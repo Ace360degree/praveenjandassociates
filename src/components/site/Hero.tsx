@@ -46,7 +46,7 @@ export function Hero() {
               <img src={praveen_home} alt="CA Praveen Jain" className="absolute inset-0 w-full h-full object-cover" />
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/95 backdrop-blur shadow-soft flex items-center justify-center hover:scale-110 transition-transform" aria-label="Play video">
+                  <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/70 backdrop-blur shadow-soft flex items-center justify-center hover:scale-110 transition-transform" aria-label="Play video">
                     <Play className="h-6 w-6 text-brand fill-brand ml-1" />
                   </button>
                 </DialogTrigger>
