@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { WhyUs, ChooseNeed, PopularServices, HowItWorks, FreeTools, About, Reviews, Blog, FAQ, FinalCTA } from "@/components/site/Sections";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,18 +23,48 @@ function Index() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
+        {/* Hero is above the fold — no fade needed */}
         <Hero />
-        <WhyUs />
-        <ChooseNeed />
-        <PopularServices />
-        <HowItWorks />
-        
-        <FreeTools />
-        <About />
-        <Reviews />
-        <Blog />
-        <FAQ />
-        <FinalCTA />
+
+        <FadeIn direction="up">
+          <WhyUs />
+        </FadeIn>
+
+        <FadeIn direction="up" delay="delay-75">
+          <ChooseNeed />
+        </FadeIn>
+
+        <FadeIn direction="up">
+          <PopularServices />
+        </FadeIn>
+
+        <FadeIn direction="left">
+          <HowItWorks />
+        </FadeIn>
+
+        <FadeIn direction="up" delay="delay-75">
+          <FreeTools />
+        </FadeIn>
+
+        <FadeIn direction="right">
+          <About />
+        </FadeIn>
+
+        <FadeIn direction="up">
+          <Reviews />
+        </FadeIn>
+
+        <FadeIn direction="up" delay="delay-75">
+          <Blog />
+        </FadeIn>
+
+        <FadeIn direction="up">
+          <FAQ />
+        </FadeIn>
+
+        <FadeIn direction="up">
+          <FinalCTA />
+        </FadeIn>
       </main>
       <Footer />
       <FloatingWhatsApp />
