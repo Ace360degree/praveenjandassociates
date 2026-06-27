@@ -304,36 +304,10 @@ export function Header() {
               </div>
             </div>
           </div>
-          <Link
-            to="/company-profile"
-            className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-brand rounded-md transition-colors"
-          >
-            About
-          </Link>
-          <Link
-            to="/blog"
-            className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-brand rounded-md transition-colors"
-          >
-            Blog
-          </Link>
-          <Link
-            to="/contact-us"
-            className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-brand rounded-md transition-colors"
-          >
-            Contact
-          </Link>
         </nav>
         <div className="flex items-center gap-2">
           <a href="tel:+919999999999" className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full bg-brand-light hover:bg-primary/10 transition">
             <Phone className="h-4 w-4 text-brand" />
-          </a>
-          <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:inline-flex h-10 items-center gap-1.5 rounded-full bg-[#25D366] px-4 text-sm font-semibold text-white hover:opacity-90 transition"
-          >
-            <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
           <Link
             to="/contact-us"
@@ -570,15 +544,6 @@ export function Header() {
                 {n.label}
               </a>
             ))}
-            <Link to="/company-profile" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
-              About
-            </Link>
-            <Link to="/blog" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
-              Blog
-            </Link>
-            <Link to="/contact-us" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
-              Contact
-            </Link>
             <Link to="/contact-us" onClick={() => setOpen(false)} className="mt-3 inline-flex h-11 items-center justify-center rounded-full bg-gradient-red px-5 text-sm font-semibold text-white">
               Book Consultation
             </Link>
