@@ -33,14 +33,13 @@ export function Header() {
   }, []);
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
           ? "bg-background/90 backdrop-blur-md shadow-card py-2"
           : "bg-background/70 backdrop-blur-sm py-3"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between gap-4">
-        <a href="#" className="flex items-center gap-2 shrink-0">
+        <a href="/" className="flex items-center gap-2 shrink-0">
           <img src={logo} alt="Praveen J & Associates" className={`transition-all ${scrolled ? "h-9" : "h-11"}`} />
         </a>
         <nav className="hidden lg:flex items-center gap-1">
