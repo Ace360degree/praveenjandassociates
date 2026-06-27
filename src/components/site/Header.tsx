@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Phone, MessageCircle, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, MessageCircle, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { GST_SERVICES } from "@/data/gstServices";
 import { ITR_SERVICES } from "@/data/incomeTaxServices";
 import { MCA_SERVICES } from "@/data/mcaServices";
@@ -13,6 +14,52 @@ import { TDS_SERVICES } from "@/data/tdsServices";
 import logo from "@/assets/logo.png";
 
 const NAV: { label: string; href: string }[] = [];
+
+function ConsultationModal({ children }: { children: React.ReactNode }) {
+  const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
+  const WA = "919999999999";
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        {children}
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px] p-6">
+        <h3 className="font-display text-xl font-bold text-ink">Get a Callback within 24 Hours</h3>
+        <p className="text-sm text-muted-foreground mt-1">Tell us what you need — our CA team will reach out.</p>
+        <form
+          className="mt-5 space-y-3"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const msg = `Hi, I need CA assistance.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0AService: ${form.service}%0AMessage: ${form.message}`;
+            window.open(`https://wa.me/${WA}?text=${msg}`, "_blank");
+          }}
+        >
+          <input required maxLength={100} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+          <input required type="tel" maxLength={15} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+          <input required type="email" maxLength={255} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+          <select required value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30 bg-white">
+            <option value="">Service Required</option>
+            <option>Income Tax / ITR</option>
+            <option>GST</option>
+            <option>TDS / TCS</option>
+            <option>MCA / ROC</option>
+            <option>Accounting &amp; Audit</option>
+            <option>Registrations</option>
+            <option>Bank Loan Documentation</option>
+            <option>Compliance Package</option>
+            <option>CA Consultation</option>
+            <option>Other</option>
+          </select>
+          <textarea maxLength={1000} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Message (optional)" rows={3} className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+          <button type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
+            Request Callback <ArrowRight className="h-4 w-4" />
+          </button>
+          <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -309,12 +356,11 @@ export function Header() {
           <a href="tel:+919999999999" className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full bg-brand-light hover:bg-primary/10 transition">
             <Phone className="h-4 w-4 text-brand" />
           </a>
-          <Link
-            to="/contact-us"
-            className="hidden md:inline-flex h-10 items-center rounded-full bg-gradient-red px-5 text-sm font-semibold text-white shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all"
-          >
-            Book Consultation
-          </Link>
+          <ConsultationModal>
+            <button className="hidden md:inline-flex h-10 items-center rounded-full bg-gradient-red px-5 text-sm font-semibold text-white shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer">
+              Book Consultation
+            </button>
+          </ConsultationModal>
           <button onClick={() => setOpen(!open)} className="lg:hidden h-10 w-10 inline-flex items-center justify-center rounded-md hover:bg-muted">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -544,9 +590,11 @@ export function Header() {
                 {n.label}
               </a>
             ))}
-            <Link to="/contact-us" onClick={() => setOpen(false)} className="mt-3 inline-flex h-11 items-center justify-center rounded-full bg-gradient-red px-5 text-sm font-semibold text-white">
-              Book Consultation
-            </Link>
+            <ConsultationModal>
+              <button onClick={() => setOpen(false)} className="mt-3 w-full inline-flex h-11 items-center justify-center rounded-full bg-gradient-red px-5 text-sm font-semibold text-white cursor-pointer">
+                Book Consultation
+              </button>
+            </ConsultationModal>
           </div>
         </div>
       )}

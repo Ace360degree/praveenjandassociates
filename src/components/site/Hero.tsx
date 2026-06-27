@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CheckCircle2, MessageCircle, Phone, Play, Sparkles, ArrowRight, ShieldCheck, Star } from "lucide-react";
-import praveen from "@/assets/praveen.jpg";
-
+import praveen_home from "@/assets/praveen-home.jpg";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const SERVICES = ["ITR Filing", "GST", "TDS", "MCA/ROC", "Registration", "Accounting", "Consultation"];
 
 export function Hero() {
@@ -43,10 +43,19 @@ export function Hero() {
           {/* Video / Praveen card */}
           <div className="relative rounded-3xl overflow-hidden shadow-soft bg-white p-3">
             <div className="relative aspect-[4/5] sm:aspect-[16/12] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-light to-white">
-              <img src={praveen} alt="CA Praveen Jain" className="absolute inset-0 w-full h-full object-cover" />
-              <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/95 backdrop-blur shadow-soft flex items-center justify-center hover:scale-110 transition-transform" aria-label="Play video">
-                <Play className="h-6 w-6 text-brand fill-brand ml-1" />
-              </button>
+              <img src={praveen_home} alt="CA Praveen Jain" className="absolute inset-0 w-full h-full object-cover" />
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/95 backdrop-blur shadow-soft flex items-center justify-center hover:scale-110 transition-transform" aria-label="Play video">
+                    <Play className="h-6 w-6 text-brand fill-brand ml-1" />
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-4xl p-0 border-none bg-transparent shadow-none">
+                  <div className="aspect-video w-full rounded-lg overflow-hidden bg-black">
+                    <iframe className="w-full h-full" src="https://www.youtube.com/embed/bpllR6l2A5s?si=EOZ4d4GvSjsPz4yj&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                  </div>
+                </DialogContent>
+              </Dialog>
               <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" /> Intro Video
               </div>
@@ -57,7 +66,7 @@ export function Hero() {
                 <div className="text-xs text-muted-foreground">Founder · 10+ years experience</div>
               </div>
               <div className="flex -space-x-1">
-                {[0,1,2,3,4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
+                {[0, 1, 2, 3, 4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
               </div>
             </div>
           </div>

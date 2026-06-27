@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import praveen from "@/assets/praveen.jpg";
+import praveen_about from "@/assets/praveen-about.jpg";
 
 function SectionHeader({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
   return (
@@ -182,7 +183,7 @@ export function About() {
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-red opacity-10 rounded-3xl blur-2xl" />
           <div className="relative rounded-3xl overflow-hidden bg-white p-3 shadow-soft">
-            <img src={praveen} alt="CA Praveen Jain" className="w-full aspect-square object-cover rounded-2xl" />
+            <img src={praveen_about} alt="CA Praveen Jain" className="w-full aspect-square object-cover rounded-2xl" />
           </div>
           <div className="absolute -bottom-4 -right-2 sm:right-6 rounded-2xl bg-white shadow-soft p-4 flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"><Star className="h-5 w-5 fill-amber-400 text-amber-400" /></div>
@@ -226,7 +227,7 @@ export function Reviews() {
         <div className="grid md:grid-cols-3 gap-5">
           {reviews.map(r => (
             <div key={r.name} className="rounded-2xl bg-white border border-border p-6 shadow-card hover:shadow-soft transition-all">
-              <div className="flex gap-0.5 mb-3">{[0,1,2,3,4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}</div>
+              <div className="flex gap-0.5 mb-3">{[0, 1, 2, 3, 4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}</div>
               <p className="text-sm text-foreground/90 leading-relaxed">"{r.text}"</p>
               <div className="mt-4 flex items-center gap-3 pt-4 border-t">
                 <div className="h-10 w-10 rounded-full bg-gradient-red text-white flex items-center justify-center font-bold">{r.name[0]}</div>

@@ -225,7 +225,7 @@ function MapSection() {
         <div className="mt-8 rounded-2xl overflow-hidden border shadow-sm aspect-[16/9]">
           <iframe
             title="Praveen J & Associates — Mumbai Office"
-            src="https://www.google.com/maps?q=Mumbai,India&output=embed"
+            src="https://www.google.com/maps?q=PRAVEEN+J+and+ASSOCIATES+(Chartered+Accountants)&output=embed"
             className="w-full h-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

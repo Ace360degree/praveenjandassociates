@@ -15,7 +15,7 @@ export function Footer() {
               Trusted Chartered Accountants helping businesses and individuals with tax, GST, MCA and financial compliance across India.
             </p>
             <div className="mt-5 flex gap-2">
-            {[Linkedin, Instagram, Facebook, Youtube].map((Icon, i) => (
+              {[Linkedin, Instagram, Facebook, Youtube].map((Icon, i) => (
                 <a key={i} href="#" className="h-9 w-9 rounded-full bg-white/10 hover:bg-brand flex items-center justify-center transition-colors">
                   <Icon className="h-4 w-4" />
                 </a>
@@ -24,31 +24,39 @@ export function Footer() {
           </div>
           <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
             {([
-              { h: "Services", items: [
-                { label: "Income Tax", to: "/income-tax" },
-                { label: "GST", to: "/gst" },
-                { label: "TDS & TCS", to: "/tds-tcs" },
-                { label: "MCA / ROC", to: "/mca" },
-                { label: "Registrations", to: "/registrations" },
-                { label: "Accounting", to: "/accounting-audit-services" },
-              ]},
-              { h: "About", items: [
-                { label: "Company Profile", to: "/company-profile" },
-                { label: "Contact", to: "/contact-us" },
-                { label: "Consultation", to: "/consultation" },
-                { label: "Compliance", to: "/compliance" },
-              ]},
-              { h: "Resources", items: [
-                { label: "Blog", to: "/blog" },
-                { label: "Bank Loan Docs", to: "/bank-loan" },
-                { label: "Full Packages", to: "/our-full-packages-services" },
-              ]},
-              { h: "Policies", items: [
-                { label: "Privacy Policy", to: "/privacy-policy" },
-                { label: "Terms & Conditions", to: "/terms-and-conditions" },
-                { label: "Disclaimer", to: "/disclaimer" },
-                { label: "Company Policies", to: "/company-policies" },
-              ]},
+              {
+                h: "Services", items: [
+                  { label: "Income Tax", to: "/income-tax" },
+                  { label: "GST", to: "/gst" },
+                  { label: "TDS & TCS", to: "/tds-tcs" },
+                  { label: "MCA / ROC", to: "/mca" },
+                  { label: "Registrations", to: "/registrations" },
+                  { label: "Accounting", to: "/accounting-audit-services" },
+                ]
+              },
+              {
+                h: "About", items: [
+                  { label: "Company Profile", to: "/company-profile" },
+                  { label: "Contact", to: "/contact-us" },
+                  { label: "Consultation", to: "/consultation" },
+                  { label: "Compliance", to: "/compliance" },
+                ]
+              },
+              {
+                h: "Resources", items: [
+                  { label: "Blog", to: "/blog" },
+                  { label: "Bank Loan Docs", to: "/bank-loan" },
+                  { label: "Full Packages", to: "/our-full-packages-services" },
+                ]
+              },
+              {
+                h: "Policies", items: [
+                  { label: "Privacy Policy", to: "/privacy-policy" },
+                  { label: "Terms & Conditions", to: "/terms-and-conditions" },
+                  { label: "Disclaimer", to: "/disclaimer" },
+                  { label: "Company Policies", to: "/company-policies" },
+                ]
+              },
             ] as const).map(col => (
               <div key={col.h}>
                 <h4 className="font-display font-semibold mb-3">{col.h}</h4>
