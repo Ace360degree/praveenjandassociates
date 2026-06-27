@@ -311,6 +311,12 @@ export function Header() {
             About
           </Link>
           <Link
+            to="/blog"
+            className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-brand rounded-md transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             to="/contact-us"
             className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-brand rounded-md transition-colors"
           >
@@ -566,6 +572,9 @@ export function Header() {
             ))}
             <Link to="/company-profile" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
               About
+            </Link>
+            <Link to="/blog" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
+              Blog
             </Link>
             <Link to="/contact-us" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium border-b">
               Contact

@@ -9,8 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as CompanyProfileRouteImport } from './routes/company-profile'
+import { Route as CompanyPoliciesRouteImport } from './routes/company-policies'
 import { Route as TdsTcsRouteRouteImport } from './routes/tds-tcs.route'
 import { Route as RegistrationsRouteRouteImport } from './routes/registrations.route'
 import { Route as McaRouteRouteImport } from './routes/mca.route'
@@ -18,6 +22,7 @@ import { Route as IncomeTaxRouteRouteImport } from './routes/income-tax.route'
 import { Route as GstRouteRouteImport } from './routes/gst.route'
 import { Route as ConsultationRouteRouteImport } from './routes/consultation.route'
 import { Route as ComplianceRouteRouteImport } from './routes/compliance.route'
+import { Route as BlogRouteRouteImport } from './routes/blog.route'
 import { Route as BankLoanRouteRouteImport } from './routes/bank-loan.route'
 import { Route as AccountingAuditServicesRouteRouteImport } from './routes/accounting-audit-services.route'
 import { Route as IndexRouteImport } from './routes/index'
@@ -28,6 +33,7 @@ import { Route as IncomeTaxIndexRouteImport } from './routes/income-tax.index'
 import { Route as GstIndexRouteImport } from './routes/gst.index'
 import { Route as ConsultationIndexRouteImport } from './routes/consultation.index'
 import { Route as ComplianceIndexRouteImport } from './routes/compliance.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BankLoanIndexRouteImport } from './routes/bank-loan.index'
 import { Route as AccountingAuditServicesIndexRouteImport } from './routes/accounting-audit-services.index'
 import { Route as TdsTcsSlugRouteImport } from './routes/tds-tcs.$slug'
@@ -37,9 +43,25 @@ import { Route as IncomeTaxSlugRouteImport } from './routes/income-tax.$slug'
 import { Route as GstSlugRouteImport } from './routes/gst.$slug'
 import { Route as ConsultationSlugRouteImport } from './routes/consultation.$slug'
 import { Route as ComplianceSlugRouteImport } from './routes/compliance.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BankLoanSlugRouteImport } from './routes/bank-loan.$slug'
 import { Route as AccountingAuditServicesSlugRouteImport } from './routes/accounting-audit-services.$slug'
 
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactUsRoute = ContactUsRouteImport.update({
   id: '/contact-us',
   path: '/contact-us',
@@ -48,6 +70,11 @@ const ContactUsRoute = ContactUsRouteImport.update({
 const CompanyProfileRoute = CompanyProfileRouteImport.update({
   id: '/company-profile',
   path: '/company-profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyPoliciesRoute = CompanyPoliciesRouteImport.update({
+  id: '/company-policies',
+  path: '/company-policies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TdsTcsRouteRoute = TdsTcsRouteRouteImport.update({
@@ -83,6 +110,11 @@ const ConsultationRouteRoute = ConsultationRouteRouteImport.update({
 const ComplianceRouteRoute = ComplianceRouteRouteImport.update({
   id: '/compliance',
   path: '/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRouteRoute = BlogRouteRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BankLoanRouteRoute = BankLoanRouteRouteImport.update({
@@ -136,6 +168,11 @@ const ComplianceIndexRoute = ComplianceIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ComplianceRouteRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRouteRoute,
+} as any)
 const BankLoanIndexRoute = BankLoanIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -182,6 +219,11 @@ const ComplianceSlugRoute = ComplianceSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ComplianceRouteRoute,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRouteRoute,
+} as any)
 const BankLoanSlugRoute = BankLoanSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -198,6 +240,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/accounting-audit-services': typeof AccountingAuditServicesRouteRouteWithChildren
   '/bank-loan': typeof BankLoanRouteRouteWithChildren
+  '/blog': typeof BlogRouteRouteWithChildren
   '/compliance': typeof ComplianceRouteRouteWithChildren
   '/consultation': typeof ConsultationRouteRouteWithChildren
   '/gst': typeof GstRouteRouteWithChildren
@@ -205,10 +248,15 @@ export interface FileRoutesByFullPath {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
   '/gst/$slug': typeof GstSlugRoute
@@ -218,6 +266,7 @@ export interface FileRoutesByFullPath {
   '/tds-tcs/$slug': typeof TdsTcsSlugRoute
   '/accounting-audit-services/': typeof AccountingAuditServicesIndexRoute
   '/bank-loan/': typeof BankLoanIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/compliance/': typeof ComplianceIndexRoute
   '/consultation/': typeof ConsultationIndexRoute
   '/gst/': typeof GstIndexRoute
@@ -228,10 +277,15 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
   '/gst/$slug': typeof GstSlugRoute
@@ -241,6 +295,7 @@ export interface FileRoutesByTo {
   '/tds-tcs/$slug': typeof TdsTcsSlugRoute
   '/accounting-audit-services': typeof AccountingAuditServicesIndexRoute
   '/bank-loan': typeof BankLoanIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/compliance': typeof ComplianceIndexRoute
   '/consultation': typeof ConsultationIndexRoute
   '/gst': typeof GstIndexRoute
@@ -254,6 +309,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/accounting-audit-services': typeof AccountingAuditServicesRouteRouteWithChildren
   '/bank-loan': typeof BankLoanRouteRouteWithChildren
+  '/blog': typeof BlogRouteRouteWithChildren
   '/compliance': typeof ComplianceRouteRouteWithChildren
   '/consultation': typeof ConsultationRouteRouteWithChildren
   '/gst': typeof GstRouteRouteWithChildren
@@ -261,10 +317,15 @@ export interface FileRoutesById {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
   '/gst/$slug': typeof GstSlugRoute
@@ -274,6 +335,7 @@ export interface FileRoutesById {
   '/tds-tcs/$slug': typeof TdsTcsSlugRoute
   '/accounting-audit-services/': typeof AccountingAuditServicesIndexRoute
   '/bank-loan/': typeof BankLoanIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/compliance/': typeof ComplianceIndexRoute
   '/consultation/': typeof ConsultationIndexRoute
   '/gst/': typeof GstIndexRoute
@@ -288,6 +350,7 @@ export interface FileRouteTypes {
     | '/'
     | '/accounting-audit-services'
     | '/bank-loan'
+    | '/blog'
     | '/compliance'
     | '/consultation'
     | '/gst'
@@ -295,10 +358,15 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/disclaimer'
+    | '/privacy-policy'
+    | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
+    | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
     | '/gst/$slug'
@@ -308,6 +376,7 @@ export interface FileRouteTypes {
     | '/tds-tcs/$slug'
     | '/accounting-audit-services/'
     | '/bank-loan/'
+    | '/blog/'
     | '/compliance/'
     | '/consultation/'
     | '/gst/'
@@ -318,10 +387,15 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/disclaimer'
+    | '/privacy-policy'
+    | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
+    | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
     | '/gst/$slug'
@@ -331,6 +405,7 @@ export interface FileRouteTypes {
     | '/tds-tcs/$slug'
     | '/accounting-audit-services'
     | '/bank-loan'
+    | '/blog'
     | '/compliance'
     | '/consultation'
     | '/gst'
@@ -343,6 +418,7 @@ export interface FileRouteTypes {
     | '/'
     | '/accounting-audit-services'
     | '/bank-loan'
+    | '/blog'
     | '/compliance'
     | '/consultation'
     | '/gst'
@@ -350,10 +426,15 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/disclaimer'
+    | '/privacy-policy'
+    | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
+    | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
     | '/gst/$slug'
@@ -363,6 +444,7 @@ export interface FileRouteTypes {
     | '/tds-tcs/$slug'
     | '/accounting-audit-services/'
     | '/bank-loan/'
+    | '/blog/'
     | '/compliance/'
     | '/consultation/'
     | '/gst/'
@@ -376,6 +458,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccountingAuditServicesRouteRoute: typeof AccountingAuditServicesRouteRouteWithChildren
   BankLoanRouteRoute: typeof BankLoanRouteRouteWithChildren
+  BlogRouteRoute: typeof BlogRouteRouteWithChildren
   ComplianceRouteRoute: typeof ComplianceRouteRouteWithChildren
   ConsultationRouteRoute: typeof ConsultationRouteRouteWithChildren
   GstRouteRoute: typeof GstRouteRouteWithChildren
@@ -383,12 +466,37 @@ export interface RootRouteChildren {
   McaRouteRoute: typeof McaRouteRouteWithChildren
   RegistrationsRouteRoute: typeof RegistrationsRouteRouteWithChildren
   TdsTcsRouteRoute: typeof TdsTcsRouteRouteWithChildren
+  CompanyPoliciesRoute: typeof CompanyPoliciesRoute
   CompanyProfileRoute: typeof CompanyProfileRoute
   ContactUsRoute: typeof ContactUsRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact-us': {
       id: '/contact-us'
       path: '/contact-us'
@@ -401,6 +509,13 @@ declare module '@tanstack/react-router' {
       path: '/company-profile'
       fullPath: '/company-profile'
       preLoaderRoute: typeof CompanyProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-policies': {
+      id: '/company-policies'
+      path: '/company-policies'
+      fullPath: '/company-policies'
+      preLoaderRoute: typeof CompanyPoliciesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tds-tcs': {
@@ -450,6 +565,13 @@ declare module '@tanstack/react-router' {
       path: '/compliance'
       fullPath: '/compliance'
       preLoaderRoute: typeof ComplianceRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bank-loan': {
@@ -522,6 +644,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComplianceIndexRouteImport
       parentRoute: typeof ComplianceRouteRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRouteRoute
+    }
     '/bank-loan/': {
       id: '/bank-loan/'
       path: '/'
@@ -585,6 +714,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComplianceSlugRouteImport
       parentRoute: typeof ComplianceRouteRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRouteRoute
+    }
     '/bank-loan/$slug': {
       id: '/bank-loan/$slug'
       path: '/$slug'
@@ -630,6 +766,20 @@ const BankLoanRouteRouteChildren: BankLoanRouteRouteChildren = {
 
 const BankLoanRouteRouteWithChildren = BankLoanRouteRoute._addFileChildren(
   BankLoanRouteRouteChildren,
+)
+
+interface BlogRouteRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteRouteChildren: BlogRouteRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteRouteWithChildren = BlogRouteRoute._addFileChildren(
+  BlogRouteRouteChildren,
 )
 
 interface ComplianceRouteRouteChildren {
@@ -733,6 +883,7 @@ const rootRouteChildren: RootRouteChildren = {
   AccountingAuditServicesRouteRoute:
     AccountingAuditServicesRouteRouteWithChildren,
   BankLoanRouteRoute: BankLoanRouteRouteWithChildren,
+  BlogRouteRoute: BlogRouteRouteWithChildren,
   ComplianceRouteRoute: ComplianceRouteRouteWithChildren,
   ConsultationRouteRoute: ConsultationRouteRouteWithChildren,
   GstRouteRoute: GstRouteRouteWithChildren,
@@ -740,8 +891,12 @@ const rootRouteChildren: RootRouteChildren = {
   McaRouteRoute: McaRouteRouteWithChildren,
   RegistrationsRouteRoute: RegistrationsRouteRouteWithChildren,
   TdsTcsRouteRoute: TdsTcsRouteRouteWithChildren,
+  CompanyPoliciesRoute: CompanyPoliciesRoute,
   CompanyProfileRoute: CompanyProfileRoute,
   ContactUsRoute: ContactUsRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
