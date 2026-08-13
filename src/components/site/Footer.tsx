@@ -8,10 +8,10 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
-            <div className="bg-white rounded-xl inline-block p-3">
-              <img src={logo} alt="Praveen J & Associates" className="h-10" />
+            <div className="inline-flex items-center rounded-2xl bg-white px-4 py-3 shadow-sm">
+              <img src={logo} alt="Praveen J & Associates" className="h-11 w-auto object-contain" />
             </div>
-            <p className="mt-4 text-sm text-white/70 max-w-sm">
+            <p className="mt-4 text-sm leading-6 text-white/70 max-w-sm">
               Trusted Chartered Accountants helping businesses and individuals with tax, GST, MCA and financial compliance across India.
             </p>
             <div className="mt-5 flex gap-2">
@@ -72,11 +72,21 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-white/10 grid sm:grid-cols-3 gap-4 text-sm text-white/80">
-          <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-brand" /><span>+91 8169887643</span></div>
-          <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-brand" /><span>pjain4069@gmail.com</span></div>
-          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand" /><span>First Floor, Office no. 19,Evershine Mall,
-                New Link Rd, Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064.
-                | The CA in Malad West, Mumbai |</span></div>
+          <div className="flex items-center gap-2">
+            <Phone className="h-4 w-4 text-brand shrink-0" />
+            <span>+91 8169887643</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail className="h-4 w-4 text-brand shrink-0" />
+            <span>pjain4069@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-2 sm:justify-end">
+            <MapPin className="h-4 w-4 text-brand shrink-0" />
+            <span className="leading-6">
+              First Floor, Office no. 19, Evershine Mall, New Link Rd, Malad,
+              Ram Nagar, Malad West, Mumbai, Maharashtra 400064.
+            </span>
+          </div>
         </div>
         <div className="mt-8 text-center text-xs text-white/50">
           © {new Date().getFullYear()} Praveen J & Associates. All rights reserved.
