@@ -31,7 +31,7 @@ export function Hero() {
             <a href="#lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all">
               Free Consultation <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
               <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
             <a href="#services" className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition">

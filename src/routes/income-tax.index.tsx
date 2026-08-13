@@ -282,7 +282,7 @@ function ItHero() {
             <a href="#it-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition">
               File Your ITR
             </a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
           </div>
@@ -597,7 +597,7 @@ function ItFinalCTA() {
           <a href="#it-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-white/10 border border-white/40 backdrop-blur px-7 text-sm font-bold text-white hover:bg-white/20 transition-all">
             Book Consultation
           </a>
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-7 text-sm font-bold text-white hover:opacity-90 transition">
+          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-7 text-sm font-bold text-white hover:opacity-90 transition">
             <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
         </div>

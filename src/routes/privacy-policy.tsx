@@ -67,13 +67,13 @@ export function LegalLayout({ icon: Icon, title, tagline, subtitle, sections }: 
               <p className="text-sm text-white/80 mt-1">For any related concerns, reach out:</p>
               <div className="mt-4 flex flex-wrap gap-4 text-sm">
                 <a href="mailto:info@praveenjandassociates.com" className="flex items-center gap-2 hover:text-brand"><Mail className="h-4 w-4" /> info@praveenjandassociates.com</a>
-                <a href="tel:+919999999999" className="flex items-center gap-2 hover:text-brand"><Phone className="h-4 w-4" /> +91 99999 99999</a>
+                <a href="tel:+918169887643" className="flex items-center gap-2 hover:text-brand"><Phone className="h-4 w-4" /> +91 8169887643</a>
               </div>
             </div>
             <p className="text-center text-xs text-muted-foreground">Last updated: 2026</p>
             <div className="flex flex-wrap justify-center gap-3 pt-4">
               <Link to="/contact-us" className="rounded-full border px-4 py-2 text-sm hover:bg-muted">Contact</Link>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="rounded-full bg-[#25D366] text-white px-4 py-2 text-sm font-semibold inline-flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+              <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="rounded-full bg-[#25D366] text-white px-4 py-2 text-sm font-semibold inline-flex items-center gap-2"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
             </div>
           </div>
         </section>

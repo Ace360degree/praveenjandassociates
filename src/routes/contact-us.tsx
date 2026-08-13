@@ -7,9 +7,9 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 
-const PHONE = "+91 99999 99999";
-const PHONE_TEL = "+919999999999";
-const WA = "919999999999";
+const PHONE = "+91 8169887643";
+const PHONE_TEL = "+918169887643";
+const WA = "918169887643";
 const EMAIL = "info@praveenjandassociates.com";
 
 export const Route = createFileRoute("/contact-us")({

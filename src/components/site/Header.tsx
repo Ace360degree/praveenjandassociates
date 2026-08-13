@@ -10,7 +10,7 @@ import logo from "@/assets/logo.png";
 /* ─── Consultation pop-up form ──────────────────────────────────────────── */
 function ConsultationModal({ children }: { children: React.ReactNode }) {
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
-  const WA = "919999999999";
+  const WA = "918169887643";
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -280,7 +280,7 @@ export function Header() {
 
         {/* CTA area */}
         <div className="flex items-center gap-2">
-          <a href="tel:+919999999999" className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full bg-brand-light hover:bg-primary/10 transition">
+          <a href="tel:+918169887643" className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full bg-brand-light hover:bg-primary/10 transition">
             <Phone className="h-4 w-4 text-brand" />
           </a>
           <ConsultationModal>

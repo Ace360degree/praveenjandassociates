@@ -164,7 +164,7 @@ function BlogPostPage() {
                 <p className="mt-2 text-white/90">Whether you're salaried, a freelancer, business owner, trader or NRI — our CA team can help.</p>
                 <div className="mt-4 flex flex-wrap gap-3">
                   <Link to="/contact-us" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-5 py-2.5 font-semibold hover:bg-white/90 transition"><Phone className="h-4 w-4" /> Book Consultation</Link>
-                  <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-5 py-2.5 font-semibold hover:opacity-90 transition"><MessageCircle className="h-4 w-4" /> WhatsApp CA</a>
+                  <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-5 py-2.5 font-semibold hover:opacity-90 transition"><MessageCircle className="h-4 w-4" /> WhatsApp CA</a>
                 </div>
               </div>
 

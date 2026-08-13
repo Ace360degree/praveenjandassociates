@@ -98,7 +98,7 @@ function CompanyPolicies() {
             <p className="mt-2 text-white/90">We're here to help clarify any concerns.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link to="/contact-us" className="rounded-xl bg-white text-brand px-6 py-3 font-semibold hover:bg-white/90 transition">Contact Us</Link>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-6 py-3 font-semibold hover:opacity-90 transition"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
+              <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-6 py-3 font-semibold hover:opacity-90 transition"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
             </div>
           </div>
         </section>

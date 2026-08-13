@@ -72,9 +72,11 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-white/10 grid sm:grid-cols-3 gap-4 text-sm text-white/80">
-          <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-brand" /><span>+91 99999 99999</span></div>
-          <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-brand" /><span>hello@praveenja.com</span></div>
-          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand" /><span>Pan India · Online & Offline</span></div>
+          <div className="flex items-center gap-2"><Phone className="h-4 w-4 text-brand" /><span>+91 8169887643</span></div>
+          <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-brand" /><span>pjain4069@gmail.com</span></div>
+          <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-brand" /><span>First Floor, Office no. 19,Evershine Mall,
+                New Link Rd, Malad, Ram Nagar, Malad West, Mumbai, Maharashtra 400064.
+                | The CA in Malad West, Mumbai |</span></div>
         </div>
         <div className="mt-8 text-center text-xs text-white/50">
           © {new Date().getFullYear()} Praveen J & Associates. All rights reserved.
@@ -87,7 +89,7 @@ export function Footer() {
 export function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/919999999999"
+      href="https://wa.me/918169887643"
       target="_blank"
       rel="noreferrer"
       className="fixed bottom-5 right-5 z-40 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-2xl flex items-center justify-center hover:scale-110 transition-transform"

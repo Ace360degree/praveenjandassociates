@@ -91,7 +91,7 @@ function Hero() {
               Consult a CA Today <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/918169887643"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all"
@@ -431,7 +431,7 @@ function FinalCTA() {
             Consult a CA Today <ArrowRight className="h-4 w-4" />
           </Link>
           <a
-            href="tel:+919999999999"
+            href="tel:+918169887643"
             className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors"
           >
             <Phone className="h-4 w-4" /> Call Now

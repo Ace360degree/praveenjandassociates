@@ -135,7 +135,7 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
             <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
               {s.primaryCta} <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
               <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
             </a>
           </div>
@@ -156,7 +156,7 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
             onSubmit={(e) => {
               e.preventDefault();
               const msg = `Hi, I need help with ${s.title}.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-              window.open(`https://wa.me/919999999999?text=${msg}`, "_blank");
+              window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
             }}
           >
             <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
@@ -371,7 +371,7 @@ function FinalCTA({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
           <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
             {s.primaryCta} <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="tel:+919999999999" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
+          <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
             <Phone className="h-4 w-4" /> Call CA Now
           </a>
         </div>
@@ -415,7 +415,7 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
 function StickyMobileCTA({ cta }: { cta: string }) {
   return (
     <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t shadow-2xl p-3 flex gap-2">
-      <a href="tel:+919999999999" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm">
+      <a href="tel:+918169887643" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm">
         <Phone className="h-4 w-4" /> Call
       </a>
       <a href="#lead" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30">

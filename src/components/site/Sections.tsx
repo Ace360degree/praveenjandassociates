@@ -317,10 +317,10 @@ export function FinalCTA() {
           Business ho ya tax problem — clarity aur compliance dono zaruri hai.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="tel:+919999999999" className="inline-flex h-12 items-center gap-2 rounded-full bg-white text-brand font-semibold px-6 shadow-lg hover:-translate-y-0.5 transition-all">
+          <a href="tel:+918169887643" className="inline-flex h-12 items-center gap-2 rounded-full bg-white text-brand font-semibold px-6 shadow-lg hover:-translate-y-0.5 transition-all">
             <Headphones className="h-4 w-4" /> Call Now
           </a>
-          <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] text-white font-semibold px-6 shadow-lg hover:-translate-y-0.5 transition-all">
+          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] text-white font-semibold px-6 shadow-lg hover:-translate-y-0.5 transition-all">
             WhatsApp
           </a>
           <a href="#lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-ink text-white font-semibold px-6 shadow-lg hover:-translate-y-0.5 transition-all">

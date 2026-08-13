@@ -148,7 +148,7 @@ function BlogIndex() {
               <div className="p-5 rounded-2xl bg-ink text-white">
                 <h3 className="font-semibold flex items-center gap-2"><Mail className="h-4 w-4" /> Never Miss Important Tax Updates</h3>
                 <p className="text-sm text-white/70 mt-2">Get monthly insights from our CA team.</p>
-                <form className="mt-4 space-y-2" onSubmit={e => { e.preventDefault(); window.open("https://wa.me/919999999999?text=Subscribe%20me%20to%20tax%20updates", "_blank"); }}>
+                <form className="mt-4 space-y-2" onSubmit={e => { e.preventDefault(); window.open("https://wa.me/918169887643?text=Subscribe%20me%20to%20tax%20updates", "_blank"); }}>
                   <input type="email" required placeholder="Email" className="w-full rounded-lg px-3 py-2 text-ink focus:outline-none" />
                   <button className="w-full rounded-lg bg-brand py-2 font-semibold hover:bg-brand/90 transition">Subscribe</button>
                 </form>
@@ -165,7 +165,7 @@ function BlogIndex() {
               <Link to="/contact-us" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:bg-white/90 transition-all">
                 <Phone className="h-4 w-4" /> Book Consultation
               </Link>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-6 py-3 font-semibold hover:opacity-90 transition-all">
+              <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] text-white px-6 py-3 font-semibold hover:opacity-90 transition-all">
                 <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
               </a>
             </div>
