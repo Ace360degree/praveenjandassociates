@@ -23,8 +23,8 @@ export function Hero() {
             Business start karna ho, GST handle karna ho, ITR file karna ho ya company compliance manage karna ho — expert CA support ke saath stress-free process.
           </p>
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
-            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400" /> 4.8 Rated Support</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> 1000+ Clients</span>
+            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400" /> 5 Rated Support</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> 500+ Clients</span>
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand" /> Pan India Online Support</span>
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -63,7 +63,7 @@ export function Hero() {
             <div className="px-2 pt-3 pb-1 flex items-center justify-between">
               <div>
                 <div className="font-display font-bold text-foreground">CA Praveen Jain</div>
-                <div className="text-xs text-muted-foreground">Founder · 10+ years experience</div>
+                <div className="text-xs text-muted-foreground">Founder · 7+ years experience</div>
               </div>
               <div className="flex -space-x-1">
                 {[0, 1, 2, 3, 4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}

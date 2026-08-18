@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Praveen J & Associates — Chartered Accountants | ITR, GST, MCA, TDS" },
-      { name: "description", content: "Trusted CA support for ITR filing, GST, TDS, MCA/ROC, company registration and accounting. Pan India online support with 1000+ happy clients." },
+      { name: "description", content: "Trusted CA support for ITR filing, GST, TDS, MCA/ROC, company registration and accounting. Pan India online support with 500+ happy clients." },
       { property: "og:title", content: "Praveen J & Associates — Chartered Accountants" },
       { property: "og:description", content: "Expert CA support for tax, GST, MCA and business compliance — stress-free, enquiry-based assistance." },
       { property: "og:type", content: "website" },

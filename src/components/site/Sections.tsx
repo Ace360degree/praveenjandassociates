@@ -35,7 +35,7 @@ export function WhyUs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {items.map((it) => (
             <div key={it.title} className="group rounded-2xl bg-white p-6 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-primary/20">
-              <div className="h-12 w-12 rounded-xl bg-primary/10 text-brand flex items-center justify-center group-hover:bg-gradient-red group-hover:text-white transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/10 text-brand flex items-center justify-center">
                 <it.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-4 font-display font-bold text-lg">{it.title}</h3>
@@ -187,7 +187,7 @@ export function About() {
           </div>
           <div className="absolute -bottom-4 -right-2 sm:right-6 rounded-2xl bg-white shadow-soft p-4 flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center"><Star className="h-5 w-5 fill-amber-400 text-amber-400" /></div>
-            <div><div className="font-bold text-sm">4.8 / 5</div><div className="text-xs text-muted-foreground">1000+ happy clients</div></div>
+            <div><div className="font-bold text-sm">5 / 5</div><div className="text-xs text-muted-foreground">500+ happy clients</div></div>
           </div>
         </div>
         <div>
@@ -201,8 +201,8 @@ export function About() {
             Trusted CA firm helping businesses and individuals with tax, GST, MCA and financial compliance — with clarity, speed, and a human touch.
           </p>
           <div className="mt-6 grid grid-cols-3 gap-4">
-            <div><div className="font-display text-2xl font-bold text-brand">10+</div><div className="text-xs text-muted-foreground">Years Exp.</div></div>
-            <div><div className="font-display text-2xl font-bold text-brand">1000+</div><div className="text-xs text-muted-foreground">Clients Served</div></div>
+            <div><div className="font-display text-2xl font-bold text-brand">7+</div><div className="text-xs text-muted-foreground">Years Exp.</div></div>
+            <div><div className="font-display text-2xl font-bold text-brand">500+</div><div className="text-xs text-muted-foreground">Clients Served</div></div>
             <div><div className="font-display text-2xl font-bold text-brand">5000+</div><div className="text-xs text-muted-foreground">Filings Done</div></div>
           </div>
           <a href="#lead" className="mt-7 inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:shadow-lg transition-all">
