@@ -98,7 +98,7 @@ function Hero() {
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Trusted by 5000+ Clients</span>
@@ -312,7 +312,7 @@ function Trust() {
       <div className="container mx-auto px-4 max-w-5xl text-center">
         <div className="flex items-center justify-center gap-1">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold text-ink">4.8/5 Client Rating</span>
+          <span className="ml-2 font-semibold text-ink">5/5 Client Rating</span>
         </div>
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           {quotes.map((q) => (

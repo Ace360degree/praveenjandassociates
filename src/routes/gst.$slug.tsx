@@ -142,7 +142,7 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
           <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Online</span>
@@ -322,7 +322,7 @@ function Trust() {
         <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Trusted by Businesses</h2>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold">4.8/5 on Google</span>
+          <span className="ml-2 font-semibold">5/5 on Google</span>
         </div>
         <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (

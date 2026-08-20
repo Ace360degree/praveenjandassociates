@@ -511,11 +511,11 @@ function ItReviews() {
   return (
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
-        <SectionTitle eyebrow="Google Reviews" title="Trusted by Individuals & Businesses" sub="⭐ 4.8 · 120+ Reviews" />
+        <SectionTitle eyebrow="Google Reviews" title="Trusted by Individuals & Businesses" sub="⭐ 5 · 120+ Reviews" />
         <div className="grid md:grid-cols-3 gap-5">
           {REVIEWS.map((r) => (
             <div key={r.name} className="rounded-2xl bg-white border border-border p-6 shadow-card hover:shadow-soft transition-all">
-              <div className="flex gap-0.5 mb-3">{[0,1,2,3,4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}</div>
+              <div className="flex gap-0.5 mb-3">{[0, 1, 2, 3, 4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}</div>
               <p className="text-sm text-foreground/90 leading-relaxed">"{r.text}"</p>
               <div className="mt-4 flex items-center gap-3 pt-4 border-t">
                 <div className="h-10 w-10 rounded-full bg-gradient-red text-white flex items-center justify-center font-bold">{r.name[0]}</div>

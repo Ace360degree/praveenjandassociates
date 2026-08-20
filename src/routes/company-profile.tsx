@@ -104,7 +104,7 @@ function Hero() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
               ))}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1">
               <ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified
@@ -399,7 +399,7 @@ function Testimonials() {
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
             ))}
-            <span className="ml-2 font-semibold text-ink">4.8/5 Client Rating</span>
+            <span className="ml-2 font-semibold text-ink">5/5 Client Rating</span>
           </div>
           <h2 className="mt-3 font-display text-3xl md:text-4xl font-bold text-ink">Client Trust</h2>
         </div>

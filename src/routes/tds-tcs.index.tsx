@@ -125,7 +125,7 @@ function Hero() {
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Zero-Penalty Focus</span>
@@ -371,7 +371,7 @@ function Trust() {
     { stat: "5000+", label: "TDS / TCS Returns Filed" },
     { stat: "500+", label: "Happy Businesses" },
     { stat: "10+", label: "Years Experience" },
-    { stat: "4.8/5", label: "Google Rating" },
+    { stat: "5/5", label: "Google Rating" },
   ];
   return (
     <section className="py-14 bg-muted/30">

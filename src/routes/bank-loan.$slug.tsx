@@ -139,7 +139,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getBankLoanServiceBySlug
           <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Bank-Ready</span>
