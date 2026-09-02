@@ -20,37 +20,49 @@ export type ComplianceBundle = {
   whoFor: string[];
   faqs: { q: string; a: string }[];
   keywords: string[];
+  whyChoose?: string[];
+  help?: string[];
+  steps?: string[];
+  trust?: string[];
+  moreTitle?: string;
+  more?: string[];
 };
 
 export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
   {
     slug: "proprietorship",
     entity: "Proprietorship",
-    title: "Proprietorship Compliance",
-    h1: "Proprietorship Compliance Solutions in India — Tax, GST & Accounting",
-    metaTitle: "Proprietorship Compliance Solutions | CA-led Tax, GST & Accounting",
-    metaDescription: "End-to-end compliance for proprietors & freelancers — ITR, GST, accounting & advisory. CA-led, enquiry-based.",
-    heroHeadline: "Simple & Stress-Free Compliance for Your Proprietorship",
-    heroLead: "Manage GST, income tax aur accounting easily with expert CA support — freelancers, small businesses aur individual entrepreneurs ke liye.",
+    title: "Proprietorship Packages",
+    h1: "Proprietorship Packages in India - Tax, GST & Compliance Services",
+    metaTitle: "Proprietorship Packages in India | Tax, GST & Compliance Services",
+    metaDescription: "Affordable proprietorship packages in India with expert CA support for GST registration, GST returns, ITR filing, accounting and advisory.",
+    heroHeadline: "Simple & Affordable Compliance for Your Proprietorship Business",
+    heroLead: "Manage your GST, income tax, and accounting easily with expert CA support.",
     about: [
-      "Proprietorship business ka compliance simple hota hai — par tax filing, GST returns aur financial management proper hone chahiye.",
-      "Hamari bundled solutions cover karti hain: ITR filing, GST registration & returns, basic accounting aur ongoing advisory.",
+      "A proprietorship business has simpler compliance requirements but still needs proper tax filing, GST returns, and financial management.",
+      "Our packages include income tax filing, GST registration & returns, basic accounting and advisory support.",
     ],
     packages: [
-      { name: "Basic Tax Solution", tagline: "Freelancers & individuals ke liye", bestFor: "Freelancers, individuals", includes: ["Income Tax Return (ITR) filing", "Basic tax advisory", "Compliance reminders"] },
-      { name: "GST Solution", tagline: "Small businesses with GST", bestFor: "Traders, service providers under GST", includes: ["GST registration", "Monthly / quarterly GST returns", "GST compliance support", "Email assistance"] },
-      { name: "Standard Business", tagline: "Growing proprietorships", bestFor: "Active proprietors with regular sales", includes: ["ITR filing", "GST returns", "Basic accounting support", "Expense tracking guidance"] },
-      { name: "Complete Business", tagline: "Serious business owners", bestFor: "Established proprietors who want full handling", includes: ["ITR + GST filing", "Monthly accounting & bookkeeping", "Financial reports", "Business advisory support", "Priority CA assistance"] },
+      { name: "Basic Tax Package", tagline: "Freelancers and individuals", bestFor: "Best for freelancers and individuals", includes: ["Income Tax Return (ITR) filing", "Basic tax advisory", "Compliance reminders"] },
+      { name: "GST Package", tagline: "Small businesses with GST", bestFor: "Ideal for small businesses with GST", includes: ["GST registration", "Monthly/quarterly GST returns", "GST compliance support", "Email assistance"] },
+      { name: "Standard Business Package", tagline: "Growing proprietorships", bestFor: "Perfect for growing proprietorships", includes: ["ITR filing", "GST returns", "Basic accounting support", "Expense tracking guidance"] },
+      { name: "Complete Business Package", tagline: "Serious business owners", bestFor: "Best for serious business owners", includes: ["ITR + GST filing", "Monthly accounting & bookkeeping", "Financial reports", "Business advisory support", "Priority CA assistance"] },
     ],
-    problems: ["GST / tax deadlines miss ho jaate hain", "Tax filing mein confusion", "Poor financial tracking", "Tax overpay karna", "Expert advice ki kami"],
-    whoFor: ["Freelancers", "Small business owners", "Consultants", "Traders & service providers", "Individual entrepreneurs"],
+    problems: ["Missing GST or tax deadlines", "Confusion in tax filing", "Poor financial tracking", "Overpaying taxes", "Lack of expert advice"],
+    whoFor: ["Freelancers", "Small business owners", "Consultants", "Traders and service providers", "Individual entrepreneurs"],
     faqs: [
-      { q: "Proprietorship ke liye GST mandatory hai?", a: "Turnover threshold cross ho ya specific business categories ho to mandatory hai." },
-      { q: "Income tax filing zaroori hai?", a: "Haan — annually file karna hota hai." },
-      { q: "Kya solution scalable hai?", a: "Bilkul — business badhne par upgrade kar sakte hain." },
-      { q: "CA support milta hai?", a: "Haan — har bundle mein expert CA assistance included hai." },
+      { q: "Is GST required for proprietorship?", a: "Yes, if turnover exceeds threshold or for specific businesses." },
+      { q: "Do I need to file income tax?", a: "Yes, annually." },
+      { q: "Are these packages affordable?", a: "Yes, designed for small businesses." },
+      { q: "Can I upgrade later?", a: "Yes, packages are scalable." },
     ],
-    keywords: ["Proprietorship compliance India", "Sole proprietorship tax services", "Proprietor GST and tax", "Small business CA services"],
+    keywords: ["Proprietorship compliance India", "Sole proprietorship tax services", "Proprietor GST and tax services", "Small business CA services"],
+    whyChoose: ["Affordable pricing for small businesses", "Expert CA guidance", "Timely tax filing", "Easy and hassle-free process", "Scalable as your business grows"],
+    help: ["Handle complete tax and GST compliance", "Provide expert advisory", "Ensure timely filing", "Simplify accounting", "Help optimize taxes"],
+    steps: ["Choose your package", "Share your details", "Onboard with our team", "We manage your filings", "You grow your business"],
+    trust: ["Affordable and easy tax filing.", "Great support for GST compliance.", "Perfect for small business owners."],
+    moreTitle: "SEO Alignment",
+    more: ["Proprietorship compliance packages India", "Proprietorship CA services", "Small business tax packages India", "Sole proprietorship tax services", "Proprietor GST and tax services"],
   },
   {
     slug: "partnership-firm",
@@ -114,32 +126,33 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
   {
     slug: "private-limited-company",
     entity: "Private Limited",
-    title: "Private Limited Company Compliance",
-    h1: "Private Limited Company Compliance — ROC, Tax, Accounting & Secretarial",
-    metaTitle: "Pvt Ltd Compliance Solutions | ROC, Tax, Accounting, Secretarial — CA-led",
-    metaDescription: "End-to-end Pvt Ltd compliance — AOC-4, MGT-7, DIR-3 KYC, GST, TDS, accounting, secretarial. CA-led, enquiry-based.",
-    heroHeadline: "Complete Compliance for Your Private Limited Company",
-    heroLead: "AOC-4, MGT-7, DIR-3 KYC, GST, TDS, accounting aur secretarial — sab kuch ek dedicated CA team ke through.",
+    title: "Private Limited Company Packages",
+    h1: "Private Limited Company Packages - Complete Tax & Compliance Services India",
+    metaTitle: "Private Limited Company Packages | ROC, GST, Accounting & Secretarial",
+    metaDescription: "Private limited company packages in India covering ROC compliance, GST, accounting, tax filings and secretarial support with expert CA guidance.",
+    heroHeadline: "All-in-One Compliance & Tax Solutions for Your Private Limited Company",
+    heroLead: "Simplify your business operations with complete ROC, GST, accounting, and tax services under one package.",
     about: [
-      "Pvt Ltd companies ko har saal ROC filings, statutory audit, GST, TDS aur secretarial records maintain karne hote hain.",
-      "Hamare bundled solutions cost-effective ek-window service dete hain — penalty aur missed deadlines se bachao.",
+      "Managing compliance for a Private Limited Company involves multiple filings, deadlines, and legal requirements.",
+      "Our packages combine ROC compliance, GST and tax filings, accounting and bookkeeping, and ongoing advisory.",
+      "Everything your company needs - handled in one place.",
     ],
     packages: [
-      { name: "Basic Compliance", tagline: "Companies with minimal transactions", bestFor: "Dormant / newly registered companies", includes: ["AOC-4 Filing (Financial statements)", "MGT-7 Filing (Annual return)", "DIR-3 KYC (Director KYC)", "Compliance reminders", "Basic CA support"] },
-      { name: "Standard Business", tagline: "Small to mid-sized companies", bestFor: "Active companies under GST + TDS", includes: ["All Basic inclusions", "GST return filing", "Basic accounting support", "TDS return filing", "Email support"] },
-      { name: "Advanced Business", tagline: "Growing companies", bestFor: "Companies needing full financial visibility", includes: ["All Standard inclusions", "Monthly accounting & bookkeeping", "GST + TDS + ITR filing", "Financial reports & analysis", "Priority CA support"] },
-      { name: "Complete Corporate", tagline: "Scaling businesses & enterprises", bestFor: "Multi-team companies needing secretarial layer", includes: ["All Advanced inclusions", "Secretarial records maintenance", "Board meeting & AGM documentation", "ROC compliance & advisory", "Dedicated CA manager"] },
+      { name: "Basic Compliance Package", tagline: "Companies with minimal transactions", bestFor: "Best for companies with minimal transactions", includes: ["AOC-4 Filing (Financial statements)", "MGT-7 Filing (Annual return)", "DIR-3 KYC (Director KYC)", "Compliance reminders", "Basic CA support"] },
+      { name: "Standard Business Package", tagline: "Small to mid-sized businesses", bestFor: "Ideal for small to mid-sized businesses", includes: ["All Basic package inclusions", "GST return filing", "Basic accounting support", "TDS return filing", "Email support"] },
+      { name: "Advanced Business Package", tagline: "Growing companies", bestFor: "Perfect for growing companies", includes: ["All Standard package inclusions", "Monthly accounting & bookkeeping", "GST + TDS + ITR filing", "Financial reports and analysis", "Priority CA support"] },
+      { name: "Complete Corporate Package", tagline: "Scaling businesses and enterprises", bestFor: "Best for scaling businesses and enterprises", includes: ["All Advanced package inclusions", "Secretarial records maintenance", "Board meeting & AGM documentation", "ROC compliance & advisory", "Dedicated CA manager"] },
     ],
-    problems: ["ROC deadlines miss", "Multiple vendors handle karna", "High compliance costs", "Financial clarity ki kami", "Disorganized accounting"],
-    whoFor: ["Private Limited Companies", "Startups raising funds", "DPIIT-recognized startups", "Growing enterprises", "Group companies"],
+    problems: ["Missing ROC deadlines", "Managing multiple vendors", "High compliance costs", "Lack of financial clarity", "Disorganized accounting"],
+    whoFor: ["Private Limited Companies", "Startups and SMEs", "Growing businesses", "Companies needing full compliance support", "Businesses looking for cost-effective solutions"],
     faqs: [
-      { q: "AOC-4 aur MGT-7 mandatory hain?", a: "Haan — har Pvt Ltd company ko annually file karna hota hai." },
-      { q: "DIR-3 KYC kab karna hota hai?", a: "Har director ko har year 30 Sep tak file karna mandatory hai." },
-      { q: "Kya solution customizable hai?", a: "Haan — company size & activity ke base par." },
-      { q: "Secretarial support milta hai?", a: "Complete Corporate bundle mein milta hai — board meetings, AGM aur minutes." },
-      { q: "Statutory audit included hai?", a: "Audit alag se quote hota hai turnover & complexity ke base par." },
+      { q: "Are packages customizable?", a: "Yes, based on your business needs." },
+      { q: "What is included in compliance package?", a: "ROC filings, GST, accounting, and tax services." },
+      { q: "Do I get dedicated CA support?", a: "Yes, in higher-tier packages." },
+      { q: "Can I upgrade later?", a: "Yes, packages are scalable." },
+      { q: "Are these packages cost-effective?", a: "Yes, compared to individual services." },
     ],
-    keywords: ["Private Limited compliance India", "Pvt Ltd ROC compliance", "Pvt Ltd CA services", "AOC-4 MGT-7 filing", "Company secretarial services"],
+    keywords: ["Private limited company packages", "Company compliance packages India", "Corporate compliance services", "CA packages for companies", "Business tax service packages"],
   },
   {
     slug: "complete-tax-business",

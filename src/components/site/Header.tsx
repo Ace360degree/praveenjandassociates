@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { Phone, Menu, X, ChevronDown, ChevronRight, ArrowRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { CONSULTATION_SERVICES } from "@/data/consultationServices";
 import { COMPLIANCE_BUNDLES } from "@/data/compliancePackages";
 import { HEADER_MENU } from "@/data/navigationMenu";
-import logo from "@/assets/logo.png";
+function Link({ to, params, ...props }: { to: string; params?: Record<string, string | number>; [key: string]: any }) {
+  let href = to;
+  if (params) {
+    for (const [key, value] of Object.entries(params)) {
+      href = href.replace("$" + key, String(value));
+    }
+  }
+  return <a href={href} {...props} />;
+}
 
 /* ─── Consultation pop-up form ──────────────────────────────────────────── */
 function ConsultationModal({ children }: { children: React.ReactNode }) {

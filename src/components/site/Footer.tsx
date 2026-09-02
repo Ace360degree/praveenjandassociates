@@ -1,6 +1,14 @@
 import { Phone, Mail, MapPin, MessageCircle, Linkedin, Instagram, Facebook, Youtube } from "lucide-react";
-import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
+function Link({ to, params, ...props }: { to: string; params?: Record<string, string | number>; [key: string]: any }) {
+  let href = to;
+  if (params) {
+    for (const [key, value] of Object.entries(params)) {
+      href = href.replace("$" + key, String(value));
+    }
+  }
+  return <a href={href} {...props} />;
+}
 
 export function Footer() {
   return (

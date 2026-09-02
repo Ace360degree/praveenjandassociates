@@ -1,4 +1,4 @@
-export type NavSubItem = { title: string; href: string };
+﻿export type NavSubItem = { title: string; href: string };
 export type NavGroup = { title: string; href: string; items: NavSubItem[] };
 export type NavEntry = { title: string; href: string; groups: NavGroup[] };
 
@@ -22,27 +22,33 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Business ITR-4 (SUGAM)",
         href: "/income-tax/business-itr-4-presumptive",
         items: [
-          { title: "44AD Presumptive ITR", href: "/income-tax/business-itr-4-presumptive" },
-          { title: "44ADA Freelancer ITR", href: "/income-tax/business-itr-4-presumptive" },
+          { title: "44AD Presumptive ITR", href: "/income-tax/44ad-presumptive-itr" },
+          { title: "44ADA Freelancer ITR", href: "/income-tax/44ada-freelancer-itr" },
         ],
       },
       {
         title: "Capital Gain ITR-2",
         href: "/income-tax/capital-gain-itr-2",
         items: [
-          { title: "Shares / Mutual Fund Gain-Loss", href: "/income-tax/capital-gain-itr-2" },
-          { title: "Property Profit / Loss", href: "/income-tax/capital-gain-itr-2" },
+          {
+            title: "Shares / Mutual Fund Gain-Loss",
+            href: "/income-tax/shares-mutual-fund-gain-loss-itr-2",
+          },
+          { title: "Property Profit / Loss", href: "/income-tax/property-profit-loss-itr-2" },
         ],
       },
       {
         title: "Business Income ITR-3",
         href: "/income-tax/business-itr-3",
         items: [
-          { title: "Commission & Brokerage", href: "/income-tax/business-itr-3" },
-          { title: "FnO ITR", href: "/income-tax/business-itr-3" },
-          { title: "Intraday ITR", href: "/income-tax/business-itr-3" },
-          { title: "Partner of Firm ITR", href: "/income-tax/business-itr-3" },
-          { title: "All Type Income ITR", href: "/income-tax/business-itr-3" },
+          {
+            title: "Commission & Brokerage",
+            href: "/income-tax/commission-brokerage-income-itr-3",
+          },
+          { title: "FnO ITR", href: "/income-tax/futures-options-itr-3" },
+          { title: "Intraday ITR", href: "/income-tax/intraday-trading-itr-3" },
+          { title: "Partner of Firm ITR", href: "/income-tax/partner-of-firm-itr-3" },
+          { title: "All Type Income ITR", href: "/income-tax/multiple-income-tax-filing-mumbai" },
         ],
       },
       {
@@ -69,11 +75,11 @@ export const HEADER_MENU: NavEntry[] = [
       },
       {
         title: "Error in Income Tax Return",
-        href: "/income-tax/revised-rectification",
+        href: "/income-tax/revised-itr-filing-section-139-5",
         items: [
-          { title: "Defective ITR 139(9)", href: "/income-tax/revised-rectification" },
-          { title: "Revised ITR 139(5)", href: "/income-tax/revised-rectification" },
-          { title: "Rectification of ITR", href: "/income-tax/revised-rectification" },
+          { title: "Defective ITR 139(9)", href: "/income-tax/defective-itr-notice-139-9" },
+          { title: "Revised ITR 139(5)", href: "/income-tax/revised-itr-filing-section-139-5" },
+          { title: "Rectification of ITR", href: "/income-tax/rectification-of-itr-section-154" },
         ],
       },
       {
@@ -228,7 +234,10 @@ export const HEADER_MENU: NavEntry[] = [
           { title: "26QB Filing", href: "/tds-tcs/form-26qb-filing-property" },
           { title: "16B", href: "/tds-tcs/form-16b-tds-certificate-property" },
           { title: "Correction", href: "/tds-tcs/form-26qb-correction-tds-property" },
-          { title: "Multiple Buyers/Sellers", href: "/tds-tcs/tds-on-property-multiple-buyers-sellers" },
+          {
+            title: "Multiple Buyers/Sellers",
+            href: "/tds-tcs/tds-on-property-multiple-buyers-sellers",
+          },
         ],
       },
       {
@@ -256,14 +265,38 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Accounting & Outsourcing",
         href: "/accounting-audit-services/complete-accounting-services",
         items: [
-          { title: "Startup Outsourcing", href: "/accounting-audit-services/startup-outsourcing-services" },
-          { title: "Small Business", href: "/accounting-audit-services/small-business-accounting-tax-services" },
-          { title: "Daily E-Invoicing / E-way", href: "/accounting-audit-services/daily-einvoicing-eway-bill-services" },
-          { title: "Complete Accounting", href: "/accounting-audit-services/complete-accounting-services" },
-          { title: "Accounting Review", href: "/accounting-audit-services/accounting-review-visits-services" },
-          { title: "Accounting for Audit", href: "/accounting-audit-services/company-audit-services" },
-          { title: "Accounting for ITR", href: "/accounting-audit-services/accounting-for-itr-filing" },
-          { title: "Personal Accounting", href: "/accounting-audit-services/personal-accounting-services" },
+          {
+            title: "Startup Outsourcing",
+            href: "/accounting-audit-services/startup-outsourcing-services",
+          },
+          {
+            title: "Small Business",
+            href: "/accounting-audit-services/small-business-accounting-tax-services",
+          },
+          {
+            title: "Daily E-Invoicing / E-way",
+            href: "/accounting-audit-services/daily-einvoicing-eway-bill-services",
+          },
+          {
+            title: "Complete Accounting",
+            href: "/accounting-audit-services/complete-accounting-services",
+          },
+          {
+            title: "Accounting Review",
+            href: "/accounting-audit-services/accounting-review-visits-services",
+          },
+          {
+            title: "Accounting for Audit",
+            href: "/accounting-audit-services/company-audit-services",
+          },
+          {
+            title: "Accounting for ITR",
+            href: "/accounting-audit-services/accounting-for-itr-filing",
+          },
+          {
+            title: "Personal Accounting",
+            href: "/accounting-audit-services/personal-accounting-services",
+          },
         ],
       },
       {
@@ -271,10 +304,19 @@ export const HEADER_MENU: NavEntry[] = [
         href: "/accounting-audit-services/balance-sheet-preparation-services",
         items: [
           { title: "P&L", href: "/accounting-audit-services/profit-loss-statement-services" },
-          { title: "ITR Balance Sheet", href: "/accounting-audit-services/itr-balance-sheet-preparation-services" },
+          {
+            title: "ITR Balance Sheet",
+            href: "/accounting-audit-services/itr-balance-sheet-preparation-services",
+          },
           { title: "True Copy", href: "/accounting-audit-services/ca-certified-itr-copy-services" },
-          { title: "LLP Balance Sheet", href: "/accounting-audit-services/llp-balance-sheet-form-8-services" },
-          { title: "Company Financials", href: "/accounting-audit-services/company-financial-statements" },
+          {
+            title: "LLP Balance Sheet",
+            href: "/accounting-audit-services/llp-balance-sheet-form-8-services",
+          },
+          {
+            title: "Company Financials",
+            href: "/accounting-audit-services/company-financial-statements",
+          },
         ],
       },
     ],
@@ -287,7 +329,10 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Bank Loan Documents",
         href: "/bank-loan",
         items: [
-          { title: "True Copy BS & PNL", href: "/bank-loan/true-copy-itr-balance-sheet-pnl-bank-loan" },
+          {
+            title: "True Copy BS & PNL",
+            href: "/bank-loan/true-copy-itr-balance-sheet-pnl-bank-loan",
+          },
           { title: "CMA Data", href: "/bank-loan/cma-data-bank-loan" },
           { title: "Provisional Balance Sheet", href: "/bank-loan/provisional-balance-sheet" },
           { title: "3-Year Balance Sheet", href: "/bank-loan/three-year-balance-sheet" },
@@ -380,49 +425,64 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Business Setup",
         href: "/registrations",
         items: [
-          { title: "Sole Proprietorship", href: "/registrations/sole-proprietorship-registration" },
-          { title: "Partnership Firm", href: "/registrations/partnership-firm-registration" },
-          { title: "Shop & Establishment", href: "/registrations/shop-establishment-registration" },
+          { title: "Business Setup Services", href: "/business-setup-services" },
+          { title: "Business Registration & Licenses", href: "/business-registration-licenses" },
+          { title: "Digital Business Services", href: "/digital-business-services" },
+          { title: "Partnership Firm", href: "/partnership-firm-registration-services" },
+          { title: "MSME / Udyam", href: "/msme-udyam-registration-services" },
+          { title: "Sole Proprietorship", href: "/sole-proprietorship-registration-services" },
+          { title: "Shop & Establishment", href: "/shop-and-establishment-registration-services" },
         ],
       },
       {
         title: "Tax Registrations",
         href: "/registrations",
         items: [
-          { title: "Professional Tax", href: "/registrations/professional-tax-registration" },
-          { title: "ESIC & PF", href: "/registrations" },
+          { title: "Tax Registration Services", href: "/tax-registration-services" },
+          { title: "Professional Tax", href: "/professional-tax-registration-services" },
+          { title: "ESIC & PF", href: "/esic-pf-registration-services" },
         ],
       },
       {
         title: "Licenses",
         href: "/registrations",
         items: [
-          { title: "FSSAI", href: "/registrations" },
-          { title: "Import Export Code", href: "/registrations" },
+          { title: "FSSAI", href: "/fssai-food-license-registration-services" },
+          { title: "Import Export Code", href: "/import-export-code-iec-registration-services" },
         ],
       },
       {
         title: "Digital",
         href: "/registrations",
         items: [
-          { title: "Digital Signature (All types)", href: "/registrations" },
+          { title: "Digital Business Services", href: "/digital-business-services" },
+          {
+            title: "Digital Signature Certificate (DSC)",
+            href: "/digital-signature-dsc-registration-services",
+          },
         ],
       },
       {
         title: "Startup / NGO",
         href: "/registrations/startup-ngo-registration",
         items: [
-          { title: "Startup India DPIIT", href: "/registrations/startup-india-dpiit-registration" },
-          { title: "Tax Holiday 80IAC", href: "/registrations/tax-holiday-section-80iac" },
-          { title: "80G & 12AA", href: "/registrations" },
+          { title: "Startup & NGO Registration", href: "/startup-ngo-registration-services" },
+          {
+            title: "Startup Grant & Loan Assistance",
+            href: "/startup-grant-loan-assistance-services",
+          },
+          {
+            title: "Startup India DPIIT",
+            href: "/startup-india-dpiit-registration-services",
+          },
+          { title: "Tax Holiday 80IAC", href: "/tax-holiday-section-80iac-services" },
+          { title: "80G & 12AA", href: "/80g-12aa-registration-services" },
         ],
       },
       {
         title: "Others",
         href: "/registrations",
-        items: [
-          { title: "HUF Creation", href: "/registrations" },
-        ],
+        items: [{ title: "HUF Creation", href: "/huf-formation-registration-services" }],
       },
     ],
   },

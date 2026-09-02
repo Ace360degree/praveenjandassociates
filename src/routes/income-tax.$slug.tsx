@@ -1,8 +1,18 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  ArrowRight, CheckCircle2, MessageCircle, AlertTriangle, FileText,
-  Sparkles, ChevronDown, ShieldCheck, Phone, Star, BadgeCheck, ChevronRight,
+  ArrowRight,
+  CheckCircle2,
+  MessageCircle,
+  AlertTriangle,
+  FileText,
+  Sparkles,
+  ChevronDown,
+  ShieldCheck,
+  Phone,
+  Star,
+  BadgeCheck,
+  ChevronRight,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
@@ -10,6 +20,9 @@ import { ITR_SERVICES, getItrServiceBySlug } from "@/data/incomeTaxServices";
 
 export const Route = createFileRoute("/income-tax/$slug")({
   loader: ({ params }) => {
+    if (params.slug === "revised-rectification") {
+      throw redirect({ to: "/income-tax/$slug", params: { slug: "revised-itr-filing-section-139-5" } });
+    }
     const service = getItrServiceBySlug(params.slug);
     if (!service) throw notFound();
     return service;
@@ -58,8 +71,13 @@ export const Route = createFileRoute("/income-tax/$slug")({
       <Header />
       <main className="flex-1 container mx-auto px-4 py-24 text-center">
         <h1 className="font-display text-4xl font-bold">Service not found</h1>
-        <p className="text-muted-foreground mt-3">Looks like this Income Tax service page doesn't exist.</p>
-        <Link to="/income-tax" className="inline-flex mt-6 items-center gap-2 text-brand font-semibold">
+        <p className="text-muted-foreground mt-3">
+          Looks like this Income Tax service page doesn't exist.
+        </p>
+        <Link
+          to="/income-tax"
+          className="inline-flex mt-6 items-center gap-2 text-brand font-semibold"
+        >
           <ArrowRight className="h-4 w-4" /> Back to Income Tax services
         </Link>
       </main>
@@ -70,7 +88,9 @@ export const Route = createFileRoute("/income-tax/$slug")({
     <div className="container mx-auto px-4 py-24 text-center">
       <h1 className="font-display text-3xl font-bold">Something went wrong</h1>
       <p className="text-muted-foreground mt-2">{error.message}</p>
-      <button onClick={reset} className="mt-4 rounded-lg bg-brand text-white px-4 py-2">Try again</button>
+      <button onClick={reset} className="mt-4 rounded-lg bg-brand text-white px-4 py-2">
+        Try again
+      </button>
     </div>
   ),
   component: ItrServicePage,
@@ -87,13 +107,18 @@ function ItrServicePage() {
         <Problems items={s.problems} />
         <WhatIs whatIs={s.whatIs} />
         <WhoFor items={s.whoFor} />
-        <Benefits items={s.benefits} important={s.important} />
+        <Benefits
+          title={s.benefitsHeading ?? "Benefits"}
+          items={s.benefits}
+          important={s.important}
+        />
         <Process steps={s.process} />
         <Documents items={s.documents} />
-        <Trust />
+        <Trust s={s} />
         <FAQ items={s.faqs} />
-        <FinalCTA s={s} />
+        <MoreAlignment s={s} />
         <RelatedServices currentSlug={s.slug} />
+        <FinalCTA s={s} />
       </main>
       <Footer />
       <FloatingWhatsApp />
@@ -106,9 +131,17 @@ function Breadcrumbs({ title }: { title: string }) {
   return (
     <nav className="border-b bg-muted/30" aria-label="Breadcrumb">
       <ol className="container mx-auto px-4 py-3 text-sm flex items-center gap-2 text-muted-foreground flex-wrap">
-        <li><Link to="/" className="hover:text-brand">Home</Link></li>
+        <li>
+          <Link to="/" className="hover:text-brand">
+            Home
+          </Link>
+        </li>
         <ChevronRight className="h-3 w-3" />
-        <li><Link to="/income-tax" className="hover:text-brand">Income Tax</Link></li>
+        <li>
+          <Link to="/income-tax" className="hover:text-brand">
+            Income Tax
+          </Link>
+        </li>
         <ChevronRight className="h-3 w-3" />
         <li className="text-ink font-medium">{title}</li>
       </ol>
@@ -123,31 +156,46 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> })
       <div className="container mx-auto px-4 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center relative">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
-            <Sparkles className="h-3.5 w-3.5" /> Income Tax · {s.title}
+            <Sparkles className="h-3.5 w-3.5" /> Income Tax
           </span>
-          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">{s.h1}</h1>
+          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">
+            {s.h1}
+          </h1>
           <p className="mt-3 text-lg text-muted-foreground">{s.heroLead}</p>
           <p className="mt-2 text-muted-foreground">{s.heroSub}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
-              {s.primaryCta} <ArrowRight className="h-4 w-4" />
+            <a
+              href="#lead"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all"
+            >
+              {s.heroFormCta ?? s.primaryCta} <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
+            <a
+              href="https://wa.me/918169887643"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all"
+            >
               <MessageCircle className="h-4 w-4" /> WhatsApp CA
             </a>
           </div>
-          <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+                    <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+              ))}
               <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
-            <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
-            <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Online</span>
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified
+            </span>
+            <span className="flex items-center gap-1">
+              <BadgeCheck className="h-4 w-4 text-brand" /> 100% Online
+            </span>
           </div>
         </div>
         <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
-          <h3 className="font-display text-xl font-bold text-ink">Talk to a CA — free callback</h3>
-          <p className="text-sm text-muted-foreground mt-1">Share details, our CA will connect within 30 mins.</p>
+          <h3 className="font-display text-xl font-bold text-ink">Talk to a CA</h3>
           <form
             className="mt-5 space-y-3"
             onSubmit={(e) => {
@@ -156,11 +204,34 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> })
               window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
             }}
           >
-            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <button type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
-              {s.primaryCta} <ArrowRight className="h-4 w-4" />
+            <input
+              required
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              placeholder="Full Name"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+            />
+            <input
+              required
+              type="tel"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              placeholder="Mobile Number"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+            />
+            <input
+              required
+              type="email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              placeholder="Email"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+            />
+            <button
+              type="submit"
+              className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2"
+            >
+              {s.heroFormCta ?? s.primaryCta} <ArrowRight className="h-4 w-4" />
             </button>
             <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
           </form>
@@ -174,11 +245,16 @@ function Problems({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Common Problems Taxpayers Face</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Common Problems Taxpayers Face
+        </h2>
         <p className="text-center text-muted-foreground mt-2">Sound familiar? You're not alone.</p>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((p) => (
-            <div key={p} className="flex gap-3 p-5 rounded-xl border bg-red-50/40 hover:bg-red-50 transition-colors">
+            <div
+              key={p}
+              className="flex gap-3 p-5 rounded-xl border bg-red-50/40 hover:bg-red-50 transition-colors"
+            >
               <AlertTriangle className="h-5 w-5 text-brand shrink-0 mt-0.5" />
               <p className="text-sm text-ink">{p}</p>
             </div>
@@ -204,7 +280,8 @@ function WhatIs({ whatIs }: { whatIs: { heading: string; points: string[]; note?
         </ul>
         {whatIs.note && (
           <div className="mt-5 rounded-xl bg-brand/5 border border-brand/20 p-4 text-sm text-ink">
-            <span className="font-semibold text-brand">Note: </span>{whatIs.note}
+            <span className="font-semibold text-brand">Note: </span>
+            {whatIs.note}
           </div>
         )}
       </div>
@@ -216,10 +293,15 @@ function WhoFor({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Who Should Use This Service?</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Who Should Use This Service?
+        </h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((w) => (
-            <div key={w} className="p-5 rounded-xl border hover:border-brand/40 hover:shadow-md transition-all bg-white">
+            <div
+              key={w}
+              className="p-5 rounded-xl border hover:border-brand/40 hover:shadow-md transition-all bg-white"
+            >
               <div className="h-9 w-9 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-3">
                 <BadgeCheck className="h-5 w-5" />
               </div>
@@ -232,13 +314,21 @@ function WhoFor({ items }: { items: string[] }) {
   );
 }
 
-function Benefits({ items, important }: { items: string[]; important: string[] }) {
+function Benefits({
+  title,
+  items,
+  important,
+}: {
+  title: string;
+  items: string[];
+  important: string[];
+}) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 max-w-5xl">
         <div className="bg-white rounded-2xl p-6 lg:p-8 border shadow-sm">
           <h3 className="font-display text-xl font-bold text-ink flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-brand" /> Benefits
+            <Sparkles className="h-5 w-5 text-brand" /> {title}
           </h3>
           <ul className="mt-4 space-y-2.5">
             {items.map((b) => (
@@ -271,12 +361,19 @@ function Process({ steps }: { steps: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Our Process</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Our Process
+        </h2>
         <p className="text-center text-muted-foreground mt-2">Simple, transparent, expert-led.</p>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {steps.map((step, i) => (
-            <div key={step} className="relative p-5 rounded-xl border bg-gradient-to-br from-white to-brand/5 hover:shadow-lg transition-all">
-              <div className="h-9 w-9 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm shadow-md shadow-brand/30">{i + 1}</div>
+            <div
+              key={step}
+              className="relative p-5 rounded-xl border bg-gradient-to-br from-white to-brand/5 hover:shadow-lg transition-all"
+            >
+              <div className="h-9 w-9 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm shadow-md shadow-brand/30">
+                {i + 1}
+              </div>
               <p className="mt-3 text-sm font-medium text-ink">{step}</p>
             </div>
           ))}
@@ -290,11 +387,18 @@ function Documents({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Documents Required</h2>
-        <p className="text-center text-muted-foreground mt-2">We'll guide you step-by-step on documentation.</p>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Documents Required
+        </h2>
+        <p className="text-center text-muted-foreground mt-2">
+          We'll guide you step-by-step on documentation.
+        </p>
         <div className="mt-8 grid sm:grid-cols-2 gap-3">
           {items.map((d) => (
-            <div key={d} className="flex gap-3 p-4 rounded-xl bg-white border hover:border-brand/40 transition-colors">
+            <div
+              key={d}
+              className="flex gap-3 p-4 rounded-xl bg-white border hover:border-brand/40 transition-colors"
+            >
               <FileText className="h-5 w-5 text-brand shrink-0" />
               <span className="text-sm text-ink">{d}</span>
             </div>
@@ -305,23 +409,31 @@ function Documents({ items }: { items: string[] }) {
   );
 }
 
-function Trust() {
-  const reviews = [
-    "Filed my ITR in two days — accurate and stress-free.",
-    "Got my refund quickly. Excellent CA guidance.",
-    "Tax notice resolved smoothly. Highly recommended.",
-  ];
+function Trust({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }) {
+  const reviews = s.trust ?? [];
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Trusted by Individuals & Businesses</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">
+          {s.trustHeading ?? "Trusted by Clients"}
+        </h2>
+        <p className="mt-2 text-muted-foreground">{s.trustSubtitle ?? "4.8/5 Rating on Google"}</p>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
           <span className="ml-2 font-semibold">5/5 on Google</span>
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+          ))}
+          <span className="ml-2 font-semibold">4.8/5</span>
         </div>
         <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (
-            <blockquote key={r} className="p-5 rounded-xl border bg-muted/30 text-sm italic text-ink">"{r}"</blockquote>
+            <blockquote
+              key={r}
+              className="p-5 rounded-xl border bg-muted/30 text-sm italic text-ink"
+            >
+              "{r}"
+            </blockquote>
           ))}
         </div>
       </div>
@@ -334,7 +446,9 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Frequently Asked Questions</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Frequently Asked Questions
+        </h2>
         <div className="mt-8 space-y-3">
           {items.map((f, i) => (
             <div key={f.q} className="rounded-xl border bg-white overflow-hidden">
@@ -343,11 +457,11 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
                 className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-muted/30 transition-colors"
               >
                 <span className="font-semibold text-ink">{f.q}</span>
-                <ChevronDown className={`h-5 w-5 text-brand shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`h-5 w-5 text-brand shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`}
+                />
               </button>
-              {open === i && (
-                <div className="px-5 pb-5 text-sm text-muted-foreground">{f.a}</div>
-              )}
+              {open === i && <div className="px-5 pb-5 text-sm text-muted-foreground">{f.a}</div>}
             </div>
           ))}
         </div>
@@ -356,18 +470,60 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
+function MoreAlignment({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }) {
+  if (!s.more?.length) return null;
+  return (
+    <section className="py-14 bg-white">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="rounded-3xl border bg-muted/30 p-6 lg:p-8">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+            {s.moreHeading ?? "More Information"}
+          </h2>
+          {s.moreLead && <p className="text-center text-muted-foreground mt-2">{s.moreLead}</p>}
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {s.more.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center rounded-full border bg-white px-4 py-2 text-sm font-medium text-ink shadow-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 function FinalCTA({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }) {
   return (
-    <section className="py-16 bg-gradient-to-br from-brand to-brand/80 text-white">
-      <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Ready to file with confidence?</h2>
-        <p className="mt-3 text-white/90">Expert CA filing, accurate computation, full compliance — talk to us today.</p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
-            {s.primaryCta} <ArrowRight className="h-4 w-4" />
+    <section className="relative overflow-hidden bg-[#d81f26] py-18 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_35%)]" />
+      <div className="container mx-auto px-4 relative max-w-4xl text-center">
+        <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold shadow-sm">
+          <ShieldCheck className="h-4 w-4" /> Limited consultation slots
+        </span>
+        <h2 className="mt-6 font-display text-3xl md:text-5xl font-bold leading-tight">
+          {s.finalCtaTitle ?? "Need help with your income tax notice reply?"}
+        </h2>
+        <p className="mt-4 text-lg md:text-xl text-white/95">
+          {s.finalCtaLead ?? "Get expert CA support and draft your reply professionally."}
+        </p>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="#lead"
+            className="inline-flex items-center gap-2 rounded-full bg-white text-[#d81f26] px-6 py-3.5 font-semibold shadow-xl shadow-black/10 hover:scale-[1.02] transition-transform"
+          >
+            {s.finalCtaPrimary ?? s.primaryCta} <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
-            <Phone className="h-4 w-4" /> Call CA Now
+          <a
+            href="https://wa.me/918169887643"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 font-semibold text-white shadow-xl shadow-black/10 hover:scale-[1.02] transition-transform"
+          >
+            <MessageCircle className="h-4 w-4" />{" "}
+            {s.finalCtaSecondary ?? "Chat with CA on WhatsApp"}
           </a>
         </div>
       </div>
@@ -380,7 +536,9 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Explore More Income Tax Services</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+          Explore More Income Tax Services
+        </h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {related.map((r) => (
             <Link
@@ -389,16 +547,22 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
               params={{ slug: r.slug }}
               className="group p-5 rounded-xl border hover:border-brand/40 hover:shadow-lg transition-all bg-white"
             >
-              <h3 className="font-display font-bold text-ink group-hover:text-brand transition-colors">{r.title}</h3>
+              <h3 className="font-display font-bold text-ink group-hover:text-brand transition-colors">
+                {r.title}
+              </h3>
               <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{r.heroLead}</p>
               <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand">
-                Learn more <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                Learn more{" "}
+                <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           ))}
         </div>
         <div className="text-center mt-8">
-          <Link to="/income-tax" className="inline-flex items-center gap-2 text-brand font-semibold hover:underline">
+          <Link
+            to="/income-tax"
+            className="inline-flex items-center gap-2 text-brand font-semibold hover:underline"
+          >
             View all Income Tax services <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -410,12 +574,19 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
 function StickyMobileCTA({ cta }: { cta: string }) {
   return (
     <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t shadow-2xl p-3 flex gap-2">
-      <a href="tel:+918169887643" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm">
+      <a
+        href="tel:+918169887643"
+        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm"
+      >
         <Phone className="h-4 w-4" /> Call
       </a>
-      <a href="#lead" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30">
+      <a
+        href="#lead"
+        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30"
+      >
         {cta} <ArrowRight className="h-4 w-4" />
       </a>
     </div>
   );
 }
+

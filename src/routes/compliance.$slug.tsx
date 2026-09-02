@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight, CheckCircle2, ChevronDown, ChevronRight, MessageCircle, Phone,
-  Sparkles, Star, ShieldCheck, AlertCircle, Users, ClipboardList,
+  Sparkles, Star, ShieldCheck, AlertCircle, Users, ClipboardList, ClipboardCheck,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
@@ -84,7 +84,7 @@ function BundlePage() {
               <p className="mt-2 text-muted-foreground">{b.heroLead}</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="#bundles" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
-                  View Bundles <ArrowRight className="h-4 w-4" />
+                  View {b.entity} Packages <ArrowRight className="h-4 w-4" />
                 </a>
                 <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
                   <MessageCircle className="h-4 w-4" /> WhatsApp CA
@@ -137,7 +137,7 @@ function BundlePage() {
         {/* Bundles */}
         <section id="bundles" className="py-14 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Our {b.entity} Bundles</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Our {b.entity} Service Packages</h2>
             <p className="text-center text-muted-foreground mt-2">Pick a starting point — final scope &amp; quote tailored to your business.</p>
             <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {b.packages.map((p, idx) => (
@@ -191,12 +191,39 @@ function BundlePage() {
           </div>
         </section>
 
+        {b.whyChoose?.length ? (
+          <section className="py-14 bg-white">
+            <div className="container mx-auto px-4 max-w-5xl grid lg:grid-cols-2 gap-6">
+              <div className="p-6 rounded-2xl bg-white border shadow-sm">
+                <div className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-brand" /><h3 className="font-display font-bold text-ink">Why Choose Our Packages</h3></div>
+                <ul className="mt-4 space-y-2">
+                  {b.whyChoose.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />{p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-6 rounded-2xl bg-muted/30 border shadow-sm">
+                <div className="flex items-center gap-2"><Users className="h-5 w-5 text-brand" /><h3 className="font-display font-bold text-ink">How We Help You</h3></div>
+                <ul className="mt-4 space-y-2">
+                  {b.help.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="h-4 w-4 text-brand shrink-0 mt-0.5" />{p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {/* Process */}
         <section className="py-14 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">How It Works</h2>
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {["Choose bundle", "Share details", "Onboard with CA team", "We manage filings", "You focus on growth"].map((s, i) => (
+              {(b.steps ?? ["Choose bundle", "Share details", "Onboard with CA team", "We manage filings", "You focus on growth"]).map((s, i) => (
                 <div key={s} className="p-5 rounded-xl border bg-gradient-to-br from-white to-brand/5">
                   <div className="h-9 w-9 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm shadow-md shadow-brand/30">{i + 1}</div>
                   <ClipboardList className="h-5 w-5 text-brand mt-3" />
@@ -206,6 +233,39 @@ function BundlePage() {
             </div>
           </div>
         </section>
+
+        {b.trust?.length ? (
+          <section className="py-14 bg-muted/30">
+            <div className="container mx-auto px-4 max-w-5xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+              <aside className="rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
+                    <Star className="h-6 w-6 fill-current" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-brand">Trust Section</p>
+                    <h2 className="font-display text-2xl font-bold text-ink">Clients trust us for proprietorship support</h2>
+                  </div>
+                </div>
+                <div className="mt-6 space-y-3">
+                  {b.trust.map((quote) => (
+                    <blockquote key={quote} className="rounded-2xl bg-brand/5 p-4 text-sm text-foreground/75">
+                      {quote}
+                    </blockquote>
+                  ))}
+                </div>
+              </aside>
+              <aside className="rounded-2xl border bg-ink p-6 md:p-8 shadow-sm text-white">
+                <p className="text-sm text-white/70">Client Rating</p>
+                <p className="mt-2 text-3xl font-bold">4.8/5</p>
+                <p className="mt-4 text-white/85">Affordable compliance support, GST guidance and tax help for small businesses.</p>
+                <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 font-semibold text-ink">
+                  <MessageCircle className="h-4 w-4" /> Consult a CA Today
+                </a>
+              </aside>
+            </div>
+          </section>
+        ) : null}
 
         {/* FAQ */}
         <section className="py-14 bg-muted/30">
@@ -228,21 +288,21 @@ function BundlePage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section id="lead" className="py-16 bg-gradient-to-br from-brand to-brand/80 text-white">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="font-display text-3xl md:text-4xl font-bold">Choose the Right Bundle for Your {b.entity}</h2>
-            <p className="mt-3 text-white/90">Simplify compliance with expert CA support — enquiry first, transparent scope.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
-                <MessageCircle className="h-4 w-4" /> WhatsApp CA
-              </a>
-              <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
-                <Phone className="h-4 w-4" /> Call CA Now
-              </a>
+        {b.more?.length ? (
+          <section className="py-12 bg-white">
+            <div className="container mx-auto px-4 max-w-5xl">
+              <h3 className="font-display text-xl font-bold text-ink text-center">{b.moreTitle ?? 'More for Proprietorship'}</h3>
+              <p className="text-center text-muted-foreground mt-2">Keywords and search phrases aligned with the page content.</p>
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                {b.more.map((item) => (
+                  <span key={item} className="rounded-full border bg-muted/30 px-4 py-2 text-sm text-foreground/75">
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : null}
 
         {/* Other bundles */}
         <section className="py-12 bg-white">
@@ -258,9 +318,33 @@ function BundlePage() {
             </div>
           </div>
         </section>
+
+        {/* Final CTA */}
+        <section id="lead" className="bg-brand py-8 sm:py-12 lg:py-14">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="rounded-[32px] px-6 py-10 sm:px-10 sm:py-14 text-center text-white shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]" style={{ backgroundImage: "linear-gradient(135deg, #db1f1f 0%, #d31919 48%, #b71212 100%)" }}>
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white/95">
+                <ClipboardCheck className="h-4 w-4" /> Limited consultation slots
+              </div>
+              <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Choose the Right Package for Your {b.entity}</h2>
+              <p className="mt-4 text-base sm:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">Simplify taxes and compliance with expert support.</p>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <a href="#bundles" className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 font-semibold text-brand shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5">
+                  View {b.entity} Packages <ArrowRight className="h-4 w-4" />
+                </a>
+                <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-white shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5">
+                  <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
       <FloatingWhatsApp />
     </div>
   );
 }
+
+

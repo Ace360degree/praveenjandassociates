@@ -10,11 +10,34 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as TaxRegistrationServicesRouteImport } from './routes/tax-registration-services'
+import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax-holiday-section-80iac-services'
+import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
+import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
+import { Route as StartupGrantLoanAssistanceServicesRouteImport } from './routes/startup-grant-loan-assistance-services'
+import { Route as SoleProprietorshipRegistrationServicesRouteImport } from './routes/sole-proprietorship-registration-services'
+import { Route as ShopAndEstablishmentRegistrationServicesRouteImport } from './routes/shop-and-establishment-registration-services'
+import { Route as ProfessionalTaxRegistrationServicesRouteImport } from './routes/professional-tax-registration-services'
+import { Route as PrivateLimitedCompanyRouteImport } from './routes/private-limited-company'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PartnershipFirmRegistrationServicesRouteImport } from './routes/partnership-firm-registration-services'
+import { Route as PartnershipFirmRouteImport } from './routes/partnership-firm'
+import { Route as OurFullPackagesServicesRouteImport } from './routes/our-full-packages-services'
+import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
+import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
+import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
+import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
+import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
+import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as DigitalSignatureDscRegistrationServicesRouteImport } from './routes/digital-signature-dsc-registration-services'
+import { Route as DigitalBusinessServicesRouteImport } from './routes/digital-business-services'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as CompanyProfileRouteImport } from './routes/company-profile'
 import { Route as CompanyPoliciesRouteImport } from './routes/company-policies'
+import { Route as BusinessSetupServicesRouteImport } from './routes/business-setup-services'
+import { Route as BusinessRegistrationLicensesRouteImport } from './routes/business-registration-licenses'
+import { Route as R80g12aaRegistrationServicesRouteImport } from './routes/80g-12aa-registration-services'
 import { Route as TdsTcsRouteRouteImport } from './routes/tds-tcs.route'
 import { Route as RegistrationsRouteRouteImport } from './routes/registrations.route'
 import { Route as McaRouteRouteImport } from './routes/mca.route'
@@ -52,14 +75,128 @@ const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   path: '/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TaxRegistrationServicesRoute = TaxRegistrationServicesRouteImport.update({
+  id: '/tax-registration-services',
+  path: '/tax-registration-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxHolidaySection80iacServicesRoute =
+  TaxHolidaySection80iacServicesRouteImport.update({
+    id: '/tax-holiday-section-80iac-services',
+    path: '/tax-holiday-section-80iac-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupNgoRegistrationServicesRoute =
+  StartupNgoRegistrationServicesRouteImport.update({
+    id: '/startup-ngo-registration-services',
+    path: '/startup-ngo-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupIndiaDpiitRegistrationServicesRoute =
+  StartupIndiaDpiitRegistrationServicesRouteImport.update({
+    id: '/startup-india-dpiit-registration-services',
+    path: '/startup-india-dpiit-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupGrantLoanAssistanceServicesRoute =
+  StartupGrantLoanAssistanceServicesRouteImport.update({
+    id: '/startup-grant-loan-assistance-services',
+    path: '/startup-grant-loan-assistance-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SoleProprietorshipRegistrationServicesRoute =
+  SoleProprietorshipRegistrationServicesRouteImport.update({
+    id: '/sole-proprietorship-registration-services',
+    path: '/sole-proprietorship-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ShopAndEstablishmentRegistrationServicesRoute =
+  ShopAndEstablishmentRegistrationServicesRouteImport.update({
+    id: '/shop-and-establishment-registration-services',
+    path: '/shop-and-establishment-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProfessionalTaxRegistrationServicesRoute =
+  ProfessionalTaxRegistrationServicesRouteImport.update({
+    id: '/professional-tax-registration-services',
+    path: '/professional-tax-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PrivateLimitedCompanyRoute = PrivateLimitedCompanyRouteImport.update({
+  id: '/private-limited-company',
+  path: '/private-limited-company',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   id: '/privacy-policy',
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnershipFirmRegistrationServicesRoute =
+  PartnershipFirmRegistrationServicesRouteImport.update({
+    id: '/partnership-firm-registration-services',
+    path: '/partnership-firm-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PartnershipFirmRoute = PartnershipFirmRouteImport.update({
+  id: '/partnership-firm',
+  path: '/partnership-firm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurFullPackagesServicesRoute = OurFullPackagesServicesRouteImport.update({
+  id: '/our-full-packages-services',
+  path: '/our-full-packages-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MsmeUdyamRegistrationServicesRoute =
+  MsmeUdyamRegistrationServicesRouteImport.update({
+    id: '/msme-udyam-registration-services',
+    path: '/msme-udyam-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LlpCompliancePackagesRoute = LlpCompliancePackagesRouteImport.update({
+  id: '/llp-compliance-packages',
+  path: '/llp-compliance-packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImportExportCodeIecRegistrationServicesRoute =
+  ImportExportCodeIecRegistrationServicesRouteImport.update({
+    id: '/import-export-code-iec-registration-services',
+    path: '/import-export-code-iec-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HufFormationRegistrationServicesRoute =
+  HufFormationRegistrationServicesRouteImport.update({
+    id: '/huf-formation-registration-services',
+    path: '/huf-formation-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FssaiFoodLicenseRegistrationServicesRoute =
+  FssaiFoodLicenseRegistrationServicesRouteImport.update({
+    id: '/fssai-food-license-registration-services',
+    path: '/fssai-food-license-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const EsicPfRegistrationServicesRoute =
+  EsicPfRegistrationServicesRouteImport.update({
+    id: '/esic-pf-registration-services',
+    path: '/esic-pf-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DigitalSignatureDscRegistrationServicesRoute =
+  DigitalSignatureDscRegistrationServicesRouteImport.update({
+    id: '/digital-signature-dsc-registration-services',
+    path: '/digital-signature-dsc-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DigitalBusinessServicesRoute = DigitalBusinessServicesRouteImport.update({
+  id: '/digital-business-services',
+  path: '/digital-business-services',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactUsRoute = ContactUsRouteImport.update({
@@ -77,6 +214,23 @@ const CompanyPoliciesRoute = CompanyPoliciesRouteImport.update({
   path: '/company-policies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BusinessSetupServicesRoute = BusinessSetupServicesRouteImport.update({
+  id: '/business-setup-services',
+  path: '/business-setup-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessRegistrationLicensesRoute =
+  BusinessRegistrationLicensesRouteImport.update({
+    id: '/business-registration-licenses',
+    path: '/business-registration-licenses',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const R80g12aaRegistrationServicesRoute =
+  R80g12aaRegistrationServicesRouteImport.update({
+    id: '/80g-12aa-registration-services',
+    path: '/80g-12aa-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TdsTcsRouteRoute = TdsTcsRouteRouteImport.update({
   id: '/tds-tcs',
   path: '/tds-tcs',
@@ -248,11 +402,34 @@ export interface FileRoutesByFullPath {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
+  '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
+  '/business-setup-services': typeof BusinessSetupServicesRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/digital-business-services': typeof DigitalBusinessServicesRoute
+  '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
+  '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/our-full-packages-services': typeof OurFullPackagesServicesRoute
+  '/partnership-firm': typeof PartnershipFirmRoute
+  '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
+  '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
+  '/startup-grant-loan-assistance-services': typeof StartupGrantLoanAssistanceServicesRoute
+  '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
+  '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
+  '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
+  '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
@@ -277,11 +454,34 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
+  '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
+  '/business-setup-services': typeof BusinessSetupServicesRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/digital-business-services': typeof DigitalBusinessServicesRoute
+  '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
+  '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/our-full-packages-services': typeof OurFullPackagesServicesRoute
+  '/partnership-firm': typeof PartnershipFirmRoute
+  '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
+  '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
+  '/startup-grant-loan-assistance-services': typeof StartupGrantLoanAssistanceServicesRoute
+  '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
+  '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
+  '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
+  '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
@@ -317,11 +517,34 @@ export interface FileRoutesById {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
+  '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
+  '/business-setup-services': typeof BusinessSetupServicesRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/contact-us': typeof ContactUsRoute
+  '/digital-business-services': typeof DigitalBusinessServicesRoute
+  '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
+  '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/our-full-packages-services': typeof OurFullPackagesServicesRoute
+  '/partnership-firm': typeof PartnershipFirmRoute
+  '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
+  '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
+  '/startup-grant-loan-assistance-services': typeof StartupGrantLoanAssistanceServicesRoute
+  '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
+  '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
+  '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
+  '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
@@ -358,11 +581,34 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/80g-12aa-registration-services'
+    | '/business-registration-licenses'
+    | '/business-setup-services'
     | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/digital-business-services'
+    | '/digital-signature-dsc-registration-services'
     | '/disclaimer'
+    | '/esic-pf-registration-services'
+    | '/fssai-food-license-registration-services'
+    | '/huf-formation-registration-services'
+    | '/import-export-code-iec-registration-services'
+    | '/llp-compliance-packages'
+    | '/msme-udyam-registration-services'
+    | '/our-full-packages-services'
+    | '/partnership-firm'
+    | '/partnership-firm-registration-services'
     | '/privacy-policy'
+    | '/private-limited-company'
+    | '/professional-tax-registration-services'
+    | '/shop-and-establishment-registration-services'
+    | '/sole-proprietorship-registration-services'
+    | '/startup-grant-loan-assistance-services'
+    | '/startup-india-dpiit-registration-services'
+    | '/startup-ngo-registration-services'
+    | '/tax-holiday-section-80iac-services'
+    | '/tax-registration-services'
     | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
@@ -387,11 +633,34 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/80g-12aa-registration-services'
+    | '/business-registration-licenses'
+    | '/business-setup-services'
     | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/digital-business-services'
+    | '/digital-signature-dsc-registration-services'
     | '/disclaimer'
+    | '/esic-pf-registration-services'
+    | '/fssai-food-license-registration-services'
+    | '/huf-formation-registration-services'
+    | '/import-export-code-iec-registration-services'
+    | '/llp-compliance-packages'
+    | '/msme-udyam-registration-services'
+    | '/our-full-packages-services'
+    | '/partnership-firm'
+    | '/partnership-firm-registration-services'
     | '/privacy-policy'
+    | '/private-limited-company'
+    | '/professional-tax-registration-services'
+    | '/shop-and-establishment-registration-services'
+    | '/sole-proprietorship-registration-services'
+    | '/startup-grant-loan-assistance-services'
+    | '/startup-india-dpiit-registration-services'
+    | '/startup-ngo-registration-services'
+    | '/tax-holiday-section-80iac-services'
+    | '/tax-registration-services'
     | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
@@ -426,11 +695,34 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/80g-12aa-registration-services'
+    | '/business-registration-licenses'
+    | '/business-setup-services'
     | '/company-policies'
     | '/company-profile'
     | '/contact-us'
+    | '/digital-business-services'
+    | '/digital-signature-dsc-registration-services'
     | '/disclaimer'
+    | '/esic-pf-registration-services'
+    | '/fssai-food-license-registration-services'
+    | '/huf-formation-registration-services'
+    | '/import-export-code-iec-registration-services'
+    | '/llp-compliance-packages'
+    | '/msme-udyam-registration-services'
+    | '/our-full-packages-services'
+    | '/partnership-firm'
+    | '/partnership-firm-registration-services'
     | '/privacy-policy'
+    | '/private-limited-company'
+    | '/professional-tax-registration-services'
+    | '/shop-and-establishment-registration-services'
+    | '/sole-proprietorship-registration-services'
+    | '/startup-grant-loan-assistance-services'
+    | '/startup-india-dpiit-registration-services'
+    | '/startup-ngo-registration-services'
+    | '/tax-holiday-section-80iac-services'
+    | '/tax-registration-services'
     | '/terms-and-conditions'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
@@ -466,11 +758,34 @@ export interface RootRouteChildren {
   McaRouteRoute: typeof McaRouteRouteWithChildren
   RegistrationsRouteRoute: typeof RegistrationsRouteRouteWithChildren
   TdsTcsRouteRoute: typeof TdsTcsRouteRouteWithChildren
+  R80g12aaRegistrationServicesRoute: typeof R80g12aaRegistrationServicesRoute
+  BusinessRegistrationLicensesRoute: typeof BusinessRegistrationLicensesRoute
+  BusinessSetupServicesRoute: typeof BusinessSetupServicesRoute
   CompanyPoliciesRoute: typeof CompanyPoliciesRoute
   CompanyProfileRoute: typeof CompanyProfileRoute
   ContactUsRoute: typeof ContactUsRoute
+  DigitalBusinessServicesRoute: typeof DigitalBusinessServicesRoute
+  DigitalSignatureDscRegistrationServicesRoute: typeof DigitalSignatureDscRegistrationServicesRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  EsicPfRegistrationServicesRoute: typeof EsicPfRegistrationServicesRoute
+  FssaiFoodLicenseRegistrationServicesRoute: typeof FssaiFoodLicenseRegistrationServicesRoute
+  HufFormationRegistrationServicesRoute: typeof HufFormationRegistrationServicesRoute
+  ImportExportCodeIecRegistrationServicesRoute: typeof ImportExportCodeIecRegistrationServicesRoute
+  LlpCompliancePackagesRoute: typeof LlpCompliancePackagesRoute
+  MsmeUdyamRegistrationServicesRoute: typeof MsmeUdyamRegistrationServicesRoute
+  OurFullPackagesServicesRoute: typeof OurFullPackagesServicesRoute
+  PartnershipFirmRoute: typeof PartnershipFirmRoute
+  PartnershipFirmRegistrationServicesRoute: typeof PartnershipFirmRegistrationServicesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  PrivateLimitedCompanyRoute: typeof PrivateLimitedCompanyRoute
+  ProfessionalTaxRegistrationServicesRoute: typeof ProfessionalTaxRegistrationServicesRoute
+  ShopAndEstablishmentRegistrationServicesRoute: typeof ShopAndEstablishmentRegistrationServicesRoute
+  SoleProprietorshipRegistrationServicesRoute: typeof SoleProprietorshipRegistrationServicesRoute
+  StartupGrantLoanAssistanceServicesRoute: typeof StartupGrantLoanAssistanceServicesRoute
+  StartupIndiaDpiitRegistrationServicesRoute: typeof StartupIndiaDpiitRegistrationServicesRoute
+  StartupNgoRegistrationServicesRoute: typeof StartupNgoRegistrationServicesRoute
+  TaxHolidaySection80iacServicesRoute: typeof TaxHolidaySection80iacServicesRoute
+  TaxRegistrationServicesRoute: typeof TaxRegistrationServicesRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
 }
 
@@ -483,6 +798,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tax-registration-services': {
+      id: '/tax-registration-services'
+      path: '/tax-registration-services'
+      fullPath: '/tax-registration-services'
+      preLoaderRoute: typeof TaxRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-holiday-section-80iac-services': {
+      id: '/tax-holiday-section-80iac-services'
+      path: '/tax-holiday-section-80iac-services'
+      fullPath: '/tax-holiday-section-80iac-services'
+      preLoaderRoute: typeof TaxHolidaySection80iacServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-ngo-registration-services': {
+      id: '/startup-ngo-registration-services'
+      path: '/startup-ngo-registration-services'
+      fullPath: '/startup-ngo-registration-services'
+      preLoaderRoute: typeof StartupNgoRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-india-dpiit-registration-services': {
+      id: '/startup-india-dpiit-registration-services'
+      path: '/startup-india-dpiit-registration-services'
+      fullPath: '/startup-india-dpiit-registration-services'
+      preLoaderRoute: typeof StartupIndiaDpiitRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-grant-loan-assistance-services': {
+      id: '/startup-grant-loan-assistance-services'
+      path: '/startup-grant-loan-assistance-services'
+      fullPath: '/startup-grant-loan-assistance-services'
+      preLoaderRoute: typeof StartupGrantLoanAssistanceServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sole-proprietorship-registration-services': {
+      id: '/sole-proprietorship-registration-services'
+      path: '/sole-proprietorship-registration-services'
+      fullPath: '/sole-proprietorship-registration-services'
+      preLoaderRoute: typeof SoleProprietorshipRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop-and-establishment-registration-services': {
+      id: '/shop-and-establishment-registration-services'
+      path: '/shop-and-establishment-registration-services'
+      fullPath: '/shop-and-establishment-registration-services'
+      preLoaderRoute: typeof ShopAndEstablishmentRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-tax-registration-services': {
+      id: '/professional-tax-registration-services'
+      path: '/professional-tax-registration-services'
+      fullPath: '/professional-tax-registration-services'
+      preLoaderRoute: typeof ProfessionalTaxRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/private-limited-company': {
+      id: '/private-limited-company'
+      path: '/private-limited-company'
+      fullPath: '/private-limited-company'
+      preLoaderRoute: typeof PrivateLimitedCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy-policy': {
       id: '/privacy-policy'
       path: '/privacy-policy'
@@ -490,11 +868,88 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partnership-firm-registration-services': {
+      id: '/partnership-firm-registration-services'
+      path: '/partnership-firm-registration-services'
+      fullPath: '/partnership-firm-registration-services'
+      preLoaderRoute: typeof PartnershipFirmRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnership-firm': {
+      id: '/partnership-firm'
+      path: '/partnership-firm'
+      fullPath: '/partnership-firm'
+      preLoaderRoute: typeof PartnershipFirmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-full-packages-services': {
+      id: '/our-full-packages-services'
+      path: '/our-full-packages-services'
+      fullPath: '/our-full-packages-services'
+      preLoaderRoute: typeof OurFullPackagesServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/msme-udyam-registration-services': {
+      id: '/msme-udyam-registration-services'
+      path: '/msme-udyam-registration-services'
+      fullPath: '/msme-udyam-registration-services'
+      preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-compliance-packages': {
+      id: '/llp-compliance-packages'
+      path: '/llp-compliance-packages'
+      fullPath: '/llp-compliance-packages'
+      preLoaderRoute: typeof LlpCompliancePackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/import-export-code-iec-registration-services': {
+      id: '/import-export-code-iec-registration-services'
+      path: '/import-export-code-iec-registration-services'
+      fullPath: '/import-export-code-iec-registration-services'
+      preLoaderRoute: typeof ImportExportCodeIecRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/huf-formation-registration-services': {
+      id: '/huf-formation-registration-services'
+      path: '/huf-formation-registration-services'
+      fullPath: '/huf-formation-registration-services'
+      preLoaderRoute: typeof HufFormationRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fssai-food-license-registration-services': {
+      id: '/fssai-food-license-registration-services'
+      path: '/fssai-food-license-registration-services'
+      fullPath: '/fssai-food-license-registration-services'
+      preLoaderRoute: typeof FssaiFoodLicenseRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esic-pf-registration-services': {
+      id: '/esic-pf-registration-services'
+      path: '/esic-pf-registration-services'
+      fullPath: '/esic-pf-registration-services'
+      preLoaderRoute: typeof EsicPfRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/disclaimer': {
       id: '/disclaimer'
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-signature-dsc-registration-services': {
+      id: '/digital-signature-dsc-registration-services'
+      path: '/digital-signature-dsc-registration-services'
+      fullPath: '/digital-signature-dsc-registration-services'
+      preLoaderRoute: typeof DigitalSignatureDscRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-business-services': {
+      id: '/digital-business-services'
+      path: '/digital-business-services'
+      fullPath: '/digital-business-services'
+      preLoaderRoute: typeof DigitalBusinessServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact-us': {
@@ -516,6 +971,27 @@ declare module '@tanstack/react-router' {
       path: '/company-policies'
       fullPath: '/company-policies'
       preLoaderRoute: typeof CompanyPoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-setup-services': {
+      id: '/business-setup-services'
+      path: '/business-setup-services'
+      fullPath: '/business-setup-services'
+      preLoaderRoute: typeof BusinessSetupServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-registration-licenses': {
+      id: '/business-registration-licenses'
+      path: '/business-registration-licenses'
+      fullPath: '/business-registration-licenses'
+      preLoaderRoute: typeof BusinessRegistrationLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/80g-12aa-registration-services': {
+      id: '/80g-12aa-registration-services'
+      path: '/80g-12aa-registration-services'
+      fullPath: '/80g-12aa-registration-services'
+      preLoaderRoute: typeof R80g12aaRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tds-tcs': {
@@ -891,11 +1367,43 @@ const rootRouteChildren: RootRouteChildren = {
   McaRouteRoute: McaRouteRouteWithChildren,
   RegistrationsRouteRoute: RegistrationsRouteRouteWithChildren,
   TdsTcsRouteRoute: TdsTcsRouteRouteWithChildren,
+  R80g12aaRegistrationServicesRoute: R80g12aaRegistrationServicesRoute,
+  BusinessRegistrationLicensesRoute: BusinessRegistrationLicensesRoute,
+  BusinessSetupServicesRoute: BusinessSetupServicesRoute,
   CompanyPoliciesRoute: CompanyPoliciesRoute,
   CompanyProfileRoute: CompanyProfileRoute,
   ContactUsRoute: ContactUsRoute,
+  DigitalBusinessServicesRoute: DigitalBusinessServicesRoute,
+  DigitalSignatureDscRegistrationServicesRoute:
+    DigitalSignatureDscRegistrationServicesRoute,
   DisclaimerRoute: DisclaimerRoute,
+  EsicPfRegistrationServicesRoute: EsicPfRegistrationServicesRoute,
+  FssaiFoodLicenseRegistrationServicesRoute:
+    FssaiFoodLicenseRegistrationServicesRoute,
+  HufFormationRegistrationServicesRoute: HufFormationRegistrationServicesRoute,
+  ImportExportCodeIecRegistrationServicesRoute:
+    ImportExportCodeIecRegistrationServicesRoute,
+  LlpCompliancePackagesRoute: LlpCompliancePackagesRoute,
+  MsmeUdyamRegistrationServicesRoute: MsmeUdyamRegistrationServicesRoute,
+  OurFullPackagesServicesRoute: OurFullPackagesServicesRoute,
+  PartnershipFirmRoute: PartnershipFirmRoute,
+  PartnershipFirmRegistrationServicesRoute:
+    PartnershipFirmRegistrationServicesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  PrivateLimitedCompanyRoute: PrivateLimitedCompanyRoute,
+  ProfessionalTaxRegistrationServicesRoute:
+    ProfessionalTaxRegistrationServicesRoute,
+  ShopAndEstablishmentRegistrationServicesRoute:
+    ShopAndEstablishmentRegistrationServicesRoute,
+  SoleProprietorshipRegistrationServicesRoute:
+    SoleProprietorshipRegistrationServicesRoute,
+  StartupGrantLoanAssistanceServicesRoute:
+    StartupGrantLoanAssistanceServicesRoute,
+  StartupIndiaDpiitRegistrationServicesRoute:
+    StartupIndiaDpiitRegistrationServicesRoute,
+  StartupNgoRegistrationServicesRoute: StartupNgoRegistrationServicesRoute,
+  TaxHolidaySection80iacServicesRoute: TaxHolidaySection80iacServicesRoute,
+  TaxRegistrationServicesRoute: TaxRegistrationServicesRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
 }
 export const routeTree = rootRouteImport
