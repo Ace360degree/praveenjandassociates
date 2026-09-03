@@ -110,7 +110,13 @@ export const HEADER_MENU: NavEntry[] = [
       {
         title: "Updated ITR (ITR-U)",
         href: "/income-tax/updated-itr-u",
-        items: [],
+        items: [
+          { title: "Updated & Past Year ITR", href: "/income-tax/updated-past-year-itr-filing-mumbai" },
+          { title: "Last 2 Years ITR Filing", href: "/income-tax/last-2-years-itr-filing-mumbai" },
+          { title: "Last 3 Years ITR Filing", href: "/income-tax/last-3-years-itr-filing-mumbai" },
+          { title: "Last 4 Years ITR Filing", href: "/income-tax/last-4-years-itr-filing-mumbai" },
+          { title: "Last 5 Years ITR Filing", href: "/income-tax/last-5-years-itr-filing-mumbai" },
+        ],
       },
     ],
   },
@@ -494,6 +500,8 @@ export const HEADER_MENU: NavEntry[] = [
     ],
   },
 ];
+
+
 
 
 

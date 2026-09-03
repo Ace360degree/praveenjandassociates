@@ -187,7 +187,7 @@ const IT_SERVICES = [
   {
     icon: Globe2,
     title: "Foreign Income Tax Filing",
-    sub: "Foreign income · DTAA · FTC",
+    sub: "Foreign income ï¿½ DTAA ï¿½ FTC",
     items: [
       "Global income disclosure",
       "DTAA / FTC support",
@@ -199,11 +199,51 @@ const IT_SERVICES = [
   },
   {
     icon: RefreshCw,
+    title: "Updated & Past Year ITR",
+    sub: "Belated, revised, ITR-U",
+    items: ["Belated returns", "Revised return", "Updated return (ITR-U)", "Past year correction"],
+    cta: "Fix Now",
+    slug: "updated-past-year-itr-filing-mumbai",
+  },
+  {
+    icon: RefreshCw,
     title: "Updated ITR (ITR-U)",
-    sub: "Fix Past 1Ã¢â‚¬â€œ4 Years",
+    sub: "Fix Past 1-4 Years",
     items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
     cta: "File Now",
     slug: "updated-itr-u",
+  },
+  {
+    icon: RefreshCw,
+    title: "Last 2 Years ITR Filing",
+    sub: "Pending returns Â· Past year filing",
+    items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
+    cta: "File Now",
+    slug: "last-2-years-itr-filing-mumbai",
+  },
+  {
+    icon: RefreshCw,
+    title: "Last 3 Years ITR Filing",
+    sub: "Pending returns · Past year filing",
+    items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
+    cta: "File Now",
+    slug: "last-3-years-itr-filing-mumbai",
+  },
+  {
+    icon: RefreshCw,
+    title: "Last 4 Years ITR Filing",
+    sub: "Pending returns · Past year filing",
+    items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
+    cta: "File Now",
+    slug: "last-4-years-itr-filing-mumbai",
+  },
+  {
+    icon: RefreshCw,
+    title: "Last 5 Years ITR Filing",
+    sub: "Pending returns · Past year filing",
+    items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
+    cta: "File Now",
+    slug: "last-5-years-itr-filing-mumbai",
   },
   {
     icon: FileSpreadsheet,
@@ -435,7 +475,8 @@ const MORE_TOPICS = [
   { icon: Briefcase, label: "Business ITR-3", slug: "business-itr-3" },
   { icon: Calculator, label: "ITR-4 Sugam", slug: "business-itr-4-presumptive" },
   { icon: TrendingUp, label: "Capital Gain ITR-2", slug: "capital-gain-itr-2" },
-  { icon: RefreshCw, label: "Updated ITR", slug: "updated-itr-u" },
+  { icon: RefreshCw, label: "Updated & Past Year ITR", slug: "updated-past-year-itr-filing-mumbai" },
+    { icon: RefreshCw, label: "Updated ITR", slug: "updated-itr-u" },
   { icon: Bell, label: "Income Tax Notice", slug: "income-tax-notice" },
   { icon: FileSpreadsheet, label: "Revised ITR", slug: "revised-itr-filing-section-139-5" },
   { icon: Gavel, label: "Appeal & Reply", slug: "appeal-reply" },
@@ -453,7 +494,12 @@ const SERVICE_ICON_MAP: Record<string, any> = {
   "business-itr-3": Calculator,
   "llp-partnership-firm-itr-5": Landmark,
   "foreign-income-tax-filing-mumbai": Globe2,
+  "updated-past-year-itr-filing-mumbai": RefreshCw,
   "updated-itr-u": RefreshCw,
+  "last-2-years-itr-filing-mumbai": RefreshCw,
+  "last-3-years-itr-filing-mumbai": RefreshCw,
+  "last-4-years-itr-filing-mumbai": RefreshCw,
+  "last-5-years-itr-filing-mumbai": RefreshCw,
   "revised-itr-filing-section-139-5": FileSpreadsheet,
   "rectification-of-itr-section-154": FileSpreadsheet,
   "defective-itr-notice-139-9": AlertTriangle,
@@ -1074,6 +1120,9 @@ function IncomeTaxPage() {
     </div>
   );
 }
+
+
+
 
 
 
