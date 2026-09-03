@@ -15,7 +15,6 @@ import {
   RefreshCw,
   Bell,
   Gavel,
-  IndianRupee,
   Globe2,
   Briefcase,
   Users,
@@ -26,7 +25,6 @@ import {
   Headphones,
   BadgeCheck,
   ClipboardCheck,
-  BookOpen,
   ChevronDown,
   Calculator,
   Landmark,
@@ -38,75 +36,108 @@ import praveen from "@/assets/praveen.jpg";
 import { ITR_SERVICES } from "@/data/incomeTaxServices";
 const FAQS = [
   {
-    q: "Mujhe kaunsa ITR form file karna chahiye?",
-    a: "Aapki income type pe depend karta hai — sirf salary/interest/rent (single property) hai toh ITR-1; capital gain / multiple properties par ITR-2; business / profession / F&O par ITR-3 / ITR-4. CA ek call par sahi form decide kar deta hai.",
+    q: "Which ITR form should I file?",
+    a: "The right form depends on your income profile. Salary, one house property, and interest income usually fit ITR-1. Capital gains, multiple house properties, foreign assets, or complex income may need ITR-2. Business, profession, F&O, or partnership income usually needs ITR-3 or ITR-4.",
   },
   {
-    q: "Kya pichle saal ka ITR file ho sakta hai?",
-    a: "Haan — Section 139(8A) ke under Updated Return (ITR-U) 4 assessment years tak file kar sakte ho, additional tax (25–70%) pay karke. Refund claim ITR-U mein allowed nahi.",
+    q: "Can I file a previous year return?",
+    a: "Yes. In eligible cases, an updated return can be filed for earlier assessment years with additional tax and the right disclosures. We help you check whether updated return, revised return, or another correction route is appropriate.",
   },
   {
-    q: "Notice aaya hai — kya karna chahiye?",
-    a: "Notice ka type (143(1), 142, 148, 148A) dekh ke time-bound reply karna mandatory hai. Hum end-to-end notice handling karte hain — reply drafting se hearing tak.",
+    q: "What if I received an income tax notice?",
+    a: "Do not ignore it. The notice type decides the response timeline and documents needed. We help with notices under sections 143(1), 142(1), 148, 148A, and related proceedings.",
   },
   {
-    q: "NRI ko bhi ITR file karna padta hai?",
-    a: "Agar India mein income (rent, interest, capital gain, business) > basic exemption hai, ya refund chahiye, toh haan. NRO TDS aksar zyada deduct hota hai — refund mil jaata hai.",
-  },
-  {
-    q: "Capital gain par tax kaise calculate hota hai?",
-    a: "Equity LTCG > ₹1.25L: 12.5%, STCG: 20%. Property LTCG: 12.5% (without indexation) / 20% (with indexation, pre-23 July 2024 purchase). Section 54 / 54EC / 54F exemption planning se tax bachta hai.",
-  },
-  {
-    q: "Refund kab tak aata hai?",
-    a: "ITR e-verify hone ke 15–45 din mein generally refund credit ho jaata hai. Bank account pre-validated hona zaroori. ITR-1 walon ke liye process tezi se hota hai.",
+    q: "Do you support NRI taxation?",
+    a: "Yes. We handle NRI cases involving rental income, interest income, capital gains, foreign salary, and disclosure requirements with DTAA support where applicable.",
   },
 ];
+const FORM_OPTIONS = [
+  "Salary Income ITR",
+  "Rent Income ITR",
+  "Business Income ITR",
+  "Capital Gains ITR",
+  "Income Tax Notice Reply",
+  "Updated / Revised ITR",
+];
+
 const PROBLEMS = [
   {
     icon: FileText,
-    title: "Confused About ITR Form",
-    text: "Salary, business, capital gain — kaunsa form sahi hai pata nahi.",
+    title: "Wrong ITR form",
+    text: "Choosing the wrong return form can lead to defects, mismatch, or notices.",
   },
   {
     icon: AlertTriangle,
-    title: "Wrong Filing",
-    text: "Galat form ya galat figures se 143(1) demand / defective notice.",
+    title: "Filing errors",
+    text: "Small mistakes in income, deductions, or disclosure can trigger tax demand.",
   },
   {
     icon: Coins,
-    title: "Missed Deductions",
-    text: "80C, 80D, HRA, NPS — eligible deductions miss ho jaate hain.",
+    title: "Missed deductions",
+    text: "80C, 80D, HRA, and NPS benefits often go unused without proper review.",
   },
   {
     icon: TrendingUp,
-    title: "Capital Gain Confusion",
-    text: "STCG vs LTCG, indexation, Section 54 — DIY se galti aam hai.",
+    title: "Capital gains confusion",
+    text: "Shares, mutual funds, and property gains need correct reporting and schedules.",
   },
   {
     icon: Globe2,
-    title: "Crypto & Foreign Income",
-    text: "VDA 30% flat, Schedule FA disclosure, DTAA relief — specialised area.",
+    title: "NRI and foreign income",
+    text: "Foreign income, foreign assets, and DTAA rules require careful disclosure.",
   },
   {
     icon: Bell,
-    title: "Late Filing Risk",
-    text: "Belated par penalty + interest + loss carry-forward khatam.",
+    title: "Delayed or revised filing",
+    text: "Late returns, revised returns, and updated returns need the right strategy.",
   },
 ];
 const IT_SERVICES = [
   {
     icon: Wallet,
-    title: "Simple ITR-1",
-    sub: "Salary · Rent · Interest · Dividend",
-    items: ["Salary income", "One house property", "Interest & dividend", "Pension"],
+    title: "Salary Income ITR (Sahaj)",
+    sub: "Form 16 · Salary · Deductions",
+    items: ["Form 16", "Salary income", "Deductions", "ITR-1 Sahaj"],
+    cta: "Know More",
+    slug: "salary-income-sahaj",
+  },
+  {
+    icon: Wallet,
+    title: "Rent Income ITR",
+    sub: "Rental income · One house property · Interest & dividend",
+    items: ["Rental income", "One house property", "Interest & dividend", "Salary + rent income"],
     cta: "Know More",
     slug: "simple-itr-1-salary",
   },
   {
+    icon: Users,
+    title: "Retired Person ITR",
+    sub: "Pension · Interest · One house property",
+    items: ["Pension income", "Bank interest", "Senior citizen deductions", "One house property"],
+    cta: "Know More",
+    slug: "retired-person-itr",
+  },
+  {
+    icon: Coins,
+    title: "Salary + Interest + Dividend ITR",
+    sub: "Salary · FD interest · Dividend",
+    items: ["Salary income", "FD / savings interest", "Dividend income", "ITR-1 Sahaj"],
+    cta: "Know More",
+    slug: "salary-interest-dividend-itr",
+  },
+  {
+    icon: Building2,
+    title: "Salary + Rent Income ITR",
+    sub: "Salary · HRA · Rental income",
+    items: ["Salary income", "HRA claim", "Rental income", "Home loan interest"],
+    cta: "Know More",
+    slug: "salary-rent-income-itr",
+  },
+  {
     icon: Briefcase,
     title: "Business ITR-4",
-    sub: "Presumptive — 44AD / 44ADA",
+    sub: "Presumptive â€” 44AD / 44ADA",
     items: ["Small business 44AD", "Professionals 44ADA", "Composition friendly"],
     cta: "Know More",
     slug: "business-itr-4-presumptive",
@@ -114,7 +145,7 @@ const IT_SERVICES = [
   {
     icon: TrendingUp,
     title: "Capital Gain ITR-2",
-    sub: "Shares · Mutual Funds · Property",
+    sub: "Shares Â· Mutual Funds Â· Property",
     items: ["Equity STCG / LTCG", "Mutual fund gains", "Property sale", "ESOP / RSU"],
     cta: "Know More",
     slug: "capital-gain-itr-2",
@@ -130,7 +161,7 @@ const IT_SERVICES = [
   {
     icon: Calculator,
     title: "Business ITR-3",
-    sub: "F&O · Intraday · Profession · Partner",
+    sub: "F&O Â· Intraday Â· Profession Â· Partner",
     items: [
       "F&O / derivatives",
       "Intraday trading",
@@ -143,7 +174,7 @@ const IT_SERVICES = [
   {
     icon: Building2,
     title: "LLP / Firm / Company",
-    sub: "ITR-5 · ITR-6 · Corporate Tax",
+    sub: "ITR-5 Â· ITR-6 Â· Corporate Tax",
     items: [
       "LLP & partnership firm",
       "Private Limited Company",
@@ -151,12 +182,12 @@ const IT_SERVICES = [
       "115BAA / 115BAB regime",
     ],
     cta: "Know More",
-    slug: "llp-firm-company-itr",
+    slug: "llp-partnership-firm-itr-5",
   },
   {
     icon: Globe2,
     title: "Special Income",
-    sub: "Crypto · NRI · Lottery · Foreign",
+    sub: "Crypto Â· NRI Â· Lottery Â· Foreign",
     items: [
       "Crypto / VDA (30%)",
       "NRI ITR & DTAA",
@@ -169,7 +200,7 @@ const IT_SERVICES = [
   {
     icon: RefreshCw,
     title: "Updated ITR (ITR-U)",
-    sub: "Fix Past 1–4 Years",
+    sub: "Fix Past 1â€“4 Years",
     items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
     cta: "File Now",
     slug: "updated-itr-u",
@@ -206,7 +237,7 @@ const IT_SERVICES = [
   {
     icon: Bell,
     title: "Income Tax Notice",
-    sub: "143(1) · 142 · 148 · 148A",
+    sub: "143(1) Â· 142 Â· 148 Â· 148A",
     items: [
       "143(1) intimation",
       "142 / 143(2) scrutiny",
@@ -219,7 +250,7 @@ const IT_SERVICES = [
   {
     icon: Gavel,
     title: "Appeal & Reply",
-    sub: "CIT(A) · ITAT · Hearing",
+    sub: "CIT(A) Â· ITAT Â· Hearing",
     items: ["First appeal CIT(A)", "ITAT appeal", "Stay applications", "Faceless representation"],
     cta: "Talk To CA",
     slug: "appeal-reply",
@@ -240,7 +271,7 @@ const IT_SERVICES = [
   {
     icon: Gavel,
     title: "Income Tax Appeal & Reply",
-    sub: "Form 35 · CIT(A) · ITAT",
+    sub: "Form 35 Â· CIT(A) Â· ITAT",
     items: ["Challenge assessment orders", "File Form 35", "ITAT escalation", "Dispute resolution"],
     cta: "File Appeal",
     slug: "income-tax-appeal-and-reply",
@@ -260,191 +291,204 @@ const IT_SERVICES = [
   },
 ];
 const SEGMENTS = [
-  { icon: Wallet, label: "Salaried Employees" },
-  { icon: Briefcase, label: "Freelancers" },
-  { icon: Headphones, label: "Consultants" },
+  { icon: Wallet, label: "Salaried Individuals" },
+  { icon: Briefcase, label: "Freelancers & Consultants" },
+  { icon: TrendingUp, label: "Traders (F&O / Intraday)" },
   { icon: Building2, label: "Business Owners" },
-  { icon: TrendingUp, label: "Stock Traders" },
-  { icon: Landmark, label: "LLPs" },
-  { icon: Building2, label: "Companies" },
-  { icon: Globe2, label: "NRIs" },
+  { icon: Landmark, label: "Partnership / LLP / Company" },
+  { icon: Globe2, label: "NRIs & Foreign Income" },
+  { icon: Users, label: "Retired Persons" },
+  { icon: Receipt, label: "Rent & Investment Income" },
 ];
 const WHY = [
   {
     icon: BadgeCheck,
-    title: "Experienced Chartered Accountants",
-    text: "Qualified CA team — every return reviewed by an expert.",
+    title: "Experienced Chartered Accountant",
+    text: "Every return is reviewed by a qualified professional before filing.",
   },
   {
     icon: ShieldCheck,
-    title: "Accurate Filing",
-    text: "AIS / 26AS / TIS reconciled — zero mismatch, zero stress.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Maximum Compliance",
-    text: "Old vs New regime, deductions, exemptions — everything optimised.",
-  },
-  {
-    icon: Bell,
-    title: "Notice Support",
-    text: "143(1) demand, 148A, scrutiny — full notice & appeal support.",
+    title: "Accurate and compliant",
+    text: "Income, deductions, AIS, and 26AS are checked carefully to reduce mismatch risk.",
   },
   {
     icon: Zap,
-    title: "Fast Turnaround",
-    text: "Quick filing — refund tracking included till credit.",
+    title: "Quick turnaround time",
+    text: "We keep the process fast, simple, and responsive from document collection to filing.",
+  },
+  {
+    icon: Bell,
+    title: "Notice support",
+    text: "Support continues after filing if you receive a notice, demand, or clarification request.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Tax planning included",
+    text: "We help identify deductions, exemptions, and the right tax regime where applicable.",
   },
   {
     icon: Headphones,
-    title: "Expert Guidance",
-    text: "Hinglish explanations, no jargon, transparent advice.",
+    title: "Clear communication",
+    text: "You get simple explanations, transparent guidance, and no confusing jargon.",
   },
 ];
 const INSIGHTS = [
   {
-    title: "ITR Filing Deadlines",
-    text: "31 July (non-audit) / 31 Oct (audit) / 30 Nov (TP). Belated par penalty + interest.",
+    title: "Choose the right ITR form",
+    text: "ITR-1, ITR-2, ITR-3, and ITR-4 cover different income profiles. Selecting the wrong one can delay processing.",
   },
   {
-    title: "Updated Return (ITR-U)",
-    text: "Past 4 AYs tak file ho sakta hai — additional tax 25–70%. Refund nahi milta.",
+    title: "Keep AIS and 26AS aligned",
+    text: "Mismatch between reported income and tax statements often leads to notices or demand adjustments.",
   },
   {
-    title: "Capital Gain Rates",
-    text: "Post 23 July 2024: Equity LTCG 12.5% (>₹1.25L), STCG 20%. Property LTCG 12.5%.",
+    title: "Handle capital gains properly",
+    text: "Shares, mutual funds, and property gains need correct treatment, exemption planning, and disclosure.",
   },
   {
-    title: "Notice Risk",
-    text: "AIS / 26AS mismatch, high-value transaction = scrutiny ya 148 reopening risk.",
+    title: "Watch deadlines carefully",
+    text: "Late filing can mean interest, penalties, and loss of certain carry-forward benefits.",
   },
   {
-    title: "Tax Planning",
-    text: "80C ₹1.5L, 80D, NPS 50K, home loan interest ₹2L — proper planning se tax save hota hai.",
+    title: "Updated and revised returns are different",
+    text: "A revised return corrects a filed return, while an updated return helps in eligible past year cases.",
   },
   {
-    title: "Refund Process",
-    text: "E-verification ke baad 15–45 din. Pre-validated bank account mandatory.",
+    title: "Refunds need validation",
+    text: "A pre-validated bank account and correct e-verification help refunds process faster.",
   },
 ];
 const STEPS = [
   {
     n: "01",
     title: "Share Documents",
-    text: "Form 16, broker statements, AIS — WhatsApp par bhejein.",
+    text: "Send PAN, Aadhaar, Form 16, bank statements, and any investment or capital gain details.",
   },
   {
     n: "02",
-    title: "Income Analysis",
-    text: "AIS / 26AS / TIS reconcile karke complete income picture banate hain.",
+    title: "Income Review",
+    text: "We analyze salary, rent, interest, business income, capital gains, and notices if any.",
   },
   {
     n: "03",
-    title: "Correct ITR Selection",
-    text: "ITR-1 to ITR-6 — sahi form aur regime (Old vs New) decide.",
+    title: "Choose the Right Form",
+    text: "ITR-1 to ITR-4 or other applicable return form is selected after a proper review.",
   },
   {
     n: "04",
-    title: "Expert Filing",
-    text: "Computation, deductions, schedules — CA review ke baad filing.",
+    title: "File with Accuracy",
+    text: "Deductions, schedules, and tax calculations are reviewed before the return is filed.",
   },
   {
     n: "05",
-    title: "Acknowledgement & Support",
-    text: "ITR-V, e-verification, refund tracking + post-filing support.",
+    title: "Ack and Support",
+    text: "We share the acknowledgement and stay available for e-verification, refund, or follow-up help.",
   },
 ];
 const DOC_PERSONAL = [
-  "PAN & Aadhaar",
-  "Form 16 (from employer)",
-  "Bank statement / passbook",
+  "PAN card",
+  "Aadhaar card",
+  "Form 16 or salary proof",
+  "Bank statements / passbook",
   "Investment proofs (80C, 80D, NPS)",
-  "Home loan / rent receipts",
 ];
 const DOC_BUSINESS = [
-  "Books of accounts / P&L",
-  "Capital gain statement (broker)",
-  "Foreign income & assets docs",
-  "GST returns (if registered)",
-  "Bank statements (all accounts)",
+  "Profit and loss statement",
+  "Capital gain statement",
+  "Rental income details",
+  "Foreign income or asset details",
+  "GST returns and books of accounts if applicable",
 ];
 const REVIEWS = [
   {
-    name: "Aniket Sharma",
-    role: "Salaried IT Professional",
-    text: "Form 16 share kiya, 2 din mein ITR filed + ₹38K refund. AIS mismatch bhi PJ&A ne sort kiya.",
+    name: "Rohan Mehta",
+    role: "Salaried Employee",
+    text: "The team filed my return quickly, explained every step, and made sure my deductions were properly covered.",
   },
   {
-    name: "Priya Mehta",
-    role: "Stock Trader (F&O)",
-    text: "F&O turnover, audit applicability — sab handle. ITR-3 filing super smooth. Year-on-year le rahi hu.",
+    name: "Anjali Verma",
+    role: "Freelancer",
+    text: "My professional income and ITR-3 filing were handled smoothly. Communication was clear from start to finish.",
   },
   {
-    name: "Rohit Khanna",
-    role: "NRI (Dubai)",
-    text: "India mein rental income aur capital gain — DTAA relief le ke refund mila. Highly professional team.",
+    name: "Imran Khan",
+    role: "NRI Taxpayer",
+    text: "Rental income and capital gains were managed properly, and the support team responded very fast.",
+  },
+  {
+    name: "Neha Shah",
+    role: "Business Owner",
+    text: "They helped me choose the right ITR and also guided me on future compliance. Very dependable team.",
+  },
+  {
+    name: "Vikram Joshi",
+    role: "Trader",
+    text: "F&O and intraday income can be tricky, but the filing was handled correctly and on time.",
   },
 ];
-const BLOGS = [
-  {
-    tag: "Income Tax",
-    title: "ITR Filing 2025: Complete Guide for Salaried Taxpayers",
-    color: "from-red-100 to-rose-50",
-  },
-  {
-    tag: "Capital Gain",
-    title: "New Capital Gain Rules After 23 July 2024 — Explained",
-    color: "from-amber-100 to-orange-50",
-  },
-  {
-    tag: "Updated ITR",
-    title: "ITR-U: How to File Updated Return for Past 4 Years",
-    color: "from-rose-100 to-red-50",
-  },
-  {
-    tag: "Notice",
-    title: "Got a 143(1) Intimation? Here's What to Do",
-    color: "from-red-100 to-rose-50",
-  },
-  {
-    tag: "NRI Tax",
-    title: "NRI ITR Filing in India: DTAA, Schedule FA & More",
-    color: "from-amber-100 to-orange-50",
-  },
-  {
-    tag: "Crypto",
-    title: "Crypto Tax in India: 30% Flat, 1% TDS & Disclosure",
-    color: "from-rose-100 to-red-50",
-  },
+const MORE_TOPICS = [
+  { icon: Wallet, label: "Salary Income (Sahaj)", slug: "salary-income-sahaj" },
+  { icon: Receipt, label: "Rent Income ITR", slug: "simple-itr-1-salary" },
+  { icon: Users, label: "Retired Person ITR", slug: "retired-person-itr" },
+  { icon: Coins, label: "Salary + Interest + Dividend", slug: "salary-interest-dividend-itr" },
+  { icon: Building2, label: "Salary + Rent Income", slug: "salary-rent-income-itr" },
+  { icon: Briefcase, label: "Business ITR-3", slug: "business-itr-3" },
+  { icon: Calculator, label: "ITR-4 Sugam", slug: "business-itr-4-presumptive" },
+  { icon: TrendingUp, label: "Capital Gain ITR-2", slug: "capital-gain-itr-2" },
+  { icon: RefreshCw, label: "Updated ITR", slug: "updated-itr-u" },
+  { icon: Bell, label: "Income Tax Notice", slug: "income-tax-notice" },
+  { icon: FileSpreadsheet, label: "Revised ITR", slug: "revised-itr-filing-section-139-5" },
+  { icon: Gavel, label: "Appeal & Reply", slug: "appeal-reply" },
 ];
-const FORM_OPTIONS = [
-  "Salary ITR",
-  "Business ITR",
-  "Capital Gain",
-  "Updated ITR",
-  "Notice",
-  "NRI ITR",
-  "Other",
-];
+
+const SERVICE_ICON_MAP: Record<string, any> = {
+  "salary-income-sahaj": Wallet,
+  "simple-itr-1-salary": Receipt,
+  "retired-person-itr": Users,
+  "salary-interest-dividend-itr": Coins,
+  "salary-rent-income-itr": Building2,
+  "business-itr-4-presumptive": Briefcase,
+  "capital-gain-itr-2": TrendingUp,
+  "shares-mutual-fund-gain-loss-itr-2": TrendingUp,
+  "business-itr-3": Calculator,
+  "llp-partnership-firm-itr-5": Landmark,
+  "special-income-crypto-nri": Globe2,
+  "updated-itr-u": RefreshCw,
+  "revised-itr-filing-section-139-5": FileSpreadsheet,
+  "rectification-of-itr-section-154": FileSpreadsheet,
+  "defective-itr-notice-139-9": AlertTriangle,
+  "income-tax-notice": Bell,
+  "appeal-reply": Gavel,
+  "drafting-reply-to-income-tax-notice": FileText,
+  "income-tax-appeal-and-reply": Gavel,
+  "appeal-and-hearing-income-tax": Gavel,
+};
+
 export const Route = createFileRoute("/income-tax/")({
   head: () => ({
     meta: [
-      { title: "Income Tax Filing Services in India — Expert CA Help | Praveen J & Associates" },
+      {
+        title:
+          "Income Tax Filing Services in Mumbai by Expert Chartered Accountant | Praveen J & Associates",
+      },
       {
         name: "description",
         content:
-          "Expert Chartered Accountant for Income Tax Return filing — Salary, Business, Capital Gain, F&O, NRI, Crypto, Updated ITR (ITR-U) & Notice handling. Pan India online.",
+          "Income tax filing services in Mumbai for salaried individuals, freelancers, businesses, capital gains, NRI income, updated returns, and tax notices by expert Chartered Accountants.",
       },
       {
         name: "keywords",
         content:
           "Income Tax Filing Services, ITR Filing, Income Tax Consultant, Chartered Accountant, Updated ITR, Income Tax Notice, Business ITR, Capital Gain Tax, NRI Tax Filing",
       },
-      { property: "og:title", content: "Income Tax Filing Services by Praveen J & Associates" },
+      {
+        property: "og:title",
+        content: "Income Tax Filing Services in Mumbai | Praveen J & Associates",
+      },
       {
         property: "og:description",
         content:
-          "ITR filing for salaried, business, capital gain, F&O, NRI & crypto. Updated ITR, notice handling, appeal — all under one CA roof.",
+          "Expert CA support for income tax filing, deductions, capital gains, business income, NRI cases, updated returns, and tax notice handling.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/income-tax" },
@@ -477,138 +521,102 @@ export const Route = createFileRoute("/income-tax/")({
   }),
   component: IncomeTaxPage,
 });
-function Eyebrow({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-brand px-3 py-1 text-xs font-semibold mb-3">
-      {" "}
-      <Sparkles className="h-3.5 w-3.5" /> {children}{" "}
-    </div>
-  );
-}
-function SectionTitle({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
-  return (
-    <div className="text-center max-w-3xl mx-auto mb-12">
-      {" "}
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}{" "}
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-        {title}
-      </h2>{" "}
-      {sub && <p className="mt-4 text-base sm:text-lg text-muted-foreground">{sub}</p>}{" "}
-    </div>
-  );
-}
+
 function ItHero() {
   const [submitted, setSubmitted] = useState(false);
+
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
-      {" "}
-      <div className="absolute top-20 -right-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />{" "}
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />{" "}
+      <div className="absolute top-20 -right-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
       <div className="container mx-auto px-4 pt-12 pb-16 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-10 items-center relative">
-        {" "}
         <div className="lg:col-span-7">
-          {" "}
           <div className="inline-flex items-center gap-2 rounded-full bg-white border border-primary/20 px-4 py-1.5 text-xs font-semibold text-brand shadow-card">
-            {" "}
-            🔥 Income Tax Expert CA{" "}
-          </div>{" "}
+            <Sparkles className="h-3.5 w-3.5" /> Income Tax Filing
+          </div>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-foreground">
-            {" "}
-            Income Tax Filing Services —{" "}
-            <span className="text-brand">Expert Chartered Accountant</span>{" "}
-          </h1>{" "}
+            Income Tax Filing Services in Mumbai by Expert Chartered Accountant
+          </h1>
           <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            {" "}
-            Filing your Income Tax Return doesn't have to be stressful. Salaried, freelancer,
-            trader, business owner ya company — accurate filing, maximum compliance aur timely
-            submission, hum sambhalenge.{" "}
-          </p>{" "}
+            Filing your income tax return does not have to be stressful. At Praveen J & Associates,
+            we provide accurate, compliant, and hassle-free ITR filing services in Mumbai for
+            individuals, professionals, and businesses.
+          </p>
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
-            {" "}
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4 text-brand" /> Expert CA Support
-            </span>{" "}
+              <CheckCircle2 className="h-4 w-4 text-brand" /> ITR-1 to ITR-4
+            </span>
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4 text-brand" /> Accurate Filing
-            </span>{" "}
+              <CheckCircle2 className="h-4 w-4 text-brand" /> Tax planning support
+            </span>
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-4 w-4 text-brand" /> Notice Assistance
-            </span>{" "}
+              <CheckCircle2 className="h-4 w-4 text-brand" /> Notice and scrutiny help
+            </span>
             <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="h-4 w-4 text-brand" /> Pan India Online
-            </span>{" "}
-          </div>{" "}
+              <ShieldCheck className="h-4 w-4 text-brand" /> NRI and complex income support
+            </span>
+          </div>
           <div className="mt-7 flex flex-wrap gap-3">
-            {" "}
             <a
               href="#it-lead"
               className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all"
             >
-              {" "}
-              Book Free Consultation <ArrowRight className="h-4 w-4" />{" "}
-            </a>{" "}
+              Start Your ITR Filing <ArrowRight className="h-4 w-4" />
+            </a>
             <a
               href="#it-lead"
               className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition"
             >
-              {" "}
-              File Your ITR{" "}
-            </a>{" "}
+              Talk to CA
+            </a>
             <a
               href="https://wa.me/918169887643"
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition"
             >
-              {" "}
-              <MessageCircle className="h-4 w-4" /> WhatsApp{" "}
-            </a>{" "}
-          </div>{" "}
-        </div>{" "}
+              <MessageCircle className="h-4 w-4" /> WhatsApp
+            </a>
+          </div>
+        </div>
+
         <div className="lg:col-span-5 relative">
-          {" "}
           <div className="relative rounded-3xl overflow-hidden shadow-soft bg-white p-3">
-            {" "}
             <div className="relative aspect-[16/12] rounded-2xl overflow-hidden bg-gradient-to-br from-brand-light to-white">
-              {" "}
               <img
                 src={praveen}
-                alt="CA Praveen Jain — Income Tax Expert"
+                alt="CA Praveen Jain - Income Tax Expert"
                 className="absolute inset-0 w-full h-full object-cover"
-              />{" "}
+              />
               <button
                 className="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/95 backdrop-blur shadow-soft flex items-center justify-center hover:scale-110 transition-transform"
-                aria-label="Play Income Tax intro video"
+                aria-label="Play income tax intro video"
               >
-                {" "}
-                <Play className="h-6 w-6 text-brand fill-brand ml-1" />{" "}
-              </button>{" "}
+                <Play className="h-6 w-6 text-brand fill-brand ml-1" />
+              </button>
               <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white">
-                {" "}
-                <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" /> Income Tax
-                Explainer{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" /> Expert CA
+                Support
+              </div>
+            </div>
+          </div>
+
           <div
             id="it-lead"
             className="mt-5 rounded-3xl bg-white shadow-soft border border-border p-5 sm:p-6"
           >
-            {" "}
             <div className="flex items-center justify-between mb-3">
-              {" "}
-              <h3 className="font-display font-bold text-lg">Talk To CA</h3>{" "}
+              <h3 className="font-display font-bold text-lg">Talk to Our CA Today</h3>
               <span className="text-xs font-semibold text-brand bg-primary/10 px-2 py-1 rounded-full">
                 Free Call
-              </span>{" "}
-            </div>{" "}
+              </span>
+            </div>
             {submitted ? (
               <div className="py-6 text-center">
-                {" "}
-                <CheckCircle2 className="h-10 w-10 text-green-500 mx-auto" />{" "}
+                <CheckCircle2 className="h-10 w-10 text-green-500 mx-auto" />
                 <p className="mt-2 font-semibold">
-                  Thanks! Hamari CA team jaldi connect karegi.
-                </p>{" "}
+                  Thanks! Our CA team will connect with you soon.
+                </p>
               </div>
             ) : (
               <form
@@ -618,307 +626,268 @@ function ItHero() {
                 }}
                 className="grid gap-3"
               >
-                {" "}
                 <input
                   required
                   placeholder="Your Name"
                   className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-                />{" "}
+                />
                 <input
                   required
                   type="tel"
                   pattern="[0-9]{10}"
                   placeholder="Mobile Number"
                   className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-                />{" "}
+                />
                 <select
                   required
                   className="h-11 rounded-xl border border-border px-4 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
                 >
-                  {" "}
-                  <option value="">Income Tax Requirement</option>{" "}
+                  <option value="">Income Tax Requirement</option>
                   {FORM_OPTIONS.map((s) => (
                     <option key={s}>{s}</option>
-                  ))}{" "}
-                </select>{" "}
+                  ))}
+                </select>
                 <button className="h-12 rounded-xl bg-gradient-red text-white font-semibold shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2">
-                  {" "}
-                  Talk To CA <ArrowRight className="h-4 w-4" />{" "}
-                </button>{" "}
+                  Request Callback <ArrowRight className="h-4 w-4" />
+                </button>
                 <p className="text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
-                  {" "}
-                  <ShieldCheck className="h-3.5 w-3.5" /> Quick response • No spam • Expert CA
-                  Support{" "}
-                </p>{" "}
+                  <ShieldCheck className="h-3.5 w-3.5" /> Quick response - No spam - Expert CA
+                  support
+                </p>
               </form>
-            )}{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+            )}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
+
 function Problems() {
   return (
     <section className="py-16 sm:py-20 bg-brand-light">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
           eyebrow="Common Tax Problems"
-          title="Income Tax Galat File Hua To Notice Aa Sakta Hai ⚠️"
-          sub="Yeh issues familiar lagte hain? Time rehte expert CA se baat karein."
-        />{" "}
+          title="Why Income Tax Filing Often Goes Wrong"
+          sub="These are the issues people face most often. We help you avoid them before they become a notice."
+        />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {" "}
           {PROBLEMS.map((p) => (
             <div
               key={p.title}
               className="group rounded-2xl bg-white p-5 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-primary/20"
             >
-              {" "}
               <div className="h-11 w-11 rounded-xl bg-primary/10 text-brand flex items-center justify-center group-hover:bg-gradient-red group-hover:text-white transition-colors">
-                {" "}
-                <p.icon className="h-5 w-5" />{" "}
-              </div>{" "}
-              <h3 className="mt-3 font-display font-bold">{p.title}</h3>{" "}
-              <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>{" "}
+                <p.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-3 font-display font-bold">{p.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{p.text}</p>
             </div>
-          ))}{" "}
-        </div>{" "}
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          A small mistake today can become a costly notice tomorrow.
-        </p>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function ItServices() {
   return (
     <section id="it-services" className="py-16 sm:py-24">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
           eyebrow="Our Income Tax Services"
-          title="Every Income Tax Case — Handled"
-          sub="Salary, business, capital gain, F&O, NRI, crypto, notice, appeal — sab ek CA roof ke under."
-        />{" "}
+          title="Income Tax Cases Handled Under One Roof"
+          sub="From salary and rent income to capital gains, business income, notices, and appeals - we support all major filing needs."
+        />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {" "}
-          {IT_SERVICES.map((s) => (
-            <Link
-              key={s.slug}
-              to="/income-tax/$slug"
-              params={{ slug: s.slug }}
-              className="group relative rounded-3xl border border-border bg-white p-6 hover:border-primary hover:shadow-soft hover:-translate-y-1 transition-all"
-            >
-              {" "}
-              <div className="h-14 w-14 rounded-2xl bg-primary/10 text-brand flex items-center justify-center mb-5 group-hover:bg-gradient-red group-hover:text-white transition-colors">
-                {" "}
-                <s.icon className="h-7 w-7" />{" "}
-              </div>{" "}
-              <h3 className="font-display font-bold text-xl">{s.title}</h3>{" "}
-              <p className="text-sm text-muted-foreground mt-1">{s.sub}</p>{" "}
-              <ul className="mt-4 space-y-1.5 text-sm text-foreground/80">
-                {" "}
-                {s.items.map((i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    {" "}
-                    <span className="h-1.5 w-1.5 rounded-full bg-brand" /> {i}{" "}
-                  </li>
-                ))}{" "}
-              </ul>{" "}
-              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand group-hover:gap-2.5 transition-all">
-                {" "}
-                {s.cta} <ArrowRight className="h-4 w-4" />{" "}
-              </span>{" "}
-            </Link>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          {ITR_SERVICES.map((s) => {
+            const Icon = SERVICE_ICON_MAP[s.slug] ?? Briefcase;
+            return (
+              <Link
+                key={s.slug}
+                to="/income-tax/$slug"
+                params={{ slug: s.slug }}
+                className="group relative rounded-3xl border border-border bg-white p-6 hover:border-primary hover:shadow-soft hover:-translate-y-1 transition-all"
+              >
+                <div className="h-14 w-14 rounded-2xl bg-primary/10 text-brand flex items-center justify-center mb-5 group-hover:bg-gradient-red group-hover:text-white transition-colors">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="font-display font-bold text-xl">{s.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{s.sub}</p>
+                <ul className="mt-4 space-y-1.5 text-sm text-foreground/80">
+                  {s.items.map((i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand" /> {i}
+                    </li>
+                  ))}
+                </ul>
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand group-hover:gap-2.5 transition-all">
+                  {s.cta} <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 }
+
 function Segments() {
   return (
     <section className="py-16 sm:py-20 bg-brand-light">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
           eyebrow="Who Needs This Service"
-          title="Kya Yeh Income Tax Service Aapke Liye Hai?"
-          sub="Agar aap inme se kisi bhi category mein hain — yes, hum aapke liye hain."
-        />{" "}
+          title="This Income Tax Service Fits Your Profile If..."
+          sub="If any of these apply to you, we can help you file correctly and on time."
+        />
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {" "}
           {SEGMENTS.map((s) => (
             <div
               key={s.label}
               className="rounded-2xl bg-white p-5 text-center shadow-card hover:shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-primary/20"
             >
-              {" "}
               <div className="h-12 w-12 mx-auto rounded-xl bg-primary/10 text-brand flex items-center justify-center">
-                {" "}
-                <s.icon className="h-6 w-6" />{" "}
-              </div>{" "}
-              <div className="mt-3 font-semibold text-sm">{s.label}</div>{" "}
+                <s.icon className="h-6 w-6" />
+              </div>
+              <div className="mt-3 font-semibold text-sm">{s.label}</div>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function WhyChoose() {
   return (
     <section className="py-16 sm:py-24">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
-        <SectionTitle
-          eyebrow="Why Choose Us"
-          title="Why Businesses & Individuals Trust PJ&A"
-        />{" "}
+        <SectionTitle eyebrow="Why Choose Us" title="Why Clients Trust Praveen J & Associates" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {" "}
           {WHY.map((w) => (
             <div
               key={w.title}
               className="rounded-2xl bg-white p-6 border border-border hover:border-primary/30 hover:shadow-card transition-all"
             >
-              {" "}
               <div className="h-11 w-11 rounded-xl bg-primary/10 text-brand flex items-center justify-center">
-                {" "}
-                <w.icon className="h-5 w-5" />{" "}
-              </div>{" "}
-              <h3 className="mt-3 font-display font-bold">{w.title}</h3>{" "}
-              <p className="mt-1 text-sm text-muted-foreground">{w.text}</p>{" "}
+                <w.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-3 font-display font-bold">{w.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{w.text}</p>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function Insights() {
   return (
     <section className="py-16 sm:py-20 bg-brand-light">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
           eyebrow="Important Tax Insights"
-          title="Income Tax — Jo Aapko Pata Hona Chahiye"
-        />{" "}
+          title="A Few Things Every Taxpayer Should Know"
+          sub="These points help you file correctly and avoid common mistakes."
+        />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {" "}
           {INSIGHTS.map((i) => (
             <div
               key={i.title}
               className="rounded-2xl bg-white p-6 border-l-4 border-brand shadow-card"
             >
-              {" "}
               <div className="flex items-start gap-3">
-                {" "}
-                <AlertTriangle className="h-5 w-5 text-brand shrink-0 mt-0.5" />{" "}
+                <AlertTriangle className="h-5 w-5 text-brand shrink-0 mt-0.5" />
                 <div>
-                  {" "}
-                  <h3 className="font-display font-bold">{i.title}</h3>{" "}
-                  <p className="mt-1 text-sm text-muted-foreground">{i.text}</p>{" "}
-                </div>{" "}
-              </div>{" "}
+                  <h3 className="font-display font-bold">{i.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{i.text}</p>
+                </div>
+              </div>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function Process() {
   return (
     <section className="py-16 sm:py-24">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
-        <SectionTitle eyebrow="Simple Process" title="5 Step Mein ITR Filed" />{" "}
+        <SectionTitle eyebrow="Simple Process" title="How We File Your Return" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 relative">
-          {" "}
           {STEPS.map((s, i) => (
             <div
               key={s.n}
               className="relative rounded-2xl border border-border bg-white p-6 hover:border-primary/30 hover:shadow-card transition-all"
             >
-              {" "}
-              <div className="font-display text-4xl font-bold text-brand/15">{s.n}</div>{" "}
-              <h3 className="mt-2 font-display font-bold">{s.title}</h3>{" "}
-              <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>{" "}
+              <div className="font-display text-4xl font-bold text-brand/15">{s.n}</div>
+              <h3 className="mt-2 font-display font-bold">{s.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
               {i < STEPS.length - 1 && (
                 <ArrowRight className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-brand/40" />
-              )}{" "}
+              )}
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function Documents() {
   return (
     <section className="py-16 sm:py-24 bg-brand-light">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
           eyebrow="Document Checklist"
-          title="Documents Required"
-          sub="Itna ready rakhein — baaki sab hum karenge."
-        />{" "}
+          title="Documents Required for ITR Filing"
+          sub="Keep these ready and we will take care of the filing process."
+        />
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-          {" "}
           {[
             { title: "Personal Documents", icon: BadgeCheck, items: DOC_PERSONAL },
-            { title: "Business / Investment Docs", icon: FileSpreadsheet, items: DOC_BUSINESS },
+            { title: "Business / Income Documents", icon: FileSpreadsheet, items: DOC_BUSINESS },
           ].map((g) => (
             <div
               key={g.title}
               className="rounded-3xl bg-white border border-border p-6 shadow-card"
             >
-              {" "}
               <div className="flex items-center gap-3 mb-4">
-                {" "}
                 <div className="h-11 w-11 rounded-xl bg-primary/10 text-brand flex items-center justify-center">
-                  {" "}
-                  <g.icon className="h-5 w-5" />{" "}
-                </div>{" "}
-                <h3 className="font-display font-bold text-lg">{g.title}</h3>{" "}
-              </div>{" "}
+                  <g.icon className="h-5 w-5" />
+                </div>
+                <h3 className="font-display font-bold text-lg">{g.title}</h3>
+              </div>
               <ul className="space-y-2.5">
-                {" "}
                 {g.items.map((it) => (
                   <li key={it} className="flex items-start gap-2.5 text-sm">
-                    {" "}
-                    <CheckCircle2 className="h-4 w-4 text-brand mt-0.5 shrink-0" />{" "}
-                    <span>{it}</span>{" "}
+                    <CheckCircle2 className="h-4 w-4 text-brand mt-0.5 shrink-0" />
+                    <span>{it}</span>
                   </li>
-                ))}{" "}
-              </ul>{" "}
+                ))}
+              </ul>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function ItReviews() {
   return (
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle
           eyebrow="Google Reviews"
-          title="Trusted by Individuals & Businesses"
-          sub="? 4.8 � 120+ Reviews"
+          title="Trusted by Individuals and Businesses"
+          sub="4.8/5 rating and 120+ verified client reviews"
         />
         <div className="grid md:grid-cols-3 gap-5">
           {REVIEWS.map((r) => (
@@ -948,52 +917,40 @@ function ItReviews() {
     </section>
   );
 }
-
 function Learning() {
   return (
     <section className="py-16 sm:py-24 bg-brand-light">
-      {" "}
       <div className="container mx-auto px-4">
-        {" "}
         <SectionTitle
-          eyebrow="Featured Blogs"
-          title="Income Tax Blogs & Updates"
-          sub="Stay updated. Stay compliant."
-        />{" "}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {" "}
-          {BLOGS.map((p) => (
-            <a
-              key={p.title}
-              href="#"
-              className="group rounded-2xl bg-white border border-border overflow-hidden hover:shadow-soft hover:-translate-y-1 transition-all"
+          eyebrow="More to Explore"
+          title="More Income Tax Services"
+          sub="Quick links to related filing, correction, notice, and appeal support pages."
+        />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {MORE_TOPICS.map((item) => (
+            <Link
+              key={item.slug}
+              to="/income-tax/$slug"
+              params={{ slug: item.slug }}
+              className="group rounded-2xl bg-white border border-border p-4 hover:border-primary hover:shadow-card hover:-translate-y-1 transition-all flex items-center gap-3"
             >
-              {" "}
-              <div
-                className={`aspect-[16/10] bg-gradient-to-br ${p.color} flex items-center justify-center`}
-              >
-                {" "}
-                <BookOpen className="h-12 w-12 text-brand/40" />{" "}
-              </div>{" "}
-              <div className="p-5">
-                {" "}
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-brand px-2 py-0.5 rounded-full">
-                  {p.tag}
-                </span>{" "}
-                <h3 className="mt-3 font-display font-bold leading-snug group-hover:text-brand transition-colors">
-                  {p.title}
-                </h3>{" "}
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand group-hover:gap-2 transition-all">
-                  Read More <ArrowRight className="h-3.5 w-3.5" />
-                </span>{" "}
-              </div>{" "}
-            </a>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+              <div className="h-11 w-11 rounded-xl bg-primary/10 text-brand flex items-center justify-center group-hover:bg-gradient-red group-hover:text-white transition-colors shrink-0">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="font-semibold text-sm leading-snug">{item.label}</div>
+                <span className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-brand group-hover:gap-2 transition-all">
+                  View page <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
+
 function ItFAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
@@ -1001,7 +958,7 @@ function ItFAQ() {
       {" "}
       <div className="container mx-auto px-4 max-w-3xl">
         {" "}
-        <SectionTitle eyebrow="FAQ" title="Frequently asked Income Tax questions" />{" "}
+        <SectionTitle eyebrow="FAQ" title="Frequently Asked Income Tax Questions" />{" "}
         <div className="space-y-3">
           {" "}
           {FAQS.map((f, i) => (
@@ -1037,15 +994,16 @@ function ItFinalCTA() {
         {" "}
         <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-semibold mb-5">
           {" "}
-          <ClipboardCheck className="h-4 w-4" /> Limited slots this week{" "}
+          <ClipboardCheck className="h-4 w-4" /> Limited consultation slots{" "}
         </div>{" "}
         <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
           {" "}
-          Don't Risk Penalties. File Your Income Tax Return Correctly.{" "}
+          Need help with your Income Tax Return? Talk to our CA today.{" "}
         </h2>{" "}
         <p className="mt-5 text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
           {" "}
-          Expert Chartered Accountant Support for Individuals, Professionals & Businesses.{" "}
+          Start your filing with expert support for salary, rent, business, capital gains, NRI, and
+          notice cases.{" "}
         </p>{" "}
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {" "}
@@ -1080,15 +1038,23 @@ function ItFinalCTA() {
 function IncomeTaxPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {" "}
-      <Header />{" "}
+      <Header />
       <main className="flex-1">
-        {" "}
-        <ItHero /> <Problems /> <ItServices /> <Segments /> <WhyChoose /> <Insights /> <Process />{" "}
-        <Documents /> <ItReviews /> <Learning /> <ItFAQ /> <ItFinalCTA />{" "}
-      </main>{" "}
-      <Footer /> <FloatingWhatsApp />{" "}
+        <ItHero />
+        <Problems />
+        <ItServices />
+        <Segments />
+        <WhyChoose />
+        <Insights />
+        <Process />
+        <Documents />
+        <ItReviews />
+        <Learning />
+        <ItFAQ />
+        <ItFinalCTA />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
-

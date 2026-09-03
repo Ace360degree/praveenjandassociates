@@ -1,4 +1,4 @@
-﻿export type NavSubItem = { title: string; href: string };
+export type NavSubItem = { title: string; href: string };
 export type NavGroup = { title: string; href: string; items: NavSubItem[] };
 export type NavEntry = { title: string; href: string; groups: NavGroup[] };
 
@@ -9,13 +9,17 @@ export const HEADER_MENU: NavEntry[] = [
     groups: [
       {
         title: "Simple & Basic ITR-1",
-        href: "/income-tax/simple-itr-1-salary",
+        href: "/income-tax/salary-income-sahaj",
         items: [
-          { title: "Salary Income (Sahaj)", href: "/income-tax/simple-itr-1-salary" },
+          { title: "Salary Income (Sahaj)", href: "/income-tax/salary-income-sahaj" },
           { title: "Rent Income ITR", href: "/income-tax/simple-itr-1-salary" },
-          { title: "Retired Person ITR", href: "/income-tax/simple-itr-1-salary" },
-          { title: "Salary + Interest + Dividend", href: "/income-tax/simple-itr-1-salary" },
-          { title: "Salary + Rent Income", href: "/income-tax/simple-itr-1-salary" },
+          { title: "Salary + Rent Income", href: "/income-tax/salary-rent-income-itr" },
+          { title: "Retired Person ITR", href: "/income-tax/retired-person-itr" },
+          {
+            title: "Salary + Interest + Dividend",
+            href: "/income-tax/salary-interest-dividend-itr",
+          },
+          { title: "One House Property ITR", href: "/income-tax/simple-itr-1-salary" },
         ],
       },
       {
@@ -53,12 +57,15 @@ export const HEADER_MENU: NavEntry[] = [
       },
       {
         title: "LLP, Firm & Company ITR",
-        href: "/income-tax/llp-firm-company-itr",
+        href: "/income-tax/llp-partnership-firm-itr-5",
         items: [
-          { title: "Partnership Firm ITR-5", href: "/income-tax/llp-firm-company-itr" },
-          { title: "LLP ITR-5", href: "/income-tax/llp-firm-company-itr" },
-          { title: "OPC Company ITR-6", href: "/income-tax/llp-firm-company-itr" },
-          { title: "Pvt Ltd Company ITR-6", href: "/income-tax/llp-firm-company-itr" },
+          { title: "Partnership Firm ITR-5", href: "/income-tax/partnership-firm-itr-5" },
+          { title: "LLP ITR-5", href: "/income-tax/llp-partnership-firm-itr-5" },
+          { title: "OPC Company ITR-6", href: "/income-tax/opc-itr-6-filing-mumbai" },
+          {
+            title: "Pvt Ltd Company ITR-6",
+            href: "/income-tax/private-limited-company-tax-filing-mumbai",
+          },
         ],
       },
       {
@@ -86,10 +93,10 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Income Tax Notice",
         href: "/income-tax/income-tax-notice",
         items: [
-          { title: "143(1) Intimation", href: "/income-tax/income-tax-notice" },
-          { title: "Section 142 Notice", href: "/income-tax/income-tax-notice" },
-          { title: "Section 148A Notice", href: "/income-tax/income-tax-notice" },
-          { title: "Section 148 Notice", href: "/income-tax/income-tax-notice" },
+          { title: "143(1) Intimation", href: "/income-tax/income-tax-section-143-1-intimation" },
+          { title: "Section 142 Notice", href: "/income-tax/section-142-1-income-tax-notice" },
+          { title: "Section 148A Notice", href: "/income-tax/section-148a-income-tax-notice" },
+          { title: "Section 148 Notice", href: "/income-tax/section-148-income-tax-notice" },
         ],
       },
       {

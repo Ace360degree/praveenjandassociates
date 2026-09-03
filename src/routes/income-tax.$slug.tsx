@@ -21,7 +21,16 @@ import { ITR_SERVICES, getItrServiceBySlug } from "@/data/incomeTaxServices";
 export const Route = createFileRoute("/income-tax/$slug")({
   loader: ({ params }) => {
     if (params.slug === "revised-rectification") {
-      throw redirect({ to: "/income-tax/$slug", params: { slug: "revised-itr-filing-section-139-5" } });
+      throw redirect({
+        to: "/income-tax/$slug",
+        params: { slug: "revised-itr-filing-section-139-5" },
+      });
+    }
+    if (params.slug === "llp-firm-company-itr") {
+      throw redirect({
+        to: "/income-tax/$slug",
+        params: { slug: "llp-partnership-firm-itr-5" },
+      });
     }
     const service = getItrServiceBySlug(params.slug);
     if (!service) throw notFound();
@@ -98,6 +107,14 @@ export const Route = createFileRoute("/income-tax/$slug")({
 
 function ItrServicePage() {
   const s = Route.useLoaderData();
+  const showMoreKeywords =
+    [
+      "simple-itr-1-salary",
+      "llp-partnership-firm-itr-5",
+      "opc-itr-6-filing-mumbai",
+      "partnership-firm-itr-5",
+      "private-limited-company-tax-filing-mumbai",
+    ].includes(s.slug) && Boolean(s.more?.length);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -116,8 +133,8 @@ function ItrServicePage() {
         <Documents items={s.documents} />
         <Trust s={s} />
         <FAQ items={s.faqs} />
-        <MoreAlignment s={s} />
         <RelatedServices currentSlug={s.slug} />
+        {showMoreKeywords ? <MoreKeywords s={s} /> : null}
         <FinalCTA s={s} />
       </main>
       <Footer />
@@ -179,7 +196,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> })
               <MessageCircle className="h-4 w-4" /> WhatsApp CA
             </a>
           </div>
-                    <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
@@ -419,8 +436,10 @@ function Trust({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }
         </h2>
         <p className="mt-2 text-muted-foreground">{s.trustSubtitle ?? "4.8/5 Rating on Google"}</p>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
-          {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold">5/5 on Google</span>
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+          ))}
+          <span className="ml-2 font-semibold">4.8/5 on Google</span>
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
           ))}
@@ -470,21 +489,35 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
-function MoreAlignment({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }) {
-  if (!s.more?.length) return null;
+function MoreKeywords({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }) {
+  if (
+    ![
+      "simple-itr-1-salary",
+      "llp-partnership-firm-itr-5",
+      "opc-itr-6-filing-mumbai",
+      "partnership-firm-itr-5",
+      "private-limited-company-tax-filing-mumbai",
+    ].includes(s.slug) ||
+    !s.more?.length
+  )
+    return null;
   return (
-    <section className="py-14 bg-white">
+    <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="rounded-3xl border bg-muted/30 p-6 lg:p-8">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
-            {s.moreHeading ?? "More Information"}
-          </h2>
-          {s.moreLead && <p className="text-center text-muted-foreground mt-2">{s.moreLead}</p>}
+        <div className="rounded-3xl border bg-white px-6 py-8 lg:px-10 lg:py-10 shadow-sm">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">
+              {s.moreHeading ?? "More About Rent Income ITR"}
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              {s.moreLead ?? "Keywords and search phrases aligned with rental income filing."}
+            </p>
+          </div>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {s.more.map((item) => (
               <span
                 key={item}
-                className="inline-flex items-center rounded-full border bg-white px-4 py-2 text-sm font-medium text-ink shadow-sm"
+                className="inline-flex items-center rounded-full border bg-muted/30 px-4 py-2 text-sm font-medium text-ink shadow-sm"
               >
                 {item}
               </span>
@@ -589,4 +622,3 @@ function StickyMobileCTA({ cta }: { cta: string }) {
     </div>
   );
 }
-
