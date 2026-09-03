@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -123,6 +123,7 @@ function ItrServicePage() {
       "agricultural-income-tax-filing-mumbai",
       "nri-income-tax-filing-mumbai",
       "foreign-income-tax-filing-mumbai",
+      "cryptocurrency-income-tax-filing",
     ].includes(s.slug) && Boolean(s.more?.length);
   return (
     <div className="min-h-screen flex flex-col">
@@ -510,6 +511,7 @@ function MoreKeywords({ s }: { s: NonNullable<ReturnType<typeof getItrServiceByS
       "agricultural-income-tax-filing-mumbai",
       "nri-income-tax-filing-mumbai",
       "foreign-income-tax-filing-mumbai",
+      "cryptocurrency-income-tax-filing",
     ].includes(s.slug) ||
     !s.more?.length
   )

@@ -1,4 +1,4 @@
-export type ItrService = {
+﻿export type ItrService = {
   slug: string;
   title: string;
   h1: string;
@@ -33,7 +33,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "simple-itr-1-salary",
     title: "Rent Income ITR",
-    h1: "Rent Income ITR Filing in Mumbai � File ITR-1 with Rental Income Easily",
+    h1: "Rent Income ITR Filing in Mumbai – File ITR-1 with Rental Income Easily",
     metaTitle: "Rent Income ITR Filing | Rental Income with Expert CA | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for rent income with expert CA support. Report rental income correctly, claim eligible deductions, and stay compliant with hassle-free filing.",
@@ -141,7 +141,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "salary-income-sahaj",
     title: "Salary Income ITR (Sahaj)",
-    h1: "Salary Income ITR Filing (Sahaj) in Mumbai � Expert CA Support",
+    h1: "Salary Income ITR Filing (Sahaj) in Mumbai – Expert CA Support",
     metaTitle: "Salary Income ITR Filing | Sahaj | Praveen J & Associates",
     metaDescription:
       "File ITR-1 (Sahaj) for salary income with expert CA support. Claim deductions, report income correctly and avoid unnecessary tax payments.",
@@ -226,11 +226,11 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "How fast can my ITR be filed?",
-        a: "Usually within 24�48 hours.",
+        a: "Usually within 24–48 hours.",
       },
       {
         q: "Will I get a refund?",
-        a: "If excess tax is paid, yes � we ensure correct calculation.",
+        a: "If excess tax is paid, yes — we ensure correct calculation.",
       },
     ],
     finalCtaTitle: "Stop overpaying taxes and avoid filing mistakes.",
@@ -241,7 +241,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "retired-person-itr",
     title: "Retired Person ITR",
-    h1: "ITR Filing for Retired Persons in Mumbai � Pension & Interest Income (Sahaj)",
+    h1: "ITR Filing for Retired Persons in Mumbai – Pension & Interest Income (Sahaj)",
     metaTitle: "Retired Person ITR Filing | Pension & Interest Income | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for retired persons, pensioners and senior citizens with expert CA support. Report pension, interest and rent income accurately and claim eligible deductions.",
@@ -329,7 +329,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "How can I file easily without using the online portal?",
-        a: "We handle everything for you � just share your documents.",
+        a: "We handle everything for you — just share your documents.",
       },
     ],
     finalCtaTitle: "Make your tax filing simple and stress-free.",
@@ -405,7 +405,7 @@ export const ITR_SERVICES: ItrService[] = [
     trustHeading: "Trusted by Working Professionals",
     trustSubtitle: "4.8/5 Rating on Google",
     trust: [
-      "Had salary and investment income confusion � everything was handled perfectly.",
+      "Had salary and investment income confusion — everything was handled perfectly.",
       "They ensured all my income was reported correctly.",
       "Very smooth and professional experience.",
     ],
@@ -431,7 +431,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, deductions under various sections are allowed.",
       },
     ],
-    finalCtaTitle: "Don�t miss out on reporting additional income correctly.",
+    finalCtaTitle: "Don’t miss out on reporting additional income correctly.",
     finalCtaLead: "File your ITR with expert guidance and complete accuracy.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -439,11 +439,11 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "salary-rent-income-itr",
     title: "Salary + Rent Income ITR",
-    h1: "ITR Filing for Salary + Rent Income in Mumbai (HRA & Rental Income � ITR-1)",
+    h1: "ITR Filing for Salary + Rent Income in Mumbai (HRA & Rental Income – ITR-1)",
     metaTitle: "Salary + Rent Income ITR Filing | HRA & Rental Income | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for salary and rent income with expert CA support. Handle HRA, rental income, deductions and accurate reporting with ease.",
-    heroLead: "Earning salary and also dealing with rent � either paying or receiving?",
+    heroLead: "Earning salary and also dealing with rent — either paying or receiving?",
     heroSub:
       "We help you file your ITR-1 (Sahaj) accurately, ensuring proper handling of HRA, rental income, and deductions.",
     primaryCta: "File Your ITR Now",
@@ -504,7 +504,7 @@ export const ITR_SERVICES: ItrService[] = [
     trustHeading: "Trusted by Working Professionals",
     trustSubtitle: "4.8/5 Rating on Google",
     trust: [
-      "Had both HRA and rental income confusion � they handled everything perfectly.",
+      "Had both HRA and rental income confusion — they handled everything perfectly.",
       "Saved a lot of tax with proper guidance.",
       "Very professional and smooth experience.",
     ],
@@ -570,7 +570,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Traders and shopkeepers",
       "Retail businesses",
       "Service providers (non-professional)",
-      "Individuals with turnover up to ₹2 crore",
+      "Individuals with turnover up to â‚¹2 crore",
     ],
     benefitsHeading: "Benefits of 44AD Presumptive Taxation",
     benefits: [
@@ -611,7 +611,7 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "What is the turnover limit for 44AD?",
-        a: "Up to ��2 crore, subject to the latest rules and your digital receipt ratio.",
+        a: "Up to ‚¹2 crore, subject to the latest rules and your digital receipt ratio.",
       },
       {
         q: "Do I need to maintain books?",
@@ -761,7 +761,7 @@ export const ITR_SERVICES: ItrService[] = [
         "It covers stocks, mutual funds and property transactions",
         "It also applies where there are multiple house properties",
         "Foreign income or foreign assets may require ITR-2",
-        "Income above ₹50 lakh without business income is also covered",
+        "Income above â‚¹50 lakh without business income is also covered",
       ],
       note: "This form is more detailed and requires expert handling.",
     },
@@ -918,7 +918,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, all gains and losses should be declared in the return.",
       },
       {
-        q: "What happens if I don’t report losses?",
+        q: "What happens if I donâ€™t report losses?",
         a: "You lose the benefit of carrying forward those losses.",
       },
       {
@@ -1321,7 +1321,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Possible, but risky due to the complexity of F&O taxation.",
       },
     ],
-    finalCtaTitle: "F&O taxation is complex â€” donâ€™t take risks with your filing.",
+    finalCtaTitle: "F&O taxation is complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks with your filing.",
     finalCtaLead: "Get expert help and ensure accurate compliance.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1422,7 +1422,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
     ],
     finalCtaTitle:
-      "Intraday trading taxation is different and complex â€” donâ€™t take risks.",
+      "Intraday trading taxation is different and complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks.",
     finalCtaLead: "Get expert help and file your ITR correctly.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1521,7 +1521,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can I use ITR-4 instead of ITR-3?",
-        a: "In some cases, yes â€” we help determine eligibility.",
+        a: "In some cases, yes Ã¢â‚¬â€ we help determine eligibility.",
       },
     ],
     finalCtaTitle: "Don't risk incorrect filing of your commission income.",
@@ -1607,7 +1607,7 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "Is share of profit taxable?",
-        a: "No, it is exempt in the partnerâ€™s hands.",
+        a: "No, it is exempt in the partnerÃ¢â‚¬â„¢s hands.",
       },
       {
         q: "Is partner salary taxable?",
@@ -1634,7 +1634,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "llp-partnership-firm-itr-5",
     title: "LLP & Partnership Firm ITR-5",
-    h1: "LLP & Partnership Firm ITR-5 Filing in Mumbai � Expert CA for Business Tax Compliance",
+    h1: "LLP & Partnership Firm ITR-5 Filing in Mumbai – Expert CA for Business Tax Compliance",
     metaTitle: "LLP & Partnership Firm ITR-5 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-5 for LLPs and partnership firms with expert CA support. Accurate financial reporting, compliance, and smooth business tax filing.",
@@ -1746,12 +1746,12 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "partnership-firm-itr-5",
     title: "Partnership Firm ITR-5",
-    h1: "ITR Filing for Partnership Firm & Partner Income in Mumbai � Expert CA Services (ITR-5 & ITR-3)",
+    h1: "ITR Filing for Partnership Firm & Partner Income in Mumbai – Expert CA Services (ITR-5 & ITR-3)",
     metaTitle: "Partnership Firm ITR-5 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-5 for partnership firms with expert CA support. Accurate reporting, firm tax compliance, and smooth filing handled end-to-end.",
     heroLead:
-      "Running a partnership firm or earning as a partner? Your tax filing involves firm-level ITR (ITR-5) and partner-level ITR (ITR-3) � both require accurate reporting and compliance.",
+      "Running a partnership firm or earning as a partner? Your tax filing involves firm-level ITR (ITR-5) and partner-level ITR (ITR-3) — both require accurate reporting and compliance.",
     heroSub:
       "We help partnership firms and partners file their income tax returns correctly with expert CA support.",
     primaryCta: "File Your ITR Now",
@@ -1771,7 +1771,7 @@ export const ITR_SERVICES: ItrService[] = [
         "At partner level, salary / remuneration is taxable",
         "Interest on capital is taxable and profit share is exempt",
       ],
-      note: "Partnership taxation involves dual-level reporting � mistakes are common.",
+      note: "Partnership taxation involves dual-level reporting — mistakes are common.",
     },
     whoFor: [
       "Partnership firms",
@@ -1956,7 +1956,7 @@ export const ITR_SERVICES: ItrService[] = [
   },  {
     slug: "private-limited-company-tax-filing-mumbai",
     title: "Private Limited Company ITR-6",
-    h1: "ITR-6 Filing for Private Limited Company in Mumbai � Expert CA for Corporate Tax Compliance",
+    h1: "ITR-6 Filing for Private Limited Company in Mumbai – Expert CA for Corporate Tax Compliance",
     metaTitle: "Private Limited Company ITR-6 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-6 for private limited companies with expert CA support. Accurate corporate reporting, compliance, and smooth tax filing.",
@@ -2058,10 +2058,107 @@ export const ITR_SERVICES: ItrService[] = [
       "Company ITR Filing Services",
       "CA for Company Tax Filing",
     ],
-    finalCtaTitle: "Corporate tax filing requires precision and compliance � don�t take risks.",
+    finalCtaTitle: "Corporate tax filing requires precision and compliance — don’t take risks.",
     finalCtaLead: "Get expert CA support for your company today.",
     finalCtaPrimary: "Start Your Company ITR Filing Now",
     finalCtaSecondary: "Consult CA on WhatsApp",
+  },
+  {
+    slug: "cryptocurrency-income-tax-filing",
+    title: "Crypto Income Tax Filing",
+    h1: "Crypto Income Tax Filing in Mumbai - 30% Tax & 1% TDS Compliance (ITR Experts)",
+    metaTitle: "Crypto Income Tax Filing | 30% Tax & 1% TDS Compliance | Praveen J & Associates",
+    metaDescription:
+      "File crypto income tax with expert CA support. Correct 30% tax reporting, 1% TDS reconciliation, AIS matching, and smooth ITR filing.",
+    heroLead:
+      "Trading or investing in cryptocurrency like Bitcoin, Ethereum, or other digital assets? Your crypto income is taxed at a flat 30% rate with 1% TDS and must be reported correctly in your ITR.",
+    heroSub:
+      "We help you file your crypto income tax accurately, ensuring full compliance and no errors.",
+    primaryCta: "File Your Crypto ITR Now",
+    heroFormCta: "Chat with CA on WhatsApp",
+    problems: [
+      "Confusion about 30% tax rules",
+      "Not understanding 1% TDS deduction",
+      "Difficulty tracking multiple transactions",
+      "Losses not being adjusted",
+      "Mismatch with AIS / tax records",
+    ],
+    whatIs: {
+      heading: "How Crypto Taxation Works in India",
+      points: [
+        "Crypto (Virtual Digital Assets) is taxed at a flat 30% rate on profits",
+        "1% TDS is deducted on taxable transactions",
+        "Losses from crypto cannot be set off against other income",
+        "Only the cost of acquisition is generally deductible",
+        "Proper calculation and reporting are critical",
+      ],
+      note: "Crypto transactions are highly tracked, so correct disclosure is important.",
+    },
+    whoFor: [
+      "Crypto traders with frequent transactions",
+      "Long-term crypto investors",
+      "NFT buyers and sellers",
+      "Individuals using Binance, WazirX, CoinDCX, or similar platforms",
+      "First-time crypto taxpayers",
+    ],
+    benefitsHeading: "What We Handle",
+    benefits: [
+      "Profit and loss calculation",
+      "Transaction reconciliation",
+      "TDS adjustment",
+      "AIS matching",
+      "Accurate ITR filing",
+    ],
+    important: [
+      "Crypto income must be reported correctly",
+      "1% TDS entries should be reconciled",
+      "Wrong profit calculation can create tax demand",
+      "Losses cannot be adjusted against other income",
+      "Filing under the wrong ITR form can create issues",
+    ],
+    process: [
+      "Share crypto transaction reports",
+      "Provide exchange statements",
+      "CA calculates profit and tax",
+      "Reconcile TDS and AIS",
+      "File ITR accurately",
+    ],
+    documents: [
+      "PAN & Aadhaar",
+      "Crypto exchange statements",
+      "Transaction reports",
+      "Bank statements",
+      "Previous ITR",
+      "AIS / TIS download if available",
+    ],
+    trustHeading: "Trusted by Crypto Investors",
+    trustSubtitle: "4.8/5 Rating on Google",
+    trust: [
+      "Had multiple crypto trades - everything was handled perfectly.",
+      "Clear explanation of 30% tax and TDS.",
+      "Very professional service for crypto taxation.",
+    ],
+    faqs: [
+      { q: "Is crypto income taxable in India?", a: "Yes, crypto income is generally taxed at a flat 30% rate under the virtual digital asset rules." },
+      { q: "Can I adjust crypto losses?", a: "No. Crypto losses cannot be set off against other income." },
+      { q: "What is 1% TDS in crypto?", a: "It is tax deducted on eligible crypto transactions." },
+      { q: "Do I need to report all crypto transactions?", a: "Yes, all transactions should be declared correctly." },
+      { q: "Which ITR form is used?", a: "It depends on your income type, and we guide you on the correct form." },
+    ],
+    moreHeading: "More About Crypto Income Tax Filing",
+    moreLead: "Keywords and search phrases aligned with crypto taxation.",
+    more: [
+      "Cryptocurrency Tax Filing India",
+      "Crypto Tax 30% India",
+      "Income Tax on Crypto India",
+      "CA for Crypto Tax Filing Mumbai",
+      "Bitcoin Tax Filing India",
+      "Crypto Trading Tax Filing",
+    ],
+    finalCtaTitle: "Crypto taxation is strict and evolving - don't take risks.",
+    finalCtaLead: "Get expert CA support and file your crypto ITR correctly.",
+    finalCtaPrimary: "Start Your Crypto ITR Filing Now",
+    finalCtaSecondary: "Chat with CA on WhatsApp",
   },
   {
     slug: "lottery-income-tax-filing-mumbai",
@@ -2455,15 +2552,15 @@ export const ITR_SERVICES: ItrService[] = [
     title: "Updated ITR (ITR-U)",
     h1: "Updated ITR Filing (ITR-U)  Fix Missed or Wrong Returns up to 4 Years",
     metaTitle:
-      "Updated ITR ITR-U Filing Past Years | Section 139(8A) â€” Praveen J & Associates",
+      "Updated ITR ITR-U Filing Past Years | Section 139(8A) Ã¢â‚¬â€ Praveen J & Associates",
     metaDescription:
       "File Updated Return (ITR-U) under Section 139(8A) for last 4 assessment years. Disclose missed income, avoid bigger penalties. Expert CA filing.",
     heroLead: "Pichle saal ka ITR file nahi kiya ya income disclose chhoot gayi?",
     heroSub:
-      "Section 139(8A) ke under aap last 4 assessment years tak Updated Return (ITR-U) file kar sakte ho â€” additional tax pay karke department notice se bach jaaiye.",
+      "Section 139(8A) ke under aap last 4 assessment years tak Updated Return (ITR-U) file kar sakte ho Ã¢â‚¬â€ additional tax pay karke department notice se bach jaaiye.",
     primaryCta: "File ITR-U Now",
     problems: [
-      "Past 2â€“4 saal ka ITR file karna chhoot gaya",
+      "Past 2Ã¢â‚¬â€œ4 saal ka ITR file karna chhoot gaya",
       "AIS mein income show ho rahi, ITR mein nahi",
       "Crypto / shares income disclose nahi ki",
       "Foreign income / asset miss ho gaya",
@@ -2477,7 +2574,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Additional tax: 25% (within 12M) / 50% (12-24M) / 60% (24-36M) / 70% (36-48M)",
         "Cannot reduce tax / claim refund / increase loss only additional tax allowed",
       ],
-      note: "ITR-U ek bachao tool hai â€” search/seizure ya notice ke baad file nahi kar sakte.",
+      note: "ITR-U ek bachao tool hai Ã¢â‚¬â€ search/seizure ya notice ke baad file nahi kar sakte.",
     },
     whoFor: [
       "Non-filers wanting to regularize past years",
@@ -2521,7 +2618,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "ITR-U mein refund mil sakta hai?",
-        a: "Nahi. ITR-U sirf additional income disclose karne ke liye hai â€” refund claim, loss increase ya tax reduce karne ke liye allowed nahi. Sirf additional tax payable cases mein file hota hai.",
+        a: "Nahi. ITR-U sirf additional income disclose karne ke liye hai Ã¢â‚¬â€ refund claim, loss increase ya tax reduce karne ke liye allowed nahi. Sirf additional tax payable cases mein file hota hai.",
       },
       {
         q: "Additional tax kitna lagta hai?",
@@ -2836,7 +2933,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Usually 15 days from the notice date.",
       },
       {
-        q: "What happens if I don’t respond?",
+        q: "What happens if I donâ€™t respond?",
         a: "Your return may be treated as invalid.",
       },
       {
@@ -2862,7 +2959,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Get expert help to review and respond to ITR intimation under Section 143(1). Support for tax demand, refund, mismatch and processing notices.",
     heroLead: "Received an ITR Intimation under Section 143(1)?",
     heroSub:
-      "Not sure if it�s a refund, demand, or mismatch? We help you understand, verify, and respond correctly, ensuring no penalties or loss.",
+      "Not sure if it’s a refund, demand, or mismatch? We help you understand, verify, and respond correctly, ensuring no penalties or loss.",
     primaryCta: "Check Your Intimation Now",
     heroFormCta: "Check Your Intimation Now",
     problems: [
@@ -3248,7 +3345,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, expert handling is strongly recommended.",
       },
     ],
-    finalCtaTitle: "Received a Section 148 notice? Don�t delay or guess.",
+    finalCtaTitle: "Received a Section 148 notice? Don’t delay or guess.",
     finalCtaLead: "Get expert CA support and handle reassessment correctly.",
     finalCtaPrimary: "Respond to 148 Notice Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -3365,13 +3462,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-reply",
     title: "Appeal & Hearing Representation",
-    h1: "Income Tax Appeal â€” CIT(A), ITAT Drafting & Representation",
+    h1: "Income Tax Appeal Ã¢â‚¬â€ CIT(A), ITAT Drafting & Representation",
     metaTitle: "Income Tax Appeal CIT(A) ITAT Filing | CA Help  Praveen J & Associates",
     metaDescription:
       "First Appeal (CIT(A)) & ITAT appeal drafting, filing and representation. Stay applications, condonation, written submissions by experienced CA team.",
     heroLead: "Assessment order ya demand se agree nahi?",
     heroSub:
-      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing â€” sab.",
+      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing Ã¢â‚¬â€ sab.",
     primaryCta: "Discuss My Appeal",
     problems: [
       "Assessment order mein high demand raised",
@@ -3386,7 +3483,7 @@ export const ITR_SERVICES: ItrService[] = [
         "First Appeal: CIT(A)  Form 35, within 30 days of order",
         "Second Appeal: ITAT  Form 36, within 60 days of CIT(A) order",
         "Stay of demand application alag se",
-        "Faceless appeal scheme â€” no physical hearing default",
+        "Faceless appeal scheme Ã¢â‚¬â€ no physical hearing default",
         "Appeal fee:250 to 10,000 based on assessed income",
       ],
       note: "20% pre-deposit of disputed demand usually required for stay.",
@@ -3410,7 +3507,7 @@ export const ITR_SERVICES: ItrService[] = [
       "ITAT deadline: 60 days from CIT(A) order",
       "Pre-deposit (20%) usually for stay grant",
       "Condonation possible for delay with reasons",
-      "Faceless appeal â€” written submissions critical",
+      "Faceless appeal Ã¢â‚¬â€ written submissions critical",
     ],
     process: [
       "Order review & grounds identification",
@@ -3532,13 +3629,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-and-hearing-income-tax",
     title: "Income Tax Appeal & Hearing",
-    h1: "Income Tax Appeal & Hearing Help â€” CIT(A) Representation & Dispute Resolution",
-    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation â€” Praveen J & Associates",
+    h1: "Income Tax Appeal & Hearing Help Ã¢â‚¬â€ CIT(A) Representation & Dispute Resolution",
+    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation Ã¢â‚¬â€ Praveen J & Associates",
     metaDescription:
-      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes â€” Section 250.",
+      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes Ã¢â‚¬â€ Section 250.",
     heroLead: "Filed an income tax appeal or received notice for hearing?",
     heroSub:
-      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling â€” helping you reduce tax demand and win your case.",
+      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling Ã¢â‚¬â€ helping you reduce tax demand and win your case.",
     primaryCta: "Get Expert Representation",
     problems: [
       "Confusion about hearing procedure",
@@ -3556,7 +3653,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Supporting evidence & case laws presented",
         "Order passed reducing, confirming or cancelling demand",
       ],
-      note: "Hearing outcome directly determines your final tax liability â€” strong preparation is non-negotiable.",
+      note: "Hearing outcome directly determines your final tax liability Ã¢â‚¬â€ strong preparation is non-negotiable.",
     },
     whoFor: [
       "Taxpayers with pending CIT(A) appeals",
@@ -3601,7 +3698,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Is representation required?",
-        a: "Not mandatory, but highly recommended â€” professional CA representation significantly improves the chance of a favourable outcome.",
+        a: "Not mandatory, but highly recommended Ã¢â‚¬â€ professional CA representation significantly improves the chance of a favourable outcome.",
       },
       {
         q: "What happens in the hearing?",
@@ -3609,7 +3706,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can tax demand be reduced?",
-        a: "Yes â€” based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
+        a: "Yes Ã¢â‚¬â€ based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
       },
       {
         q: "What if I lose the appeal?",
