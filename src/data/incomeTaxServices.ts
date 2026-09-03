@@ -33,7 +33,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "simple-itr-1-salary",
     title: "Rent Income ITR",
-    h1: "Rent Income ITR Filing in Mumbai – File ITR-1 with Rental Income Easily",
+    h1: "Rent Income ITR Filing in Mumbai � File ITR-1 with Rental Income Easily",
     metaTitle: "Rent Income ITR Filing | Rental Income with Expert CA | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for rent income with expert CA support. Report rental income correctly, claim eligible deductions, and stay compliant with hassle-free filing.",
@@ -55,7 +55,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Income from residential property rent",
         "Income from one house property",
         "Rental income along with salary",
-        "ITR-1 (Sahaj) can be used if conditions are met and total income is within ₹50 lakh",
+        "ITR-1 (Sahaj) can be used if conditions are met and total income is within ?50 lakh",
       ],
       note: "Rental income must be reported correctly to avoid penalties and mismatch issues.",
     },
@@ -141,7 +141,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "salary-income-sahaj",
     title: "Salary Income ITR (Sahaj)",
-    h1: "Salary Income ITR Filing (Sahaj) in Mumbai – Expert CA Support",
+    h1: "Salary Income ITR Filing (Sahaj) in Mumbai � Expert CA Support",
     metaTitle: "Salary Income ITR Filing | Sahaj | Praveen J & Associates",
     metaDescription:
       "File ITR-1 (Sahaj) for salary income with expert CA support. Claim deductions, report income correctly and avoid unnecessary tax payments.",
@@ -163,7 +163,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Salary or pension income",
         "Interest income from bank or FD",
         "Dividend income",
-        "ITR-1 (Sahaj) is the correct form if your total income is within ₹50 lakh and conditions are met",
+        "ITR-1 (Sahaj) is the correct form if your total income is within ?50 lakh and conditions are met",
       ],
       note: "This is the simplest return for salaried individuals with a simple income structure.",
     },
@@ -226,11 +226,11 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "How fast can my ITR be filed?",
-        a: "Usually within 24–48 hours.",
+        a: "Usually within 24�48 hours.",
       },
       {
         q: "Will I get a refund?",
-        a: "If excess tax is paid, yes — we ensure correct calculation.",
+        a: "If excess tax is paid, yes � we ensure correct calculation.",
       },
     ],
     finalCtaTitle: "Stop overpaying taxes and avoid filing mistakes.",
@@ -241,7 +241,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "retired-person-itr",
     title: "Retired Person ITR",
-    h1: "ITR Filing for Retired Persons in Mumbai – Pension & Interest Income (Sahaj)",
+    h1: "ITR Filing for Retired Persons in Mumbai � Pension & Interest Income (Sahaj)",
     metaTitle: "Retired Person ITR Filing | Pension & Interest Income | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for retired persons, pensioners and senior citizens with expert CA support. Report pension, interest and rent income accurately and claim eligible deductions.",
@@ -263,7 +263,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Pension income",
         "Interest from bank deposits (FD, savings)",
         "Income from one house property",
-        "ITR-1 (Sahaj) can be used if total income is within ₹50 lakh",
+        "ITR-1 (Sahaj) can be used if total income is within ?50 lakh",
       ],
       note: "Pension and interest income are commonly reported under ITR-1 for eligible retired individuals.",
     },
@@ -329,7 +329,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "How can I file easily without using the online portal?",
-        a: "We handle everything for you — just share your documents.",
+        a: "We handle everything for you � just share your documents.",
       },
     ],
     finalCtaTitle: "Make your tax filing simple and stress-free.",
@@ -362,7 +362,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Salary or pension",
         "Interest from bank / FD",
         "Dividend from shares or mutual funds",
-        "ITR-1 (Sahaj) is generally the correct form if total income is within ₹50 lakh and conditions are met",
+        "ITR-1 (Sahaj) is generally the correct form if total income is within ?50 lakh and conditions are met",
       ],
       note: "Even small additional income must be declared correctly to avoid mismatch and notices.",
     },
@@ -405,7 +405,7 @@ export const ITR_SERVICES: ItrService[] = [
     trustHeading: "Trusted by Working Professionals",
     trustSubtitle: "4.8/5 Rating on Google",
     trust: [
-      "Had salary and investment income confusion — everything was handled perfectly.",
+      "Had salary and investment income confusion � everything was handled perfectly.",
       "They ensured all my income was reported correctly.",
       "Very smooth and professional experience.",
     ],
@@ -431,7 +431,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, deductions under various sections are allowed.",
       },
     ],
-    finalCtaTitle: "Don’t miss out on reporting additional income correctly.",
+    finalCtaTitle: "Don�t miss out on reporting additional income correctly.",
     finalCtaLead: "File your ITR with expert guidance and complete accuracy.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -439,11 +439,11 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "salary-rent-income-itr",
     title: "Salary + Rent Income ITR",
-    h1: "ITR Filing for Salary + Rent Income in Mumbai (HRA & Rental Income – ITR-1)",
+    h1: "ITR Filing for Salary + Rent Income in Mumbai (HRA & Rental Income � ITR-1)",
     metaTitle: "Salary + Rent Income ITR Filing | HRA & Rental Income | Praveen J & Associates",
     metaDescription:
       "File ITR-1 for salary and rent income with expert CA support. Handle HRA, rental income, deductions and accurate reporting with ease.",
-    heroLead: "Earning salary and also dealing with rent — either paying or receiving?",
+    heroLead: "Earning salary and also dealing with rent � either paying or receiving?",
     heroSub:
       "We help you file your ITR-1 (Sahaj) accurately, ensuring proper handling of HRA, rental income, and deductions.",
     primaryCta: "File Your ITR Now",
@@ -504,7 +504,7 @@ export const ITR_SERVICES: ItrService[] = [
     trustHeading: "Trusted by Working Professionals",
     trustSubtitle: "4.8/5 Rating on Google",
     trust: [
-      "Had both HRA and rental income confusion — they handled everything perfectly.",
+      "Had both HRA and rental income confusion � they handled everything perfectly.",
       "Saved a lot of tax with proper guidance.",
       "Very professional and smooth experience.",
     ],
@@ -570,7 +570,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Traders and shopkeepers",
       "Retail businesses",
       "Service providers (non-professional)",
-      "Individuals with turnover up to â‚¹2 crore",
+      "Individuals with turnover up to ₹2 crore",
     ],
     benefitsHeading: "Benefits of 44AD Presumptive Taxation",
     benefits: [
@@ -611,7 +611,7 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "What is the turnover limit for 44AD?",
-        a: "Up to ‚¹2 crore, subject to the latest rules and your digital receipt ratio.",
+        a: "Up to ��2 crore, subject to the latest rules and your digital receipt ratio.",
       },
       {
         q: "Do I need to maintain books?",
@@ -761,7 +761,7 @@ export const ITR_SERVICES: ItrService[] = [
         "It covers stocks, mutual funds and property transactions",
         "It also applies where there are multiple house properties",
         "Foreign income or foreign assets may require ITR-2",
-        "Income above â‚¹50 lakh without business income is also covered",
+        "Income above ₹50 lakh without business income is also covered",
       ],
       note: "This form is more detailed and requires expert handling.",
     },
@@ -918,7 +918,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, all gains and losses should be declared in the return.",
       },
       {
-        q: "What happens if I donâ€™t report losses?",
+        q: "What happens if I don’t report losses?",
         a: "You lose the benefit of carrying forward those losses.",
       },
       {
@@ -1321,7 +1321,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Possible, but risky due to the complexity of F&O taxation.",
       },
     ],
-    finalCtaTitle: "F&O taxation is complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks with your filing.",
+    finalCtaTitle: "F&O taxation is complex â€” donâ€™t take risks with your filing.",
     finalCtaLead: "Get expert help and ensure accurate compliance.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1422,7 +1422,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
     ],
     finalCtaTitle:
-      "Intraday trading taxation is different and complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks.",
+      "Intraday trading taxation is different and complex â€” donâ€™t take risks.",
     finalCtaLead: "Get expert help and file your ITR correctly.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1521,7 +1521,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can I use ITR-4 instead of ITR-3?",
-        a: "In some cases, yes Ã¢â‚¬â€ we help determine eligibility.",
+        a: "In some cases, yes â€” we help determine eligibility.",
       },
     ],
     finalCtaTitle: "Don't risk incorrect filing of your commission income.",
@@ -1607,7 +1607,7 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "Is share of profit taxable?",
-        a: "No, it is exempt in the partnerÃ¢â‚¬â„¢s hands.",
+        a: "No, it is exempt in the partnerâ€™s hands.",
       },
       {
         q: "Is partner salary taxable?",
@@ -1634,7 +1634,7 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "llp-partnership-firm-itr-5",
     title: "LLP & Partnership Firm ITR-5",
-    h1: "LLP & Partnership Firm ITR-5 Filing in Mumbai – Expert CA for Business Tax Compliance",
+    h1: "LLP & Partnership Firm ITR-5 Filing in Mumbai � Expert CA for Business Tax Compliance",
     metaTitle: "LLP & Partnership Firm ITR-5 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-5 for LLPs and partnership firms with expert CA support. Accurate financial reporting, compliance, and smooth business tax filing.",
@@ -1746,12 +1746,12 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "partnership-firm-itr-5",
     title: "Partnership Firm ITR-5",
-    h1: "ITR Filing for Partnership Firm & Partner Income in Mumbai – Expert CA Services (ITR-5 & ITR-3)",
+    h1: "ITR Filing for Partnership Firm & Partner Income in Mumbai � Expert CA Services (ITR-5 & ITR-3)",
     metaTitle: "Partnership Firm ITR-5 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-5 for partnership firms with expert CA support. Accurate reporting, firm tax compliance, and smooth filing handled end-to-end.",
     heroLead:
-      "Running a partnership firm or earning as a partner? Your tax filing involves firm-level ITR (ITR-5) and partner-level ITR (ITR-3) — both require accurate reporting and compliance.",
+      "Running a partnership firm or earning as a partner? Your tax filing involves firm-level ITR (ITR-5) and partner-level ITR (ITR-3) � both require accurate reporting and compliance.",
     heroSub:
       "We help partnership firms and partners file their income tax returns correctly with expert CA support.",
     primaryCta: "File Your ITR Now",
@@ -1771,7 +1771,7 @@ export const ITR_SERVICES: ItrService[] = [
         "At partner level, salary / remuneration is taxable",
         "Interest on capital is taxable and profit share is exempt",
       ],
-      note: "Partnership taxation involves dual-level reporting — mistakes are common.",
+      note: "Partnership taxation involves dual-level reporting � mistakes are common.",
     },
     whoFor: [
       "Partnership firms",
@@ -1854,9 +1854,109 @@ export const ITR_SERVICES: ItrService[] = [
     finalCtaSecondary: "Chat with CA on WhatsApp",
   },
   {
+    slug: "opc-itr-6-filing-mumbai",
+    title: "OPC Company ITR-6",
+    h1: "OPC ITR-6 Filing Services in Mumbai One Person Company Tax Experts",
+    metaTitle: "OPC ITR-6 Filing | One Person Company Tax Filing | Praveen J & Associates",
+    metaDescription:
+      "File ITR-6 for One Person Companies with expert CA support. Accurate compliance, financial reporting, and smooth OPC tax filing.",
+    heroLead:
+      "Running a One Person Company (OPC)? Your income tax return must be filed under ITR-6, with proper compliance and financial accuracy.",
+    heroSub:
+      "We help OPC owners file their ITR-6 smoothly, ensuring compliance, accuracy, and peace of mind.",
+    primaryCta: "File Your OPC ITR Now",
+    heroFormCta: "Consult CA on WhatsApp",
+    problems: [
+      "Confusion around corporate tax filing",
+      "Errors in financial reporting",
+      "Compliance issues with MCA and Income Tax",
+      "Missing deductions and tax planning",
+      "Risk of notices and penalties",
+    ],
+    whatIs: {
+      heading: "What is OPC ITR-6 Filing?",
+      points: [
+        "A One Person Company (OPC) must file income tax return under ITR-6",
+        "Report financial statements accurately",
+        "Comply with corporate tax regulations",
+        "OPC taxation is similar to private limited companies",
+      ],
+      note: "OPC is treated like a company compliance is strict.",
+    },
+    whoFor: [
+      "OPC business owners",
+      "Solo entrepreneurs with company structure",
+      "Startup founders operating as OPC",
+      "Professionals running OPC entities",
+    ],
+    benefitsHeading: "Key Benefits of Expert ITR-6 Filing",
+    benefits: [
+      "Accurate corporate tax filing",
+      "Compliance with legal requirements",
+      "Proper deduction claims",
+      "Reduced risk of notices",
+      "Support for audit and filings",
+    ],
+    important: [
+      "Mandatory ITR-6 filing for OPC",
+      "Financial statements must be accurate",
+      "Audit applicability if required",
+      "MCA compliance alignment",
+      "GST reconciliation if applicable",
+    ],
+    process: [
+      "Share company financial statements",
+      "Provide income and expense details",
+      "CA reviews compliance requirements",
+      "Tax calculation and optimization",
+      "Filing of ITR-6 with accuracy",
+    ],
+    documents: [
+      "PAN & company incorporation documents",
+      "Financial statements (P&L, Balance Sheet)",
+      "Audit report (if applicable)",
+      "GST details",
+      "Bank statements",
+      "Previous ITR",
+    ],
+    trustHeading: "Trusted by Business Owners",
+    trustSubtitle: "4.8/5 Rating on Google",
+    trust: [
+      "Handled my OPC filing professionally.",
+      "Very smooth and compliant tax filing.",
+      "Reliable CA for company taxation.",
+    ],
+    faqs: [
+      {
+        q: "Which ITR form is used for OPC?",
+        a: "ITR-6 is used for OPC and companies.",
+      },
+      {
+        q: "Is audit required for OPC?",
+        a: "It depends on turnover and compliance requirements.",
+      },
+      {
+        q: "Can I file OPC ITR myself?",
+        a: "It is possible, but not recommended due to complexity.",
+      },
+      {
+        q: "Is OPC taxed like a company?",
+        a: "Yes, OPC follows corporate taxation rules.",
+      },
+      {
+        q: "What happens if filing is incorrect?",
+        a: "It may lead to notices, penalties, or compliance issues.",
+      },
+    ],
+
+    finalCtaTitle: "OPC tax filing requires accuracy and compliance don't take risks.",
+    finalCtaLead: "Get expert CA support for your business today.",
+    finalCtaPrimary: "Start Your OPC ITR Filing Now",
+    finalCtaSecondary: "Consult CA on WhatsApp",
+  },  {
     slug: "private-limited-company-tax-filing-mumbai",
     title: "Private Limited Company ITR-6",
-    h1: "ITR-6 Filing for Private Limited Company in Mumbai – Expert CA for Corporate Tax Compliance",
+    h1: "ITR-6 Filing for Private Limited Company in Mumbai � Expert CA for Corporate Tax Compliance",
     metaTitle: "Private Limited Company ITR-6 Filing | Praveen J & Associates",
     metaDescription:
       "File ITR-6 for private limited companies with expert CA support. Accurate corporate reporting, compliance, and smooth tax filing.",
@@ -1958,7 +2058,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Company ITR Filing Services",
       "CA for Company Tax Filing",
     ],
-    finalCtaTitle: "Corporate tax filing requires precision and compliance — don’t take risks.",
+    finalCtaTitle: "Corporate tax filing requires precision and compliance � don�t take risks.",
     finalCtaLead: "Get expert CA support for your company today.",
     finalCtaPrimary: "Start Your Company ITR Filing Now",
     finalCtaSecondary: "Consult CA on WhatsApp",
@@ -1966,20 +2066,20 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "special-income-crypto-nri",
     title: "Special Income (Crypto / NRI / Foreign)",
-    h1: "Special Income ITR Ã¢â‚¬â€ Crypto, NRI, Foreign Income & Lottery",
-    metaTitle: "Crypto Tax NRI ITR Foreign Income Filing Ã¢â‚¬â€ Praveen J & Associates",
+    h1: "Special Income ITR â€” Crypto, NRI, Foreign Income & Lottery",
+    metaTitle: "Crypto Tax NRI ITR Foreign Income Filing â€” Praveen J & Associates",
     metaDescription:
       "Specialized ITR filing for crypto/VDA (30% tax), NRI residents, foreign salary, lottery winnings, agriculture income. DTAA & Schedule FA expertise.",
     heroLead: "Crypto, foreign salary, NRI status ya lottery income hai?",
     heroSub:
-      "Special income types ke unique tax rules hote hain Ã¢â‚¬â€ Schedule VDA, Schedule FA, DTAA relief, residential status determination. Hum specialists hain.",
+      "Special income types ke unique tax rules hote hain â€” Schedule VDA, Schedule FA, DTAA relief, residential status determination. Hum specialists hain.",
     primaryCta: "Talk to Special Income CA",
     problems: [
       "Crypto P&L exchange-wise alag, consolidation tough",
       "NRI ya RNOR status determine nahi hota",
       "Foreign salary mein DTAA relief miss",
       "Schedule FA mein foreign holdings disclose nahi kiye",
-      "Lottery / online gaming winnings TDS 30% Ã¢â‚¬â€ refund chahiye",
+      "Lottery / online gaming winnings TDS 30% â€” refund chahiye",
     ],
     whatIs: {
       heading: "Special income ka tax treatment",
@@ -2000,7 +2100,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Farmers with substantial agricultural income",
     ],
     benefits: [
-      "DTAA relief claim Ã¢â‚¬â€ avoid double tax",
+      "DTAA relief claim â€” avoid double tax",
       "FTC (Form 67) filing for foreign tax credit",
       "Schedule FA & FSI properly disclosed",
       "TDS refund on lottery / gaming",
@@ -2010,7 +2110,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Crypto loss can't be set off against any income",
       "Form 67 must be filed BEFORE ITR to claim FTC",
       "NRI:2.5L basic exemption applicable, slab same",
-      "Foreign bank a/c, MF, shares Ã¢â‚¬â€ all in Schedule FA",
+      "Foreign bank a/c, MF, shares â€” all in Schedule FA",
       "Agricultural income > 5,000 = ITR-2 / ITR-3 only",
     ],
     process: [
@@ -2030,15 +2130,15 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "Crypto loss adjust kar sakte hain dusri income se?",
-        a: "Nahi. VDA loss kisi bhi head se set-off nahi ho sakta Ã¢â‚¬â€ na same year mein, na carry forward. Sirf gains 30% par taxed honge, expense (acquisition cost) ke alawa kuch deduct nahi hota.",
+        a: "Nahi. VDA loss kisi bhi head se set-off nahi ho sakta â€” na same year mein, na carry forward. Sirf gains 30% par taxed honge, expense (acquisition cost) ke alawa kuch deduct nahi hota.",
       },
       {
-        q: "NRI hu, India mein FD interest hai Ã¢â‚¬â€ kya karna padega?",
-        a: "NRO account interest pe 30% TDS deduct hota hai. ITR file karke slab rate par tax recompute karenge Ã¢â‚¬â€ usually refund mil jaata hai kyunki actual liability TDS se kam hoti hai.",
+        q: "NRI hu, India mein FD interest hai â€” kya karna padega?",
+        a: "NRO account interest pe 30% TDS deduct hota hai. ITR file karke slab rate par tax recompute karenge â€” usually refund mil jaata hai kyunki actual liability TDS se kam hoti hai.",
       },
       {
         q: "Foreign ESOP / RSU ka tax kaise lagta hai?",
-        a: "Vesting par perquisite (salary income) employer TDS deduct karta hai. Sale par capital gain Ã¢â‚¬â€ listed foreign shares LTCG 12.5% (after 24 months). Schedule FA mein disclosure mandatory.",
+        a: "Vesting par perquisite (salary income) employer TDS deduct karta hai. Sale par capital gain â€” listed foreign shares LTCG 12.5% (after 24 months). Schedule FA mein disclosure mandatory.",
       },
       {
         q: "Form 67 kya hai aur kab file karna hai?",
@@ -2051,15 +2151,15 @@ export const ITR_SERVICES: ItrService[] = [
     title: "Updated ITR (ITR-U)",
     h1: "Updated ITR Filing (ITR-U)  Fix Missed or Wrong Returns up to 4 Years",
     metaTitle:
-      "Updated ITR ITR-U Filing Past Years | Section 139(8A) Ã¢â‚¬â€ Praveen J & Associates",
+      "Updated ITR ITR-U Filing Past Years | Section 139(8A) â€” Praveen J & Associates",
     metaDescription:
       "File Updated Return (ITR-U) under Section 139(8A) for last 4 assessment years. Disclose missed income, avoid bigger penalties. Expert CA filing.",
     heroLead: "Pichle saal ka ITR file nahi kiya ya income disclose chhoot gayi?",
     heroSub:
-      "Section 139(8A) ke under aap last 4 assessment years tak Updated Return (ITR-U) file kar sakte ho Ã¢â‚¬â€ additional tax pay karke department notice se bach jaaiye.",
+      "Section 139(8A) ke under aap last 4 assessment years tak Updated Return (ITR-U) file kar sakte ho â€” additional tax pay karke department notice se bach jaaiye.",
     primaryCta: "File ITR-U Now",
     problems: [
-      "Past 2Ã¢â‚¬â€œ4 saal ka ITR file karna chhoot gaya",
+      "Past 2â€“4 saal ka ITR file karna chhoot gaya",
       "AIS mein income show ho rahi, ITR mein nahi",
       "Crypto / shares income disclose nahi ki",
       "Foreign income / asset miss ho gaya",
@@ -2073,7 +2173,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Additional tax: 25% (within 12M) / 50% (12-24M) / 60% (24-36M) / 70% (36-48M)",
         "Cannot reduce tax / claim refund / increase loss only additional tax allowed",
       ],
-      note: "ITR-U ek bachao tool hai Ã¢â‚¬â€ search/seizure ya notice ke baad file nahi kar sakte.",
+      note: "ITR-U ek bachao tool hai â€” search/seizure ya notice ke baad file nahi kar sakte.",
     },
     whoFor: [
       "Non-filers wanting to regularize past years",
@@ -2117,7 +2217,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "ITR-U mein refund mil sakta hai?",
-        a: "Nahi. ITR-U sirf additional income disclose karne ke liye hai Ã¢â‚¬â€ refund claim, loss increase ya tax reduce karne ke liye allowed nahi. Sirf additional tax payable cases mein file hota hai.",
+        a: "Nahi. ITR-U sirf additional income disclose karne ke liye hai â€” refund claim, loss increase ya tax reduce karne ke liye allowed nahi. Sirf additional tax payable cases mein file hota hai.",
       },
       {
         q: "Additional tax kitna lagta hai?",
@@ -2432,7 +2532,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Usually 15 days from the notice date.",
       },
       {
-        q: "What happens if I donâ€™t respond?",
+        q: "What happens if I don’t respond?",
         a: "Your return may be treated as invalid.",
       },
       {
@@ -2458,7 +2558,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Get expert help to review and respond to ITR intimation under Section 143(1). Support for tax demand, refund, mismatch and processing notices.",
     heroLead: "Received an ITR Intimation under Section 143(1)?",
     heroSub:
-      "Not sure if it’s a refund, demand, or mismatch? We help you understand, verify, and respond correctly, ensuring no penalties or loss.",
+      "Not sure if it�s a refund, demand, or mismatch? We help you understand, verify, and respond correctly, ensuring no penalties or loss.",
     primaryCta: "Check Your Intimation Now",
     heroFormCta: "Check Your Intimation Now",
     problems: [
@@ -2844,7 +2944,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, expert handling is strongly recommended.",
       },
     ],
-    finalCtaTitle: "Received a Section 148 notice? Don’t delay or guess.",
+    finalCtaTitle: "Received a Section 148 notice? Don�t delay or guess.",
     finalCtaLead: "Get expert CA support and handle reassessment correctly.",
     finalCtaPrimary: "Respond to 148 Notice Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -2961,13 +3061,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-reply",
     title: "Appeal & Hearing Representation",
-    h1: "Income Tax Appeal Ã¢â‚¬â€ CIT(A), ITAT Drafting & Representation",
+    h1: "Income Tax Appeal â€” CIT(A), ITAT Drafting & Representation",
     metaTitle: "Income Tax Appeal CIT(A) ITAT Filing | CA Help  Praveen J & Associates",
     metaDescription:
       "First Appeal (CIT(A)) & ITAT appeal drafting, filing and representation. Stay applications, condonation, written submissions by experienced CA team.",
     heroLead: "Assessment order ya demand se agree nahi?",
     heroSub:
-      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing Ã¢â‚¬â€ sab.",
+      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing â€” sab.",
     primaryCta: "Discuss My Appeal",
     problems: [
       "Assessment order mein high demand raised",
@@ -2982,7 +3082,7 @@ export const ITR_SERVICES: ItrService[] = [
         "First Appeal: CIT(A)  Form 35, within 30 days of order",
         "Second Appeal: ITAT  Form 36, within 60 days of CIT(A) order",
         "Stay of demand application alag se",
-        "Faceless appeal scheme Ã¢â‚¬â€ no physical hearing default",
+        "Faceless appeal scheme â€” no physical hearing default",
         "Appeal fee:250 to 10,000 based on assessed income",
       ],
       note: "20% pre-deposit of disputed demand usually required for stay.",
@@ -3006,7 +3106,7 @@ export const ITR_SERVICES: ItrService[] = [
       "ITAT deadline: 60 days from CIT(A) order",
       "Pre-deposit (20%) usually for stay grant",
       "Condonation possible for delay with reasons",
-      "Faceless appeal Ã¢â‚¬â€ written submissions critical",
+      "Faceless appeal â€” written submissions critical",
     ],
     process: [
       "Order review & grounds identification",
@@ -3128,13 +3228,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-and-hearing-income-tax",
     title: "Income Tax Appeal & Hearing",
-    h1: "Income Tax Appeal & Hearing Help Ã¢â‚¬â€ CIT(A) Representation & Dispute Resolution",
-    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation Ã¢â‚¬â€ Praveen J & Associates",
+    h1: "Income Tax Appeal & Hearing Help â€” CIT(A) Representation & Dispute Resolution",
+    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation â€” Praveen J & Associates",
     metaDescription:
-      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes Ã¢â‚¬â€ Section 250.",
+      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes â€” Section 250.",
     heroLead: "Filed an income tax appeal or received notice for hearing?",
     heroSub:
-      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling Ã¢â‚¬â€ helping you reduce tax demand and win your case.",
+      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling â€” helping you reduce tax demand and win your case.",
     primaryCta: "Get Expert Representation",
     problems: [
       "Confusion about hearing procedure",
@@ -3152,7 +3252,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Supporting evidence & case laws presented",
         "Order passed reducing, confirming or cancelling demand",
       ],
-      note: "Hearing outcome directly determines your final tax liability Ã¢â‚¬â€ strong preparation is non-negotiable.",
+      note: "Hearing outcome directly determines your final tax liability â€” strong preparation is non-negotiable.",
     },
     whoFor: [
       "Taxpayers with pending CIT(A) appeals",
@@ -3197,7 +3297,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Is representation required?",
-        a: "Not mandatory, but highly recommended Ã¢â‚¬â€ professional CA representation significantly improves the chance of a favourable outcome.",
+        a: "Not mandatory, but highly recommended â€” professional CA representation significantly improves the chance of a favourable outcome.",
       },
       {
         q: "What happens in the hearing?",
@@ -3205,7 +3305,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can tax demand be reduced?",
-        a: "Yes Ã¢â‚¬â€ based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
+        a: "Yes â€” based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
       },
       {
         q: "What if I lose the appeal?",
@@ -3218,3 +3318,5 @@ export const ITR_SERVICES: ItrService[] = [
 export function getItrServiceBySlug(slug: string) {
   return ITR_SERVICES.find((s) => s.slug === slug);
 }
+
+
