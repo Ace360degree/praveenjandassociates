@@ -33,7 +33,7 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import praveen from "@/assets/praveen.jpg";
-import { ITR_SERVICES } from "@/data/incomeTaxServices";
+
 const FAQS = [
   {
     q: "Which ITR form should I file?",
@@ -663,6 +663,22 @@ function ItHero() {
   );
 }
 
+function SectionTitle({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: string }) {
+  return (
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      {eyebrow ? (
+        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-brand px-3 py-1 text-xs font-semibold mb-3">
+          <Sparkles className="h-3.5 w-3.5" /> {eyebrow}
+        </div>
+      ) : null}
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        {title}
+      </h2>
+      {sub ? <p className="mt-4 text-base sm:text-lg text-muted-foreground">{sub}</p> : null}
+    </div>
+  );
+}
+
 function Problems() {
   return (
     <section className="py-16 sm:py-20 bg-brand-light">
@@ -701,7 +717,7 @@ function ItServices() {
           sub="From salary and rent income to capital gains, business income, notices, and appeals - we support all major filing needs."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {ITR_SERVICES.map((s) => {
+          {IT_SERVICES.map((s) => {
             const Icon = SERVICE_ICON_MAP[s.slug] ?? Briefcase;
             return (
               <Link
