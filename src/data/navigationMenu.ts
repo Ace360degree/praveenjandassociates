@@ -70,14 +70,14 @@ export const HEADER_MENU: NavEntry[] = [
       },
       {
         title: "Special Income ITR",
-        href: "/income-tax/special-income-crypto-nri",
+        href: "/income-tax/foreign-income-tax-filing-mumbai",
         items: [
-          { title: "Crypto Income", href: "/income-tax/special-income-crypto-nri" },
-          { title: "Lottery / Winning Income", href: "/income-tax/special-income-crypto-nri" },
-          { title: "Agricultural Income", href: "/income-tax/special-income-crypto-nri" },
-          { title: "NRI ITR", href: "/income-tax/special-income-crypto-nri" },
-          { title: "Foreign Income ITR", href: "/income-tax/special-income-crypto-nri" },
-          { title: "Complex Income", href: "/income-tax/special-income-crypto-nri" },
+          { title: "Crypto Income", href: "/income-tax/cryptocurrency-income-tax-filing" },
+          { title: "Lottery / Winning Income", href: "/income-tax/lottery-income-tax-filing-mumbai" },
+          { title: "Agricultural Income", href: "/income-tax/agricultural-income-tax-filing-mumbai" },
+          { title: "NRI ITR", href: "/income-tax/nri-income-tax-filing-mumbai" },
+          { title: "Foreign Income ITR", href: "/income-tax/foreign-income-tax-filing-mumbai" },
+          { title: "Complex Income", href: "/income-tax/foreign-income-tax-filing-mumbai" },
         ],
       },
       {
@@ -494,3 +494,8 @@ export const HEADER_MENU: NavEntry[] = [
     ],
   },
 ];
+
+
+
+
+

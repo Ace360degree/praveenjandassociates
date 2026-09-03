@@ -186,16 +186,16 @@ const IT_SERVICES = [
   },
   {
     icon: Globe2,
-    title: "Special Income",
-    sub: "Crypto Â· NRI Â· Lottery Â· Foreign",
+    title: "Foreign Income Tax Filing",
+    sub: "Foreign income � DTAA � FTC",
     items: [
-      "Crypto / VDA (30%)",
-      "NRI ITR & DTAA",
-      "Foreign salary / ESOP",
-      "Lottery / gaming TDS refund",
+      "Global income disclosure",
+      "DTAA / FTC support",
+      "Global income disclosure",
+      "Expert CA support",
     ],
     cta: "Know More",
-    slug: "special-income-crypto-nri",
+    slug: "foreign-income-tax-filing-mumbai",
   },
   {
     icon: RefreshCw,
@@ -452,7 +452,7 @@ const SERVICE_ICON_MAP: Record<string, any> = {
   "shares-mutual-fund-gain-loss-itr-2": TrendingUp,
   "business-itr-3": Calculator,
   "llp-partnership-firm-itr-5": Landmark,
-  "special-income-crypto-nri": Globe2,
+  "foreign-income-tax-filing-mumbai": Globe2,
   "updated-itr-u": RefreshCw,
   "revised-itr-filing-section-139-5": FileSpreadsheet,
   "rectification-of-itr-section-154": FileSpreadsheet,
@@ -1074,3 +1074,6 @@ function IncomeTaxPage() {
     </div>
   );
 }
+
+
+

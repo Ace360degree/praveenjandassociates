@@ -32,6 +32,12 @@ export const Route = createFileRoute("/income-tax/$slug")({
         params: { slug: "llp-partnership-firm-itr-5" },
       });
     }
+    if (params.slug === "special-income-crypto-nri") {
+      throw redirect({
+        to: "/income-tax/$slug",
+        params: { slug: "nri-income-tax-filing-mumbai" },
+      });
+    }
     const service = getItrServiceBySlug(params.slug);
     if (!service) throw notFound();
     return service;
@@ -114,6 +120,9 @@ function ItrServicePage() {
       "opc-itr-6-filing-mumbai",
       "partnership-firm-itr-5",
       "private-limited-company-tax-filing-mumbai",
+      "agricultural-income-tax-filing-mumbai",
+      "nri-income-tax-filing-mumbai",
+      "foreign-income-tax-filing-mumbai",
     ].includes(s.slug) && Boolean(s.more?.length);
   return (
     <div className="min-h-screen flex flex-col">
@@ -497,6 +506,10 @@ function MoreKeywords({ s }: { s: NonNullable<ReturnType<typeof getItrServiceByS
       "opc-itr-6-filing-mumbai",
       "partnership-firm-itr-5",
       "private-limited-company-tax-filing-mumbai",
+      "lottery-income-tax-filing-mumbai",
+      "agricultural-income-tax-filing-mumbai",
+      "nri-income-tax-filing-mumbai",
+      "foreign-income-tax-filing-mumbai",
     ].includes(s.slug) ||
     !s.more?.length
   )
@@ -622,3 +635,5 @@ function StickyMobileCTA({ cta }: { cta: string }) {
     </div>
   );
 }
+
+
