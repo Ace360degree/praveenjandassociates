@@ -27,6 +27,7 @@ import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme
 import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
 import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
 import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
+import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
 import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
 import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
@@ -53,7 +54,6 @@ import { Route as TdsTcsIndexRouteImport } from './routes/tds-tcs.index'
 import { Route as RegistrationsIndexRouteImport } from './routes/registrations.index'
 import { Route as McaIndexRouteImport } from './routes/mca.index'
 import { Route as IncomeTaxIndexRouteImport } from './routes/income-tax.index'
-import { Route as GstIndexRouteImport } from './routes/gst.index'
 import { Route as ConsultationIndexRouteImport } from './routes/consultation.index'
 import { Route as ComplianceIndexRouteImport } from './routes/compliance.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -169,6 +169,12 @@ const HufFormationRegistrationServicesRoute =
   HufFormationRegistrationServicesRouteImport.update({
     id: '/huf-formation-registration-services',
     path: '/huf-formation-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GstRegistrationReturnFilingServicesRoute =
+  GstRegistrationReturnFilingServicesRouteImport.update({
+    id: '/gst-registration-return-filing-services',
+    path: '/gst-registration-return-filing-services',
     getParentRoute: () => rootRouteImport,
   } as any)
 const FssaiFoodLicenseRegistrationServicesRoute =
@@ -307,11 +313,6 @@ const IncomeTaxIndexRoute = IncomeTaxIndexRouteImport.update({
   path: '/',
   getParentRoute: () => IncomeTaxRouteRoute,
 } as any)
-const GstIndexRoute = GstIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => GstRouteRoute,
-} as any)
 const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -413,6 +414,7 @@ export interface FileRoutesByFullPath {
   '/disclaimer': typeof DisclaimerRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
@@ -446,7 +448,6 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/compliance/': typeof ComplianceIndexRoute
   '/consultation/': typeof ConsultationIndexRoute
-  '/gst/': typeof GstIndexRoute
   '/income-tax/': typeof IncomeTaxIndexRoute
   '/mca/': typeof McaIndexRoute
   '/registrations/': typeof RegistrationsIndexRoute
@@ -454,6 +455,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/gst': typeof GstRouteRouteWithChildren
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
   '/business-setup-services': typeof BusinessSetupServicesRoute
@@ -465,6 +467,7 @@ export interface FileRoutesByTo {
   '/disclaimer': typeof DisclaimerRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
@@ -498,7 +501,6 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/compliance': typeof ComplianceIndexRoute
   '/consultation': typeof ConsultationIndexRoute
-  '/gst': typeof GstIndexRoute
   '/income-tax': typeof IncomeTaxIndexRoute
   '/mca': typeof McaIndexRoute
   '/registrations': typeof RegistrationsIndexRoute
@@ -528,6 +530,7 @@ export interface FileRoutesById {
   '/disclaimer': typeof DisclaimerRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
+  '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
@@ -561,7 +564,6 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/compliance/': typeof ComplianceIndexRoute
   '/consultation/': typeof ConsultationIndexRoute
-  '/gst/': typeof GstIndexRoute
   '/income-tax/': typeof IncomeTaxIndexRoute
   '/mca/': typeof McaIndexRoute
   '/registrations/': typeof RegistrationsIndexRoute
@@ -592,6 +594,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
+    | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
     | '/llp-compliance-packages'
@@ -625,7 +628,6 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compliance/'
     | '/consultation/'
-    | '/gst/'
     | '/income-tax/'
     | '/mca/'
     | '/registrations/'
@@ -633,6 +635,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/gst'
     | '/80g-12aa-registration-services'
     | '/business-registration-licenses'
     | '/business-setup-services'
@@ -644,6 +647,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
+    | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
     | '/llp-compliance-packages'
@@ -677,7 +681,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/compliance'
     | '/consultation'
-    | '/gst'
     | '/income-tax'
     | '/mca'
     | '/registrations'
@@ -706,6 +709,7 @@ export interface FileRouteTypes {
     | '/disclaimer'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
+    | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
     | '/llp-compliance-packages'
@@ -739,7 +743,6 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/compliance/'
     | '/consultation/'
-    | '/gst/'
     | '/income-tax/'
     | '/mca/'
     | '/registrations/'
@@ -769,6 +772,7 @@ export interface RootRouteChildren {
   DisclaimerRoute: typeof DisclaimerRoute
   EsicPfRegistrationServicesRoute: typeof EsicPfRegistrationServicesRoute
   FssaiFoodLicenseRegistrationServicesRoute: typeof FssaiFoodLicenseRegistrationServicesRoute
+  GstRegistrationReturnFilingServicesRoute: typeof GstRegistrationReturnFilingServicesRoute
   HufFormationRegistrationServicesRoute: typeof HufFormationRegistrationServicesRoute
   ImportExportCodeIecRegistrationServicesRoute: typeof ImportExportCodeIecRegistrationServicesRoute
   LlpCompliancePackagesRoute: typeof LlpCompliancePackagesRoute
@@ -915,6 +919,13 @@ declare module '@tanstack/react-router' {
       path: '/huf-formation-registration-services'
       fullPath: '/huf-formation-registration-services'
       preLoaderRoute: typeof HufFormationRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gst-registration-return-filing-services': {
+      id: '/gst-registration-return-filing-services'
+      path: '/gst-registration-return-filing-services'
+      fullPath: '/gst-registration-return-filing-services'
+      preLoaderRoute: typeof GstRegistrationReturnFilingServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fssai-food-license-registration-services': {
@@ -1099,13 +1110,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IncomeTaxIndexRouteImport
       parentRoute: typeof IncomeTaxRouteRoute
     }
-    '/gst/': {
-      id: '/gst/'
-      path: '/'
-      fullPath: '/gst/'
-      preLoaderRoute: typeof GstIndexRouteImport
-      parentRoute: typeof GstRouteRoute
-    }
     '/consultation/': {
       id: '/consultation/'
       path: '/'
@@ -1287,12 +1291,10 @@ const ConsultationRouteRouteWithChildren =
 
 interface GstRouteRouteChildren {
   GstSlugRoute: typeof GstSlugRoute
-  GstIndexRoute: typeof GstIndexRoute
 }
 
 const GstRouteRouteChildren: GstRouteRouteChildren = {
   GstSlugRoute: GstSlugRoute,
-  GstIndexRoute: GstIndexRoute,
 }
 
 const GstRouteRouteWithChildren = GstRouteRoute._addFileChildren(
@@ -1380,6 +1382,8 @@ const rootRouteChildren: RootRouteChildren = {
   EsicPfRegistrationServicesRoute: EsicPfRegistrationServicesRoute,
   FssaiFoodLicenseRegistrationServicesRoute:
     FssaiFoodLicenseRegistrationServicesRoute,
+  GstRegistrationReturnFilingServicesRoute:
+    GstRegistrationReturnFilingServicesRoute,
   HufFormationRegistrationServicesRoute: HufFormationRegistrationServicesRoute,
   ImportExportCodeIecRegistrationServicesRoute:
     ImportExportCodeIecRegistrationServicesRoute,

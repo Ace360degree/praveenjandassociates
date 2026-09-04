@@ -92,8 +92,17 @@ function GstServicePage() {
         <Documents items={s.documents} />
         <Trust />
         <FAQ items={s.faqs} />
+        {s.moreKeywords?.length ? (
+          <MoreSection
+            title={s.moreHeading}
+            intro={s.moreIntro}
+            keywords={s.moreKeywords}
+          />
+        ) : null}
+        {s.showRelatedServices === false ? null : (
+          <RelatedServices currentSlug={s.slug} />
+        )}
         <FinalCTA s={s} />
-        <RelatedServices currentSlug={s.slug} />
       </main>
       <Footer />
       <FloatingWhatsApp />
@@ -178,9 +187,9 @@ function Problems({ items }: { items: string[] }) {
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
-          Common Problems Businesses Face
+          New business owners often face:
         </h2>
-        <p className="text-center text-muted-foreground mt-2">Sound familiar? You're not alone.</p>
+        <p className="text-center text-muted-foreground mt-2">Starting wrong can delay your business launch.</p>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((p) => (
             <div key={p} className="flex gap-3 p-5 rounded-xl border bg-red-50/40 hover:bg-red-50 transition-colors">
@@ -221,7 +230,7 @@ function WhoFor({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Who Should Use This Service?</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">WHO SHOULD APPLY?</h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((w) => (
             <div key={w} className="p-5 rounded-xl border hover:border-brand/40 hover:shadow-md transition-all bg-white">
@@ -243,7 +252,7 @@ function Benefits({ items, important }: { items: string[]; important: string[] }
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 max-w-5xl">
         <div className="bg-white rounded-2xl p-6 lg:p-8 border shadow-sm">
           <h3 className="font-display text-xl font-bold text-ink flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-brand" /> Benefits
+            <Sparkles className="h-5 w-5 text-brand" /> BENEFITS OF NEW GST REGISTRATION
           </h3>
           <ul className="mt-4 space-y-2.5">
             {items.map((b) => (
@@ -256,7 +265,7 @@ function Benefits({ items, important }: { items: string[]; important: string[] }
         </div>
         <div className="bg-white rounded-2xl p-6 lg:p-8 border shadow-sm">
           <h3 className="font-display text-xl font-bold text-ink flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-brand" /> Important Points
+            <AlertTriangle className="h-5 w-5 text-brand" /> IMPORTANT POINTS
           </h3>
           <ul className="mt-4 space-y-2.5">
             {important.map((b) => (
@@ -276,7 +285,7 @@ function Process({ steps }: { steps: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Our Process</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">OUR PROCESS</h2>
         <p className="text-center text-muted-foreground mt-2">Simple, transparent, expert-led.</p>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {steps.map((step, i) => (
@@ -295,8 +304,8 @@ function Documents({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Documents Required</h2>
-        <p className="text-center text-muted-foreground mt-2">We'll guide you step-by-step on documentation.</p>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">DOCUMENTS REQUIRED</h2>
+        <p className="text-center text-muted-foreground mt-2">We will guide you step-by-step on documentation.</p>
         <div className="mt-8 grid sm:grid-cols-2 gap-3">
           {items.map((d) => (
             <div key={d} className="flex gap-3 p-4 rounded-xl bg-white border hover:border-brand/40 transition-colors">
@@ -312,17 +321,17 @@ function Documents({ items }: { items: string[] }) {
 
 function Trust() {
   const reviews = [
-    "Got my work done quickly without any hassle.",
-    "Very smooth and professional service.",
-    "Highly recommended — expert CA guidance.",
+    "Perfect support for starting my business.",
+    "Quick and hassle-free GST registration.",
+    "Highly recommended for new entrepreneurs.",
   ];
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Trusted by Businesses</h2>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Trusted by New Businesses</h2>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold">5/5 on Google</span>
+          <span className="ml-2 font-semibold">4.8/5 Rating on Google</span>
         </div>
         <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (
@@ -361,18 +370,63 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
-function FinalCTA({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
+function MoreSection({
+  title,
+  intro,
+  keywords,
+}: {
+  title?: string;
+  intro?: string;
+  keywords: string[];
+}) {
   return (
-    <section className="py-16 bg-gradient-to-br from-brand to-brand/80 text-white">
+    <section className="py-14 bg-muted/30">
+      <div className="container mx-auto px-4 max-w-5xl">
+        <div className="rounded-3xl border bg-white px-6 py-8 lg:px-10 lg:py-10 shadow-sm">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
+              <Sparkles className="h-3.5 w-3.5" /> More
+            </p>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-bold text-ink">
+              {title ?? "More About GST Registration"}
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              {intro ?? "Popular search phrases aligned with GST registration support."}
+            </p>
+          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {keywords.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center rounded-full border bg-muted/30 px-4 py-2 text-sm font-medium text-ink shadow-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FinalCTA({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
+  const heading = s.finalCtaHeading || "Starting a new business? Get your GST registration done the right way.";
+  const subheading = s.finalCtaSubheading || "Get expert CA support and launch smoothly.";
+  const primaryText = s.finalCtaPrimary || s.primaryCta;
+  const secondaryText = s.finalCtaSecondary || "Call CA Now";
+  const secondaryHref = secondaryText === "Chat with CA on WhatsApp" ? "https://wa.me/918169887643" : "tel:+918169887643";
+  return (
+    <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Ready to get started?</h2>
-        <p className="mt-3 text-white/90">Expert CA support, quick turnaround, full compliance — talk to us today.</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">{heading}</h2>
+        <p className="mt-3 text-white/90">{subheading}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
-            {s.primaryCta} <ArrowRight className="h-4 w-4" />
+            {primaryText} <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
-            <Phone className="h-4 w-4" /> Call CA Now
+          <a href={secondaryHref} target={secondaryHref.startsWith("http") ? "_blank" : undefined} rel={secondaryHref.startsWith("http") ? "noreferrer" : undefined} className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
+            {secondaryText === "Chat with CA on WhatsApp" ? <MessageCircle className="h-4 w-4" /> : <Phone className="h-4 w-4" />} {secondaryText}
           </a>
         </div>
       </div>
