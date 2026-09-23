@@ -9,9 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UpdateEmailMobileMcaRouteImport } from './routes/update-email-mobile-mca'
+import { Route as ThreeYearBalanceSheetRouteImport } from './routes/three-year-balance-sheet'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as TaxRegistrationServicesRouteImport } from './routes/tax-registration-services'
 import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax-holiday-section-80iac-services'
+import { Route as SurrenderDuplicateDinRouteImport } from './routes/surrender-duplicate-din'
 import { Route as StartupOutsourcingServicesRouteImport } from './routes/startup-outsourcing-services'
 import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
 import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
@@ -19,21 +22,41 @@ import { Route as StartupGrantLoanAssistanceServicesRouteImport } from './routes
 import { Route as SoleProprietorshipRegistrationServicesRouteImport } from './routes/sole-proprietorship-registration-services'
 import { Route as SmallBusinessAccountingTaxServicesRouteImport } from './routes/small-business-accounting-tax-services'
 import { Route as ShopAndEstablishmentRegistrationServicesRouteImport } from './routes/shop-and-establishment-registration-services'
+import { Route as Section8CompanyRegistrationRouteImport } from './routes/section-8-company-registration'
+import { Route as SecretarialRecordsPreparationMaintenanceRouteImport } from './routes/secretarial-records-preparation-maintenance'
+import { Route as RocOtherFormsInc20aDir6Dpt3RouteImport } from './routes/roc-other-forms-inc20a-dir6-dpt3'
+import { Route as ResignationOfPartnerInLlpRouteImport } from './routes/resignation-of-partner-in-llp'
+import { Route as ProjectedBalanceSheetRouteImport } from './routes/projected-balance-sheet'
+import { Route as ProjectReportForBankLoanRouteImport } from './routes/project-report-for-bank-loan'
+import { Route as ProfitAndLossStatementServicesRouteImport } from './routes/profit-and-loss-statement-services'
 import { Route as ProfessionalTaxRegistrationServicesRouteImport } from './routes/professional-tax-registration-services'
+import { Route as PrivateLimitedCompanyFormationRouteImport } from './routes/private-limited-company-formation'
 import { Route as PrivateLimitedCompanyRouteImport } from './routes/private-limited-company'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PersonalAccountingServicesRouteImport } from './routes/personal-accounting-services'
 import { Route as PartnershipFirmRegistrationServicesRouteImport } from './routes/partnership-firm-registration-services'
 import { Route as PartnershipFirmRouteImport } from './routes/partnership-firm'
 import { Route as OurFullPackagesServicesRouteImport } from './routes/our-full-packages-services'
+import { Route as OnePersonCompanyRegistrationRouteImport } from './routes/one-person-company-registration'
+import { Route as NewLlpFormationRouteImport } from './routes/new-llp-formation'
+import { Route as NewDinApplicationRouteImport } from './routes/new-din-application'
 import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
+import { Route as Mgt7Mgt7aFilingRouteImport } from './routes/mgt-7-mgt-7a-filing'
+import { Route as McaRocFilingServicesIndiaRouteImport } from './routes/mca-roc-filing-services-india'
+import { Route as LlpFormsFilingRouteImport } from './routes/llp-forms-filing'
 import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
+import { Route as LlpBalanceSheetForm8ServicesRouteImport } from './routes/llp-balance-sheet-form-8-services'
+import { Route as LlpAgreementChangesRouteImport } from './routes/llp-agreement-changes'
+import { Route as KycFilingMcaRouteImport } from './routes/kyc-filing-mca'
+import { Route as ItrBalanceSheetPreparationServicesRouteImport } from './routes/itr-balance-sheet-preparation-services'
 import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
 import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
 import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
 import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
 import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
+import { Route as DpinApplicationLlpPartnerIndiaRouteImport } from './routes/dpin-application-llp-partner-india'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as DinDpinRegistrationDirectorLlpIndiaRouteImport } from './routes/din-dpin-registration-director-llp-india'
 import { Route as DigitalSignatureDscRegistrationServicesRouteImport } from './routes/digital-signature-dsc-registration-services'
 import { Route as DigitalBusinessServicesRouteImport } from './routes/digital-business-services'
 import { Route as DailyEinvoicingEwayBillServicesRouteImport } from './routes/daily-einvoicing-eway-bill-services'
@@ -41,8 +64,20 @@ import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as CompleteAccountingServicesRouteImport } from './routes/complete-accounting-services'
 import { Route as CompanyProfileRouteImport } from './routes/company-profile'
 import { Route as CompanyPoliciesRouteImport } from './routes/company-policies'
+import { Route as CompanyNameChangeMcaRouteImport } from './routes/company-name-change-mca'
+import { Route as CompanyIncorporationServiceRouteImport } from './routes/company-incorporation-service'
+import { Route as CompanyFinancialStatementsServicesRouteImport } from './routes/company-financial-statements-services'
+import { Route as CompanyAddressChangeMcaRouteImport } from './routes/company-address-change-mca'
+import { Route as CmaDataForBankOdCc35YearsRouteImport } from './routes/cma-data-for-bank-od-cc-3-5-years'
+import { Route as ChangeMoaAoaOfCompanyRouteImport } from './routes/change-moa-aoa-of-company'
+import { Route as ChangeInCompanyMasterDataRouteImport } from './routes/change-in-company-master-data'
 import { Route as BusinessSetupServicesRouteImport } from './routes/business-setup-services'
 import { Route as BusinessRegistrationLicensesRouteImport } from './routes/business-registration-licenses'
+import { Route as BankLoanServicesRouteImport } from './routes/bank-loan-services'
+import { Route as BalanceSheetPreparationServicesRouteImport } from './routes/balance-sheet-preparation-services'
+import { Route as Aoc4FilingPrivateLimitedRouteImport } from './routes/aoc-4-filing-private-limited'
+import { Route as AnnualRocComplianceRouteImport } from './routes/annual-roc-compliance'
+import { Route as Adt1FilingForAuditorRouteImport } from './routes/adt-1-filing-for-auditor'
 import { Route as AccountingReviewVisitsServicesRouteImport } from './routes/accounting-review-visits-services'
 import { Route as AccountingForItrFilingRouteImport } from './routes/accounting-for-itr-filing'
 import { Route as R80g12aaRegistrationServicesRouteImport } from './routes/80g-12aa-registration-services'
@@ -77,6 +112,16 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BankLoanSlugRouteImport } from './routes/bank-loan.$slug'
 import { Route as AccountingAuditServicesSlugRouteImport } from './routes/accounting-audit-services.$slug'
 
+const UpdateEmailMobileMcaRoute = UpdateEmailMobileMcaRouteImport.update({
+  id: '/update-email-mobile-mca',
+  path: '/update-email-mobile-mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThreeYearBalanceSheetRoute = ThreeYearBalanceSheetRouteImport.update({
+  id: '/three-year-balance-sheet',
+  path: '/three-year-balance-sheet',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   id: '/terms-and-conditions',
   path: '/terms-and-conditions',
@@ -93,6 +138,11 @@ const TaxHolidaySection80iacServicesRoute =
     path: '/tax-holiday-section-80iac-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const SurrenderDuplicateDinRoute = SurrenderDuplicateDinRouteImport.update({
+  id: '/surrender-duplicate-din',
+  path: '/surrender-duplicate-din',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StartupOutsourcingServicesRoute =
   StartupOutsourcingServicesRouteImport.update({
     id: '/startup-outsourcing-services',
@@ -135,10 +185,57 @@ const ShopAndEstablishmentRegistrationServicesRoute =
     path: '/shop-and-establishment-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const Section8CompanyRegistrationRoute =
+  Section8CompanyRegistrationRouteImport.update({
+    id: '/section-8-company-registration',
+    path: '/section-8-company-registration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SecretarialRecordsPreparationMaintenanceRoute =
+  SecretarialRecordsPreparationMaintenanceRouteImport.update({
+    id: '/secretarial-records-preparation-maintenance',
+    path: '/secretarial-records-preparation-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RocOtherFormsInc20aDir6Dpt3Route =
+  RocOtherFormsInc20aDir6Dpt3RouteImport.update({
+    id: '/roc-other-forms-inc20a-dir6-dpt3',
+    path: '/roc-other-forms-inc20a-dir6-dpt3',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResignationOfPartnerInLlpRoute =
+  ResignationOfPartnerInLlpRouteImport.update({
+    id: '/resignation-of-partner-in-llp',
+    path: '/resignation-of-partner-in-llp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectedBalanceSheetRoute = ProjectedBalanceSheetRouteImport.update({
+  id: '/projected-balance-sheet',
+  path: '/projected-balance-sheet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectReportForBankLoanRoute =
+  ProjectReportForBankLoanRouteImport.update({
+    id: '/project-report-for-bank-loan',
+    path: '/project-report-for-bank-loan',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProfitAndLossStatementServicesRoute =
+  ProfitAndLossStatementServicesRouteImport.update({
+    id: '/profit-and-loss-statement-services',
+    path: '/profit-and-loss-statement-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProfessionalTaxRegistrationServicesRoute =
   ProfessionalTaxRegistrationServicesRouteImport.update({
     id: '/professional-tax-registration-services',
     path: '/professional-tax-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PrivateLimitedCompanyFormationRoute =
+  PrivateLimitedCompanyFormationRouteImport.update({
+    id: '/private-limited-company-formation',
+    path: '/private-limited-company-formation',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PrivateLimitedCompanyRoute = PrivateLimitedCompanyRouteImport.update({
@@ -173,17 +270,71 @@ const OurFullPackagesServicesRoute = OurFullPackagesServicesRouteImport.update({
   path: '/our-full-packages-services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OnePersonCompanyRegistrationRoute =
+  OnePersonCompanyRegistrationRouteImport.update({
+    id: '/one-person-company-registration',
+    path: '/one-person-company-registration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const NewLlpFormationRoute = NewLlpFormationRouteImport.update({
+  id: '/new-llp-formation',
+  path: '/new-llp-formation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewDinApplicationRoute = NewDinApplicationRouteImport.update({
+  id: '/new-din-application',
+  path: '/new-din-application',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MsmeUdyamRegistrationServicesRoute =
   MsmeUdyamRegistrationServicesRouteImport.update({
     id: '/msme-udyam-registration-services',
     path: '/msme-udyam-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const Mgt7Mgt7aFilingRoute = Mgt7Mgt7aFilingRouteImport.update({
+  id: '/mgt-7-mgt-7a-filing',
+  path: '/mgt-7-mgt-7a-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McaRocFilingServicesIndiaRoute =
+  McaRocFilingServicesIndiaRouteImport.update({
+    id: '/mca-roc-filing-services-india',
+    path: '/mca-roc-filing-services-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LlpFormsFilingRoute = LlpFormsFilingRouteImport.update({
+  id: '/llp-forms-filing',
+  path: '/llp-forms-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LlpCompliancePackagesRoute = LlpCompliancePackagesRouteImport.update({
   id: '/llp-compliance-packages',
   path: '/llp-compliance-packages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LlpBalanceSheetForm8ServicesRoute =
+  LlpBalanceSheetForm8ServicesRouteImport.update({
+    id: '/llp-balance-sheet-form-8-services',
+    path: '/llp-balance-sheet-form-8-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LlpAgreementChangesRoute = LlpAgreementChangesRouteImport.update({
+  id: '/llp-agreement-changes',
+  path: '/llp-agreement-changes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KycFilingMcaRoute = KycFilingMcaRouteImport.update({
+  id: '/kyc-filing-mca',
+  path: '/kyc-filing-mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItrBalanceSheetPreparationServicesRoute =
+  ItrBalanceSheetPreparationServicesRouteImport.update({
+    id: '/itr-balance-sheet-preparation-services',
+    path: '/itr-balance-sheet-preparation-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ImportExportCodeIecRegistrationServicesRoute =
   ImportExportCodeIecRegistrationServicesRouteImport.update({
     id: '/import-export-code-iec-registration-services',
@@ -214,11 +365,23 @@ const EsicPfRegistrationServicesRoute =
     path: '/esic-pf-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DpinApplicationLlpPartnerIndiaRoute =
+  DpinApplicationLlpPartnerIndiaRouteImport.update({
+    id: '/dpin-application-llp-partner-india',
+    path: '/dpin-application-llp-partner-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DisclaimerRoute = DisclaimerRouteImport.update({
   id: '/disclaimer',
   path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DinDpinRegistrationDirectorLlpIndiaRoute =
+  DinDpinRegistrationDirectorLlpIndiaRouteImport.update({
+    id: '/din-dpin-registration-director-llp-india',
+    path: '/din-dpin-registration-director-llp-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DigitalSignatureDscRegistrationServicesRoute =
   DigitalSignatureDscRegistrationServicesRouteImport.update({
     id: '/digital-signature-dsc-registration-services',
@@ -257,6 +420,45 @@ const CompanyPoliciesRoute = CompanyPoliciesRouteImport.update({
   path: '/company-policies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompanyNameChangeMcaRoute = CompanyNameChangeMcaRouteImport.update({
+  id: '/company-name-change-mca',
+  path: '/company-name-change-mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyIncorporationServiceRoute =
+  CompanyIncorporationServiceRouteImport.update({
+    id: '/company-incorporation-service',
+    path: '/company-incorporation-service',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CompanyFinancialStatementsServicesRoute =
+  CompanyFinancialStatementsServicesRouteImport.update({
+    id: '/company-financial-statements-services',
+    path: '/company-financial-statements-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CompanyAddressChangeMcaRoute = CompanyAddressChangeMcaRouteImport.update({
+  id: '/company-address-change-mca',
+  path: '/company-address-change-mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CmaDataForBankOdCc35YearsRoute =
+  CmaDataForBankOdCc35YearsRouteImport.update({
+    id: '/cma-data-for-bank-od-cc-3-5-years',
+    path: '/cma-data-for-bank-od-cc-3-5-years',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChangeMoaAoaOfCompanyRoute = ChangeMoaAoaOfCompanyRouteImport.update({
+  id: '/change-moa-aoa-of-company',
+  path: '/change-moa-aoa-of-company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChangeInCompanyMasterDataRoute =
+  ChangeInCompanyMasterDataRouteImport.update({
+    id: '/change-in-company-master-data',
+    path: '/change-in-company-master-data',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BusinessSetupServicesRoute = BusinessSetupServicesRouteImport.update({
   id: '/business-setup-services',
   path: '/business-setup-services',
@@ -268,6 +470,33 @@ const BusinessRegistrationLicensesRoute =
     path: '/business-registration-licenses',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BankLoanServicesRoute = BankLoanServicesRouteImport.update({
+  id: '/bank-loan-services',
+  path: '/bank-loan-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BalanceSheetPreparationServicesRoute =
+  BalanceSheetPreparationServicesRouteImport.update({
+    id: '/balance-sheet-preparation-services',
+    path: '/balance-sheet-preparation-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Aoc4FilingPrivateLimitedRoute =
+  Aoc4FilingPrivateLimitedRouteImport.update({
+    id: '/aoc-4-filing-private-limited',
+    path: '/aoc-4-filing-private-limited',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AnnualRocComplianceRoute = AnnualRocComplianceRouteImport.update({
+  id: '/annual-roc-compliance',
+  path: '/annual-roc-compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Adt1FilingForAuditorRoute = Adt1FilingForAuditorRouteImport.update({
+  id: '/adt-1-filing-for-auditor',
+  path: '/adt-1-filing-for-auditor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AccountingReviewVisitsServicesRoute =
   AccountingReviewVisitsServicesRouteImport.update({
     id: '/accounting-review-visits-services',
@@ -454,8 +683,20 @@ export interface FileRoutesByFullPath {
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
+  '/adt-1-filing-for-auditor': typeof Adt1FilingForAuditorRoute
+  '/annual-roc-compliance': typeof AnnualRocComplianceRoute
+  '/aoc-4-filing-private-limited': typeof Aoc4FilingPrivateLimitedRoute
+  '/balance-sheet-preparation-services': typeof BalanceSheetPreparationServicesRoute
+  '/bank-loan-services': typeof BankLoanServicesRoute
   '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
   '/business-setup-services': typeof BusinessSetupServicesRoute
+  '/change-in-company-master-data': typeof ChangeInCompanyMasterDataRoute
+  '/change-moa-aoa-of-company': typeof ChangeMoaAoaOfCompanyRoute
+  '/cma-data-for-bank-od-cc-3-5-years': typeof CmaDataForBankOdCc35YearsRoute
+  '/company-address-change-mca': typeof CompanyAddressChangeMcaRoute
+  '/company-financial-statements-services': typeof CompanyFinancialStatementsServicesRoute
+  '/company-incorporation-service': typeof CompanyIncorporationServiceRoute
+  '/company-name-change-mca': typeof CompanyNameChangeMcaRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/complete-accounting-services': typeof CompleteAccountingServicesRoute
@@ -463,21 +704,41 @@ export interface FileRoutesByFullPath {
   '/daily-einvoicing-eway-bill-services': typeof DailyEinvoicingEwayBillServicesRoute
   '/digital-business-services': typeof DigitalBusinessServicesRoute
   '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
+  '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
+  '/kyc-filing-mca': typeof KycFilingMcaRoute
+  '/llp-agreement-changes': typeof LlpAgreementChangesRoute
+  '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
+  '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/new-din-application': typeof NewDinApplicationRoute
+  '/new-llp-formation': typeof NewLlpFormationRoute
+  '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
   '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/personal-accounting-services': typeof PersonalAccountingServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/private-limited-company-formation': typeof PrivateLimitedCompanyFormationRoute
   '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/profit-and-loss-statement-services': typeof ProfitAndLossStatementServicesRoute
+  '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
+  '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
+  '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
+  '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
+  '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
   '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
   '/small-business-accounting-tax-services': typeof SmallBusinessAccountingTaxServicesRoute
   '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
@@ -485,9 +746,12 @@ export interface FileRoutesByFullPath {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
+  '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -514,8 +778,20 @@ export interface FileRoutesByTo {
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
+  '/adt-1-filing-for-auditor': typeof Adt1FilingForAuditorRoute
+  '/annual-roc-compliance': typeof AnnualRocComplianceRoute
+  '/aoc-4-filing-private-limited': typeof Aoc4FilingPrivateLimitedRoute
+  '/balance-sheet-preparation-services': typeof BalanceSheetPreparationServicesRoute
+  '/bank-loan-services': typeof BankLoanServicesRoute
   '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
   '/business-setup-services': typeof BusinessSetupServicesRoute
+  '/change-in-company-master-data': typeof ChangeInCompanyMasterDataRoute
+  '/change-moa-aoa-of-company': typeof ChangeMoaAoaOfCompanyRoute
+  '/cma-data-for-bank-od-cc-3-5-years': typeof CmaDataForBankOdCc35YearsRoute
+  '/company-address-change-mca': typeof CompanyAddressChangeMcaRoute
+  '/company-financial-statements-services': typeof CompanyFinancialStatementsServicesRoute
+  '/company-incorporation-service': typeof CompanyIncorporationServiceRoute
+  '/company-name-change-mca': typeof CompanyNameChangeMcaRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/complete-accounting-services': typeof CompleteAccountingServicesRoute
@@ -523,21 +799,41 @@ export interface FileRoutesByTo {
   '/daily-einvoicing-eway-bill-services': typeof DailyEinvoicingEwayBillServicesRoute
   '/digital-business-services': typeof DigitalBusinessServicesRoute
   '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
+  '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
+  '/kyc-filing-mca': typeof KycFilingMcaRoute
+  '/llp-agreement-changes': typeof LlpAgreementChangesRoute
+  '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
+  '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/new-din-application': typeof NewDinApplicationRoute
+  '/new-llp-formation': typeof NewLlpFormationRoute
+  '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
   '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/personal-accounting-services': typeof PersonalAccountingServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/private-limited-company-formation': typeof PrivateLimitedCompanyFormationRoute
   '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/profit-and-loss-statement-services': typeof ProfitAndLossStatementServicesRoute
+  '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
+  '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
+  '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
+  '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
+  '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
   '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
   '/small-business-accounting-tax-services': typeof SmallBusinessAccountingTaxServicesRoute
   '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
@@ -545,9 +841,12 @@ export interface FileRoutesByTo {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
+  '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -584,8 +883,20 @@ export interface FileRoutesById {
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
+  '/adt-1-filing-for-auditor': typeof Adt1FilingForAuditorRoute
+  '/annual-roc-compliance': typeof AnnualRocComplianceRoute
+  '/aoc-4-filing-private-limited': typeof Aoc4FilingPrivateLimitedRoute
+  '/balance-sheet-preparation-services': typeof BalanceSheetPreparationServicesRoute
+  '/bank-loan-services': typeof BankLoanServicesRoute
   '/business-registration-licenses': typeof BusinessRegistrationLicensesRoute
   '/business-setup-services': typeof BusinessSetupServicesRoute
+  '/change-in-company-master-data': typeof ChangeInCompanyMasterDataRoute
+  '/change-moa-aoa-of-company': typeof ChangeMoaAoaOfCompanyRoute
+  '/cma-data-for-bank-od-cc-3-5-years': typeof CmaDataForBankOdCc35YearsRoute
+  '/company-address-change-mca': typeof CompanyAddressChangeMcaRoute
+  '/company-financial-statements-services': typeof CompanyFinancialStatementsServicesRoute
+  '/company-incorporation-service': typeof CompanyIncorporationServiceRoute
+  '/company-name-change-mca': typeof CompanyNameChangeMcaRoute
   '/company-policies': typeof CompanyPoliciesRoute
   '/company-profile': typeof CompanyProfileRoute
   '/complete-accounting-services': typeof CompleteAccountingServicesRoute
@@ -593,21 +904,41 @@ export interface FileRoutesById {
   '/daily-einvoicing-eway-bill-services': typeof DailyEinvoicingEwayBillServicesRoute
   '/digital-business-services': typeof DigitalBusinessServicesRoute
   '/digital-signature-dsc-registration-services': typeof DigitalSignatureDscRegistrationServicesRoute
+  '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
+  '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
+  '/kyc-filing-mca': typeof KycFilingMcaRoute
+  '/llp-agreement-changes': typeof LlpAgreementChangesRoute
+  '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
+  '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
+  '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
+  '/new-din-application': typeof NewDinApplicationRoute
+  '/new-llp-formation': typeof NewLlpFormationRoute
+  '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
   '/partnership-firm-registration-services': typeof PartnershipFirmRegistrationServicesRoute
   '/personal-accounting-services': typeof PersonalAccountingServicesRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/private-limited-company': typeof PrivateLimitedCompanyRoute
+  '/private-limited-company-formation': typeof PrivateLimitedCompanyFormationRoute
   '/professional-tax-registration-services': typeof ProfessionalTaxRegistrationServicesRoute
+  '/profit-and-loss-statement-services': typeof ProfitAndLossStatementServicesRoute
+  '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
+  '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
+  '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
+  '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
+  '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
   '/shop-and-establishment-registration-services': typeof ShopAndEstablishmentRegistrationServicesRoute
   '/small-business-accounting-tax-services': typeof SmallBusinessAccountingTaxServicesRoute
   '/sole-proprietorship-registration-services': typeof SoleProprietorshipRegistrationServicesRoute
@@ -615,9 +946,12 @@ export interface FileRoutesById {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
+  '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
   '/bank-loan/$slug': typeof BankLoanSlugRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -655,8 +989,20 @@ export interface FileRouteTypes {
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
+    | '/adt-1-filing-for-auditor'
+    | '/annual-roc-compliance'
+    | '/aoc-4-filing-private-limited'
+    | '/balance-sheet-preparation-services'
+    | '/bank-loan-services'
     | '/business-registration-licenses'
     | '/business-setup-services'
+    | '/change-in-company-master-data'
+    | '/change-moa-aoa-of-company'
+    | '/cma-data-for-bank-od-cc-3-5-years'
+    | '/company-address-change-mca'
+    | '/company-financial-statements-services'
+    | '/company-incorporation-service'
+    | '/company-name-change-mca'
     | '/company-policies'
     | '/company-profile'
     | '/complete-accounting-services'
@@ -664,21 +1010,41 @@ export interface FileRouteTypes {
     | '/daily-einvoicing-eway-bill-services'
     | '/digital-business-services'
     | '/digital-signature-dsc-registration-services'
+    | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
+    | '/dpin-application-llp-partner-india'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/itr-balance-sheet-preparation-services'
+    | '/kyc-filing-mca'
+    | '/llp-agreement-changes'
+    | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
+    | '/llp-forms-filing'
+    | '/mca-roc-filing-services-india'
+    | '/mgt-7-mgt-7a-filing'
     | '/msme-udyam-registration-services'
+    | '/new-din-application'
+    | '/new-llp-formation'
+    | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
     | '/partnership-firm-registration-services'
     | '/personal-accounting-services'
     | '/privacy-policy'
     | '/private-limited-company'
+    | '/private-limited-company-formation'
     | '/professional-tax-registration-services'
+    | '/profit-and-loss-statement-services'
+    | '/project-report-for-bank-loan'
+    | '/projected-balance-sheet'
+    | '/resignation-of-partner-in-llp'
+    | '/roc-other-forms-inc20a-dir6-dpt3'
+    | '/secretarial-records-preparation-maintenance'
+    | '/section-8-company-registration'
     | '/shop-and-establishment-registration-services'
     | '/small-business-accounting-tax-services'
     | '/sole-proprietorship-registration-services'
@@ -686,9 +1052,12 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/surrender-duplicate-din'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
     | '/terms-and-conditions'
+    | '/three-year-balance-sheet'
+    | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
     | '/blog/$slug'
@@ -715,8 +1084,20 @@ export interface FileRouteTypes {
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
+    | '/adt-1-filing-for-auditor'
+    | '/annual-roc-compliance'
+    | '/aoc-4-filing-private-limited'
+    | '/balance-sheet-preparation-services'
+    | '/bank-loan-services'
     | '/business-registration-licenses'
     | '/business-setup-services'
+    | '/change-in-company-master-data'
+    | '/change-moa-aoa-of-company'
+    | '/cma-data-for-bank-od-cc-3-5-years'
+    | '/company-address-change-mca'
+    | '/company-financial-statements-services'
+    | '/company-incorporation-service'
+    | '/company-name-change-mca'
     | '/company-policies'
     | '/company-profile'
     | '/complete-accounting-services'
@@ -724,21 +1105,41 @@ export interface FileRouteTypes {
     | '/daily-einvoicing-eway-bill-services'
     | '/digital-business-services'
     | '/digital-signature-dsc-registration-services'
+    | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
+    | '/dpin-application-llp-partner-india'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/itr-balance-sheet-preparation-services'
+    | '/kyc-filing-mca'
+    | '/llp-agreement-changes'
+    | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
+    | '/llp-forms-filing'
+    | '/mca-roc-filing-services-india'
+    | '/mgt-7-mgt-7a-filing'
     | '/msme-udyam-registration-services'
+    | '/new-din-application'
+    | '/new-llp-formation'
+    | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
     | '/partnership-firm-registration-services'
     | '/personal-accounting-services'
     | '/privacy-policy'
     | '/private-limited-company'
+    | '/private-limited-company-formation'
     | '/professional-tax-registration-services'
+    | '/profit-and-loss-statement-services'
+    | '/project-report-for-bank-loan'
+    | '/projected-balance-sheet'
+    | '/resignation-of-partner-in-llp'
+    | '/roc-other-forms-inc20a-dir6-dpt3'
+    | '/secretarial-records-preparation-maintenance'
+    | '/section-8-company-registration'
     | '/shop-and-establishment-registration-services'
     | '/small-business-accounting-tax-services'
     | '/sole-proprietorship-registration-services'
@@ -746,9 +1147,12 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/surrender-duplicate-din'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
     | '/terms-and-conditions'
+    | '/three-year-balance-sheet'
+    | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
     | '/blog/$slug'
@@ -784,8 +1188,20 @@ export interface FileRouteTypes {
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
+    | '/adt-1-filing-for-auditor'
+    | '/annual-roc-compliance'
+    | '/aoc-4-filing-private-limited'
+    | '/balance-sheet-preparation-services'
+    | '/bank-loan-services'
     | '/business-registration-licenses'
     | '/business-setup-services'
+    | '/change-in-company-master-data'
+    | '/change-moa-aoa-of-company'
+    | '/cma-data-for-bank-od-cc-3-5-years'
+    | '/company-address-change-mca'
+    | '/company-financial-statements-services'
+    | '/company-incorporation-service'
+    | '/company-name-change-mca'
     | '/company-policies'
     | '/company-profile'
     | '/complete-accounting-services'
@@ -793,21 +1209,41 @@ export interface FileRouteTypes {
     | '/daily-einvoicing-eway-bill-services'
     | '/digital-business-services'
     | '/digital-signature-dsc-registration-services'
+    | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
+    | '/dpin-application-llp-partner-india'
     | '/esic-pf-registration-services'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/itr-balance-sheet-preparation-services'
+    | '/kyc-filing-mca'
+    | '/llp-agreement-changes'
+    | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
+    | '/llp-forms-filing'
+    | '/mca-roc-filing-services-india'
+    | '/mgt-7-mgt-7a-filing'
     | '/msme-udyam-registration-services'
+    | '/new-din-application'
+    | '/new-llp-formation'
+    | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
     | '/partnership-firm-registration-services'
     | '/personal-accounting-services'
     | '/privacy-policy'
     | '/private-limited-company'
+    | '/private-limited-company-formation'
     | '/professional-tax-registration-services'
+    | '/profit-and-loss-statement-services'
+    | '/project-report-for-bank-loan'
+    | '/projected-balance-sheet'
+    | '/resignation-of-partner-in-llp'
+    | '/roc-other-forms-inc20a-dir6-dpt3'
+    | '/secretarial-records-preparation-maintenance'
+    | '/section-8-company-registration'
     | '/shop-and-establishment-registration-services'
     | '/small-business-accounting-tax-services'
     | '/sole-proprietorship-registration-services'
@@ -815,9 +1251,12 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/surrender-duplicate-din'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
     | '/terms-and-conditions'
+    | '/three-year-balance-sheet'
+    | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
     | '/bank-loan/$slug'
     | '/blog/$slug'
@@ -854,8 +1293,20 @@ export interface RootRouteChildren {
   R80g12aaRegistrationServicesRoute: typeof R80g12aaRegistrationServicesRoute
   AccountingForItrFilingRoute: typeof AccountingForItrFilingRoute
   AccountingReviewVisitsServicesRoute: typeof AccountingReviewVisitsServicesRoute
+  Adt1FilingForAuditorRoute: typeof Adt1FilingForAuditorRoute
+  AnnualRocComplianceRoute: typeof AnnualRocComplianceRoute
+  Aoc4FilingPrivateLimitedRoute: typeof Aoc4FilingPrivateLimitedRoute
+  BalanceSheetPreparationServicesRoute: typeof BalanceSheetPreparationServicesRoute
+  BankLoanServicesRoute: typeof BankLoanServicesRoute
   BusinessRegistrationLicensesRoute: typeof BusinessRegistrationLicensesRoute
   BusinessSetupServicesRoute: typeof BusinessSetupServicesRoute
+  ChangeInCompanyMasterDataRoute: typeof ChangeInCompanyMasterDataRoute
+  ChangeMoaAoaOfCompanyRoute: typeof ChangeMoaAoaOfCompanyRoute
+  CmaDataForBankOdCc35YearsRoute: typeof CmaDataForBankOdCc35YearsRoute
+  CompanyAddressChangeMcaRoute: typeof CompanyAddressChangeMcaRoute
+  CompanyFinancialStatementsServicesRoute: typeof CompanyFinancialStatementsServicesRoute
+  CompanyIncorporationServiceRoute: typeof CompanyIncorporationServiceRoute
+  CompanyNameChangeMcaRoute: typeof CompanyNameChangeMcaRoute
   CompanyPoliciesRoute: typeof CompanyPoliciesRoute
   CompanyProfileRoute: typeof CompanyProfileRoute
   CompleteAccountingServicesRoute: typeof CompleteAccountingServicesRoute
@@ -863,21 +1314,41 @@ export interface RootRouteChildren {
   DailyEinvoicingEwayBillServicesRoute: typeof DailyEinvoicingEwayBillServicesRoute
   DigitalBusinessServicesRoute: typeof DigitalBusinessServicesRoute
   DigitalSignatureDscRegistrationServicesRoute: typeof DigitalSignatureDscRegistrationServicesRoute
+  DinDpinRegistrationDirectorLlpIndiaRoute: typeof DinDpinRegistrationDirectorLlpIndiaRoute
   DisclaimerRoute: typeof DisclaimerRoute
+  DpinApplicationLlpPartnerIndiaRoute: typeof DpinApplicationLlpPartnerIndiaRoute
   EsicPfRegistrationServicesRoute: typeof EsicPfRegistrationServicesRoute
   FssaiFoodLicenseRegistrationServicesRoute: typeof FssaiFoodLicenseRegistrationServicesRoute
   GstRegistrationReturnFilingServicesRoute: typeof GstRegistrationReturnFilingServicesRoute
   HufFormationRegistrationServicesRoute: typeof HufFormationRegistrationServicesRoute
   ImportExportCodeIecRegistrationServicesRoute: typeof ImportExportCodeIecRegistrationServicesRoute
+  ItrBalanceSheetPreparationServicesRoute: typeof ItrBalanceSheetPreparationServicesRoute
+  KycFilingMcaRoute: typeof KycFilingMcaRoute
+  LlpAgreementChangesRoute: typeof LlpAgreementChangesRoute
+  LlpBalanceSheetForm8ServicesRoute: typeof LlpBalanceSheetForm8ServicesRoute
   LlpCompliancePackagesRoute: typeof LlpCompliancePackagesRoute
+  LlpFormsFilingRoute: typeof LlpFormsFilingRoute
+  McaRocFilingServicesIndiaRoute: typeof McaRocFilingServicesIndiaRoute
+  Mgt7Mgt7aFilingRoute: typeof Mgt7Mgt7aFilingRoute
   MsmeUdyamRegistrationServicesRoute: typeof MsmeUdyamRegistrationServicesRoute
+  NewDinApplicationRoute: typeof NewDinApplicationRoute
+  NewLlpFormationRoute: typeof NewLlpFormationRoute
+  OnePersonCompanyRegistrationRoute: typeof OnePersonCompanyRegistrationRoute
   OurFullPackagesServicesRoute: typeof OurFullPackagesServicesRoute
   PartnershipFirmRoute: typeof PartnershipFirmRoute
   PartnershipFirmRegistrationServicesRoute: typeof PartnershipFirmRegistrationServicesRoute
   PersonalAccountingServicesRoute: typeof PersonalAccountingServicesRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   PrivateLimitedCompanyRoute: typeof PrivateLimitedCompanyRoute
+  PrivateLimitedCompanyFormationRoute: typeof PrivateLimitedCompanyFormationRoute
   ProfessionalTaxRegistrationServicesRoute: typeof ProfessionalTaxRegistrationServicesRoute
+  ProfitAndLossStatementServicesRoute: typeof ProfitAndLossStatementServicesRoute
+  ProjectReportForBankLoanRoute: typeof ProjectReportForBankLoanRoute
+  ProjectedBalanceSheetRoute: typeof ProjectedBalanceSheetRoute
+  ResignationOfPartnerInLlpRoute: typeof ResignationOfPartnerInLlpRoute
+  RocOtherFormsInc20aDir6Dpt3Route: typeof RocOtherFormsInc20aDir6Dpt3Route
+  SecretarialRecordsPreparationMaintenanceRoute: typeof SecretarialRecordsPreparationMaintenanceRoute
+  Section8CompanyRegistrationRoute: typeof Section8CompanyRegistrationRoute
   ShopAndEstablishmentRegistrationServicesRoute: typeof ShopAndEstablishmentRegistrationServicesRoute
   SmallBusinessAccountingTaxServicesRoute: typeof SmallBusinessAccountingTaxServicesRoute
   SoleProprietorshipRegistrationServicesRoute: typeof SoleProprietorshipRegistrationServicesRoute
@@ -885,13 +1356,30 @@ export interface RootRouteChildren {
   StartupIndiaDpiitRegistrationServicesRoute: typeof StartupIndiaDpiitRegistrationServicesRoute
   StartupNgoRegistrationServicesRoute: typeof StartupNgoRegistrationServicesRoute
   StartupOutsourcingServicesRoute: typeof StartupOutsourcingServicesRoute
+  SurrenderDuplicateDinRoute: typeof SurrenderDuplicateDinRoute
   TaxHolidaySection80iacServicesRoute: typeof TaxHolidaySection80iacServicesRoute
   TaxRegistrationServicesRoute: typeof TaxRegistrationServicesRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  ThreeYearBalanceSheetRoute: typeof ThreeYearBalanceSheetRoute
+  UpdateEmailMobileMcaRoute: typeof UpdateEmailMobileMcaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/update-email-mobile-mca': {
+      id: '/update-email-mobile-mca'
+      path: '/update-email-mobile-mca'
+      fullPath: '/update-email-mobile-mca'
+      preLoaderRoute: typeof UpdateEmailMobileMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/three-year-balance-sheet': {
+      id: '/three-year-balance-sheet'
+      path: '/three-year-balance-sheet'
+      fullPath: '/three-year-balance-sheet'
+      preLoaderRoute: typeof ThreeYearBalanceSheetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms-and-conditions': {
       id: '/terms-and-conditions'
       path: '/terms-and-conditions'
@@ -911,6 +1399,13 @@ declare module '@tanstack/react-router' {
       path: '/tax-holiday-section-80iac-services'
       fullPath: '/tax-holiday-section-80iac-services'
       preLoaderRoute: typeof TaxHolidaySection80iacServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surrender-duplicate-din': {
+      id: '/surrender-duplicate-din'
+      path: '/surrender-duplicate-din'
+      fullPath: '/surrender-duplicate-din'
+      preLoaderRoute: typeof SurrenderDuplicateDinRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/startup-outsourcing-services': {
@@ -962,11 +1457,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ShopAndEstablishmentRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/section-8-company-registration': {
+      id: '/section-8-company-registration'
+      path: '/section-8-company-registration'
+      fullPath: '/section-8-company-registration'
+      preLoaderRoute: typeof Section8CompanyRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/secretarial-records-preparation-maintenance': {
+      id: '/secretarial-records-preparation-maintenance'
+      path: '/secretarial-records-preparation-maintenance'
+      fullPath: '/secretarial-records-preparation-maintenance'
+      preLoaderRoute: typeof SecretarialRecordsPreparationMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roc-other-forms-inc20a-dir6-dpt3': {
+      id: '/roc-other-forms-inc20a-dir6-dpt3'
+      path: '/roc-other-forms-inc20a-dir6-dpt3'
+      fullPath: '/roc-other-forms-inc20a-dir6-dpt3'
+      preLoaderRoute: typeof RocOtherFormsInc20aDir6Dpt3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resignation-of-partner-in-llp': {
+      id: '/resignation-of-partner-in-llp'
+      path: '/resignation-of-partner-in-llp'
+      fullPath: '/resignation-of-partner-in-llp'
+      preLoaderRoute: typeof ResignationOfPartnerInLlpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projected-balance-sheet': {
+      id: '/projected-balance-sheet'
+      path: '/projected-balance-sheet'
+      fullPath: '/projected-balance-sheet'
+      preLoaderRoute: typeof ProjectedBalanceSheetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/project-report-for-bank-loan': {
+      id: '/project-report-for-bank-loan'
+      path: '/project-report-for-bank-loan'
+      fullPath: '/project-report-for-bank-loan'
+      preLoaderRoute: typeof ProjectReportForBankLoanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profit-and-loss-statement-services': {
+      id: '/profit-and-loss-statement-services'
+      path: '/profit-and-loss-statement-services'
+      fullPath: '/profit-and-loss-statement-services'
+      preLoaderRoute: typeof ProfitAndLossStatementServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/professional-tax-registration-services': {
       id: '/professional-tax-registration-services'
       path: '/professional-tax-registration-services'
       fullPath: '/professional-tax-registration-services'
       preLoaderRoute: typeof ProfessionalTaxRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/private-limited-company-formation': {
+      id: '/private-limited-company-formation'
+      path: '/private-limited-company-formation'
+      fullPath: '/private-limited-company-formation'
+      preLoaderRoute: typeof PrivateLimitedCompanyFormationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/private-limited-company': {
@@ -1011,6 +1562,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OurFullPackagesServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/one-person-company-registration': {
+      id: '/one-person-company-registration'
+      path: '/one-person-company-registration'
+      fullPath: '/one-person-company-registration'
+      preLoaderRoute: typeof OnePersonCompanyRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-llp-formation': {
+      id: '/new-llp-formation'
+      path: '/new-llp-formation'
+      fullPath: '/new-llp-formation'
+      preLoaderRoute: typeof NewLlpFormationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-din-application': {
+      id: '/new-din-application'
+      path: '/new-din-application'
+      fullPath: '/new-din-application'
+      preLoaderRoute: typeof NewDinApplicationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/msme-udyam-registration-services': {
       id: '/msme-udyam-registration-services'
       path: '/msme-udyam-registration-services'
@@ -1018,11 +1590,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/mgt-7-mgt-7a-filing': {
+      id: '/mgt-7-mgt-7a-filing'
+      path: '/mgt-7-mgt-7a-filing'
+      fullPath: '/mgt-7-mgt-7a-filing'
+      preLoaderRoute: typeof Mgt7Mgt7aFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mca-roc-filing-services-india': {
+      id: '/mca-roc-filing-services-india'
+      path: '/mca-roc-filing-services-india'
+      fullPath: '/mca-roc-filing-services-india'
+      preLoaderRoute: typeof McaRocFilingServicesIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-forms-filing': {
+      id: '/llp-forms-filing'
+      path: '/llp-forms-filing'
+      fullPath: '/llp-forms-filing'
+      preLoaderRoute: typeof LlpFormsFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/llp-compliance-packages': {
       id: '/llp-compliance-packages'
       path: '/llp-compliance-packages'
       fullPath: '/llp-compliance-packages'
       preLoaderRoute: typeof LlpCompliancePackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-balance-sheet-form-8-services': {
+      id: '/llp-balance-sheet-form-8-services'
+      path: '/llp-balance-sheet-form-8-services'
+      fullPath: '/llp-balance-sheet-form-8-services'
+      preLoaderRoute: typeof LlpBalanceSheetForm8ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-agreement-changes': {
+      id: '/llp-agreement-changes'
+      path: '/llp-agreement-changes'
+      fullPath: '/llp-agreement-changes'
+      preLoaderRoute: typeof LlpAgreementChangesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kyc-filing-mca': {
+      id: '/kyc-filing-mca'
+      path: '/kyc-filing-mca'
+      fullPath: '/kyc-filing-mca'
+      preLoaderRoute: typeof KycFilingMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/itr-balance-sheet-preparation-services': {
+      id: '/itr-balance-sheet-preparation-services'
+      path: '/itr-balance-sheet-preparation-services'
+      fullPath: '/itr-balance-sheet-preparation-services'
+      preLoaderRoute: typeof ItrBalanceSheetPreparationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/import-export-code-iec-registration-services': {
@@ -1060,11 +1681,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsicPfRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dpin-application-llp-partner-india': {
+      id: '/dpin-application-llp-partner-india'
+      path: '/dpin-application-llp-partner-india'
+      fullPath: '/dpin-application-llp-partner-india'
+      preLoaderRoute: typeof DpinApplicationLlpPartnerIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/disclaimer': {
       id: '/disclaimer'
       path: '/disclaimer'
       fullPath: '/disclaimer'
       preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/din-dpin-registration-director-llp-india': {
+      id: '/din-dpin-registration-director-llp-india'
+      path: '/din-dpin-registration-director-llp-india'
+      fullPath: '/din-dpin-registration-director-llp-india'
+      preLoaderRoute: typeof DinDpinRegistrationDirectorLlpIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/digital-signature-dsc-registration-services': {
@@ -1116,6 +1751,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyPoliciesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/company-name-change-mca': {
+      id: '/company-name-change-mca'
+      path: '/company-name-change-mca'
+      fullPath: '/company-name-change-mca'
+      preLoaderRoute: typeof CompanyNameChangeMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-incorporation-service': {
+      id: '/company-incorporation-service'
+      path: '/company-incorporation-service'
+      fullPath: '/company-incorporation-service'
+      preLoaderRoute: typeof CompanyIncorporationServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-financial-statements-services': {
+      id: '/company-financial-statements-services'
+      path: '/company-financial-statements-services'
+      fullPath: '/company-financial-statements-services'
+      preLoaderRoute: typeof CompanyFinancialStatementsServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-address-change-mca': {
+      id: '/company-address-change-mca'
+      path: '/company-address-change-mca'
+      fullPath: '/company-address-change-mca'
+      preLoaderRoute: typeof CompanyAddressChangeMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cma-data-for-bank-od-cc-3-5-years': {
+      id: '/cma-data-for-bank-od-cc-3-5-years'
+      path: '/cma-data-for-bank-od-cc-3-5-years'
+      fullPath: '/cma-data-for-bank-od-cc-3-5-years'
+      preLoaderRoute: typeof CmaDataForBankOdCc35YearsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/change-moa-aoa-of-company': {
+      id: '/change-moa-aoa-of-company'
+      path: '/change-moa-aoa-of-company'
+      fullPath: '/change-moa-aoa-of-company'
+      preLoaderRoute: typeof ChangeMoaAoaOfCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/change-in-company-master-data': {
+      id: '/change-in-company-master-data'
+      path: '/change-in-company-master-data'
+      fullPath: '/change-in-company-master-data'
+      preLoaderRoute: typeof ChangeInCompanyMasterDataRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/business-setup-services': {
       id: '/business-setup-services'
       path: '/business-setup-services'
@@ -1128,6 +1812,41 @@ declare module '@tanstack/react-router' {
       path: '/business-registration-licenses'
       fullPath: '/business-registration-licenses'
       preLoaderRoute: typeof BusinessRegistrationLicensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bank-loan-services': {
+      id: '/bank-loan-services'
+      path: '/bank-loan-services'
+      fullPath: '/bank-loan-services'
+      preLoaderRoute: typeof BankLoanServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/balance-sheet-preparation-services': {
+      id: '/balance-sheet-preparation-services'
+      path: '/balance-sheet-preparation-services'
+      fullPath: '/balance-sheet-preparation-services'
+      preLoaderRoute: typeof BalanceSheetPreparationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aoc-4-filing-private-limited': {
+      id: '/aoc-4-filing-private-limited'
+      path: '/aoc-4-filing-private-limited'
+      fullPath: '/aoc-4-filing-private-limited'
+      preLoaderRoute: typeof Aoc4FilingPrivateLimitedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/annual-roc-compliance': {
+      id: '/annual-roc-compliance'
+      path: '/annual-roc-compliance'
+      fullPath: '/annual-roc-compliance'
+      preLoaderRoute: typeof AnnualRocComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adt-1-filing-for-auditor': {
+      id: '/adt-1-filing-for-auditor'
+      path: '/adt-1-filing-for-auditor'
+      fullPath: '/adt-1-filing-for-auditor'
+      preLoaderRoute: typeof Adt1FilingForAuditorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/accounting-review-visits-services': {
@@ -1518,8 +2237,21 @@ const rootRouteChildren: RootRouteChildren = {
   R80g12aaRegistrationServicesRoute: R80g12aaRegistrationServicesRoute,
   AccountingForItrFilingRoute: AccountingForItrFilingRoute,
   AccountingReviewVisitsServicesRoute: AccountingReviewVisitsServicesRoute,
+  Adt1FilingForAuditorRoute: Adt1FilingForAuditorRoute,
+  AnnualRocComplianceRoute: AnnualRocComplianceRoute,
+  Aoc4FilingPrivateLimitedRoute: Aoc4FilingPrivateLimitedRoute,
+  BalanceSheetPreparationServicesRoute: BalanceSheetPreparationServicesRoute,
+  BankLoanServicesRoute: BankLoanServicesRoute,
   BusinessRegistrationLicensesRoute: BusinessRegistrationLicensesRoute,
   BusinessSetupServicesRoute: BusinessSetupServicesRoute,
+  ChangeInCompanyMasterDataRoute: ChangeInCompanyMasterDataRoute,
+  ChangeMoaAoaOfCompanyRoute: ChangeMoaAoaOfCompanyRoute,
+  CmaDataForBankOdCc35YearsRoute: CmaDataForBankOdCc35YearsRoute,
+  CompanyAddressChangeMcaRoute: CompanyAddressChangeMcaRoute,
+  CompanyFinancialStatementsServicesRoute:
+    CompanyFinancialStatementsServicesRoute,
+  CompanyIncorporationServiceRoute: CompanyIncorporationServiceRoute,
+  CompanyNameChangeMcaRoute: CompanyNameChangeMcaRoute,
   CompanyPoliciesRoute: CompanyPoliciesRoute,
   CompanyProfileRoute: CompanyProfileRoute,
   CompleteAccountingServicesRoute: CompleteAccountingServicesRoute,
@@ -1528,7 +2260,10 @@ const rootRouteChildren: RootRouteChildren = {
   DigitalBusinessServicesRoute: DigitalBusinessServicesRoute,
   DigitalSignatureDscRegistrationServicesRoute:
     DigitalSignatureDscRegistrationServicesRoute,
+  DinDpinRegistrationDirectorLlpIndiaRoute:
+    DinDpinRegistrationDirectorLlpIndiaRoute,
   DisclaimerRoute: DisclaimerRoute,
+  DpinApplicationLlpPartnerIndiaRoute: DpinApplicationLlpPartnerIndiaRoute,
   EsicPfRegistrationServicesRoute: EsicPfRegistrationServicesRoute,
   FssaiFoodLicenseRegistrationServicesRoute:
     FssaiFoodLicenseRegistrationServicesRoute,
@@ -1537,8 +2272,19 @@ const rootRouteChildren: RootRouteChildren = {
   HufFormationRegistrationServicesRoute: HufFormationRegistrationServicesRoute,
   ImportExportCodeIecRegistrationServicesRoute:
     ImportExportCodeIecRegistrationServicesRoute,
+  ItrBalanceSheetPreparationServicesRoute:
+    ItrBalanceSheetPreparationServicesRoute,
+  KycFilingMcaRoute: KycFilingMcaRoute,
+  LlpAgreementChangesRoute: LlpAgreementChangesRoute,
+  LlpBalanceSheetForm8ServicesRoute: LlpBalanceSheetForm8ServicesRoute,
   LlpCompliancePackagesRoute: LlpCompliancePackagesRoute,
+  LlpFormsFilingRoute: LlpFormsFilingRoute,
+  McaRocFilingServicesIndiaRoute: McaRocFilingServicesIndiaRoute,
+  Mgt7Mgt7aFilingRoute: Mgt7Mgt7aFilingRoute,
   MsmeUdyamRegistrationServicesRoute: MsmeUdyamRegistrationServicesRoute,
+  NewDinApplicationRoute: NewDinApplicationRoute,
+  NewLlpFormationRoute: NewLlpFormationRoute,
+  OnePersonCompanyRegistrationRoute: OnePersonCompanyRegistrationRoute,
   OurFullPackagesServicesRoute: OurFullPackagesServicesRoute,
   PartnershipFirmRoute: PartnershipFirmRoute,
   PartnershipFirmRegistrationServicesRoute:
@@ -1546,8 +2292,17 @@ const rootRouteChildren: RootRouteChildren = {
   PersonalAccountingServicesRoute: PersonalAccountingServicesRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   PrivateLimitedCompanyRoute: PrivateLimitedCompanyRoute,
+  PrivateLimitedCompanyFormationRoute: PrivateLimitedCompanyFormationRoute,
   ProfessionalTaxRegistrationServicesRoute:
     ProfessionalTaxRegistrationServicesRoute,
+  ProfitAndLossStatementServicesRoute: ProfitAndLossStatementServicesRoute,
+  ProjectReportForBankLoanRoute: ProjectReportForBankLoanRoute,
+  ProjectedBalanceSheetRoute: ProjectedBalanceSheetRoute,
+  ResignationOfPartnerInLlpRoute: ResignationOfPartnerInLlpRoute,
+  RocOtherFormsInc20aDir6Dpt3Route: RocOtherFormsInc20aDir6Dpt3Route,
+  SecretarialRecordsPreparationMaintenanceRoute:
+    SecretarialRecordsPreparationMaintenanceRoute,
+  Section8CompanyRegistrationRoute: Section8CompanyRegistrationRoute,
   ShopAndEstablishmentRegistrationServicesRoute:
     ShopAndEstablishmentRegistrationServicesRoute,
   SmallBusinessAccountingTaxServicesRoute:
@@ -1560,9 +2315,12 @@ const rootRouteChildren: RootRouteChildren = {
     StartupIndiaDpiitRegistrationServicesRoute,
   StartupNgoRegistrationServicesRoute: StartupNgoRegistrationServicesRoute,
   StartupOutsourcingServicesRoute: StartupOutsourcingServicesRoute,
+  SurrenderDuplicateDinRoute: SurrenderDuplicateDinRoute,
   TaxHolidaySection80iacServicesRoute: TaxHolidaySection80iacServicesRoute,
   TaxRegistrationServicesRoute: TaxRegistrationServicesRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
+  ThreeYearBalanceSheetRoute: ThreeYearBalanceSheetRoute,
+  UpdateEmailMobileMcaRoute: UpdateEmailMobileMcaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

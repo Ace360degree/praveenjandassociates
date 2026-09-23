@@ -19,6 +19,1643 @@ export type McaService = {
 
 export const MCA_SERVICES: McaService[] = [
   {
+    slug: "secretarial-records-preparation-maintenance",
+    title: "Secretarial Records",
+    h1: "Secretarial Records Preparation & Maintenance – Corporate Compliance Services India",
+    metaTitle: "Secretarial Records Preparation & Maintenance | Corporate Compliance — Praveen J & Associates",
+    metaDescription: "Ensure complete compliance with the Companies Act, 2013 through professionally maintained statutory registers, minutes, and corporate records.",
+    heroLead: "Keep Your Company Audit-Ready with Proper Secretarial Records",
+    heroSub: "Ensure complete compliance with the Companies Act, 2013 through professionally maintained statutory registers, minutes, and corporate records. Expert assistance for secretarial documentation, record maintenance, and compliance.",
+    primaryCta: "Maintain Secretarial Records Now",
+    problems: [
+      "Missing or incomplete records",
+      "Incorrect documentation format",
+      "Non-compliance with Companies Act",
+      "Poor record maintenance",
+      "Difficulty during audits"
+    ],
+    whatIs: {
+      heading: "ABOUT SECRETARIAL RECORDS",
+      points: [
+        "Secretarial records are essential documents that maintain a company’s legal, operational, and compliance history.",
+        "These include statutory registers, board and shareholder meeting records, resolutions and notices, and compliance documentation."
+      ],
+      note: "Maintaining these records is mandatory under the Companies Act."
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "Startups and growing businesses",
+      "Companies preparing for audits",
+      "Businesses needing compliance support",
+      "Companies lacking proper documentation"
+    ],
+    benefits: [
+      "Preparation of statutory registers",
+      "Drafting board meeting minutes & resolutions",
+      "AGM/EGM minutes documentation",
+      "Maintenance of company records",
+      "Compliance with Companies Act requirements"
+    ],
+    important: [
+      "Mandatory legal compliance",
+      "Essential for audits and inspections",
+      "Proof of corporate decisions",
+      "Maintain corporate governance standards"
+    ],
+    process: [
+      "Review current records",
+      "Identify gaps and requirements",
+      "Prepare required documentation",
+      "Organize and maintain records",
+      "Ensure ongoing compliance"
+    ],
+    documents: [
+      "Company incorporation documents",
+      "Previous meeting records",
+      "Director and shareholder details",
+      "Financial and compliance records"
+    ],
+    faqs: [
+      { q: "What are secretarial records?", a: "They are statutory documents required under the Companies Act." },
+      { q: "Is maintaining these records mandatory?", a: "Yes, for all companies." },
+      { q: "What happens if records are not maintained?", a: "Penalties and compliance issues may arise." },
+      { q: "Are these required for audits?", a: "Yes, they are essential for audits and inspections." },
+      { q: "Can CA handle complete maintenance?", a: "Yes, we provide full support." }
+    ]
+  },
+  {
+    slug: "roc-other-forms-inc20a-dir6-dpt3",
+    title: "Other ROC Forms",
+    h1: "ROC Other Forms Filing – INC-20A, DIR-6 & DPT-3 Compliance Services India",
+    metaTitle: "ROC Other Forms Filing (INC-20A, DIR-6, DPT-3) | Compliance Services — Praveen J & Associates",
+    metaDescription: "File essential ROC forms like INC-20A, DIR-6, and DPT-3 with expert CA support and avoid penalties. Complete assistance for MCA filing and compliance.",
+    heroLead: "Need Help with ROC Forms Filing? Stay Fully Compliant",
+    heroSub: "File essential ROC forms like INC-20A, DIR-6, and DPT-3 with expert CA support and avoid penalties. Complete assistance for MCA filing, documentation, and compliance.",
+    primaryCta: "File ROC Forms Now",
+    problems: [
+      "Confusion about applicable forms",
+      "Errors in filing and documentation",
+      "Missed deadlines",
+      "Rejection due to incorrect data",
+      "Lack of compliance awareness"
+    ],
+    whatIs: {
+      heading: "ABOUT ROC OTHER FORMS",
+      points: [
+        "Apart from annual filings, companies must submit various ROC forms for specific compliance requirements under the Companies Act.",
+        "Key forms include INC-20A (Commencement of Business), DIR-6 (Update in director details), and DPT-3 (Return of deposits)."
+      ],
+      note: "Timely filing ensures smooth operations and avoids penalties."
+    },
+    whoFor: [
+      "Newly incorporated companies",
+      "Companies updating director details",
+      "Businesses filing deposit returns",
+      "Startups and growing companies",
+      "Companies completing compliance"
+    ],
+    benefits: [
+      "INC-20A – Commencement of Business filed within 180 days",
+      "DIR-6 – Accurate update of director details in MCA records",
+      "DPT-3 – Annual return of deposits or outstanding loans",
+      "Identify applicable ROC forms",
+      "Prepare accurate documentation & file forms with MCA"
+    ],
+    important: [
+      "Mandatory under Companies Act",
+      "Avoid heavy penalties",
+      "Ensure smooth MCA compliance",
+      "Enable legal business operations"
+    ],
+    process: [
+      "Understand compliance requirement",
+      "Identify applicable form (INC-20A / DIR-6 / DPT-3)",
+      "Prepare documents",
+      "File with MCA",
+      "Confirm successful submission"
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Director details",
+      "Financial/loan details (for DPT-3)",
+      "DSC of directors"
+    ],
+    faqs: [
+      { q: "What is INC-20A?", a: "It is a declaration for commencement of business." },
+      { q: "What is DIR-6 used for?", a: "To update director details in MCA records." },
+      { q: "What is DPT-3?", a: "It is a return of deposits or outstanding loans." },
+      { q: "Are these forms mandatory?", a: "Yes, depending on company requirements." },
+      { q: "Can CA handle complete filing?", a: "Yes, we provide full support." }
+    ],
+  },
+  {
+    slug: "change-moa-aoa-of-company",
+    title: "Change in MOA & AOA",
+    h1: "Change in MOA & AOA of Company – Amendment Services under Companies Act",
+    metaTitle: "Change in MOA & AOA of Company | Amendment Services — Praveen J & Associates",
+    metaDescription: "Modify your company’s Memorandum of Association (MOA) and Articles of Association (AOA) with expert legal and compliance support.",
+    heroLead: "Need to Update Your Company’s MOA or AOA?",
+    heroSub: "Modify your company’s Memorandum of Association (MOA) and Articles of Association (AOA) with expert legal and compliance support. End-to-end assistance for object clause change, AOA amendment, and ROC filing.",
+    primaryCta: "Amend MOA / AOA Now",
+    problems: [
+      "Incorrect drafting of object clause",
+      "Errors in filing with MCA",
+      "Delay in approvals",
+      "Confusion in legal requirements",
+      "Non-compliance with Companies Act"
+    ],
+    whatIs: {
+      heading: "ABOUT MOA & AOA AMENDMENT",
+      points: [
+        "The MOA (Memorandum of Association) defines the company’s objectives and scope of activities, while the AOA (Articles of Association) governs internal rules and management.",
+        "Changes may be required for change in business activities (main objects), expansion into new sectors, internal restructuring, and compliance updates."
+      ],
+      note: "All amendments must be approved and filed with MCA."
+    },
+    whoFor: [
+      "Companies expanding business activities",
+      "Startups pivoting business model",
+      "Businesses restructuring operations",
+      "Companies updating governance rules",
+      "Growing enterprises"
+    ],
+    benefits: [
+      "Drafting revised MOA / AOA clauses",
+      "Board resolution preparation",
+      "Shareholder approval handling",
+      "ROC filing (MGT-14 and related forms)",
+      "Compliance verification and follow-up"
+    ],
+    important: [
+      "Enables business expansion legally",
+      "Aligns company structure with operations",
+      "Required for regulatory compliance",
+      "Prevents legal disputes"
+    ],
+    process: [
+      "Understand required changes",
+      "Draft revised MOA / AOA",
+      "Prepare board & shareholder resolutions",
+      "File ROC forms (MGT-14, etc.)",
+      "Confirm approval and update"
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "Existing MOA & AOA",
+      "Board resolution",
+      "Shareholder approval",
+      "Business activity details"
+    ],
+    faqs: [
+      { q: "What is MOA and AOA?", a: "MOA defines company objectives, AOA defines internal rules." },
+      { q: "Is MCA approval required?", a: "Yes, amendments must be filed and approved." },
+      { q: "Which form is used for filing?", a: "MGT-14 is commonly used." },
+      { q: "How long does the process take?", a: "Usually 5–10 working days." },
+      { q: "Can CA handle complete process?", a: "Yes, we provide full support." }
+    ],
+  },
+  {
+    slug: "resignation-of-partner-in-llp",
+    title: "Partner Change",
+    h1: "Resignation of Partner in LLP – LLP Exit & ROC Filing Services India",
+    metaTitle: "Resignation of Partner in LLP | LLP Exit Services — Praveen J & Associates",
+    metaDescription: "Handle partner resignation smoothly with expert support for documentation, agreement update, and MCA filing. Complete assistance for Form 4 filing and compliance.",
+    heroLead: "Need to Remove or Exit a Partner from Your LLP?",
+    heroSub: "Handle partner resignation smoothly with expert support for documentation, agreement update, and MCA filing. Complete assistance for Form 4 filing, LLP agreement amendment, and compliance.",
+    primaryCta: "Process Partner Exit Now",
+    problems: [
+      "Incorrect Form 4 filing",
+      "Disputes in partner exit terms",
+      "Improper LLP agreement update",
+      "Delay in filing",
+      "Compliance errors"
+    ],
+    whatIs: {
+      heading: "ABOUT PARTNER RESIGNATION IN LLP",
+      points: [
+        "When a partner exits an LLP, it must be legally documented and filed with MCA to update official records.",
+        "The process includes resignation notice, consent of remaining partners, amendment of LLP agreement, and filing of Form 4 with ROC."
+      ],
+      note: "Proper compliance ensures smooth and legally valid exit."
+    },
+    whoFor: [
+      "LLPs with exiting partners",
+      "Businesses restructuring ownership",
+      "Firms handling partner disputes",
+      "LLPs updating partnership structure",
+      "Growing companies optimizing ownership"
+    ],
+    benefits: [
+      "Drafting resignation documents",
+      "Partner consent and resolution",
+      "LLP agreement amendment",
+      "Form 4 filing with MCA",
+      "ROC compliance and record update"
+    ],
+    important: [
+      "Legal recognition of partner exit",
+      "Updated LLP structure",
+      "Avoid future liability issues",
+      "Maintain accurate MCA records"
+    ],
+    process: [
+      "Understand partner exit details",
+      "Draft resignation and consent documents",
+      "Amend LLP agreement",
+      "File Form 4 with MCA",
+      "Confirm successful update"
+    ],
+    documents: [
+      "PAN & Aadhaar of exiting partner",
+      "LLP agreement",
+      "Resignation letter",
+      "Consent of partners",
+      "DSC of partners"
+    ],
+    faqs: [
+      { q: "How to resign from LLP?", a: "By submitting resignation and filing Form 4 with MCA." },
+      { q: "Which form is used for resignation?", a: "Form 4 is used for partner resignation." },
+      { q: "Is LLP agreement amendment required?", a: "Yes, it is mandatory." },
+      { q: "How long does the process take?", a: "Usually 3–7 working days." },
+      { q: "Can CA handle complete process?", a: "Yes, we provide full support." }
+    ],
+  },
+  {
+    slug: "llp-agreement-changes",
+    title: "Data Change",
+    h1: "LLP Agreement Changes in India – Professional Legal Assistance for Modifications",
+    metaTitle: "LLP Agreement Changes in India | Professional Legal Assistance — Praveen J & Associates",
+    metaDescription: "Make changes to your LLP agreement easily with professional assistance and ensure full compliance with the LLP Act. Expert help for agreement modification, drafting, and MCA filing.",
+    heroLead: "Update Your LLP Agreement with Expert Legal Support",
+    heroSub: "Make changes to your LLP agreement easily with professional assistance and ensure full compliance with the LLP Act. Expert help for agreement modification, drafting, and MCA filing.",
+    primaryCta: "Modify LLP Agreement Now",
+    problems: [
+      "Poorly drafted agreement clauses",
+      "Missing MCA filing (Form 3)",
+      "Confusion in legal requirements",
+      "Delay in updating records",
+      "Disputes among partners"
+    ],
+    whatIs: {
+      heading: "ABOUT LLP AGREEMENT CHANGES",
+      points: [
+        "The LLP Agreement governs the internal structure, roles, and responsibilities of partners in an LLP.",
+        "Changes may be required when business structure evolves, profit-sharing ratio changes, partners join or exit, or roles and responsibilities are updated."
+      ],
+      note: "Proper modification ensures legal clarity and avoids disputes."
+    },
+    whoFor: [
+      "LLPs undergoing structural changes",
+      "Businesses updating partnership terms",
+      "Firms revising profit-sharing ratios",
+      "LLPs adding/removing partners",
+      "Growing partnerships"
+    ],
+    benefits: [
+      "Review of existing LLP agreement",
+      "Drafting revised agreement clauses",
+      "Preparation of amendment document",
+      "Filing Form 3 with MCA",
+      "Compliance verification and support"
+    ],
+    important: [
+      "Ensures legally valid documentation",
+      "Avoids ambiguity in clauses",
+      "Maintains compliance with LLP Act",
+      "Prevents future disputes"
+    ],
+    process: [
+      "Understand required changes",
+      "Review existing agreement",
+      "Draft updated clauses",
+      "File Form 3 with MCA",
+      "Confirm compliance update"
+    ],
+    documents: [
+      "Existing LLP agreement",
+      "Details of required changes",
+      "Partner consent",
+      "KYC documents of partners",
+      "DSC of partners"
+    ],
+    faqs: [
+      { q: "Can LLP agreement be changed anytime?", a: "Yes, with mutual consent of partners." },
+      { q: "Is MCA filing required?", a: "Yes, Form 3 must be filed." },
+      { q: "How long does the process take?", a: "Usually 3–7 working days." },
+      { q: "What happens if agreement is not updated?", a: "It may lead to disputes and compliance issues." },
+      { q: "Can CA handle complete modification?", a: "Yes, full support is provided." }
+    ],
+  },
+  {
+    slug: "new-llp-formation",
+    title: "New LLP Formation",
+    h1: "New LLP Formation in India – Online LLP Incorporation with CA Support",
+    metaTitle: "New LLP Formation in India | Online LLP Incorporation — Praveen J & Associates",
+    metaDescription: "Register your Limited Liability Partnership (LLP) quickly with complete support for incorporation and compliance. Get assistance for name approval, FiLLiP filing, and MCA registration.",
+    heroLead: "Start Your New LLP with Expert Guidance",
+    heroSub: "Register your Limited Liability Partnership (LLP) quickly with complete support for incorporation and compliance. Get assistance for name approval, FiLLiP filing, LLP agreement, and MCA registration.",
+    primaryCta: "Start LLP Registration Now",
+    problems: [
+      "Confusion in LLP registration process",
+      "Errors in FiLLiP filing",
+      "Name approval rejection",
+      "LLP agreement drafting issues",
+      "Delays in MCA approvals"
+    ],
+    whatIs: {
+      heading: "ABOUT NEW LLP FORMATION",
+      points: [
+        "A Limited Liability Partnership (LLP) is an ideal structure for businesses seeking flexibility along with legal protection.",
+        "Best suited for new business partnerships, professionals, consultants, agencies, and SMEs."
+      ],
+      note: "Perfect for starting a partnership business with legal protection."
+    },
+    whoFor: [
+      "New entrepreneurs starting partnership",
+      "Consultants and professionals",
+      "Agencies and service firms",
+      "Small business owners",
+      "Startups not seeking funding"
+    ],
+    benefits: [
+      "Limited liability protection",
+      "No minimum capital requirement",
+      "Flexible profit-sharing",
+      "Lower compliance burden",
+      "Easy management structure"
+    ],
+    important: [
+      "Digital Signature Certificate (DSC)",
+      "Director Identification Number (DIN)",
+      "Name approval (RUN-LLP)",
+      "LLP incorporation filing (FiLLiP)",
+      "LLP Agreement drafting, PAN & TAN"
+    ],
+    process: [
+      "Understand business requirements",
+      "Apply for LLP name approval",
+      "Prepare incorporation documents",
+      "File FiLLiP form with MCA",
+      "Draft LLP agreement",
+      "Receive LLP registration certificate"
+    ],
+    documents: [
+      "PAN & Aadhaar of partners",
+      "Address proof",
+      "Registered office proof",
+      "Passport size photographs",
+      "Business details"
+    ],
+    faqs: [
+      { q: "What is LLP formation?", a: "It is the process of registering a Limited Liability Partnership with MCA." },
+      { q: "How long does LLP registration take?", a: "Usually 5–10 working days." },
+      { q: "How many partners are required?", a: "Minimum 2 partners are required." },
+      { q: "Is LLP better than partnership firm?", a: "Yes, LLP offers limited liability and better legal structure." },
+      { q: "Can CA handle complete process?", a: "Yes, we provide end-to-end support." }
+    ],
+  },
+  {
+    slug: "kyc-filing-mca",
+    title: "Director KYC",
+    h1: "Director KYC Filing (DIR-3 KYC) – MCA Compliance for Companies in India",
+    metaTitle: "Director KYC Filing (DIR-3 KYC) | MCA Compliance India — Praveen J & Associates",
+    metaDescription: "Ensure your DIR-3 KYC filing is completed on time with expert CA support and stay compliant with MCA. Quick assistance for director KYC update and verification.",
+    heroLead: "Avoid ₹5,000 Penalty – Complete Your Director KYC Today",
+    heroSub: "Ensure your DIR-3 KYC filing is completed on time with expert CA support and stay compliant with MCA. Quick assistance for director KYC update, OTP verification, and MCA filing.",
+    primaryCta: "File Director KYC Now",
+    problems: [
+      "OTP not received on registered mobile/email",
+      "Incorrect KYC details",
+      "Expired or inactive DIN",
+      "Delay in filing",
+      "Technical errors in MCA portal"
+    ],
+    whatIs: {
+      heading: "ABOUT DIRECTOR KYC (DIR-3 KYC)",
+      points: [
+        "DIR-3 KYC is a mandatory annual compliance for all directors holding a DIN (Director Identification Number).",
+        "It ensures updated director information, valid email and mobile verification, and accurate MCA records."
+      ],
+      note: "Non-filing leads to DIN deactivation and penalties."
+    },
+    whoFor: [
+      "Company directors",
+      "Designated partners (LLP)",
+      "Individuals with DIN",
+      "Businesses completing annual compliance",
+      "Companies with multiple directors"
+    ],
+    benefits: [
+      "DIR-3 KYC form preparation",
+      "OTP verification support (email & mobile)",
+      "Document verification and validation",
+      "MCA filing and submission",
+      "Reactivate DIN (if deactivated)"
+    ],
+    important: [
+      "Due date: 30th September every year",
+      "Late penalty: ₹5,000 per director",
+      "Missing deadline results in DIN deactivation."
+    ],
+    process: [
+      "Collect director details",
+      "Verify email & mobile",
+      "Prepare DIR-3 KYC form",
+      "Complete OTP authentication",
+      "File with MCA and confirm"
+    ],
+    documents: [
+      "PAN card of director",
+      "Aadhaar card",
+      "Mobile number and email ID",
+      "Photograph",
+      "DSC of director"
+    ],
+    faqs: [
+      { q: "What is DIR-3 KYC?", a: "It is a mandatory annual KYC filing for directors with DIN." },
+      { q: "What is the due date?", a: "30th September every year." },
+      { q: "What happens if I don’t file KYC?", a: "DIN gets deactivated and ₹5,000 penalty applies." },
+      { q: "Is it required every year?", a: "Yes, annual filing is mandatory." },
+      { q: "Can CA handle the complete process?", a: "Yes, we provide full support." }
+    ],
+  },
+  {
+    slug: "llp-forms-filing",
+    title: "LLP Forms",
+    h1: "LLP Forms Filing in India – LLP Registration & Compliance Support",
+    metaTitle: "LLP Forms Filing in India | LLP Registration & Compliance Support — Praveen J & Associates",
+    metaDescription: "File your LLP registration and compliance forms easily with expert support and accurate MCA filing. End-to-end assistance for LLP incorporation, changes, and annual compliance.",
+    heroLead: "Need Help with LLP Forms Filing? Stay Fully Compliant",
+    heroSub: "File your LLP registration and compliance forms easily with expert support and accurate MCA filing. End-to-end assistance for LLP incorporation, changes, and annual compliance.",
+    primaryCta: "File LLP Forms Now",
+    problems: [
+      "Confusion in selecting correct LLP forms",
+      "Errors in documentation",
+      "Missed filing deadlines",
+      "MCA rejection due to incorrect data",
+      "Lack of compliance awareness"
+    ],
+    whatIs: {
+      heading: "ABOUT LLP FORMS FILING",
+      points: [
+        "A Limited Liability Partnership (LLP) requires timely filing of various forms for registration, changes, and compliance under MCA.",
+        "LLP forms are used for Incorporation of LLP, Partner addition/removal, Registered office change, and Annual compliance filing."
+      ],
+      note: "Proper filing ensures smooth operations and avoids penalties."
+    },
+    whoFor: [
+      "LLP partners",
+      "New LLP registration applicants",
+      "Existing LLPs needing compliance",
+      "Businesses making structural changes",
+      "Startups operating as LLP"
+    ],
+    benefits: [
+      "Incorporation Forms: FiLLiP, RUN-LLP",
+      "Compliance Forms: Form 8, Form 11",
+      "Change Forms: Form 3, Form 4, Form 5, Form 15",
+      "All LLP forms handled with expert support."
+    ],
+    important: [
+      "Avoid heavy penalties and late fees",
+      "Maintain active LLP status",
+      "Ensure legal compliance",
+      "Build credibility with stakeholders"
+    ],
+    process: [
+      "Understand requirement (registration / change / compliance)",
+      "Identify applicable LLP forms",
+      "Prepare documentation",
+      "File with MCA",
+      "Confirm successful filing"
+    ],
+    documents: [
+      "LLP agreement",
+      "PAN of LLP",
+      "Partner KYC documents",
+      "Address proof",
+      "DSC of partners"
+    ],
+    faqs: [
+      { q: "What are LLP forms used for?", a: "They are used for LLP registration, changes, and compliance filings." },
+      { q: "Is LLP compliance mandatory?", a: "Yes, annual filing is mandatory even if there is no business activity." },
+      { q: "What are key LLP compliance forms?", a: "Form 8 and Form 11 are mandatory annual filings." },
+      { q: "What happens if I miss deadlines?", a: "Penalties and late fees are charged." },
+      { q: "Can CA handle all LLP filings?", a: "Yes, we provide complete end-to-end support." }
+    ],
+  },
+  {
+    slug: "adt-1-filing-for-auditor",
+    title: "ADT-1 Filing",
+    h1: "Form ADT-1 Filing for Auditor Appointment – ROC Compliance India",
+    metaTitle: "Form ADT-1 Filing | Appointment of Statutory Auditor — Praveen J & Associates",
+    metaDescription: "Ensure timely filing of Form ADT-1 for auditor appointment with expert CA support and avoid penalties. Complete assistance for auditor appointment and ROC filing.",
+    heroLead: "Appoint Your Company Auditor – Stay MCA Compliant",
+    heroSub: "Ensure timely filing of Form ADT-1 for auditor appointment with expert CA support and avoid penalties. Complete assistance for auditor appointment, documentation, and ROC filing.",
+    primaryCta: "File ADT-1 Now",
+    problems: [
+      "Missing auditor appointment deadline",
+      "Confusion in filing requirement",
+      "Incorrect documentation",
+      "Delay in ROC filing",
+      "Non-compliance risk"
+    ],
+    whatIs: {
+      heading: "ABOUT FORM ADT-1",
+      points: [
+        "Form ADT-1 is used to inform the Registrar of Companies (ROC) about the appointment of a statutory auditor.",
+        "Applicable for first auditor appointment and subsequent auditor appointment."
+      ],
+      note: "Filing ADT-1 ensures legal compliance under the Companies Act, 2013."
+    },
+    whoFor: [
+      "Newly incorporated companies",
+      "Private Limited Companies",
+      "OPC and LLPs (as applicable)",
+      "Companies appointing new auditors",
+      "Businesses completing compliance"
+    ],
+    benefits: [
+      "Timely auditor appointment guidance",
+      "Preparation of board resolution",
+      "Accurate ADT-1 filing with MCA",
+      "Error-free documentation & Follow-up confirmation"
+    ],
+    important: [
+      "First auditor: Within 30 days of incorporation (Board appointment)",
+      "ADT-1 filing: Within 15 days of auditor appointment",
+      "Delay may lead to penalties and compliance issues."
+    ],
+    process: [
+      "Understand company details",
+      "Draft board resolution",
+      "Prepare ADT-1 form",
+      "File with MCA",
+      "Confirm successful filing"
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Auditor consent letter",
+      "Board resolution",
+      "DSC of directors"
+    ],
+    faqs: [
+      { q: "What is Form ADT-1?", a: "It is used to file auditor appointment with ROC." },
+      { q: "Is ADT-1 mandatory?", a: "Yes, for auditor appointment compliance." },
+      { q: "What is the due date for filing?", a: "Within 15 days of auditor appointment." },
+      { q: "What happens if I miss the deadline?", a: "Penalties and compliance issues may arise." },
+      { q: "Can CA handle complete process?", a: "Yes, we provide full support." }
+    ],
+  },
+  {
+    slug: "mgt-7-mgt-7a-filing",
+    title: "MGT-7 / 7A",
+    h1: "MGT-7 / MGT-7A Filing for Annual Return – ROC Compliance India",
+    metaTitle: "MGT-7 / MGT-7A Filing for Annual Return | ROC Compliance India — Praveen J & Associates",
+    metaDescription: "Ensure timely filing of your company’s annual return with ROC and avoid penalties with expert CA support. Complete assistance for MGT-7, MGT-7A filing and compliance.",
+    heroLead: "File Your Annual Return with MGT-7 / MGT-7A – Stay MCA Compliant",
+    heroSub: "Ensure timely filing of your company’s annual return with ROC and avoid penalties with expert CA support. Complete assistance for MGT-7, MGT-7A filing and compliance.",
+    primaryCta: "File Annual Return Now",
+    problems: [
+      "Confusion between MGT-7 and MGT-7A",
+      "Incorrect shareholding details",
+      "Errors in company information",
+      "Missed filing deadlines",
+      "Rejection due to incorrect data",
+    ],
+    whatIs: {
+      heading: "ABOUT MGT-7 / MGT-7A",
+      points: [
+        "MGT-7 / MGT-7A forms are used to file the annual return of a company with the Ministry of Corporate Affairs (MCA).",
+        "It includes Company structure details, Shareholding pattern, Director and KMP details, and Registered office information."
+      ],
+      note: "Mandatory for all companies under Companies Act, 2013."
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "One Person Companies (OPC)",
+      "Small Companies",
+      "Startups and SMEs",
+      "Businesses completing annual compliance",
+    ],
+    benefits: [
+      "MGT-7 – For Private Limited & Public Companies",
+      "MGT-7A – For OPC & Small Companies",
+      "Accurate data preparation and correct form selection",
+      "Error-free filing with MCA",
+    ],
+    important: [
+      "Due date: Within 60 days of AGM",
+      "Late filing penalty: ₹100 per day (no maximum limit)",
+      "Delay leads to heavy penalties and compliance risk."
+    ],
+    process: [
+      "Collect company details",
+      "Prepare annual return data",
+      "Select correct form (MGT-7 / 7A)",
+      "File with MCA",
+      "Confirm successful submission",
+    ],
+    documents: [
+      "Company details and shareholding pattern",
+      "Director details",
+      "Financial statements",
+      "DSC of directors",
+      "Previous compliance records",
+    ],
+    faqs: [
+      { q: "What is MGT-7 / MGT-7A?", a: "It is used to file the annual return of a company with MCA." },
+      { q: "What is the difference between MGT-7 and MGT-7A?", a: "MGT-7 is for Pvt Ltd/Public companies, while MGT-7A is for OPC/Small companies." },
+      { q: "What is the due date?", a: "Within 60 days of AGM." },
+      { q: "What happens if I miss filing?", a: "₹100 per day penalty applies." },
+      { q: "Can CA handle complete filing?", a: "Yes, we provide end-to-end support." },
+    ],
+  },
+  {
+    slug: "aoc-4-filing-private-limited",
+    title: "AOC-4 Filing",
+    h1: "Form AOC-4 Filing for Private Limited Company – ROC Compliance India",
+    metaTitle: "Form AOC-4 Filing | Private Limited Company ROC Compliance — Praveen J & Associates",
+    metaDescription: "Ensure accurate and timely filing of your company’s financial statements with ROC through expert CA support. Complete assistance for balance sheet, P&L, audit report, and MCA filing.",
+    heroLead: "File Your Financial Statements with AOC-4 – Stay MCA Compliant",
+    heroSub: "Ensure accurate and timely filing of your company’s financial statements with ROC through expert CA support. Complete assistance for balance sheet, P&L, audit report, and MCA filing.",
+    primaryCta: "File AOC-4 Now",
+    problems: [
+      "Errors in financial statement preparation",
+      "Incorrect attachments in AOC-4",
+      "Missed deadlines",
+      "Confusion in audit requirements",
+      "Filing rejection due to mistakes",
+    ],
+    whatIs: {
+      heading: "ABOUT FORM AOC-4",
+      points: [
+        "Form AOC-4 is used to file the financial statements of a company with the Ministry of Corporate Affairs (MCA).",
+        "It includes the Balance Sheet, Profit & Loss Account, Auditor’s Report, and Notes to Accounts."
+      ],
+      note: "Filing AOC-4 is mandatory for all Private Limited Companies."
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "Startups and SMEs",
+      "Companies completing annual compliance",
+      "Businesses with audit requirements",
+      "Companies filing ROC returns",
+    ],
+    benefits: [
+      "Due date: Within 30 days of AGM (Annual General Meeting)",
+      "Late filing penalty: ₹100 per day (no maximum limit)",
+      "Ensure error-free and timely compliance.",
+      "Continuous compliance support",
+    ],
+    important: [
+      "Preparation of financial statements & Auditor report attachment.",
+      "AOC-4 form preparation & MCA filing and submission.",
+      "Error-checking and compliance review."
+    ],
+    process: [
+      "Collect financial data",
+      "Prepare financial statements",
+      "Attach audit report",
+      "File AOC-4 with MCA",
+      "Confirm successful submission",
+    ],
+    documents: [
+      "Balance Sheet",
+      "Profit & Loss Statement",
+      "Auditor’s Report",
+      "Bank statements",
+      "DSC of directors",
+    ],
+    faqs: [
+      { q: "What is Form AOC-4?", a: "It is used to file financial statements with MCA." },
+      { q: "Is AOC-4 mandatory?", a: "Yes, for all Private Limited Companies." },
+      { q: "What is the due date?", a: "Within 30 days from AGM." },
+      { q: "What happens if I miss the deadline?", a: "₹100 per day penalty applies." },
+      { q: "Can CA handle complete filing?", a: "Yes, we provide full end-to-end support." },
+    ],
+  },
+  {
+    slug: "annual-roc-compliance",
+    title: "Annual ROC Compliance",
+    h1: "Annual ROC Compliance & MCA Annual Return Filing in India",
+    metaTitle: "Annual ROC Compliance India | MCA Annual Return Filing — Praveen J & Associates",
+    metaDescription: "Ensure timely filing of your company’s annual returns and financial statements with expert CA support. Complete assistance for AOC-4, MGT-7, DIR-3 KYC and MCA compliance.",
+    heroLead: "Avoid Penalties – Stay Compliant with Annual ROC Filings",
+    heroSub: "Ensure timely filing of your company’s annual returns and financial statements with expert CA support. Complete assistance for AOC-4, MGT-7, DIR-3 KYC and MCA compliance.",
+    primaryCta: "Start Annual Filing Now",
+    problems: [
+      "Missing filing deadlines",
+      "Incorrect or incomplete documentation",
+      "Confusion in AOC-4 and MGT-7 forms",
+      "DIR-3 KYC delays",
+      "Penalty accumulation",
+    ],
+    whatIs: {
+      heading: "ABOUT ANNUAL ROC COMPLIANCE",
+      points: [
+        "Every company registered in India must complete annual ROC compliance filings with the Ministry of Corporate Affairs (MCA), regardless of business activity.",
+        "Mandatory filings include annual return filing, financial statement submission, and Director KYC compliance."
+      ],
+      note: "Non-compliance leads to heavy penalties and legal consequences."
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "One Person Companies (OPC)",
+      "LLPs (with applicable filings)",
+      "Startups and growing businesses",
+      "Dormant companies",
+    ],
+    benefits: [
+      "Avoid heavy penalties and late fees",
+      "Maintain active company status",
+      "Ensure legal compliance with MCA",
+      "Build credibility with banks and investors",
+      "Avoid director disqualification",
+    ],
+    important: [
+      "AOC-4 (Financial statement filing) & MGT-7 / MGT-7A (Annual return filing).",
+      "DIR-3 KYC (Director KYC update) & Preparation of financial statements.",
+      "Compliance status review & MCA filing and submission."
+    ],
+    process: [
+      "Review company details and compliance status",
+      "Prepare financial statements",
+      "Complete required forms (AOC-4, MGT-7, DIR-3 KYC)",
+      "File with MCA",
+      "Confirm successful filing",
+    ],
+    documents: [
+      "Financial statements",
+      "Bank statements",
+      "PAN & Aadhaar of directors",
+      "DSC of directors",
+      "Previous compliance records",
+    ],
+    faqs: [
+      { q: "Is annual ROC compliance mandatory?", a: "Yes, it is mandatory for all companies, even if there is no business activity." },
+      { q: "What are the main forms for annual filing?", a: "AOC-4 and MGT-7 are the primary forms." },
+      { q: "What happens if I miss deadlines?", a: "Heavy penalties and late fees are charged." },
+      { q: "Is DIR-3 KYC mandatory every year?", a: "Yes, it must be filed annually for directors." },
+      { q: "Can CA handle complete compliance?", a: "Yes, we provide full end-to-end support." },
+    ],
+  },
+  {
+    slug: "company-name-change-mca",
+    title: "Company Name Change",
+    h1: "Company Name Change in India – MCA Name Approval & Rebranding Support",
+    metaTitle: "Company Name Change India | MCA Name Approval — Praveen J & Associates",
+    metaDescription: "Get your company name changed smoothly with expert assistance for MCA approval and compliance filing. End-to-end support for RUN form, name approval, and ROC filing.",
+    heroLead: "Want to Change Your Company Name? Rebrand with Confidence",
+    heroSub: "Get your company name changed smoothly with expert assistance for MCA approval and compliance filing. End-to-end support for RUN form, name approval, and ROC filing.",
+    primaryCta: "Change Company Name Now",
+    problems: [
+      "Name rejection by MCA",
+      "Errors in RUN form filing",
+      "Similar name conflicts",
+      "Delay in approvals",
+      "Confusion in legal documentation",
+    ],
+    whatIs: {
+      heading: "ABOUT COMPANY NAME CHANGE",
+      points: [
+        "Changing your company name allows you to reposition your brand, reflect new business goals, or correct existing naming issues.",
+        "Common reasons include business rebranding, expansion into new markets, trademark conflicts, and change in business activities."
+      ],
+      note: "Name change requires MCA approval and proper legal compliance."
+    },
+    whoFor: [
+      "Companies planning rebranding",
+      "Businesses expanding services",
+      "Companies facing name conflicts",
+      "Startups repositioning in the market",
+      "Businesses updating brand identity",
+    ],
+    benefits: [
+      "Align brand with business vision",
+      "Improve market positioning",
+      "Resolve naming conflicts",
+      "Enhance brand recall and identity",
+      "Support expansion and growth",
+    ],
+    important: [
+      "Name availability check & RUN (Reserve Unique Name) form filing.",
+      "Board resolution drafting, Shareholder approval, & MOA/AOA amendment.",
+      "ROC filing for name change & Fresh Certificate of Incorporation."
+    ],
+    process: [
+      "Check name availability",
+      "File RUN form with MCA",
+      "Draft board & shareholder resolutions",
+      "Amend MOA & AOA",
+      "File ROC forms and obtain approval",
+      "Receive new Certificate of Incorporation",
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Board resolution",
+      "Shareholder resolution (if required)",
+      "Proposed new company names",
+    ],
+    faqs: [
+      { q: "How long does company name change take?", a: "Usually 7–15 working days depending on approval." },
+      { q: "Can my company name be rejected?", a: "Yes, if it is similar to existing names or violates MCA guidelines." },
+      { q: "Do I need to update other registrations after name change?", a: "Yes, PAN, GST, bank accounts, and licenses must be updated." },
+      { q: "Is shareholder approval required?", a: "Yes, in most cases." },
+      { q: "Will I get a new incorporation certificate?", a: "Yes, MCA issues a fresh Certificate of Incorporation with the new name." },
+    ],
+  },
+  {
+    slug: "company-address-change-mca",
+    title: "Company Address Change",
+    h1: "Company Address Change in India – Registered Office Update with MCA",
+    metaTitle: "Company Address Change India | Registered Office Update — Praveen J & Associates",
+    metaDescription: "Update your company address quickly with expert support for MCA filing and ROC compliance. End-to-end assistance for registered office change.",
+    heroLead: "Need to Change Your Company’s Registered Office Address?",
+    heroSub: "Update your company address quickly with expert support for MCA filing and ROC compliance. End-to-end assistance for registered office change, documentation, and approvals.",
+    primaryCta: "Change Company Address Now",
+    problems: [
+      "Confusion in applicable forms (INC-22, MGT-14)",
+      "Incorrect documentation",
+      "Delay in filing",
+      "ROC rejection due to errors",
+      "Lack of clarity in process",
+    ],
+    whatIs: {
+      heading: "ABOUT COMPANY ADDRESS CHANGE",
+      points: [
+        "Every company must maintain an updated registered office address with the Ministry of Corporate Affairs (MCA).",
+        "Address change may be required due to office relocation, business expansion, change in city or state, or compliance requirements.",
+        "Types of change: Within the same city (simple process), within the same state (ROC approval required), from one state to another (complex approval process)."
+      ],
+      note: "Address change must be filed with MCA within prescribed timelines."
+    },
+    whoFor: [
+      "Companies relocating office",
+      "Businesses expanding operations",
+      "Companies changing city/state",
+      "Startups moving to new office space",
+      "Businesses updating compliance records",
+    ],
+    benefits: [
+      "Mandatory MCA compliance",
+      "Avoid penalties and notices",
+      "Ensure valid communication address",
+      "Required for bank and legal purposes",
+      "Maintain company credibility",
+    ],
+    important: [
+      "Drafting board resolution and preparation of required documents.",
+      "Filing MCA forms (INC-22, MGT-14 if applicable).",
+      "ROC compliance handling and end-to-end follow-up till approval."
+    ],
+    process: [
+      "Understand type of address change",
+      "Prepare resolutions and documents",
+      "File MCA forms (INC-22 / MGT-14)",
+      "Submit supporting documents",
+      "Track approval and confirmation",
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Address proof (rent agreement / ownership proof)",
+      "Utility bill (electricity / water bill)",
+      "NOC from property owner & Board resolution",
+    ],
+    faqs: [
+      { q: "Which form is used for address change?", a: "INC-22 is commonly used; MGT-14 may also apply." },
+      { q: "How long does address change take?", a: "Usually 3–10 working days depending on approval." },
+      { q: "Is board resolution required?", a: "Yes, it is mandatory." },
+      { q: "Can I change address to another state?", a: "Yes, but it involves additional approvals." },
+      { q: "Do I need to update bank and GST after change?", a: "Yes, all records must be updated accordingly." },
+    ],
+  },
+  {
+    slug: "update-email-mobile-mca",
+    title: "Update Email & Mobile in MCA",
+    h1: "Update Company Email & Mobile in MCA – Contact Details Correction Service",
+    metaTitle: "Change Company Email/Mobile in MCA | ROC Update — Praveen J & Associates",
+    metaDescription: "Correct your company’s email ID and mobile number quickly with expert ROC filing support. Ensure smooth communication with MCA and avoid missing important notices.",
+    heroLead: "Need to Update Your Company Contact Details on MCA?",
+    heroSub: "Correct your company’s email ID and mobile number quickly with expert ROC filing support. Ensure smooth communication with MCA and avoid missing important notices.",
+    primaryCta: "Update Contact Details Now",
+    problems: [
+      "Lost access to registered email/mobile",
+      "OTP not received during filing",
+      "Incorrect contact details in MCA",
+      "Confusion in update process",
+      "Filing delays due to outdated data",
+    ],
+    whatIs: {
+      heading: "ABOUT EMAIL & MOBILE UPDATE IN MCA",
+      points: [
+        "Your company’s registered email ID and mobile number on MCA are used for all official communication and OTP-based verifications.",
+        "Incorrect or outdated contact details can lead to missing MCA alerts and notices, failure in OTP verification, filing issues and delays, and compliance risks."
+      ],
+      note: "Keeping contact details updated is critical for smooth compliance."
+    },
+    whoFor: [
+      "Companies with outdated contact details",
+      "Businesses facing OTP issues",
+      "Directors unable to access MCA filings",
+      "Companies changing official communication details",
+      "Businesses updating compliance records",
+    ],
+    benefits: [
+      "Receive important MCA notifications",
+      "Ensure smooth OTP-based filings",
+      "Avoid compliance issues",
+      "Maintain updated company records",
+      "Enable seamless communication",
+    ],
+    important: [
+      "Email ID update in MCA records & Mobile number correction.",
+      "ROC filing and verification support & OTP handling assistance.",
+      "MCA record update confirmation."
+    ],
+    process: [
+      "Verify existing MCA contact details",
+      "Prepare update request",
+      "Submit correction with ROC",
+      "Complete OTP verification",
+      "Confirm updated records",
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Director KYC details",
+      "Authorization (if required)",
+    ],
+    faqs: [
+      { q: "Why is updating email and mobile important?", a: "It ensures you receive MCA notifications and OTPs for filings." },
+      { q: "Can I update details without CA?", a: "It is possible, but expert help ensures smooth and error-free process." },
+      { q: "How long does update take?", a: "Usually 1–3 working days." },
+      { q: "What if I don’t have access to old mobile/email?", a: "We can help you update it through proper process." },
+      { q: "Is this mandatory?", a: "Yes, correct contact details are essential for compliance and filings." },
+    ],
+  },
+  {
+    slug: "change-in-company-master-data",
+    title: "Change in Company Master Data",
+    h1: "Change in Company Master Data – MCA Correction Service in India",
+    metaTitle: "Change in Company Master Data | MCA Data Correction — Praveen J & Associates",
+    metaDescription: "Fix errors in your company’s master data quickly with expert assistance. Get CA support for CRF filing, director updates, address correction, and more.",
+    heroLead: "Need to Correct Your Company Details on MCA?",
+    heroSub: "Fix errors in your company’s master data quickly with expert assistance and proper ROC filing. Get CA support for CRF filing, director updates, address correction, and more.",
+    primaryCta: "Update Company Details Now",
+    problems: [
+      "Errors in company incorporation data",
+      "Incorrect director information",
+      "Wrong registered address",
+      "Technical issues in MCA records",
+      "Confusion in CRF filing process",
+    ],
+    whatIs: {
+      heading: "ABOUT COMPANY MASTER DATA CORRECTION",
+      points: [
+        "Company master data on MCA includes critical details like company name, registered address, directors, and capital structure.",
+        "Any incorrect or outdated information can lead to compliance issues, legal complications, rejection in filings, and loss of business credibility."
+      ],
+      note: "Timely correction ensures smooth compliance and operations."
+    },
+    whoFor: [
+      "Companies with incorrect MCA records",
+      "Businesses facing filing rejections",
+      "Directors needing data updates",
+      "Companies changing registered office",
+      "Businesses updating company structure",
+    ],
+    benefits: [
+      "Ensures accurate MCA records",
+      "Avoids compliance penalties",
+      "Prevents filing rejections",
+      "Maintains company credibility",
+      "Required for smooth future filings",
+    ],
+    important: [
+      "Registered office address & Director details corrections.",
+      "Company name spelling errors & Capital structure details.",
+      "Email ID and contact details changes handled through proper ROC procedures."
+    ],
+    process: [
+      "Review current MCA master data",
+      "Identify errors and required corrections",
+      "Prepare supporting documents",
+      "File CRF / relevant forms with ROC",
+      "Track and confirm correction",
+    ],
+    documents: [
+      "Certificate of Incorporation (COI)",
+      "PAN of company",
+      "Supporting proof for correction",
+      "Board resolution (if applicable)",
+      "Director KYC documents",
+    ],
+    faqs: [
+      { q: "What is company master data?", a: "It is the official company information available on the MCA portal." },
+      { q: "How can errors be corrected?", a: "Through CRF (Company Registration Form) or relevant MCA filings." },
+      { q: "How long does correction take?", a: "Usually 3–7 working days depending on approval." },
+      { q: "Is CA assistance required?", a: "Yes, expert handling ensures correct filing and faster approval." },
+      { q: "Can all errors be corrected?", a: "Most errors can be corrected with proper documentation and filings." },
+    ],
+  },
+  {
+    slug: "section-8-company-registration",
+    title: "Section 8 Company Registration",
+    h1: "Section 8 Company Registration in India – NGO Setup with CA Support",
+    metaTitle: "Section 8 Company Registration India | NGO Setup — Praveen J & Associates",
+    metaDescription: "Start Your NGO with Section 8 Company Registration. Build a legally recognized non-profit organization with complete registration and compliance support.",
+    heroLead: "Start Your NGO with Section 8 Company Registration",
+    heroSub: "Build a legally recognized non-profit organization with complete registration and compliance support. Expert assistance for MCA license, DSC, DIN, and SPICe+ incorporation.",
+    primaryCta: "Register Section 8 Company Now",
+    problems: [
+      "Complexity in Section 8 license approval",
+      "Errors in SPICe+ filing",
+      "Object clause drafting issues",
+      "Delays in MCA approvals",
+      "Compliance and documentation confusion",
+    ],
+    whatIs: {
+      heading: "ABOUT SECTION 8 COMPANY",
+      points: [
+        "A Section 8 Company is a non-profit organization registered under the Companies Act, 2013, formed to promote social, charitable, educational, or environmental objectives.",
+        "Ideal for NGOs, charitable organizations, social impact initiatives, educational and research institutions.",
+        "Key Features: Non-profit objective, separate legal identity, limited liability protection, high credibility."
+      ],
+      note: "Best suited for organizations working towards social causes with structured governance."
+    },
+    whoFor: [
+      "NGOs and social entrepreneurs",
+      "Charitable organizations",
+      "Educational institutions",
+      "Non-profit foundations",
+      "CSR initiative entities",
+    ],
+    benefits: [
+      "Tax benefits (subject to approvals like 12A & 80G)",
+      "High credibility among donors and institutions",
+      "Limited liability protection",
+      "No minimum capital requirement",
+      "Better governance and compliance structure",
+    ],
+    important: [
+      "Digital Signature Certificate (DSC) & Director Identification Number (DIN).",
+      "Section 8 license from MCA & Name approval.",
+      "Company incorporation filing, PAN & TAN."
+    ],
+    process: [
+      "Understand your NGO objectives",
+      "Apply for name approval",
+      "Draft MOA & AOA with proper objectives",
+      "Apply for Section 8 license",
+      "File SPICe+ and incorporate company",
+      "Receive COI, PAN & TAN",
+    ],
+    documents: [
+      "PAN & Aadhaar of directors",
+      "Address proof",
+      "Registered office proof",
+      "Passport size photographs",
+      "NGO objective details",
+    ],
+    faqs: [
+      { q: "What is a Section 8 Company?", a: "It is a non-profit company formed for charitable or social purposes." },
+      { q: "Can profit be distributed to members?", a: "No, profits cannot be distributed; they must be reinvested." },
+      { q: "Is Section 8 better than Trust or Society?", a: "Yes, it offers higher credibility and better governance." },
+      { q: "How long does registration take?", a: "Usually 10–15 working days depending on approvals." },
+      { q: "Are tax exemptions automatic?", a: "No, separate registration (12A & 80G) is required." },
+    ],
+  },
+  {
+    slug: "one-person-company-registration",
+    title: "One Person Company Registration",
+    h1: "One Person Company Registration in India – Online OPC Setup with CA Support",
+    metaTitle: "One Person Company Registration India | OPC Setup — Praveen J & Associates",
+    metaDescription: "Turn your solo business idea into a legally recognized company with complete OPC registration and compliance support. Expert CA assistance for DSC, DIN, SPICe+ filing.",
+    heroLead: "Start Your One Person Company (OPC) with Expert CA Guidance",
+    heroSub: "Turn your solo business idea into a legally recognized company with complete registration and compliance support. Get expert assistance for DSC, DIN, SPICe+ filing and MCA incorporation.",
+    primaryCta: "Register OPC Company Now",
+    problems: [
+      "Lack of clarity in OPC registration process",
+      "Errors in SPICe+ filing",
+      "Company name rejection issues",
+      "Delay in approvals",
+      "Confusion in nominee requirements",
+    ],
+    whatIs: {
+      heading: "ABOUT ONE PERSON COMPANY (OPC)",
+      points: [
+        "A One Person Company (OPC) is a business structure designed for single entrepreneurs who want the benefits of a company with full control.",
+        "Ideal for solo entrepreneurs, freelancers, consultants, small business owners, and professionals starting independently.",
+        "Key Features: Single owner with full control, separate legal identity, limited liability protection, and nominee director requirement."
+      ],
+      note: "Perfect for individuals who want to operate as a company without partners."
+    },
+    whoFor: [
+      "Individual entrepreneurs",
+      "Freelancers and consultants",
+      "Small business owners",
+      "First-time founders",
+      "Professionals starting solo ventures",
+    ],
+    benefits: [
+      "Limited liability protection",
+      "Full ownership and control",
+      "Separate legal entity status",
+      "Better credibility than sole proprietorship",
+      "Easy compliance compared to Pvt Ltd",
+    ],
+    important: [
+      "Digital Signature Certificate (DSC) & Director Identification Number (DIN).",
+      "Company name approval (SPICe+) & OPC incorporation filing (MCA).",
+      "PAN & TAN registration & Certificate of Incorporation (COI)."
+    ],
+    process: [
+      "Understand your business requirement",
+      "Apply for name approval",
+      "Prepare incorporation documents",
+      "File SPICe+ form",
+      "Receive COI, PAN & TAN",
+    ],
+    documents: [
+      "PAN & Aadhaar of applicant",
+      "Address proof",
+      "Registered office proof",
+      "Passport size photograph",
+      "Business details",
+    ],
+    faqs: [
+      { q: "Can OPC have more than one owner?", a: "No, OPC is designed for a single owner only." },
+      { q: "Is nominee mandatory in OPC?", a: "Yes, appointing a nominee is mandatory." },
+      { q: "How long does OPC registration take?", a: "Typically 5–10 working days." },
+      { q: "Can OPC be converted into Pvt Ltd later?", a: "Yes, OPC can be converted into a Private Limited Company." },
+      { q: "Is OPC better than sole proprietorship?", a: "Yes, OPC offers limited liability and better credibility." },
+    ],
+  },
+  {
+    slug: "private-limited-company-formation",
+    title: "Private Limited Company Registration",
+    h1: "Private Limited Company Registration in India – Online Setup with CA Support",
+    metaTitle: "Private Limited Company Registration India | Pvt Ltd Setup — Praveen J & Associates",
+    metaDescription: "Start your Private Limited Company with complete registration and compliance support. Expert CA assistance for DSC, DIN, SPICe+ filing and MCA incorporation.",
+    heroLead: "Want to build a scalable and professional business?",
+    heroSub: "Start your Private Limited Company with complete registration and compliance support. Expert CA assistance for DSC, DIN, SPICe+ filing and MCA incorporation.",
+    primaryCta: "Register Pvt Ltd Company Now",
+    problems: [
+      "Confusion in registration process",
+      "Errors in SPICe+ filing",
+      "Name rejection issues",
+      "Delay in approvals",
+      "Compliance complexity",
+    ],
+    whatIs: {
+      heading: "ABOUT PRIVATE LIMITED COMPANY",
+      points: [
+        "A Private Limited Company (Pvt Ltd) is one of the most popular business structures in India.",
+        "It is ideal for startups, growing businesses, and fundraising ventures.",
+        "Key features: Separate legal identity, limited liability protection, easy ownership transfer, and high credibility."
+      ],
+      note: "Best suited for businesses planning growth and investment."
+    },
+    whoFor: [
+      "Startup founders",
+      "Entrepreneurs seeking funding",
+      "Growing businesses",
+      "Tech and service companies",
+      "Businesses needing legal structure",
+    ],
+    benefits: [
+      "Limited liability protection",
+      "Separate legal entity",
+      "Easy fundraising and investment",
+      "Better business credibility",
+      "Perpetual succession",
+    ],
+    important: [
+      "Digital Signature Certificate (DSC) & Director Identification Number (DIN).",
+      "Name approval (SPICe+) & Company incorporation filing.",
+      "PAN & TAN registration & Certificate of Incorporation (COI)."
+    ],
+    process: [
+      "Understand business requirements",
+      "Apply for name approval",
+      "Prepare incorporation documents",
+      "File SPICe+ form",
+      "Receive COI and registrations",
+    ],
+    documents: [
+      "PAN & Aadhaar of directors",
+      "Address proof",
+      "Registered office proof",
+      "Passport size photo",
+      "Business details",
+    ],
+    faqs: [
+      { q: "How many directors are required?", a: "Minimum 2 directors are required." },
+      { q: "How long does registration take?", a: "Usually 5–10 working days." },
+      { q: "Is DSC mandatory?", a: "Yes, required for filing." },
+      { q: "Can foreigners be directors?", a: "Yes, subject to conditions." },
+      { q: "Can CA handle complete process?", a: "Yes, full support is provided." },
+    ],
+  },
+  {
+    slug: "company-incorporation-service",
+    title: "Company Incorporation",
+    h1: "Company Incorporation Services in India – Register Your Company Online with Expert CA Support",
+    metaTitle: "Company Incorporation Services India | Register Company Online — Praveen J & Associates",
+    metaDescription: "Get your business legally registered with fast and hassle-free company incorporation services. Expert CA support for complete company registration.",
+    heroLead: "Planning to start your own company in India?",
+    heroSub: "Get your business legally registered with fast and hassle-free company incorporation services. We help you with complete company registration including DSC, DIN, name approval & MCA filing.",
+    primaryCta: "Register Your Company Now",
+    problems: [
+      "Confusion in choosing business structure",
+      "Errors in name approval",
+      "Complex MCA forms (SPICe+)",
+      "Documentation issues",
+      "Delays in approval",
+    ],
+    whatIs: {
+      heading: "ABOUT COMPANY INCORPORATION",
+      points: [
+        "Company incorporation is the process of legally registering your business under the Ministry of Corporate Affairs (MCA).",
+        "It gives your business a legal identity, limited liability protection, credibility in market, and access to funding and growth.",
+        "Most common structure: Private Limited Company. We also help register One Person Company (OPC), Limited Liability Partnership (LLP), and Partnership Firms."
+      ],
+      note: "Incorrect filing can lead to rejection and delays. Choose the right structure based on your business goals."
+    },
+    whoFor: [
+      "Startup founders",
+      "Entrepreneurs",
+      "Freelancers scaling business",
+      "Small business owners",
+      "Professionals starting firm",
+    ],
+    benefits: [
+      "Limited liability protection",
+      "Separate legal entity",
+      "Easy funding & investment",
+      "Better credibility",
+      "Tax benefits (in some cases)",
+    ],
+    important: [
+      "Requires at least 1–2 directors; PAN & Aadhaar mandatory.",
+      "Registered office address required.",
+      "MCA approval needed; Compliance required post incorporation.",
+    ],
+    process: [
+      "Understand business requirement",
+      "Select suitable company type",
+      "Apply for DSC & DIN",
+      "Reserve company name",
+      "File SPICe+ form with MCA",
+      "Receive Certificate of Incorporation",
+    ],
+    documents: [
+      "PAN & Aadhaar of directors",
+      "Address proof",
+      "Passport size photo",
+      "Registered office address proof",
+      "Email & mobile number",
+    ],
+    faqs: [
+      { q: "How long does company registration take?", a: "Usually 5–10 working days." },
+      { q: "What is SPICe+ form?", a: "MCA form used for company incorporation." },
+      { q: "Is GST required after registration?", a: "Depends on business activity." },
+      { q: "Can I register company online?", a: "Yes, entire process is online." },
+      { q: "Can CA handle full process?", a: "Yes, complete support available." },
+    ],
+  },
+  {
+    slug: "surrender-duplicate-din",
+    title: "Surrender Duplicate DIN",
+    h1: "Surrender Duplicate DIN Online – DIR-5 Filing & MCA Compliance Made Easy",
+    metaTitle: "Surrender Duplicate DIN Online | DIR-5 Filing — Praveen J & Associates",
+    metaDescription: "Get expert CA support to surrender your duplicate DIN quickly through DIR-5 filing. Stay compliant with MCA rules and avoid legal issues.",
+    heroLead: "Have more than one DIN (Director Identification Number)?",
+    heroSub: "Holding duplicate DIN is not allowed under MCA rules. Get expert CA support to surrender duplicate DIN quickly through DIR-5 filing and stay compliant.",
+    primaryCta: "Surrender Duplicate DIN Now",
+    problems: [
+      "Multiple DIN allotted unknowingly",
+      "Confusion on which DIN to retain",
+      "Errors in DIR-5 filing",
+      "Document rejection",
+      "Delay in approval",
+    ],
+    whatIs: {
+      heading: "ABOUT DIN SURRENDER",
+      points: [
+        "A person can hold only one DIN. Multiple DINs are not permitted.",
+        "Duplicate DIN must be surrendered using the DIR-5 form on the MCA portal.",
+      ],
+      note: "Non-compliance can lead to legal and regulatory issues.",
+    },
+    whoFor: [
+      "Directors with multiple DINs",
+      "Professionals with duplicate registration",
+      "Individuals facing MCA compliance issues",
+      "Anyone needing DIN correction",
+    ],
+    benefits: [
+      "Mandatory under MCA rules",
+      "Avoid penalties and legal issues",
+      "Maintain clean director records",
+      "Ensure compliance",
+      "Required for future filings",
+    ],
+    important: [
+      "Only one DIN is allowed per person and surrender is done via DIR-5.",
+      "Proper justification required. Incorrect filing may get rejected.",
+      "Compliance is mandatory.",
+    ],
+    process: [
+      "Review DIN details",
+      "Identify duplicate DIN",
+      "Prepare DIR-5 application",
+      "Attach required documents",
+      "File and track approval",
+    ],
+    documents: [
+      "PAN card",
+      "DIN details",
+      "Identity & address proof",
+      "Declaration for surrender",
+    ],
+    faqs: [
+      { q: "Can a person have multiple DINs?", a: "No, only one DIN is allowed." },
+      { q: "How to surrender duplicate DIN?", a: "Through DIR-5 form on MCA portal." },
+      { q: "Is surrender mandatory?", a: "Yes, as per MCA compliance." },
+      { q: "What happens if not surrendered?", a: "May lead to compliance issues and penalties." },
+      { q: "Can CA help with DIN surrender?", a: "Yes, complete support available." },
+    ],
+  },
+  {
+    slug: "dpin-application-llp-partner-india",
+    title: "DPIN Application",
+    h1: "DPIN Application in India – Become LLP Designated Partner with CA Support",
+    metaTitle: "DPIN Application India | LLP Partner Registration — Praveen J & Associates",
+    metaDescription: "Get your DPIN (Designated Partner Identification Number) quickly and hassle-free. Expert CA support for DPIN application, DIR-3 filing and MCA compliance.",
+    heroLead: "Planning to become a partner in an LLP?",
+    heroSub: "Get your DPIN (Designated Partner Identification Number) quickly and hassle-free. Expert CA support for DPIN application, DIR-3 filing and MCA compliance.",
+    primaryCta: "Apply for DPIN Now",
+    problems: [
+      "Confusion between DIN and DPIN",
+      "Incorrect application filing",
+      "Document mismatch",
+      "Delay in MCA approval",
+      "Technical filing issues",
+    ],
+    whatIs: {
+      heading: "ABOUT DPIN",
+      points: [
+        "A DPIN (Designated Partner Identification Number) is a unique identification number required to become a designated partner in a Limited Liability Partnership (LLP).",
+        "It is issued by MCA and is mandatory for LLP incorporation, partner appointment, and compliance filings.",
+      ],
+      note: "Without DPIN, you cannot act as a designated partner.",
+    },
+    whoFor: [
+      "Individuals becoming LLP partners",
+      "Startup founders choosing LLP structure",
+      "Business partners forming LLP",
+      "Professionals entering LLP",
+      "Entrepreneurs starting LLP business",
+    ],
+    benefits: [
+      "Mandatory for LLP partners",
+      "Required for LLP registration",
+      "Needed for MCA filings",
+      "Legal recognition as partner",
+      "Essential for business compliance",
+    ],
+    important: [
+      "Correct DPIN application process & proper documentation support.",
+      "Get your DPIN quickly and without hassle.",
+      "A must-have requirement for the LLP business structure.",
+    ],
+    process: [
+      "Understand requirement",
+      "Collect documents",
+      "Prepare application",
+      "Submit to MCA",
+      "Receive DPIN",
+    ],
+    documents: [
+      "PAN card",
+      "Aadhaar",
+      "Photo",
+      "Address proof",
+      "Email & mobile number",
+    ],
+    faqs: [
+      { q: "What is DPIN?", a: "A number required to become a designated partner in LLP." },
+      { q: "Is DPIN mandatory?", a: "Yes, for LLP partners." },
+      { q: "What is the difference between DIN and DPIN?", a: "DIN is for company directors, DPIN is for LLP partners." },
+      { q: "How long does it take?", a: "Usually 1–2 days." },
+      { q: "Can CA handle full process?", a: "Yes, complete support is provided." },
+    ],
+  },
+  {
+    slug: "new-din-application",
+    title: "New DIN Application (DIR-3)",
+    h1: "New DIN Application (DIR-3) in India – Apply Director DIN with CA Support",
+    metaTitle: "New DIN Application (DIR-3) India | Apply DIN Online — Praveen J & Associates",
+    metaDescription: "Get your Director Identification Number (DIN) through DIR-3 application quickly and hassle-free. Expert CA support for MCA submission and approval.",
+    heroLead: "Applying to become a company director?",
+    heroSub: "Get your Director Identification Number (DIN) through DIR-3 application quickly and hassle-free. Expert CA support for DIN application, documentation and MCA approval.",
+    primaryCta: "Apply for New DIN Now",
+    problems: [
+      "Incorrect DIR-3 filing",
+      "DSC issues",
+      "Document mismatch",
+      "MCA rejection",
+      "Delay in approval",
+    ],
+    whatIs: {
+      heading: "ABOUT NEW DIN (DIR-3)",
+      points: [
+        "A DIN (Director Identification Number) is mandatory for anyone who wants to become a director in a company.",
+        "The DIR-3 form is used to apply for a new DIN and register an individual as a director.",
+      ],
+      note: "Without DIN, you cannot be appointed as a director.",
+    },
+    whoFor: [
+      "Individuals becoming company directors",
+      "Startup founders",
+      "Business owners incorporating company",
+      "Professionals joining boards",
+      "Entrepreneurs starting new ventures",
+    ],
+    benefits: [
+      "Mandatory for company directors",
+      "Required for MCA filings",
+      "Legal identity for directors",
+      "Essential for company incorporation",
+      "Needed for compliance and governance",
+    ],
+    important: [
+      "Accurate DIR-3 application & proper documentation support.",
+      "Get your DIN quickly and correctly with fast MCA approval.",
+      "A basic requirement to enter corporate leadership roles.",
+    ],
+    process: [
+      "Collect documents",
+      "Prepare DIR-3 form",
+      "Attach DSC and verify",
+      "Submit to MCA",
+      "Receive DIN",
+    ],
+    documents: [
+      "PAN card",
+      "Aadhaar",
+      "Photo",
+      "Address proof",
+      "Email & mobile number",
+    ],
+    faqs: [
+      { q: "What is DIR-3?", a: "Form used to apply for a new DIN." },
+      { q: "Is DIN mandatory?", a: "Yes, for becoming a company director." },
+      { q: "How long does approval take?", a: "Usually 1–2 days." },
+      { q: "Is DSC required?", a: "Yes, Digital Signature is mandatory." },
+      { q: "Can CA handle full process?", a: "Yes, complete support is provided." },
+    ],
+  },
+  {
+    slug: "din-dpin-registration-director-llp-india",
+    title: "DIN / DPIN Registration",
+    h1: "DIN / DPIN Registration in India – Become Company Director or LLP Partner with CA Support",
+    metaTitle: "DIN / DPIN Registration | Director & LLP Partner — Praveen J & Associates",
+    metaDescription: "Get your DIN / DPIN registration quickly and start your business journey legally. Expert CA support for MCA DIN application, DPIN registration and compliance.",
+    heroLead: "Want to become a company director or LLP partner?",
+    heroSub: "Get your DIN / DPIN registration quickly and start your business journey legally. Expert CA support for MCA DIN application, DPIN registration and compliance.",
+    primaryCta: "Apply for DIN / DPIN Now",
+    problems: [
+      "Incorrect application submission",
+      "Document mismatch issues",
+      "Delay in MCA approval",
+      "Confusion between DIN and DPIN",
+      "Technical errors during filing",
+    ],
+    whatIs: {
+      heading: "ABOUT DIN & DPIN",
+      points: [
+        "DIN (Director Identification Number): A unique identification number required to become a director in a company.",
+        "DPIN (Designated Partner Identification Number): Required to become a designated partner in an LLP.",
+      ],
+      note: "These are mandatory for participating in company or LLP management.",
+    },
+    whoFor: [
+      "Individuals becoming company directors",
+      "LLP partners",
+      "Startup founders",
+      "Business owners forming companies",
+      "Professionals entering corporate roles",
+    ],
+    benefits: [
+      "Mandatory for company directors",
+      "Required for LLP partners",
+      "Needed for MCA filings",
+      "Legal recognition as director/partner",
+      "Essential for business registration",
+    ],
+    important: [
+      "Accurate application filing & proper documentation support.",
+      "Fast and hassle-free process with MCA support.",
+      "Get your registration done quickly and correctly.",
+    ],
+    process: [
+      "Understand requirement",
+      "Collect documents",
+      "Prepare application",
+      "Submit to MCA",
+      "Get DIN / DPIN",
+    ],
+    documents: [
+      "PAN card",
+      "Aadhaar",
+      "Photo",
+      "Address proof",
+      "Email & mobile number",
+    ],
+    faqs: [
+      { q: "What is DIN?", a: "A unique number required to become a company director." },
+      { q: "What is DPIN?", a: "A number required for LLP partners." },
+      { q: "Is DIN mandatory?", a: "Yes, for all company directors." },
+      { q: "How long does it take?", a: "Usually 1–2 days." },
+      { q: "Can CA help with full process?", a: "Yes, complete support is provided." },
+    ],
+  },
+  {
+    slug: "mca-roc-filing-services-india",
+    title: "MCA ROC Filing Services India",
+    h1: "MCA ROC Filing Services in India – Company & LLP Compliance with CA Support",
+    metaTitle: "MCA ROC Filing Services India | Company Compliance — Praveen J & Associates",
+    metaDescription: "Stay compliant with MCA filings and avoid penalties with expert CA support. Get assistance for annual returns, financial statements and ROC compliance.",
+    heroLead: "Need to file ROC returns for your company or LLP?",
+    heroSub: "Stay compliant with MCA filings and avoid penalties with expert CA support. Get assistance for annual returns, financial statements and ROC compliance.",
+    primaryCta: "File ROC Returns Now",
+    problems: [
+      "Missing filing deadlines",
+      "Incorrect filing of forms",
+      "Late fees and penalties",
+      "Lack of compliance knowledge",
+      "Director KYC issues",
+    ],
+    whatIs: {
+      heading: "SERVICES WE OFFER",
+      points: [
+        "Annual return filing (MGT-7 / MGT-7A)",
+        "Financial statement filing (AOC-4)",
+        "Director KYC compliance (DIR-3 KYC)",
+        "LLP Form 8 & Form 11",
+        "Event-based filings & compliance advisory",
+      ],
+      note: "Complete ROC compliance support.",
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "LLPs",
+      "Startups and growing businesses",
+      "Companies with annual compliance requirements",
+      "Directors and business owners",
+    ],
+    benefits: [
+      "Timely filing of all ROC forms",
+      "Accurate documentation and compliance",
+      "Reminder and deadline tracking",
+      "End-to-end filing support",
+      "Ongoing compliance management",
+    ],
+    important: [
+      "ROC filings ensure legal compliance, updated company records, and avoidance of penalties.",
+      "ROC compliance is mandatory for all companies and LLPs.",
+      "Non-compliance can lead to heavy fines and company strike-off.",
+    ],
+    process: [
+      "Review company/LLP details",
+      "Prepare financial data",
+      "File ROC forms",
+      "Verify compliance",
+      "Provide confirmation",
+    ],
+    documents: [
+      "Financial statements",
+      "PAN & company details",
+      "Director details",
+      "Previous filings",
+      "Supporting documents",
+    ],
+    faqs: [
+      { q: "What is ROC filing?", a: "Filing of annual returns and financials with MCA." },
+      { q: "Is ROC filing mandatory?", a: "Yes, for all companies and LLPs." },
+      { q: "What happens if not filed?", a: "Heavy penalties and possible strike-off." },
+      { q: "How often is filing required?", a: "Annually (and some event-based filings)." },
+      { q: "Can CA handle complete compliance?", a: "Yes, full support is provided." },
+    ],
+  },
+  {
     slug: "company-incorporation",
     title: "Company Incorporation",
     h1: "Company Incorporation in India — Pvt Ltd, OPC, LLP Registration with MCA",

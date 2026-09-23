@@ -73,8 +73,14 @@ export const HEADER_MENU: NavEntry[] = [
         href: "/income-tax/foreign-income-tax-filing-mumbai",
         items: [
           { title: "Crypto Income", href: "/income-tax/cryptocurrency-income-tax-filing" },
-          { title: "Lottery / Winning Income", href: "/income-tax/lottery-income-tax-filing-mumbai" },
-          { title: "Agricultural Income", href: "/income-tax/agricultural-income-tax-filing-mumbai" },
+          {
+            title: "Lottery / Winning Income",
+            href: "/income-tax/lottery-income-tax-filing-mumbai",
+          },
+          {
+            title: "Agricultural Income",
+            href: "/income-tax/agricultural-income-tax-filing-mumbai",
+          },
           { title: "NRI ITR", href: "/income-tax/nri-income-tax-filing-mumbai" },
           { title: "Foreign Income ITR", href: "/income-tax/foreign-income-tax-filing-mumbai" },
           { title: "Complex Income", href: "/income-tax/foreign-income-tax-filing-mumbai" },
@@ -111,7 +117,10 @@ export const HEADER_MENU: NavEntry[] = [
         title: "Updated ITR (ITR-U)",
         href: "/income-tax/updated-itr-u",
         items: [
-          { title: "Updated & Past Year ITR", href: "/income-tax/updated-past-year-itr-filing-mumbai" },
+          {
+            title: "Updated & Past Year ITR",
+            href: "/income-tax/updated-past-year-itr-filing-mumbai",
+          },
           { title: "Last 2 Years ITR Filing", href: "/income-tax/last-2-years-itr-filing-mumbai" },
           { title: "Last 3 Years ITR Filing", href: "/income-tax/last-3-years-itr-filing-mumbai" },
           { title: "Last 4 Years ITR Filing", href: "/income-tax/last-4-years-itr-filing-mumbai" },
@@ -132,7 +141,10 @@ export const HEADER_MENU: NavEntry[] = [
           { title: "GST Cancellation", href: "/gst/gst-cancellation" },
           { title: "Composition GST", href: "/gst/new-gst-registration" },
           { title: "Change Trade Name", href: "/gst/change-trade-name-gst-certificate-india" },
-          { title: "Change Mobile / Email", href: "/gst/change-mobile-email-gst-registration-india" },
+          {
+            title: "Change Mobile / Email",
+            href: "/gst/change-mobile-email-gst-registration-india",
+          },
           { title: "Change Address", href: "/gst/change-address-gst-certificate-india" },
           { title: "Add Additional Address", href: "/gst/add-additional-place-business-gst-india" },
           { title: "Add POB & APOB", href: "/gst/add-pob-apob-gst-registration-india" },
@@ -173,7 +185,10 @@ export const HEADER_MENU: NavEntry[] = [
         title: "GST Appeal & Reply",
         href: "/gst/gst-appeal-reply-services-india",
         items: [
-          { title: "GST Appeal Hearing Support", href: "/gst/gst-appeal-hearing-representation-india" },
+          {
+            title: "GST Appeal Hearing Support",
+            href: "/gst/gst-appeal-hearing-representation-india",
+          },
           { title: "GST Appeal Filing", href: "/gst/gst-appeal-filing-services-india" },
         ],
       },
@@ -183,7 +198,10 @@ export const HEADER_MENU: NavEntry[] = [
         items: [
           { title: "Export Refund", href: "/gst/gst-export-refund-services-india" },
           { title: "Rate Difference Refund", href: "/gst/gst-rate-difference-refund-itc-india" },
-          { title: "ITC Refund (Inverted Duty)", href: "/gst/gst-itc-refund-inverted-duty-structure-india" },
+          {
+            title: "ITC Refund (Inverted Duty)",
+            href: "/gst/gst-itc-refund-inverted-duty-structure-india",
+          },
         ],
       },
       {
@@ -193,7 +211,10 @@ export const HEADER_MENU: NavEntry[] = [
           { title: "LUT for Export", href: "/gst/lut-for-export-gst-registration-india" },
           { title: "Merchant Exporter", href: "/gst/gst-merchant-exporter-01-rate-india" },
           { title: "Multiple GST", href: "/gst/multiple-gst-registration-multi-state-india" },
-          { title: "E-commerce (Amazon/Flipkart/Meesho)", href: "/gst/gst-filing-ecommerce-amazon-flipkart-meesho-india" },
+          {
+            title: "E-commerce (Amazon/Flipkart/Meesho)",
+            href: "/gst/gst-filing-ecommerce-amazon-flipkart-meesho-india",
+          },
           { title: "TCS Credit", href: "/gst/gst-tcs-credit-ecommerce-reconciliation-india" },
         ],
       },
@@ -316,21 +337,21 @@ export const HEADER_MENU: NavEntry[] = [
       },
       {
         title: "Balance Sheet",
-        href: "/accounting-audit-services/balance-sheet-preparation-services",
+        href: "/balance-sheet-preparation-services",
         items: [
-          { title: "P&L", href: "/accounting-audit-services/profit-loss-statement-services" },
+          { title: "P&L", href: "/profit-and-loss-statement-services" },
           {
             title: "ITR Balance Sheet",
-            href: "/accounting-audit-services/itr-balance-sheet-preparation-services",
+            href: "/itr-balance-sheet-preparation-services",
           },
           { title: "True Copy", href: "/accounting-audit-services/ca-certified-itr-copy-services" },
           {
             title: "LLP Balance Sheet",
-            href: "/accounting-audit-services/llp-balance-sheet-form-8-services",
+            href: "/llp-balance-sheet-form-8-services",
           },
           {
             title: "Company Financials",
-            href: "/accounting-audit-services/company-financial-statements",
+            href: "/company-financial-statements-services",
           },
         ],
       },
@@ -338,85 +359,85 @@ export const HEADER_MENU: NavEntry[] = [
   },
   {
     title: "Bank Loan",
-    href: "/bank-loan",
+    href: "/bank-loan-services",
     groups: [
       {
         title: "Bank Loan Documents",
-        href: "/bank-loan",
+        href: "/bank-loan-services",
         items: [
           {
             title: "True Copy BS & PNL",
             href: "/bank-loan/true-copy-itr-balance-sheet-pnl-bank-loan",
           },
-          { title: "CMA Data", href: "/bank-loan/cma-data-bank-loan" },
+          { title: "CMA Data", href: "/cma-data-for-bank-od-cc-3-5-years" },
           { title: "Provisional Balance Sheet", href: "/bank-loan/provisional-balance-sheet" },
-          { title: "3-Year Balance Sheet", href: "/bank-loan/three-year-balance-sheet" },
-          { title: "Projected Balance Sheet", href: "/bank-loan/projected-balance-sheet" },
-          { title: "Project Report", href: "/bank-loan/project-report-bank-loan" },
+          { title: "3-Year Balance Sheet", href: "/three-year-balance-sheet" },
+          { title: "Projected Balance Sheet", href: "/projected-balance-sheet" },
+          { title: "Project Report", href: "/project-report-for-bank-loan" },
         ],
       },
     ],
   },
   {
     title: "MCA / ROC",
-    href: "/mca",
+    href: "/mca-roc-filing-services-india",
     groups: [
       {
         title: "DIN / DPIN",
-        href: "/mca/din-dpin-registration",
+        href: "/din-dpin-registration-director-llp-india",
         items: [
-          { title: "New DIN", href: "/mca/new-din-application" },
-          { title: "DPIN", href: "/mca/dpin-llp-designated-partner" },
-          { title: "Surrender", href: "/mca/surrender-duplicate-din" },
+          { title: "New DIN", href: "/new-din-application" },
+          { title: "DPIN", href: "/dpin-application-llp-partner-india" },
+          { title: "Surrender", href: "/surrender-duplicate-din" },
         ],
       },
       {
         title: "Company Incorporation",
-        href: "/mca/company-incorporation",
+        href: "/company-incorporation-service",
         items: [
-          { title: "Pvt Ltd", href: "/mca/private-limited-registration" },
-          { title: "OPC", href: "/mca/opc-registration" },
-          { title: "Section 8", href: "/mca/section-8-company-registration" },
+          { title: "Pvt Ltd", href: "/private-limited-company-formation" },
+          { title: "OPC", href: "/one-person-company-registration" },
+          { title: "Section 8", href: "/section-8-company-registration" },
         ],
       },
       {
         title: "Change in Company Data",
-        href: "/mca",
+        href: "/mca-roc-filing-services-india",
         items: [
-          { title: "Name", href: "/mca/company-name-change" },
-          { title: "Address", href: "/mca/company-address-change" },
-          { title: "Email/Mobile", href: "/mca/update-email-mobile-mca" },
+          { title: "Name", href: "/company-name-change-mca" },
+          { title: "Address", href: "/company-address-change-mca" },
+          { title: "Email/Mobile", href: "/update-email-mobile-mca" },
           { title: "Capital", href: "/mca/increase-authorised-capital" },
-          { title: "Master Data", href: "/mca/mca-master-data-correction" },
+          { title: "Master Data", href: "/change-in-company-master-data" },
         ],
       },
       {
         title: "Annual ROC Compliance",
-        href: "/mca",
+        href: "/annual-roc-compliance",
         items: [
-          { title: "AOC-4", href: "/mca" },
-          { title: "MGT-7 / 7A", href: "/mca/mgt-7-mgt-7a-filing" },
-          { title: "ADT-1", href: "/mca" },
-          { title: "LLP Forms", href: "/mca/llp-forms-filing" },
-          { title: "KYC", href: "/mca/director-kyc-dir3" },
+          { title: "AOC-4", href: "/aoc-4-filing-private-limited" },
+          { title: "MGT-7 / 7A", href: "/mgt-7-mgt-7a-filing" },
+          { title: "ADT-1", href: "/adt-1-filing-for-auditor" },
+          { title: "LLP Forms", href: "/llp-forms-filing" },
+          { title: "KYC", href: "/kyc-filing-mca" },
         ],
       },
       {
         title: "LLP",
-        href: "/mca/new-llp-formation",
+        href: "/new-llp-formation",
         items: [
-          { title: "LLP Formation", href: "/mca/new-llp-formation" },
-          { title: "Partner Change", href: "/mca/resignation-of-partner-llp" },
-          { title: "Data Change", href: "/mca/llp-agreement-changes" },
+          { title: "LLP Formation", href: "/new-llp-formation" },
+          { title: "Partner Change", href: "/resignation-of-partner-in-llp" },
+          { title: "Data Change", href: "/llp-agreement-changes" },
         ],
       },
       {
         title: "Others",
-        href: "/mca",
+        href: "/mca-roc-filing-services-india",
         items: [
-          { title: "Change in MOA", href: "/mca" },
-          { title: "Other ROC Forms", href: "/mca/roc-other-forms-filing" },
-          { title: "Secretarial Records", href: "/mca/secretarial-records-maintenance" },
+          { title: "Change in MOA / AOA", href: "/change-moa-aoa-of-company" },
+          { title: "Other ROC Forms", href: "/roc-other-forms-inc20a-dir6-dpt3" },
+          { title: "Secretarial Records", href: "/secretarial-records-preparation-maintenance" },
           { title: "Share Certificate", href: "/mca/issue-share-certificate-sh1" },
           { title: "Strike Off (Company / LLP)", href: "/mca/strike-off-company-llp" },
         ],
@@ -502,10 +523,3 @@ export const HEADER_MENU: NavEntry[] = [
     ],
   },
 ];
-
-
-
-
-
-
-
