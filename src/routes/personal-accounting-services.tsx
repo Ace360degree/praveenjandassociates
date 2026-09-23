@@ -8,9 +8,9 @@ import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { ACCOUNTING_SERVICES, getAccountingServiceBySlug } from "@/data/accountingServices";
 
-export const Route = createFileRoute("/accounting-audit-services/$slug")({
-  loader: ({ params }) => {
-    const s = getAccountingServiceBySlug(params.slug);
+export const Route = createFileRoute("/personal-accounting-services")({
+  loader: () => {
+    const s = getAccountingServiceBySlug("personal-accounting-services");
     if (!s) throw notFound();
     return s;
   },
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/accounting-audit-services/$slug")({
         { name: "description", content: s.metaDescription },
         { property: "og:title", content: s.metaTitle },
         { property: "og:description", content: s.metaDescription },
-        { property: "og:url", content: `/accounting-audit-services/${s.slug}` },
+        { property: "og:url", content: `/personal-accounting-services` },
       ],
-      links: [{ rel: "canonical", href: `/accounting-audit-services/${s.slug}` }],
+      links: [{ rel: "canonical", href: `/personal-accounting-services` }],
       scripts: [
         {
           type: "application/ld+json",
@@ -309,14 +309,13 @@ function FinalCTA({ s }: { s: NonNullable<ReturnType<typeof getAccountingService
   return (
     <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Ready to move forward?</h2>
-        <p className="mt-3 text-white/90">CA-led accounting & audit — fast, accurate, compliant.</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Take control of your finances and optimize your taxes.</h2>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
             {s.primaryCta} <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
-            <Phone className="h-4 w-4" /> Call CA Now
+          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
+            <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
           </a>
         </div>
       </div>

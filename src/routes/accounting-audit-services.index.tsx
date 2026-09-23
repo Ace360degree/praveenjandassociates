@@ -10,11 +10,11 @@ import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { ACCOUNTING_SERVICES } from "@/data/accountingServices";
 
 const FAQS = [
-  { q: "What services are included in accounting?", a: "Bookkeeping, financial statements, GST/TDS accounting, reconciliation aur compliance reporting — sab kuch covered." },
-  { q: "Is audit mandatory for all businesses?", a: "Depends on turnover and legal requirements — tax audit u/s 44AB, statutory audit for companies, GST audit thresholds ke according." },
-  { q: "Do you provide monthly accounting services?", a: "Haan — monthly, quarterly aur yearly retainer-based packages available hain." },
-  { q: "Can you handle GST and tax compliance?", a: "Complete end-to-end compliance — GST returns, TDS, ITR, ROC filings sab included." },
-  { q: "Do startups need accounting services?", a: "Bilkul — proper books from Day 1 fundraising, valuation aur compliance ke liye critical hain." },
+  { q: "What services are included in accounting?", a: "Bookkeeping, financial statements, and compliance reporting." },
+  { q: "Is audit mandatory for all businesses?", a: "Depends on turnover and legal requirements." },
+  { q: "Do you provide monthly accounting services?", a: "Yes, we offer ongoing accounting support." },
+  { q: "Can you handle GST and tax compliance?", a: "Yes, complete compliance services are provided." },
+  { q: "Do startups need accounting services?", a: "Yes, proper accounting helps in growth and funding readiness." },
 ];
 
 const ACCOUNTING = [
@@ -28,7 +28,7 @@ const ACCOUNTING = [
 const AUDIT = [
   "Statutory audit",
   "Internal audit",
-  "Tax audit (u/s 44AB)",
+  "Tax audit",
   "GST audit",
   "Compliance audit",
 ];
@@ -62,7 +62,7 @@ const WHO = [
   "Startups and growing companies",
   "Proprietors and partnerships",
   "Companies requiring audit compliance",
-  "Businesses seeking professional accounting in India",
+  "Businesses seeking professional accounting services in India",
 ];
 
 const DOCS = [
@@ -135,13 +135,13 @@ function Hero() {
             <Calculator className="h-3.5 w-3.5" /> Accounting & Audit
           </span>
           <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">
-            Accounting & Audit Services in India — Professional CA Support for Businesses
+            Accounting & Audit Services in India – Professional CA Support for Businesses
           </h1>
           <p className="mt-3 text-lg text-muted-foreground">
-            Struggling with accounting, compliance ya financial accuracy? Hum ensure karte hain aapka business smoothly chale.
+            Struggling with accounting, compliance or financial accuracy? Ensure your business runs smoothly with professional accounting and audit services.
           </p>
           <p className="mt-2 text-muted-foreground">
-            Accurate bookkeeping, statutory compliance & complete financial transparency — CA-led.
+            Get expert CA support for accurate bookkeeping, compliance & financial transparency.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
@@ -227,7 +227,7 @@ function About() {
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">About Accounting & Audit Services</h2>
         <p className="text-center text-muted-foreground mt-3">
-          Proper accounting and auditing aapke business ki backbone hai. CA Praveen Jain & Associates provides end-to-end solutions tailored to your needs.
+          At CA Praveen Jain & Associates, we provide end-to-end accounting and audit solutions tailored to your business needs.
         </p>
         <div className="mt-8 grid sm:grid-cols-2 gap-4">
           {points.map((p) => (
@@ -431,9 +431,9 @@ function FAQ() {
 
 function FinalCTA() {
   return (
-    <section className="py-16 bg-gradient-to-br from-brand to-brand/80 text-white">
+    <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Ensure your business stays compliant, accurate and financially strong</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Ensure your business stays compliant, accurate and financially strong.</h2>
         <p className="mt-3 text-white/90">Get expert CA-led accounting & audit support today.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">

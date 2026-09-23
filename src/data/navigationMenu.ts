@@ -151,48 +151,50 @@ export const HEADER_MENU: NavEntry[] = [
       },
       {
         title: "GST Reconciliation",
-        href: "/gst",
+        href: "/gst/gst-reconciliation-itc-services-india",
         items: [
-          { title: "ITC Reco (3B vs 2B)", href: "/gst" },
-          { title: "GSTR-1 vs 3B", href: "/gst" },
-          { title: "Assessment Reco", href: "/gst" },
+          { title: "ITC Reco (3B vs 2B)", href: "/gst/itc-reconciliation-gstr3b-vs-2b-india" },
+          { title: "GSTR-1 vs 3B", href: "/gst/gstr1-vs-gstr3b-reconciliation-india" },
+          { title: "Assessment Reco", href: "/gst/gst-assessment-reconciliation-services-india" },
         ],
       },
       {
         title: "GST Notice",
-        href: "/gst",
+        href: "/gst/gst-notice-reply-services-india",
         items: [
-          { title: "Interest Notice", href: "/gst" },
-          { title: "ASMT-10", href: "/gst" },
-          { title: "Amnesty Scheme", href: "/gst" },
-          { title: "Section 73 Notice", href: "/gst" },
+          { title: "Interest Notice", href: "/gst/gst-interest-notice-gstr3b-late-payment-india" },
+          { title: "ITC Notice", href: "/gst/gst-itc-notice-reply-services-india" },
+          { title: "ASMT-10", href: "/gst/gst-asmt10-notice-reply-services-india" },
+          { title: "Amnesty Scheme", href: "/gst/gst-amnesty-scheme-2024-india" },
+          { title: "Section 73 Notice", href: "/gst/gst-section-73-notice-reply-india" },
         ],
       },
       {
         title: "GST Appeal & Reply",
-        href: "/gst",
+        href: "/gst/gst-appeal-reply-services-india",
         items: [
-          { title: "GST Appeal", href: "/gst" },
-          { title: "Notice Reply", href: "/gst" },
+          { title: "GST Appeal Hearing Support", href: "/gst/gst-appeal-hearing-representation-india" },
+          { title: "GST Appeal Filing", href: "/gst/gst-appeal-filing-services-india" },
         ],
       },
       {
         title: "GST Refund",
         href: "/gst",
         items: [
-          { title: "Export Refund", href: "/gst" },
-          { title: "Rate Difference Refund", href: "/gst" },
+          { title: "Export Refund", href: "/gst/gst-export-refund-services-india" },
+          { title: "Rate Difference Refund", href: "/gst/gst-rate-difference-refund-itc-india" },
+          { title: "ITC Refund (Inverted Duty)", href: "/gst/gst-itc-refund-inverted-duty-structure-india" },
         ],
       },
       {
         title: "GST Special Cases",
-        href: "/gst",
+        href: "/gst/gst-special-cases-services-india",
         items: [
-          { title: "LUT for Export", href: "/gst" },
-          { title: "Merchant Exporter", href: "/gst" },
-          { title: "Multiple GST", href: "/gst" },
-          { title: "E-commerce (Amazon/Flipkart/Meesho)", href: "/gst" },
-          { title: "TCS Credit", href: "/gst" },
+          { title: "LUT for Export", href: "/gst/lut-for-export-gst-registration-india" },
+          { title: "Merchant Exporter", href: "/gst/gst-merchant-exporter-01-rate-india" },
+          { title: "Multiple GST", href: "/gst/multiple-gst-registration-multi-state-india" },
+          { title: "E-commerce (Amazon/Flipkart/Meesho)", href: "/gst/gst-filing-ecommerce-amazon-flipkart-meesho-india" },
+          { title: "TCS Credit", href: "/gst/gst-tcs-credit-ecommerce-reconciliation-india" },
         ],
       },
     ],
@@ -280,23 +282,23 @@ export const HEADER_MENU: NavEntry[] = [
         items: [
           {
             title: "Startup Outsourcing",
-            href: "/accounting-audit-services/startup-outsourcing-services",
+            href: "/startup-outsourcing-services",
           },
           {
             title: "Small Business",
-            href: "/accounting-audit-services/small-business-accounting-tax-services",
+            href: "/small-business-accounting-tax-services",
           },
           {
             title: "Daily E-Invoicing / E-way",
-            href: "/accounting-audit-services/daily-einvoicing-eway-bill-services",
+            href: "/daily-einvoicing-eway-bill-services",
           },
           {
             title: "Complete Accounting",
-            href: "/accounting-audit-services/complete-accounting-services",
+            href: "/complete-accounting-services",
           },
           {
             title: "Accounting Review",
-            href: "/accounting-audit-services/accounting-review-visits-services",
+            href: "/accounting-review-visits-services",
           },
           {
             title: "Accounting for Audit",
@@ -308,7 +310,7 @@ export const HEADER_MENU: NavEntry[] = [
           },
           {
             title: "Personal Accounting",
-            href: "/accounting-audit-services/personal-accounting-services",
+            href: "/personal-accounting-services",
           },
         ],
       },
