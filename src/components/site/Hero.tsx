@@ -13,29 +13,38 @@ export function Hero() {
       <div className="container mx-auto px-4 pt-12 pb-16 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-10 items-center relative">
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 rounded-full bg-white border border-primary/20 px-4 py-1.5 text-xs font-semibold text-brand shadow-card">
-            <Sparkles className="h-3.5 w-3.5" /> Trusted CA Support
+            <Sparkles className="h-3.5 w-3.5" /> Apna Business Start, Manage aur Grow Karein – Without Stress
           </div>
           <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] text-foreground">
-            Tax, GST, MCA aur Business Compliance —{" "}
-            <span className="text-brand">Sab Kuch Ek Jagah</span>
+            Tax, Compliance aur Business Setup –{" "}
+            <span className="text-brand">Sab Kuch Ek Jagah, Expert CA ke Saath</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Business start karna ho, GST handle karna ho, ITR file karna ho ya company compliance manage karna ho — expert CA support ke saath stress-free process.
+            Business start karna ho, GST handle karna ho ya tax planning karni ho — har step pe expert guidance milegi, bina confusion ke. Aap growth pe focus karein, compliance aur filings hum handle karenge.
           </p>
+          <ul className="mt-4 space-y-2 text-sm sm:text-base font-medium text-foreground/80">
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" /> Registration se leke annual compliance tak – end-to-end support
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" /> Startups, business owners aur professionals ka trusted partner
+            </li>
+          </ul>
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
-            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400" /> 5 Rated Support</span>
-            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> 500+ Clients</span>
+            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400" /> 4.8/5 Client Rating</span>
+            <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> 1000+ Businesses Served</span>
+            <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand" /> Experienced Chartered Accountants</span>
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand" /> Pan India Online Support</span>
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href="#lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all">
-              Free Consultation <ArrowRight className="h-4 w-4" />
+              Free Consultation Book Karein <ArrowRight className="h-4 w-4" />
             </a>
             <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
-              <MessageCircle className="h-4 w-4" /> WhatsApp Us
+              <MessageCircle className="h-4 w-4" /> WhatsApp pe Baat Karein
             </a>
             <a href="#services" className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition">
-              Explore Services
+              Services Explore Karein
             </a>
           </div>
         </div>

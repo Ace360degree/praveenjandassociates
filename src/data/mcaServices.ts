@@ -19,6 +19,269 @@ export type McaService = {
 
 export const MCA_SERVICES: McaService[] = [
   {
+    slug: "modification-of-charge-roc-mca",
+    title: "Modification of Charge",
+    h1: "Modification of Charge in ROC & MCA – CHG-1 / CHG-9 Filing Services India",
+    metaTitle: "Modification of Charge in ROC & MCA | CHG-1 / CHG-9 Filing — Praveen J & Associates",
+    metaDescription: "Modify your company’s charge details with expert assistance for CHG-1 / CHG-9 filing and ROC compliance.",
+    heroLead: "Need to Update Your Existing Loan Charge? Stay Compliant",
+    heroSub: "Modify your company’s charge details with expert assistance for CHG-1 / CHG-9 filing and ROC compliance. Complete support for charge modification, documentation, and MCA filing.",
+    primaryCta: "Modify Charge Now",
+    problems: [
+      "Errors in CHG forms",
+      "Incorrect modification details",
+      "Delay in filing",
+      "Missing documentation",
+      "ROC rejection due to mistakes"
+    ],
+    whatIs: {
+      heading: "ABOUT CHARGE MODIFICATION",
+      points: [
+        "A charge modification is required when there is a change in the terms of an existing loan or security on company assets.",
+        "Required when loan amount is revised, interest rate or tenure changes, security/collateral details are updated, or during loan restructuring or refinancing."
+      ],
+      note: "All modifications must be filed with ROC to maintain legal validity."
+    },
+    whoFor: [
+      "Companies modifying loan terms",
+      "Businesses restructuring debt",
+      "Firms refinancing loans",
+      "Companies updating collateral details",
+      "Businesses with secured borrowings"
+    ],
+    benefits: [
+      "Drafting of modification documents",
+      "Filing CHG-1 / CHG-9 (as applicable)",
+      "Updating charge details with MCA",
+      "Documentation verification",
+      "ROC compliance and follow-up"
+    ],
+    important: [
+      "Filing within 30 days of modification",
+      "Additional fees applicable for delay",
+      "Delayed filing may affect enforceability of charge"
+    ],
+    process: [
+      "Review existing charge details",
+      "Identify required modifications",
+      "Prepare documentation",
+      "File CHG-1 / CHG-9 with MCA",
+      "Confirm updated charge record"
+    ],
+    documents: [
+      "Original loan agreement",
+      "Modified loan terms",
+      "Board resolution",
+      "Lender approval",
+      "DSC of directors"
+    ],
+    faqs: [
+      { q: "What is charge modification?", a: "It is updating loan or security details with ROC." },
+      { q: "Which forms are used?", a: "CHG-1 or CHG-9 depending on case." },
+      { q: "Is filing mandatory?", a: "Yes, for any change in charge details." },
+      { q: "What is the due date?", a: "Within 30 days of modification." },
+      { q: "Can CA handle complete process?", a: "Yes, full support is provided." }
+    ]
+  },
+  {
+    slug: "loan-creation-modification-of-charge",
+    title: "Charge Creation & Modification",
+    h1: "Loan Creation & Modification of Charge – ROC Charge Registration Services India",
+    metaTitle: "Loan Creation & Modification of Charge | ROC Charge Registration Services — Praveen J & Associates",
+    metaDescription: "Ensure legal protection for lenders and borrowers with expert assistance for charge creation and modification filings with MCA.",
+    heroLead: "Taking a Loan? Register Your Charge with ROC Properly",
+    heroSub: "Ensure legal protection for lenders and borrowers with expert assistance for charge creation and modification filings with MCA. Complete support for charge registration, documentation, and ROC compliance.",
+    primaryCta: "Register Loan Charge Now",
+    problems: [
+      "Errors in CHG-1 filing",
+      "Delay in charge registration",
+      "Incorrect loan documentation",
+      "Confusion in modification process",
+      "Rejection due to incomplete details"
+    ],
+    whatIs: {
+      heading: "ABOUT CHARGE CREATION & MODIFICATION",
+      points: [
+        "A charge is a security interest created on company assets against a loan or borrowing.",
+        "It is required when a company takes a secured loan, assets are pledged as collateral, or loan terms are modified."
+      ],
+      note: "Charge must be registered with ROC to be legally valid."
+    },
+    whoFor: [
+      "Companies taking secured loans",
+      "Businesses pledging assets",
+      "Startups raising debt funding",
+      "Companies modifying loan terms",
+      "Financial institutions requiring charge registration"
+    ],
+    benefits: [
+      "Drafting of charge creation documents",
+      "Filing CHG-1 form (charge creation)",
+      "Filing CHG-4 / CHG-9 (modification/satisfaction as applicable)",
+      "Loan agreement and documentation support",
+      "ROC compliance and follow-up"
+    ],
+    important: [
+      "Legal protection for lenders",
+      "Mandatory compliance under Companies Act",
+      "Prevents disputes over secured assets",
+      "Ensures enforceability of loan",
+      "Maintains accurate MCA records"
+    ],
+    process: [
+      "Understand loan and security details",
+      "Prepare charge documentation",
+      "File CHG-1 / relevant forms with MCA",
+      "Submit supporting documents",
+      "Confirm charge registration/modification"
+    ],
+    documents: [
+      "Loan agreement",
+      "Board resolution",
+      "Asset details",
+      "Lender details",
+      "DSC of directors"
+    ],
+    faqs: [
+      { q: "What is charge creation?", a: "It is registering security on company assets for a loan." },
+      { q: "Which form is used for charge creation?", a: "CHG-1 is commonly used." },
+      { q: "Is charge registration mandatory?", a: "Yes, for secured loans." },
+      { q: "Can charge be modified?", a: "Yes, through proper ROC filing." },
+      { q: "Can CA handle complete process?", a: "Yes, we provide full support." }
+    ]
+  },
+  {
+    slug: "strike-off-company-llp",
+    title: "Strike Off (Company / LLP)",
+    h1: "Strike Off Company / LLP – Company & LLP Closure Services India",
+    metaTitle: "Strike Off Company / LLP | Company & LLP Closure Services — Praveen J & Associates",
+    metaDescription: "Get expert assistance for strike off / deregistration of company or LLP with complete ROC compliance. End-to-end support for closure documentation, filings, and approvals.",
+    heroLead: "Want to Close Your Company or LLP? Do It Legally & Hassle-Free",
+    heroSub: "Get expert assistance for strike off / deregistration of company or LLP with complete ROC compliance. End-to-end support for closure documentation, filings, and approvals.",
+    primaryCta: "Close Company / LLP Now",
+    problems: [
+      "Confusion in eligibility criteria",
+      "Errors in closure forms",
+      "Missing documentation",
+      "Delay in ROC approval",
+      "Pending compliance issues"
+    ],
+    whatIs: {
+      heading: "ABOUT STRIKE OFF (CLOSURE)",
+      points: [
+        "Strike off is the process of legally closing a company or LLP by removing its name from the MCA register.",
+        "Applicable when business is inactive, no operations or transactions, company is no longer required, or startup shutdown."
+      ],
+      note: "Proper closure ensures no future compliance or penalties."
+    },
+    whoFor: [
+      "Inactive companies or LLPs",
+      "Startups shutting down",
+      "Businesses with no operations",
+      "Companies avoiding compliance burden",
+      "LLPs no longer in use"
+    ],
+    benefits: [
+      "Eligibility check for strike off",
+      "Preparation of closure documents",
+      "Filing of STK-2 (Company) / LLP Form 24",
+      "Affidavits and indemnity bonds",
+      "ROC filing and follow-up"
+    ],
+    important: [
+      "Avoid future compliance burden",
+      "No annual filing requirements",
+      "Prevent penalties and late fees",
+      "Clean legal closure of entity"
+    ],
+    process: [
+      "Check eligibility and compliance status",
+      "Prepare closure documents",
+      "File STK-2 / LLP Form 24",
+      "Submit affidavits and declarations",
+      "Track approval and confirm closure"
+    ],
+    documents: [
+      "Certificate of Incorporation",
+      "PAN of company/LLP",
+      "Bank account closure proof",
+      "Affidavit and indemnity bond",
+      "Statement of accounts"
+    ],
+    faqs: [
+      { q: "What is strike off?", a: "It is the process of removing a company/LLP from MCA register." },
+      { q: "Which forms are used?", a: "STK-2 for company and Form 24 for LLP." },
+      { q: "How long does closure take?", a: "Usually 2–3 months depending on approval." },
+      { q: "Can active companies be closed?", a: "Yes, after completing required compliance." },
+      { q: "Can CA handle full closure process?", a: "Yes, we provide complete support." }
+    ]
+  },
+  {
+    slug: "issue-of-share-certificate-sh1",
+    title: "Share Certificate",
+    h1: "Issue of Share Certificate (Form SH-1) – Company Compliance Services India",
+    metaTitle: "Issue of Share Certificate (Form SH-1) | Company Compliance — Praveen J & Associates",
+    metaDescription: "Ensure proper issuance of share certificates (Form SH-1) with expert support and complete compliance under the Companies Act.",
+    heroLead: "Issue Share Certificates the Right Way – Stay Fully Compliant",
+    heroSub: "Ensure proper issuance of share certificates (Form SH-1) with expert support and complete compliance under the Companies Act. Assistance for share certificate drafting, allotment documentation, and compliance.",
+    primaryCta: "Issue Share Certificate Now",
+    problems: [
+      "Incorrect certificate format",
+      "Missing statutory details",
+      "Delay in issuance",
+      "Improper documentation",
+      "Non-maintenance of share records"
+    ],
+    whatIs: {
+      heading: "ABOUT SHARE CERTIFICATE (SH-1)",
+      points: [
+        "A share certificate (Form SH-1) is an official document issued by a company to its shareholders as proof of ownership.",
+        "It includes shareholder details, number of shares held, certificate number, and date of issue."
+      ],
+      note: "Issuing share certificates is mandatory after allotment of shares."
+    },
+    whoFor: [
+      "Private Limited Companies",
+      "Startups issuing shares",
+      "Companies raising investment",
+      "Businesses allotting new shares",
+      "Companies transferring shares"
+    ],
+    benefits: [
+      "Drafting of share certificates (SH-1 format)",
+      "Preparation of allotment documentation",
+      "Board resolution drafting",
+      "Share register update",
+      "Compliance with Companies Act"
+    ],
+    important: [
+      "Must be issued within 2 months of share allotment",
+      "Applicable for new allotment and transfer of shares",
+      "Delay may lead to penalties and compliance issues"
+    ],
+    process: [
+      "Review share allotment details",
+      "Draft share certificate (SH-1)",
+      "Prepare board resolution",
+      "Issue certificate to shareholders",
+      "Update statutory registers"
+    ],
+    documents: [
+      "Share allotment details",
+      "Shareholder information",
+      "Board resolution",
+      "MOA & AOA",
+      "Company incorporation documents"
+    ],
+    faqs: [
+      { q: "What is a share certificate?", a: "It is proof of ownership of shares in a company." },
+      { q: "Is issuing share certificate mandatory?", a: "Yes, after share allotment." },
+      { q: "What is the time limit?", a: "Within 2 months of allotment." },
+      { q: "What happens if not issued?", a: "Penalties and compliance issues may arise." },
+      { q: "Can CA handle complete process?", a: "Yes, full support is provided." }
+    ]
+  },
+  {
     slug: "secretarial-records-preparation-maintenance",
     title: "Secretarial Records",
     h1: "Secretarial Records Preparation & Maintenance – Corporate Compliance Services India",
