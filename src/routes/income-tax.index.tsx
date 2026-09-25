@@ -224,7 +224,7 @@ const IT_SERVICES = [
   {
     icon: RefreshCw,
     title: "Last 3 Years ITR Filing",
-    sub: "Pending returns · Past year filing",
+    sub: "Pending returns ï¿½ Past year filing",
     items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
     cta: "File Now",
     slug: "last-3-years-itr-filing-mumbai",
@@ -232,7 +232,7 @@ const IT_SERVICES = [
   {
     icon: RefreshCw,
     title: "Last 4 Years ITR Filing",
-    sub: "Pending returns · Past year filing",
+    sub: "Pending returns ï¿½ Past year filing",
     items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
     cta: "File Now",
     slug: "last-4-years-itr-filing-mumbai",
@@ -240,7 +240,7 @@ const IT_SERVICES = [
   {
     icon: RefreshCw,
     title: "Last 5 Years ITR Filing",
-    sub: "Pending returns · Past year filing",
+    sub: "Pending returns ï¿½ Past year filing",
     items: ["Missed returns", "Disclose extra income", "Voluntary compliance", "Section 139(8A)"],
     cta: "File Now",
     slug: "last-5-years-itr-filing-mumbai",
@@ -602,16 +602,16 @@ function ItHero() {
               <ShieldCheck className="h-4 w-4 text-brand" /> NRI and complex income support
             </span>
           </div>
-          <div className="mt-7 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href="#it-lead"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gradient-red px-5 sm:px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all text-center"
             >
               Start Your ITR Filing <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="#it-lead"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white border border-border px-5 sm:px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition text-center"
             >
               Talk to CA
             </a>
@@ -619,7 +619,7 @@ function ItHero() {
               href="https://wa.me/918169887643"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 sm:px-6 text-sm font-semibold text-white hover:opacity-90 transition text-center"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
@@ -649,7 +649,7 @@ function ItHero() {
 
           <div
             id="it-lead"
-            className="mt-5 rounded-3xl bg-white shadow-soft border border-border p-5 sm:p-6"
+            className="mt-5 rounded-3xl bg-white shadow-soft border border-border p-4 sm:p-6 box-border max-w-full overflow-hidden"
           >
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-display font-bold text-lg">Talk to Our CA Today</h3>
@@ -717,7 +717,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow?: string; title: string
           <Sparkles className="h-3.5 w-3.5" /> {eyebrow}
         </div>
       ) : null}
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+      <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight break-words">
         {title}
       </h2>
       {sub ? <p className="mt-4 text-base sm:text-lg text-muted-foreground">{sub}</p> : null}
@@ -734,7 +734,7 @@ function Problems() {
           title="Why Income Tax Filing Often Goes Wrong"
           sub="These are the issues people face most often. We help you avoid them before they become a notice."
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {PROBLEMS.map((p) => (
             <div
               key={p.title}
@@ -828,7 +828,7 @@ function WhyChoose() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Why Choose Us" title="Why Clients Trust Praveen J & Associates" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {WHY.map((w) => (
             <div
               key={w.title}
@@ -856,7 +856,7 @@ function Insights() {
           title="A Few Things Every Taxpayer Should Know"
           sub="These points help you file correctly and avoid common mistakes."
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {INSIGHTS.map((i) => (
             <div
               key={i.title}
@@ -882,7 +882,7 @@ function Process() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Simple Process" title="How We File Your Return" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 relative">
           {STEPS.map((s, i) => (
             <div
               key={s.n}
@@ -911,7 +911,7 @@ function Documents() {
           title="Documents Required for ITR Filing"
           sub="Keep these ready and we will take care of the filing process."
         />
-        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {[
             { title: "Personal Documents", icon: BadgeCheck, items: DOC_PERSONAL },
             { title: "Business / Income Documents", icon: FileSpreadsheet, items: DOC_BUSINESS },
@@ -951,7 +951,7 @@ function ItReviews() {
           title="Trusted by Individuals and Businesses"
           sub="4.8/5 rating and 120+ verified client reviews"
         />
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {REVIEWS.map((r) => (
             <div
               key={r.name}
@@ -988,7 +988,7 @@ function Learning() {
           title="More Income Tax Services"
           sub="Quick links to related filing, correction, notice, and appeal support pages."
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
           {MORE_TOPICS.map((item) => (
             <Link
               key={item.slug}
