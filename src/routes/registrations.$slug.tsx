@@ -326,13 +326,29 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
 }
 
 function FinalCTA({ s }: { s: NonNullable<ReturnType<typeof getRegistrationServiceBySlug>> }) {
+  const handleScrollToLead = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const leadEl = document.getElementById("lead");
+    if (leadEl) {
+      leadEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      const firstInput = leadEl.querySelector<HTMLInputElement>("input, textarea, select");
+      if (firstInput) firstInput.focus();
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="py-16 bg-gradient-to-br from-brand to-brand/80 text-white">
+    <section className="py-16 bg-gradient-to-br from-brand to-brand-dark text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
         <h2 className="font-display text-3xl md:text-4xl font-bold">Ready to register the right way?</h2>
         <p className="mt-3 text-white/90">CA-led, end-to-end registration support — talk to us today.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
+          <a
+            href="#lead"
+            onClick={handleScrollToLead}
+            className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform cursor-pointer"
+          >
             {s.primaryCta} <ArrowRight className="h-4 w-4" />
           </a>
           <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
