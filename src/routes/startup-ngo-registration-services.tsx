@@ -234,7 +234,7 @@ function Hero() {
           <p className="mt-2 text-muted-foreground">
             Expert CA guidance for Private Limited, LLP, Trust, Society and Section 8 registration.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href="#lead"
               className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 font-semibold text-white shadow-lg shadow-brand/30 transition-all hover:bg-brand/90"
