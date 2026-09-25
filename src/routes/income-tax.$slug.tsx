@@ -631,22 +631,7 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
 }
 
 function StickyMobileCTA({ cta }: { cta: string }) {
-  return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t shadow-2xl p-3 flex gap-2">
-      <a
-        href="tel:+918169887643"
-        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm"
-      >
-        <Phone className="h-4 w-4" /> Call
-      </a>
-      <a
-        href="#lead"
-        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30"
-      >
-        {cta} <ArrowRight className="h-4 w-4" />
-      </a>
-    </div>
-  );
+  return null;
 }
 
 

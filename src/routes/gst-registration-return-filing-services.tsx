@@ -170,7 +170,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow?: string; title: string
   return (
     <div className="text-center max-w-3xl mx-auto mb-12">
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">{title}</h2>
+      <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight break-words">{title}</h2>
       {sub && <p className="mt-4 text-base sm:text-lg text-muted-foreground">{sub}</p>}
     </div>
   );
@@ -199,14 +199,14 @@ function GstHero() {
             <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand" /> Notice Support</span>
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand" /> Pan India Online</span>
           </div>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href="#gst-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-red px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all">
+          <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3">
+            <a href="#gst-lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gradient-red px-5 sm:px-6 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:shadow-lg transition-all text-center">
               Get GST Registration Now <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#gst-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-white border border-border px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition">
+            <a href="#gst-lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white border border-border px-5 sm:px-6 text-sm font-semibold text-foreground hover:border-primary hover:text-brand transition text-center">
               File GST Returns
             </a>
-            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-white hover:opacity-90 transition">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 sm:px-6 text-sm font-semibold text-white hover:opacity-90 transition text-center">
               <MessageCircle className="h-4 w-4" /> WhatsApp CA
             </a>
           </div>
@@ -224,7 +224,7 @@ function GstHero() {
               </div>
             </div>
           </div>
-          <div id="gst-lead" className="mt-5 rounded-3xl bg-white shadow-soft border border-border p-5 sm:p-6">
+          <div id="gst-lead" className="mt-5 rounded-3xl bg-white shadow-soft border border-border p-4 sm:p-6 box-border max-w-full overflow-hidden min-w-0">
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-display font-bold text-lg">File GST Easily</h3>
               <span className="text-xs font-semibold text-brand bg-primary/10 px-2 py-1 rounded-full">Free Call</span>
@@ -262,7 +262,7 @@ function Problems() {
     <section className="py-16 sm:py-20 bg-brand-light">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Common GST Pain Points" title="Businesses often struggle with GST" sub="GST mistakes can lead to penalties and business disruption." />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {PROBLEMS.map((p) => (
             <div key={p.title} className="group rounded-2xl bg-white p-5 shadow-card hover:shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-primary/20">
               <div className="h-11 w-11 rounded-xl bg-primary/10 text-brand flex items-center justify-center group-hover:bg-gradient-red group-hover:text-white transition-colors">
@@ -283,7 +283,7 @@ function GstServices() {
     <section id="gst-services" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Explore GST Services" title="Our GST Services" sub="End-to-end GST support under one roof." />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {GST_SERVICES.map((s) => (
             <div key={s.title} className="group relative rounded-3xl border border-border bg-white p-6 hover:border-primary hover:shadow-soft hover:-translate-y-1 transition-all">
               <div className="h-14 w-14 rounded-2xl bg-primary/10 text-brand flex items-center justify-center mb-5 group-hover:bg-gradient-red group-hover:text-white transition-colors">
@@ -326,7 +326,7 @@ function Segments() {
     <section className="py-16 sm:py-20 bg-brand-light">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Who Needs This" title="Who Should Use This Service?" sub="This is ideal for:" />
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
           {SEGMENTS.map((s) => (
             <div key={s.label} className="rounded-2xl bg-white p-5 text-center shadow-card hover:shadow-soft hover:-translate-y-1 transition-all border border-transparent hover:border-primary/20">
               <div className="h-12 w-12 mx-auto rounded-xl bg-primary/10 text-brand flex items-center justify-center">
@@ -390,7 +390,7 @@ function Process() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Simple Process" title="Our Process" />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 relative">
           {STEPS.map((s, i) => (
             <div key={s.n} className="relative rounded-2xl border border-border bg-white p-6 hover:border-primary/30 hover:shadow-card transition-all">
               <div className="font-display text-4xl font-bold text-brand/15">{s.n}</div>
@@ -410,7 +410,7 @@ function Documents() {
     <section className="py-16 sm:py-24 bg-brand-light">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Checklist" title="Documents Required" sub="Itna ready rakhein — baaki sab hum karenge." />
-        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {[
             { title: "For Registration", icon: BadgeCheck, items: REG_DOCS },
             { title: "For Return Filing", icon: FileSpreadsheet, items: RET_DOCS },
@@ -443,7 +443,7 @@ function GstReviews() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Client Trust" title="Businesses Trust PJ&A" />
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {REVIEWS.map((r) => (
             <div key={r.name} className="rounded-2xl bg-white border border-border p-6 shadow-card hover:shadow-soft transition-all">
               <div className="flex gap-0.5 mb-3">{[0, 1, 2, 3, 4].map(i => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}</div>
@@ -465,7 +465,7 @@ function Learning() {
     <section className="py-16 sm:py-24 bg-brand-light">
       <div className="container mx-auto px-4">
         <SectionTitle eyebrow="Learning Hub" title="GST Blogs & Guides" sub="Stay updated. Stay compliant." />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {BLOGS.map((p) => (
             <a key={p.title} href="#" className="group rounded-2xl bg-white border border-border overflow-hidden hover:shadow-soft hover:-translate-y-1 transition-all">
               <div className={`aspect-[16/10] bg-gradient-to-br ${p.color} flex items-center justify-center`}>
@@ -545,20 +545,20 @@ function GstFinalCTA() {
         <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-semibold mb-5">
           <ClipboardCheck className="h-4 w-4" /> Limited slots this week
         </div>
-        <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto">
+        <h2 className="font-display text-2xl sm:text-4xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto break-words">
           GST compliance is critical for your business — don't take risks.
         </h2>
         <p className="mt-5 text-base sm:text-lg text-white/90 max-w-2xl mx-auto">
           Get expert CA support and manage your GST smoothly.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="#gst-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-7 text-sm font-bold text-brand hover:shadow-lg transition-all">
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3">
+          <a href="#gst-lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-brand hover:shadow-lg transition-all text-center">
             Start GST Registration Now <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="#gst-lead" className="inline-flex h-12 items-center gap-2 rounded-full bg-white/10 border border-white/40 backdrop-blur px-7 text-sm font-bold text-white hover:bg-white/20 transition-all">
+          <a href="#gst-lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-white/10 border border-white/40 backdrop-blur px-6 text-sm font-bold text-white hover:bg-white/20 transition-all text-center">
             File Your GST Returns
           </a>
-          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-[#25D366] px-7 text-sm font-bold text-white hover:opacity-90 transition">
+          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-bold text-white hover:opacity-90 transition text-center">
             <MessageCircle className="h-4 w-4" /> WhatsApp
           </a>
         </div>

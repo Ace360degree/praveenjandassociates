@@ -114,7 +114,7 @@ function GstServicePage() {
 function Breadcrumbs({ title }: { title: string }) {
   return (
     <nav className="border-b bg-muted/30" aria-label="Breadcrumb">
-      <ol className="container mx-auto px-4 py-3 text-sm flex items-center gap-2 text-muted-foreground flex-wrap">
+      <ol className="container mx-auto px-4 py-3 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 text-muted-foreground flex-wrap max-w-full overflow-hidden">
         <li><Link to="/" className="hover:text-brand">Home</Link></li>
         <ChevronRight className="h-3 w-3" />
         <li><Link to="/gst" className="hover:text-brand">GST</Link></li>
@@ -135,16 +135,16 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
             <Sparkles className="h-3.5 w-3.5" /> GST · {s.title}
           </span>
-          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">
+          <h1 className="mt-4 font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-ink break-words">
             {s.h1}
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground">{s.heroLead}</p>
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground break-words">{s.heroLead}</p>
           <p className="mt-2 text-muted-foreground">{s.heroSub}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
+            <a href="#lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all text-center">
               {s.primaryCta} <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all text-center">
               <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
             </a>
           </div>
@@ -157,7 +157,7 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Online</span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
+        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 max-w-full overflow-hidden box-border">
           <h3 className="font-display text-xl font-bold text-ink">Get expert CA help — free callback</h3>
           <p className="text-sm text-muted-foreground mt-1">Share details, our CA will call within 30 mins.</p>
           <form
@@ -186,11 +186,11 @@ function Problems({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           New business owners often face:
         </h2>
         <p className="text-center text-muted-foreground mt-2">Starting wrong can delay your business launch.</p>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((p) => (
             <div key={p} className="flex gap-3 p-5 rounded-xl border bg-red-50/40 hover:bg-red-50 transition-colors">
               <AlertTriangle className="h-5 w-5 text-brand shrink-0 mt-0.5" />
@@ -207,7 +207,7 @@ function WhatIs({ whatIs }: { whatIs: { heading: string; points: string[]; note?
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">{whatIs.heading}</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">{whatIs.heading}</h2>
         <ul className="mt-6 space-y-3">
           {whatIs.points.map((p) => (
             <li key={p} className="flex gap-3 items-start">
@@ -230,7 +230,7 @@ function WhoFor({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">WHO SHOULD APPLY?</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">WHO SHOULD APPLY?</h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((w) => (
             <div key={w} className="p-5 rounded-xl border hover:border-brand/40 hover:shadow-md transition-all bg-white">
@@ -249,7 +249,7 @@ function WhoFor({ items }: { items: string[] }) {
 function Benefits({ items, important }: { items: string[]; important: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 max-w-5xl">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl">
         <div className="bg-white rounded-2xl p-6 lg:p-8 border shadow-sm">
           <h3 className="font-display text-xl font-bold text-ink flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-brand" /> BENEFITS OF NEW GST REGISTRATION
@@ -285,9 +285,9 @@ function Process({ steps }: { steps: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">OUR PROCESS</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">OUR PROCESS</h2>
         <p className="text-center text-muted-foreground mt-2">Simple, transparent, expert-led.</p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {steps.map((step, i) => (
             <div key={step} className="relative p-5 rounded-xl border bg-gradient-to-br from-white to-brand/5 hover:shadow-lg transition-all">
               <div className="h-9 w-9 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm shadow-md shadow-brand/30">{i + 1}</div>
@@ -304,9 +304,9 @@ function Documents({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">DOCUMENTS REQUIRED</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">DOCUMENTS REQUIRED</h2>
         <p className="text-center text-muted-foreground mt-2">We will guide you step-by-step on documentation.</p>
-        <div className="mt-8 grid sm:grid-cols-2 gap-3">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {items.map((d) => (
             <div key={d} className="flex gap-3 p-4 rounded-xl bg-white border hover:border-brand/40 transition-colors">
               <FileText className="h-5 w-5 text-brand shrink-0" />
@@ -328,12 +328,12 @@ function Trust() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Trusted by New Businesses</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">Trusted by New Businesses</h2>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
           <span className="ml-2 font-semibold">4.8/5 Rating on Google</span>
         </div>
-        <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (
             <blockquote key={r} className="p-5 rounded-xl border bg-muted/30 text-sm italic text-ink">"{r}"</blockquote>
           ))}
@@ -348,7 +348,7 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Frequently Asked Questions</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Frequently Asked Questions</h2>
         <div className="mt-8 space-y-3">
           {items.map((f, i) => (
             <div key={f.q} className="rounded-xl border bg-white overflow-hidden">
@@ -387,14 +387,14 @@ function MoreSection({
             <p className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
               <Sparkles className="h-3.5 w-3.5" /> More
             </p>
-            <h2 className="mt-3 font-display text-2xl md:text-3xl font-bold text-ink">
+            <h2 className="mt-3 font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">
               {title ?? "More About GST Registration"}
             </h2>
             <p className="mt-2 text-muted-foreground">
               {intro ?? "Popular search phrases aligned with GST registration support."}
             </p>
           </div>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3">
             {keywords.map((item) => (
               <span
                 key={item}
@@ -419,13 +419,13 @@ function FinalCTA({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
   return (
     <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">{heading}</h2>
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold break-words">{heading}</h2>
         <p className="mt-3 text-white/90">{subheading}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
+          <a href="#lead" className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform text-center">
             {primaryText} <ArrowRight className="h-4 w-4" />
           </a>
-          <a href={secondaryHref} target={secondaryHref.startsWith("http") ? "_blank" : undefined} rel={secondaryHref.startsWith("http") ? "noreferrer" : undefined} className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
+          <a href={secondaryHref} target={secondaryHref.startsWith("http") ? "_blank" : undefined} rel={secondaryHref.startsWith("http") ? "noreferrer" : undefined} className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors text-center">
             {secondaryText === "Chat with CA on WhatsApp" ? <MessageCircle className="h-4 w-4" /> : <Phone className="h-4 w-4" />} {secondaryText}
           </a>
         </div>
@@ -439,7 +439,7 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Explore More GST Services</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Explore More GST Services</h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {related.map((r) => (
             <Link
@@ -467,14 +467,5 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
 }
 
 function StickyMobileCTA({ cta }: { cta: string }) {
-  return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t shadow-2xl p-3 flex gap-2">
-      <a href="tel:+918169887643" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm">
-        <Phone className="h-4 w-4" /> Call
-      </a>
-      <a href="#lead" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30">
-        {cta} <ArrowRight className="h-4 w-4" />
-      </a>
-    </div>
-  );
+  return null;
 }
