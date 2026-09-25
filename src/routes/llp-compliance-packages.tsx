@@ -169,7 +169,7 @@ export const Route = createFileRoute("/llp-compliance-packages")({
 
 function LLPCompliancePackagesPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col min-w-0 overflow-x-hidden">
       <Header />
       <main className="flex-1">
         <Breadcrumbs />
@@ -300,7 +300,7 @@ function AboutSection() {
 
   return (
     <section className="py-14 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-6xl grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-start">
         <article className="rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
@@ -361,11 +361,11 @@ function AboutSection() {
 function PackagesSection() {
   return (
     <section id="packages" className="py-14 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-6xl">
         <div className="flex items-end justify-between gap-4 flex-wrap">
           <div>
             <p className="text-sm font-semibold text-brand">Our LLP Service Packages</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">Choose the right LLP package</h2>
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold break-words text-ink">Choose the right LLP package</h2>
           </div>
           <p className="max-w-2xl text-sm md:text-base text-foreground/70">
             Flexible plans for LLPs, professionals and growing businesses that want complete CA support.
@@ -402,7 +402,7 @@ function PackagesSection() {
 function ProblemsSection() {
   return (
     <section className="py-14 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-6xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
         <article className="rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
@@ -470,11 +470,11 @@ function AlertTriangleIcon() {
 function ProcessSection() {
   return (
     <section className="py-14 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-6xl">
         <div className="flex items-end justify-between gap-4 flex-wrap">
           <div>
             <p className="text-sm font-semibold text-brand">How It Works</p>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">A simple and hassle-free process</h2>
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold break-words text-ink">A simple and hassle-free process</h2>
           </div>
         </div>
         <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-5 gap-4">
@@ -495,7 +495,7 @@ function ProcessSection() {
 function AudienceSection() {
   return (
     <section className="py-14 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-6xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
         <aside className="rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
           <div className="flex items-center gap-3">
             <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
@@ -560,10 +560,10 @@ function TrustSection() {
 function FAQSection() {
   return (
     <section className="py-14 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-5xl">
         <div className="text-center">
           <p className="text-sm font-semibold text-brand">FAQs</p>
-          <h2 className="mt-2 font-display text-2xl md:text-3xl font-bold text-ink">Common questions about LLP compliance</h2>
+          <h2 className="mt-2 font-display text-xl sm:text-2xl md:text-3xl font-bold break-words text-ink">Common questions about LLP compliance</h2>
         </div>
         <div className="mt-8 space-y-4">
           {FAQS.map((faq) => (
@@ -584,7 +584,7 @@ function FAQSection() {
 function FinalCTASection() {
   return (
     <section className="relative -mt-4 bg-brand py-8 sm:py-12 lg:py-14">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 min-w-0 box-border max-w-5xl">
         <div
           className="rounded-[32px] px-6 py-10 sm:px-10 sm:py-14 text-center text-white shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]"
           style={{ backgroundImage: "linear-gradient(135deg, #db1f1f 0%, #d31919 48%, #b71212 100%)" }}

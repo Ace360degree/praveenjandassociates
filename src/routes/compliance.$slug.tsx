@@ -73,12 +73,12 @@ function BundlePage() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", pkg: "" });
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col min-w-0 overflow-x-hidden">
       <Header />
       <main className="flex-1">
         {/* Breadcrumb */}
         <div className="container mx-auto px-4 pt-6">
-          <nav className="text-sm text-muted-foreground flex items-center gap-1 flex-wrap">
+          <nav className="text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5 sm:gap-2 overflow-x-auto whitespace-nowrap scrollbar-none max-w-full">
             <Link to="/" className="hover:text-brand">
               Home
             </Link>
@@ -93,20 +93,20 @@ function BundlePage() {
 
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="container mx-auto px-4 py-10 lg:py-14 grid lg:grid-cols-2 gap-10 items-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-14 grid lg:grid-cols-2 gap-8 lg:gap-10 items-start min-w-0 box-border">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
                 <Sparkles className="h-3.5 w-3.5" /> {b.entity} Compliance
               </span>
-              <h1 className="mt-4 font-display text-3xl md:text-4xl font-bold text-ink leading-tight">
+              <h1 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink leading-tight break-words min-w-0">
                 {b.h1}
               </h1>
               <p className="mt-3 text-lg text-muted-foreground">{b.heroHeadline}</p>
               <p className="mt-2 text-muted-foreground">{b.heroLead}</p>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <a
                   href="#bundles"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-6 py-3 font-semibold min-h-[48px] justify-center text-center shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all"
                 >
                   View {b.entity} Packages <ArrowRight className="h-4 w-4" />
                 </a>
@@ -114,7 +114,7 @@ function BundlePage() {
                   href="https://wa.me/918169887643"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-6 py-3 font-semibold min-h-[48px] justify-center text-center hover:bg-[#25D366]/20 transition-all"
                 >
                   <MessageCircle className="h-4 w-4" /> WhatsApp CA
                 </a>
@@ -131,7 +131,7 @@ function BundlePage() {
                 </span>
               </div>
             </div>
-            <div className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
+            <div className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 w-full box-border">
               <h3 className="font-display text-xl font-bold text-ink">Request a Custom Quote</h3>
               <p className="text-sm text-muted-foreground mt-1">
                 Share your details  -  CA will call within 30 mins.
@@ -149,7 +149,7 @@ function BundlePage() {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="Full Name"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+                  className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30"
                 />
                 <input
                   required
@@ -157,7 +157,7 @@ function BundlePage() {
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   placeholder="Mobile Number"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+                  className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30"
                 />
                 <input
                   required
@@ -165,12 +165,12 @@ function BundlePage() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="Email"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+                  className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30"
                 />
                 <select
                   value={form.pkg}
                   onChange={(e) => setForm({ ...form, pkg: e.target.value })}
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
+                  className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30"
                 >
                   <option value="">Preferred bundle (optional)</option>
                   {b.packages.map((p) => (
@@ -181,7 +181,7 @@ function BundlePage() {
                 </select>
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2"
+                  className="w-full min-h-[48px] rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2"
                 >
                   Request Callback <ArrowRight className="h-4 w-4" />
                 </button>
@@ -195,7 +195,7 @@ function BundlePage() {
 
         {/* About */}
         <section className="py-10 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-4xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl min-w-0 box-border">
             {b.about.map((p, i) => (
               <p key={i} className="text-muted-foreground mt-3 first:mt-0">
                 {p}
@@ -213,11 +213,11 @@ function BundlePage() {
             <p className="text-center text-muted-foreground mt-2">
               Pick a starting point  -  final scope &amp; quote tailored to your business.
             </p>
-            <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
               {b.packages.map((p, idx) => (
                 <div
                   key={p.name}
-                  className={`group relative p-6 rounded-2xl border bg-white flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/10 ${idx === b.packages.length - 1 ? "border-brand shadow-lg shadow-brand/10" : ""}`}
+                  className={`group relative p-4 sm:p-6 rounded-2xl border bg-white flex flex-col min-w-0 box-border overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-xl hover:shadow-brand/10 ${idx === b.packages.length - 1 ? "border-brand shadow-lg shadow-brand/10" : ""}`}
                 >
                   {idx === b.packages.length - 1 && (
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">
@@ -240,7 +240,7 @@ function BundlePage() {
                   <a
                     href="#lead"
                     onClick={() => setForm({ ...form, pkg: p.name })}
-                    className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 text-brand font-semibold py-2.5 hover:bg-brand/15 hover:text-brand transition-colors"
+                    className="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 text-brand font-semibold min-h-[48px] inline-flex items-center justify-center py-3 hover:bg-brand/15 hover:text-brand transition-colors"
                   >
                     Enquire <ArrowRight className="h-3.5 w-3.5" />
                   </a>
@@ -252,7 +252,7 @@ function BundlePage() {
 
         {/* Problems & Who for */}
         <section className="py-14 bg-muted/30">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto min-w-0 box-border">
             <div className="p-6 rounded-2xl bg-white border">
               <div className="flex items-center gap-2">
                 <AlertCircle className="h-5 w-5 text-amber-600" />
@@ -286,7 +286,7 @@ function BundlePage() {
 
         {b.whyChoose?.length ? (
           <section className="py-14 bg-white">
-            <div className="container mx-auto px-4 max-w-5xl grid lg:grid-cols-2 gap-6">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 min-w-0 box-border">
               <div className="p-6 rounded-2xl bg-white border shadow-sm">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="h-5 w-5 text-brand" />
@@ -321,11 +321,11 @@ function BundlePage() {
 
         {/* Process */}
         <section className="py-14 bg-white">
-          <div className="container mx-auto px-4 max-w-5xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl min-w-0 box-border">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
               How It Works
             </h2>
-            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
               {(
                 b.steps ?? [
                   "Choose bundle",
@@ -352,7 +352,7 @@ function BundlePage() {
 
         {b.trust?.length ? (
           <section className="py-14 bg-muted/30">
-            <div className="container mx-auto px-4 max-w-5xl grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-start">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl min-w-0 box-border grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-6 sm:gap-8 items-start">
               <aside className="rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
@@ -397,7 +397,7 @@ function BundlePage() {
 
         {/* FAQ */}
         <section className="py-14 bg-muted/30">
-          <div className="container mx-auto px-4 max-w-3xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl min-w-0 box-border">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
               Frequently Asked Questions
             </h2>
@@ -406,7 +406,7 @@ function BundlePage() {
                 <div key={f.q} className="rounded-xl border bg-white overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-muted/30 transition-colors"
+                    className="w-full px-4 sm:px-5 py-3.5 sm:py-4 flex items-center justify-between text-left hover:bg-muted/30 transition-colors"
                   >
                     <span className="font-semibold text-ink">{f.q}</span>
                     <ChevronDown
@@ -424,7 +424,7 @@ function BundlePage() {
 
         {b.more?.length ? (
           <section className="py-12 bg-white">
-            <div className="container mx-auto px-4 max-w-5xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl min-w-0 box-border">
               <h3 className="font-display text-xl font-bold text-ink text-center">
                 {b.moreTitle ?? "More for Proprietorship"}
               </h3>
@@ -447,11 +447,11 @@ function BundlePage() {
 
         {/* Other bundles */}
         <section className="py-12 bg-white">
-          <div className="container mx-auto px-4 max-w-5xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl min-w-0 box-border">
             <h3 className="font-display text-xl font-bold text-ink text-center">
               Explore other compliance bundles
             </h3>
-            <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {COMPLIANCE_BUNDLES.filter((x) => x.slug !== b.slug).map((x) => (
                 <Link
                   key={x.slug}
@@ -471,9 +471,9 @@ function BundlePage() {
 
         {/* Final CTA */}
         <section id="lead" className="bg-brand py-8 sm:py-12 lg:py-14">
-          <div className="container mx-auto px-4 max-w-5xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl min-w-0 box-border">
             <div
-              className="rounded-[32px] px-6 py-10 sm:px-10 sm:py-14 text-center text-white shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]"
+              className="rounded-2xl sm:rounded-[32px] px-4 py-8 sm:px-10 sm:py-14 text-center text-white min-w-0 box-border shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]"
               style={{
                 backgroundImage: "linear-gradient(135deg, #db1f1f 0%, #d31919 48%, #b71212 100%)",
               }}
@@ -481,16 +481,16 @@ function BundlePage() {
               <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white/95">
                 <ClipboardCheck className="h-4 w-4" /> Limited consultation slots
               </div>
-              <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="mt-6 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight break-words min-w-0">
                 Choose the Right Package for Your {b.entity}
               </h2>
               <p className="mt-4 text-base sm:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto">
                 Simplify taxes and compliance with expert support.
               </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 w-full sm:w-auto">
                 <a
                   href="#bundles"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 font-semibold text-brand shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold min-h-[48px] justify-center text-center text-brand shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5"
                 >
                   View {b.entity} Packages <ArrowRight className="h-4 w-4" />
                 </a>
@@ -498,7 +498,7 @@ function BundlePage() {
                   href="https://wa.me/918169887643"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-white shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-6 py-3 font-semibold min-h-[48px] justify-center text-center text-white shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5"
                 >
                   <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
                 </a>

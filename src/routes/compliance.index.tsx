@@ -28,15 +28,15 @@ export const Route = createFileRoute("/compliance/")({
 
 function ComplianceHub() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col min-w-0 overflow-x-hidden">
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-br from-brand/5 via-white to-brand/5">
-          <div className="container mx-auto px-4 py-14 lg:py-20 text-center max-w-3xl">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20 text-center max-w-3xl min-w-0 box-border">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
               <ShieldCheck className="h-3.5 w-3.5" /> Bundled Compliance Solutions
             </span>
-            <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold text-ink leading-tight">
+            <h1 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink leading-tight break-words min-w-0">
               Compliance Solutions for Every Business Type
             </h1>
             <p className="mt-3 text-lg text-muted-foreground">
@@ -54,7 +54,7 @@ function ComplianceHub() {
 
         <section className="py-14 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto">
               {COMPLIANCE_BUNDLES.map((b) => {
                 const Icon = ICONS[b.slug] ?? Building2;
                 return (
@@ -62,7 +62,7 @@ function ComplianceHub() {
                     key={b.slug}
                     to="/compliance/$slug"
                     params={{ slug: b.slug }}
-                    className="group p-6 rounded-2xl border bg-white hover:border-brand/40 hover:shadow-lg transition-all"
+                    className="group p-5 sm:p-6 rounded-2xl border bg-white hover:border-brand/40 hover:shadow-lg transition-all min-w-0 box-border overflow-hidden"
                   >
                     <div className="h-11 w-11 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
                       <Icon className="h-5 w-5" />
@@ -80,8 +80,8 @@ function ComplianceHub() {
         </section>
 
         <section className="py-14 bg-brand text-white">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h2 className="font-display text-2xl md:text-3xl font-bold">Not sure which bundle fits?</h2>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl min-w-0 box-border">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold break-words">Not sure which bundle fits?</h2>
             <p className="mt-2 text-white/90">Talk to a CA — we'll recommend the right solution for your business.</p>
             <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
               <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
