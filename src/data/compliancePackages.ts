@@ -145,15 +145,15 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
     slug: "partnership-firm",
     entity: "Partnership Firm",
     title: "Partnership Firm Compliance",
-    h1: "Partnership Firm Compliance Solutions â€” Tax, GST & Accounting",
+    h1: "Partnership Firm Compliance Solutions Tax, GST & Accounting",
     metaTitle: "Partnership Firm Compliance | CA-led Tax, GST, Accounting Bundles",
     metaDescription:
-      "Complete compliance for partnership firms â€” ITR, GST, bookkeeping, advisory. Enquiry-based, CA-led.",
+      "Complete compliance for partnership firms  ITR, GST, bookkeeping, advisory. Enquiry-based, CA-led.",
     heroHeadline: "All-in-One Compliance for Your Partnership Firm",
     heroLead:
-      "GST, income tax aur accounting â€” sab kuch ek hi CA team ke through. Small to growing partnership firms ke liye designed.",
+      "GST, income tax aur accounting  sab kuch ek hi CA team ke through. Small to growing partnership firms ke liye designed.",
     about: [
-      "Partnership firms ko regular ITR, GST aur accounting handle karni padti hai â€” vendors alag-alag rakhna mehnga aur risky hota hai.",
+      "Partnership firms ko regular ITR, GST aur accounting handle karni padti hai  vendors alag-alag rakhna mehnga aur risky hota hai.",
       "Hamari bundled solutions sab kuch single point of contact se manage karte hain.",
     ],
     packages: [
@@ -223,9 +223,9 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
       },
       {
         q: "Solution customizable hai?",
-        a: "Haan â€” firm ki needs ke hisaab se tune kar dete hain.",
+        a: "Haan  firm ki needs ke hisaab se tune kar dete hain.",
       },
-      { q: "CA support milta hai?", a: "Haan â€” expert CA included har bundle mein." },
+      { q: "CA support milta hai?", a: "Haan  expert CA included har bundle mein." },
     ],
     keywords: [
       "Partnership firm compliance India",
@@ -238,16 +238,16 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
     slug: "llp",
     entity: "LLP",
     title: "LLP Compliance",
-    h1: "LLP Compliance Solutions in India â€” Form 8, Form 11, Tax & Accounting",
-    metaTitle: "LLP Compliance Solutions | Form 8, Form 11, GST & Tax â€” CA-led",
+    h1: "LLP Compliance Solutions in India Form 8, Form 11, Tax & Accounting",
+    metaTitle: "LLP Compliance Solutions | Form 8, Form 11, GST & Tax CA-led",
     metaDescription:
-      "End-to-end LLP compliance â€” Form 8, Form 11, GST, accounting, partner changes. CA-led, enquiry-based.",
+      "End-to-end LLP compliance  Form 8, Form 11, GST, accounting, partner changes. CA-led, enquiry-based.",
     heroHeadline: "All-in-One LLP Compliance Under One CA Team",
     heroLead:
-      "Form 8, Form 11, GST returns, accounting aur partner-level filings â€” sab kuch ek hi place pe.",
+      "Form 8, Form 11, GST returns, accounting aur partner-level filings sab kuch ek hi place pe.",
     about: [
-      "LLPs ko annual ROC filing (Form 8, Form 11), GST returns aur accounting mandatory hota hai â€” chhote business mein bhi.",
-      "Hamare bundled solutions sab kuch ek CA team ke through manage karte hain â€” penalty aur multi-vendor headache ko khatam karte hain.",
+      "LLPs ko annual ROC filing (Form 8, Form 11), GST returns aur accounting mandatory hota hai  -  chhote business mein bhi.",
+      "Hamare bundled solutions sab kuch ek CA team ke through manage karte hain  -  penalty aur multi-vendor headache ko khatam karte hain.",
     ],
     packages: [
       {
@@ -313,15 +313,15 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
     faqs: [
       {
         q: "LLP compliance solution mein kya included hai?",
-        a: "Form 8, Form 11, GST, accounting aur tax filings â€” bundle ke hisaab se.",
+        a: "Form 8, Form 11, GST, accounting aur tax filings  -  bundle ke hisaab se.",
       },
-      { q: "Kya plans customizable hain?", a: "Haan â€” business needs ke base par." },
+      { q: "Kya plans customizable hain?", a: "Haan  -  business needs ke base par." },
       {
         q: "Activity na ho to bhi LLP filing zaroori hai?",
-        a: "Haan â€” annual ROC filing nil ho to bhi mandatory hai.",
+        a: "Haan  -  annual ROC filing nil ho to bhi mandatory hai.",
       },
-      { q: "Kya baad mein upgrade kar sakte hain?", a: "Haan â€” sab plans scalable hain." },
-      { q: "CA support milta hai?", a: "Haan â€” har bundle mein expert support hai." },
+      { q: "Kya baad mein upgrade kar sakte hain?", a: "Haan  -  sab plans scalable hain." },
+      { q: "CA support milta hai?", a: "Haan  -  har bundle mein expert support hai." },
     ],
     keywords: [
       "LLP compliance India",
@@ -433,15 +433,15 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
     slug: "complete-tax-business",
     entity: "Complete Tax & Business",
     title: "Complete Tax & Business Compliance",
-    h1: "Complete Tax & Business Solutions â€” Startup to Scale",
+    h1: "Complete Tax & Business Solutions  -  Startup to Scale",
     metaTitle: "Complete Tax & Business Solutions | Startup, Compliance, Accounting, Corporate",
     metaDescription:
-      "Bundled CA-led solutions â€” startup setup, ongoing ROC compliance, accounting + tax, full corporate plan. Enquiry-based.",
-    heroHeadline: "One CA Team â€” From Startup Setup to Full Corporate Compliance",
+      "Bundled CA-led solutions  -  startup setup, ongoing ROC compliance, accounting + tax, full corporate plan. Enquiry-based.",
+    heroHeadline: "One CA Team  -  From Startup Setup to Full Corporate Compliance",
     heroLead:
-      "Company / LLP registration, ROC compliance, accounting, GST, TDS, ITR aur secretarial â€” har stage ke liye bundled solution.",
+      "Company / LLP registration, ROC compliance, accounting, GST, TDS, ITR aur secretarial  -  har stage ke liye bundled solution.",
     about: [
-      "Naya business launch karna ho ya scaling company ko manage karna â€” har stage par alag-alag service providers se deal karna mehnga aur risky hai.",
+      "Naya business launch karna ho ya scaling company ko manage karna  -  har stage par alag-alag service providers se deal karna mehnga aur risky hai.",
       "Hamare end-to-end bundles ek hi CA team ke through full lifecycle cover karte hain.",
     ],
     packages: [
@@ -512,20 +512,20 @@ export const COMPLIANCE_BUNDLES: ComplianceBundle[] = [
     faqs: [
       {
         q: "Kya ek hi bundle complete business cover karta hai?",
-        a: "Corporate Plan complete lifecycle cover karta hai â€” registration ke baad ka sab kuch.",
+        a: "Corporate Plan complete lifecycle cover karta hai  -  registration ke baad ka sab kuch.",
       },
       {
         q: "Bundles customizable hain?",
-        a: "Haan â€” business needs ke base par tune kar dete hain.",
+        a: "Haan  -  business needs ke base par tune kar dete hain.",
       },
       {
         q: "Kya bundles affordable hain?",
-        a: "Individual services se kaafi cost-effective â€” bundled approach.",
+        a: "Individual services se kaafi cost-effective  -  bundled approach.",
       },
-      { q: "CA support milta hai?", a: "Haan â€” har plan mein expert CA included hai." },
+      { q: "CA support milta hai?", a: "Haan  -  har plan mein expert CA included hai." },
       {
         q: "Kya plans scalable hain?",
-        a: "Bilkul â€” startup se corporate tak grow kar sakte hain.",
+        a: "Bilkul  -  startup se corporate tak grow kar sakte hain.",
       },
     ],
     keywords: [

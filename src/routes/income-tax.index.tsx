@@ -137,7 +137,7 @@ const IT_SERVICES = [
   {
     icon: Briefcase,
     title: "Business ITR-4",
-    sub: "Presumptive â€” 44AD / 44ADA",
+    sub: "Presumptive  -  44AD / 44ADA",
     items: ["Small business 44AD", "Professionals 44ADA", "Composition friendly"],
     cta: "Know More",
     slug: "business-itr-4-presumptive",

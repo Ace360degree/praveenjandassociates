@@ -134,7 +134,7 @@ function BundlePage() {
             <div className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
               <h3 className="font-display text-xl font-bold text-ink">Request a Custom Quote</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Share your details â€” CA will call within 30 mins.
+                Share your details  -  CA will call within 30 mins.
               </p>
               <form
                 className="mt-5 space-y-3"
@@ -211,7 +211,7 @@ function BundlePage() {
               Our {b.entity} Service Packages
             </h2>
             <p className="text-center text-muted-foreground mt-2">
-              Pick a starting point â€” final scope &amp; quote tailored to your business.
+              Pick a starting point  -  final scope &amp; quote tailored to your business.
             </p>
             <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {b.packages.map((p, idx) => (
@@ -261,7 +261,7 @@ function BundlePage() {
               <ul className="mt-4 space-y-2">
                 {b.problems.map((p) => (
                   <li key={p} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-amber-600 mt-0.5">â€¢</span>
+                    <span className="text-amber-600 mt-0.5">•</span>
                     {p}
                   </li>
                 ))}

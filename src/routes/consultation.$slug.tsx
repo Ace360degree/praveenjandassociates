@@ -92,8 +92,8 @@ function ConsultationServicePage() {
         <Documents items={s.documents} />
         <Trust />
         <FAQ items={s.faqs} />
-        <FinalCTA s={s} />
         <RelatedServices currentSlug={s.slug} />
+        <FinalCTA s={s} />
       </main>
       <Footer />
       <FloatingWhatsApp />
@@ -105,7 +105,7 @@ function ConsultationServicePage() {
 function Breadcrumbs({ title }: { title: string }) {
   return (
     <nav className="border-b bg-muted/30" aria-label="Breadcrumb">
-      <ol className="container mx-auto px-4 py-3 text-sm flex items-center gap-2 text-muted-foreground flex-wrap">
+      <ol className="container mx-auto px-4 py-3 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 text-muted-foreground overflow-x-auto whitespace-nowrap scrollbar-none max-w-full">
         <li><Link to="/" className="hover:text-brand">Home</Link></li>
         <ChevronRight className="h-3 w-3" />
         <li><Link to="/consultation" className="hover:text-brand">Consultation</Link></li>
@@ -120,19 +120,19 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getConsultationServiceBy
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand/5 via-white to-brand/5">
-      <div className="container mx-auto px-4 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl min-w-0 box-border w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
             <Sparkles className="h-3.5 w-3.5" /> Consultation · {s.title}
           </span>
-          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">{s.h1}</h1>
+          <h1 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-ink break-words min-w-0">{s.h1}</h1>
           <p className="mt-3 text-lg text-muted-foreground">{s.heroLead}</p>
           <p className="mt-2 text-muted-foreground">{s.heroSub}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-6 py-3 font-semibold min-h-[48px] justify-center text-center shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
               {s.primaryCta} <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-6 py-3 font-semibold min-h-[48px] justify-center text-center hover:bg-[#25D366]/20 transition-all">
               <MessageCircle className="h-4 w-4" /> WhatsApp CA
             </a>
           </div>
@@ -145,7 +145,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getConsultationServiceBy
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Online</span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
+        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 w-full box-border">
           <h3 className="font-display text-xl font-bold text-ink">Talk to a CA — free callback</h3>
           <p className="text-sm text-muted-foreground mt-1">Share details, our CA will connect within 30 mins.</p>
           <form
@@ -156,10 +156,10 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getConsultationServiceBy
               window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
             }}
           >
-            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <button type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
+            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <button type="submit" className="w-full min-h-[48px] rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
               {s.primaryCta} <ArrowRight className="h-4 w-4" />
             </button>
             <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
@@ -408,14 +408,5 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
 }
 
 function StickyMobileCTA({ cta }: { cta: string }) {
-  return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t shadow-2xl p-3 flex gap-2">
-      <a href="tel:+918169887643" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-muted text-ink px-4 py-3 font-semibold text-sm">
-        <Phone className="h-4 w-4" /> Call
-      </a>
-      <a href="#lead" className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand text-white px-4 py-3 font-semibold text-sm shadow-lg shadow-brand/30">
-        {cta} <ArrowRight className="h-4 w-4" />
-      </a>
-    </div>
-  );
+  return null;
 }

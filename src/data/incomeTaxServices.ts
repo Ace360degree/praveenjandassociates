@@ -785,7 +785,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Traders and shopkeepers",
       "Retail businesses",
       "Service providers (non-professional)",
-      "Individuals with turnover up to â‚¹2 crore",
+      "Individuals with turnover up to ₹2 crore",
     ],
     benefitsHeading: "Benefits of 44AD Presumptive Taxation",
     benefits: [
@@ -976,7 +976,7 @@ export const ITR_SERVICES: ItrService[] = [
         "It covers stocks, mutual funds and property transactions",
         "It also applies where there are multiple house properties",
         "Foreign income or foreign assets may require ITR-2",
-        "Income above â‚¹50 lakh without business income is also covered",
+        "Income above ₹50 lakh without business income is also covered",
       ],
       note: "This form is more detailed and requires expert handling.",
     },
@@ -1133,7 +1133,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes, all gains and losses should be declared in the return.",
       },
       {
-        q: "What happens if I donâ€™t report losses?",
+        q: "What happens if I don't report losses?",
         a: "You lose the benefit of carrying forward those losses.",
       },
       {
@@ -1536,7 +1536,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Possible, but risky due to the complexity of F&O taxation.",
       },
     ],
-    finalCtaTitle: "F&O taxation is complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks with your filing.",
+    finalCtaTitle: "F&O taxation is complex  -  don't take risks with your filing.",
     finalCtaLead: "Get expert help and ensure accurate compliance.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1637,7 +1637,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
     ],
     finalCtaTitle:
-      "Intraday trading taxation is different and complex Ã¢â‚¬â€ donÃ¢â‚¬â„¢t take risks.",
+      "Intraday trading taxation is different and complex  -  don't take risks.",
     finalCtaLead: "Get expert help and file your ITR correctly.",
     finalCtaPrimary: "Start Your ITR Filing Now",
     finalCtaSecondary: "Chat with CA on WhatsApp",
@@ -1736,7 +1736,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can I use ITR-4 instead of ITR-3?",
-        a: "In some cases, yes Ã¢â‚¬â€ we help determine eligibility.",
+        a: "In some cases, yes  -  we help determine eligibility.",
       },
     ],
     finalCtaTitle: "Don't risk incorrect filing of your commission income.",
@@ -1822,7 +1822,7 @@ export const ITR_SERVICES: ItrService[] = [
     faqs: [
       {
         q: "Is share of profit taxable?",
-        a: "No, it is exempt in the partnerÃ¢â‚¬â„¢s hands.",
+        a: "No, it is exempt in the partner's hands.",
       },
       {
         q: "Is partner salary taxable?",
@@ -3476,7 +3476,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Usually 15 days from the notice date.",
       },
       {
-        q: "What happens if I donâ€™t respond?",
+        q: "What happens if I don't respond?",
         a: "Your return may be treated as invalid.",
       },
       {
@@ -4005,13 +4005,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-reply",
     title: "Appeal & Hearing Representation",
-    h1: "Income Tax Appeal Ã¢â‚¬â€ CIT(A), ITAT Drafting & Representation",
+    h1: "Income Tax Appeal  -  CIT(A), ITAT Drafting & Representation",
     metaTitle: "Income Tax Appeal CIT(A) ITAT Filing | CA Help  Praveen J & Associates",
     metaDescription:
       "First Appeal (CIT(A)) & ITAT appeal drafting, filing and representation. Stay applications, condonation, written submissions by experienced CA team.",
     heroLead: "Assessment order ya demand se agree nahi?",
     heroSub:
-      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing Ã¢â‚¬â€ sab.",
+      "Appeal aapka legal right hai. Hum CIT(A) ke samne first appeal aur ITAT tak representation karte hain  drafting, evidence aur hearing  -  sab.",
     primaryCta: "Discuss My Appeal",
     problems: [
       "Assessment order mein high demand raised",
@@ -4026,7 +4026,7 @@ export const ITR_SERVICES: ItrService[] = [
         "First Appeal: CIT(A)  Form 35, within 30 days of order",
         "Second Appeal: ITAT  Form 36, within 60 days of CIT(A) order",
         "Stay of demand application alag se",
-        "Faceless appeal scheme Ã¢â‚¬â€ no physical hearing default",
+        "Faceless appeal scheme  -  no physical hearing default",
         "Appeal fee:250 to 10,000 based on assessed income",
       ],
       note: "20% pre-deposit of disputed demand usually required for stay.",
@@ -4050,7 +4050,7 @@ export const ITR_SERVICES: ItrService[] = [
       "ITAT deadline: 60 days from CIT(A) order",
       "Pre-deposit (20%) usually for stay grant",
       "Condonation possible for delay with reasons",
-      "Faceless appeal Ã¢â‚¬â€ written submissions critical",
+      "Faceless appeal  -  written submissions critical",
     ],
     process: [
       "Order review & grounds identification",
@@ -4172,13 +4172,13 @@ export const ITR_SERVICES: ItrService[] = [
   {
     slug: "appeal-and-hearing-income-tax",
     title: "Income Tax Appeal & Hearing",
-    h1: "Income Tax Appeal & Hearing Help Ã¢â‚¬â€ CIT(A) Representation & Dispute Resolution",
-    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation Ã¢â‚¬â€ Praveen J & Associates",
+    h1: "Income Tax Appeal & Hearing Help  -  CIT(A) Representation & Dispute Resolution",
+    metaTitle: "Income Tax Appeal Hearing CIT(A) Representation  -  Praveen J & Associates",
     metaDescription:
-      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes Ã¢â‚¬â€ Section 250.",
+      "Expert CIT(A) appeal hearing representation. Professional case preparation, documentation, arguments & follow-up for income tax disputes  -  Section 250.",
     heroLead: "Filed an income tax appeal or received notice for hearing?",
     heroSub:
-      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling Ã¢â‚¬â€ helping you reduce tax demand and win your case.",
+      "Your case will now be reviewed by CIT(A) or higher authorities. Hum provide karte hain professional representation, documentation aur case handling  -  helping you reduce tax demand and win your case.",
     primaryCta: "Get Expert Representation",
     problems: [
       "Confusion about hearing procedure",
@@ -4196,7 +4196,7 @@ export const ITR_SERVICES: ItrService[] = [
         "Supporting evidence & case laws presented",
         "Order passed reducing, confirming or cancelling demand",
       ],
-      note: "Hearing outcome directly determines your final tax liability Ã¢â‚¬â€ strong preparation is non-negotiable.",
+      note: "Hearing outcome directly determines your final tax liability  -  strong preparation is non-negotiable.",
     },
     whoFor: [
       "Taxpayers with pending CIT(A) appeals",
@@ -4241,7 +4241,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Is representation required?",
-        a: "Not mandatory, but highly recommended Ã¢â‚¬â€ professional CA representation significantly improves the chance of a favourable outcome.",
+        a: "Not mandatory, but highly recommended  -  professional CA representation significantly improves the chance of a favourable outcome.",
       },
       {
         q: "What happens in the hearing?",
@@ -4249,7 +4249,7 @@ export const ITR_SERVICES: ItrService[] = [
       },
       {
         q: "Can tax demand be reduced?",
-        a: "Yes Ã¢â‚¬â€ based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
+        a: "Yes  -  based on case strength, supporting evidence and quality of arguments, the demand can be reduced, partly allowed or fully cancelled.",
       },
       {
         q: "What if I lose the appeal?",
