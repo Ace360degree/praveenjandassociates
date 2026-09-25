@@ -134,20 +134,20 @@ function Hero() {
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
             <Calculator className="h-3.5 w-3.5" /> Accounting & Audit
           </span>
-          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">
+          <h1 className="mt-4 font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-ink break-words">
             Accounting & Audit Services in India – Professional CA Support for Businesses
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground">
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground break-words">
             Struggling with accounting, compliance or financial accuracy? Ensure your business runs smoothly with professional accounting and audit services.
           </p>
           <p className="mt-2 text-muted-foreground">
             Get expert CA support for accurate bookkeeping, compliance & financial transparency.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
+            <a href="#lead" className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all text-center leading-snug">
               Get Accounting Support <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all">
+            <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all text-center leading-snug">
               <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
             </a>
           </div>
@@ -160,7 +160,7 @@ function Hero() {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Compliant</span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
+        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 max-w-full overflow-hidden box-border">
           <h3 className="font-display text-xl font-bold text-ink">Free Accounting Consultation</h3>
           <p className="text-sm text-muted-foreground mt-1">Apna business detail share kariye — CA expert 30 mins mein connect karega.</p>
           <form
@@ -189,9 +189,9 @@ function SubServicesGrid() {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">All Accounting & Audit Services</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">All Accounting & Audit Services</h2>
         <p className="text-center text-muted-foreground mt-2">Choose the service you need — CA-led, compliant, fast.</p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {ACCOUNTING_SERVICES.map((s) => (
             <Link
               key={s.slug}
@@ -225,11 +225,11 @@ function About() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">About Accounting & Audit Services</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">About Accounting & Audit Services</h2>
         <p className="text-center text-muted-foreground mt-3">
           At CA Praveen Jain & Associates, we provide end-to-end accounting and audit solutions tailored to your business needs.
         </p>
-        <div className="mt-8 grid sm:grid-cols-2 gap-4">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {points.map((p) => (
             <div key={p} className="flex items-start gap-3 p-4 rounded-xl border bg-muted/20">
               <CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" />
@@ -245,7 +245,7 @@ function About() {
 function ServicesSplit() {
   return (
     <section className="py-14 bg-muted/30">
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-6 max-w-6xl">
+      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 max-w-6xl">
         <div className="p-7 rounded-2xl border bg-white">
           <div className="h-11 w-11 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
             <BookOpen className="h-5 w-5" />
@@ -279,9 +279,9 @@ function Problems() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Common Problems Faced by Businesses</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Common Problems Faced by Businesses</h2>
         <p className="text-center text-muted-foreground mt-2">Poor accounting can lead to penalties and business risks.</p>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {PROBLEMS.map((p) => (
             <div key={p} className="flex items-start gap-3 p-5 rounded-xl border bg-red-50/50">
               <AlertTriangle className="h-5 w-5 text-red-500 shrink-0 mt-0.5" />
@@ -298,9 +298,9 @@ function Help() {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">How We Help You</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">How We Help You</h2>
         <p className="text-center text-muted-foreground mt-2">Focus on your business while we handle your finances.</p>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {HELP.map((p) => (
             <div key={p} className="flex items-start gap-3 p-5 rounded-xl border bg-white">
               <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
@@ -317,9 +317,9 @@ function Process() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Our Process</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Our Process</h2>
         <p className="text-center text-muted-foreground mt-2">Structured and professional approach.</p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {STEPS.map((s, i) => (
             <div key={s} className="relative p-5 rounded-xl border bg-muted/20 hover:shadow-lg transition-all">
               <div className="h-9 w-9 rounded-full bg-brand text-white flex items-center justify-center font-bold text-sm shadow-md shadow-brand/30">{i + 1}</div>
@@ -336,8 +336,8 @@ function Who() {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Who Needs This Service?</h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Who Needs This Service?</h2>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {WHO.map((p) => (
             <div key={p} className="flex items-start gap-3 p-5 rounded-xl border bg-white">
               <TrendingUp className="h-5 w-5 text-brand shrink-0 mt-0.5" />
@@ -354,7 +354,7 @@ function Documents() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Documents Required</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Documents Required</h2>
         <p className="text-center text-muted-foreground mt-2">Full onboarding support provided.</p>
         <div className="mt-8 grid sm:grid-cols-2 gap-3">
           {DOCS.map((d) => (
@@ -409,7 +409,7 @@ function FAQ() {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">Frequently Asked Questions</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">Frequently Asked Questions</h2>
         <div className="mt-8 space-y-3">
           {FAQS.map((f, i) => (
             <div key={f.q} className="rounded-xl border bg-white overflow-hidden">
@@ -433,13 +433,13 @@ function FinalCTA() {
   return (
     <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Ensure your business stays compliant, accurate and financially strong.</h2>
+        <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold break-words">Ensure your business stays compliant, accurate and financially strong.</h2>
         <p className="mt-3 text-white/90">Get expert CA-led accounting & audit support today.</p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <a href="#lead" className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform">
+        <div className="mt-6 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 max-w-xl mx-auto">
+          <a href="#lead" className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform text-center leading-snug">
             Get Accounting & Audit Support <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
+          <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors text-center leading-snug">
             <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
           </a>
           <a href="tel:+918169887643" className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors">
