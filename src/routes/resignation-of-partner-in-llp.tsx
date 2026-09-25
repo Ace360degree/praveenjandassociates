@@ -118,7 +118,7 @@ function AccountingServicePage() {
 function Breadcrumbs({ title }: { title: string }) {
   return (
     <nav className="border-b bg-muted/30" aria-label="Breadcrumb">
-      <ol className="container mx-auto px-4 py-3 text-sm flex items-center gap-2 text-muted-foreground flex-wrap">
+      <ol className="container mx-auto px-4 py-3 text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 text-muted-foreground flex-wrap max-w-full overflow-hidden">
         <li>
           <Link to="/" className="hover:text-brand">
             Home
@@ -146,15 +146,15 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getMcaServiceBySlug>> })
           <span className="inline-flex items-center gap-2 rounded-full bg-brand/10 text-brand px-3 py-1 text-xs font-semibold">
             <Sparkles className="h-3.5 w-3.5" /> Accounting & Audit · {s.title}
           </span>
-          <h1 className="mt-4 font-display text-3xl md:text-5xl font-bold leading-tight text-ink">
+          <h1 className="mt-4 font-display text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-ink break-words">
             {s.h1}
           </h1>
-          <p className="mt-3 text-lg text-muted-foreground">{s.heroLead}</p>
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground break-words">{s.heroLead}</p>
           <p className="mt-2 text-muted-foreground">{s.heroSub}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
             <a
               href="#lead"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all"
+              className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-brand text-white px-5 py-3 font-semibold shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all text-center leading-snug"
             >
               {s.primaryCta} <ArrowRight className="h-4 w-4" />
             </a>
@@ -162,7 +162,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getMcaServiceBySlug>> })
               href="https://wa.me/918169887643"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all"
+              className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-[#25D366]/10 text-[#128C7E] px-5 py-3 font-semibold hover:bg-[#25D366]/20 transition-all text-center leading-snug"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp CA
             </a>
@@ -182,7 +182,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getMcaServiceBySlug>> })
             </span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
+        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 max-w-full overflow-hidden box-border">
           <h3 className="font-display text-xl font-bold text-ink">Talk to a CA — free callback</h3>
           <p className="text-sm text-muted-foreground mt-1">
             Share details, our CA will connect within 30 mins.
@@ -236,10 +236,10 @@ function Problems({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Common Problems Faced
         </h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((p) => (
             <div key={p} className="flex gap-3 p-5 rounded-xl border bg-red-50/40">
               <AlertTriangle className="h-5 w-5 text-brand shrink-0 mt-0.5" />
@@ -256,7 +256,7 @@ function WhatIs({ whatIs }: { whatIs: { heading: string; points: string[]; note?
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink">{whatIs.heading}</h2>
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">{whatIs.heading}</h2>
         <ul className="mt-6 space-y-3">
           {whatIs.points.map((p) => (
             <li key={p} className="flex gap-3 items-start">
@@ -280,10 +280,10 @@ function WhoFor({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Who Should Use This Service?
         </h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {items.map((w) => (
             <div key={w} className="p-5 rounded-xl border bg-white">
               <div className="h-9 w-9 rounded-lg bg-brand/10 text-brand flex items-center justify-center mb-3">
@@ -301,7 +301,7 @@ function WhoFor({ items }: { items: string[] }) {
 function Benefits({ items, important }: { items: string[]; important: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-6 max-w-5xl">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl">
         <div className="bg-white rounded-2xl p-6 lg:p-8 border shadow-sm">
           <h3 className="font-display text-xl font-bold text-ink flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-brand" /> Benefits
@@ -337,10 +337,10 @@ function Process({ steps }: { steps: string[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Our Process
         </h2>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {steps.map((step, i) => (
             <div
               key={step}
@@ -362,7 +362,7 @@ function Documents({ items }: { items: string[] }) {
   return (
     <section className="py-14 bg-muted/30">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Documents Required
         </h2>
         <div className="mt-8 grid sm:grid-cols-2 gap-3">
@@ -383,7 +383,7 @@ function FAQ({ items }: { items: { q: string; a: string }[] }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Frequently Asked Questions
         </h2>
         <div className="mt-8 space-y-3">
@@ -411,13 +411,13 @@ function FinalCTA({ s }: { s: NonNullable<ReturnType<typeof getMcaServiceBySlug>
   return (
     <section className="py-16 bg-brand text-white">
       <div className="container mx-auto px-4 text-center max-w-3xl">
-        <h2 className="font-display text-3xl md:text-4xl font-bold">
+        <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold break-words">
           Process Partner Exit in Your LLP Today. Ensure smooth and compliant partner resignation.
         </h2>
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
+        <div className="mt-6 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 max-w-xl mx-auto">
           <a
             href="#lead"
-            className="inline-flex items-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform"
+            className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white text-brand px-6 py-3 font-semibold shadow-lg hover:scale-105 transition-transform text-center leading-snug"
           >
             {s.primaryCta} <ArrowRight className="h-4 w-4" />
           </a>
@@ -425,7 +425,7 @@ function FinalCTA({ s }: { s: NonNullable<ReturnType<typeof getMcaServiceBySlug>
             href="https://wa.me/918169887643"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors"
+            className="inline-flex min-h-[48px] w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-white/10 backdrop-blur border border-white/30 px-6 py-3 font-semibold hover:bg-white/20 transition-colors text-center leading-snug"
           >
             <MessageCircle className="h-4 w-4" /> Chat with CA on WhatsApp
           </a>
@@ -440,10 +440,10 @@ function Related({ currentSlug }: { currentSlug: string }) {
   return (
     <section className="py-14 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-ink text-center">
+        <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words text-center">
           Explore More MCA & ROC Compliance Services
         </h2>
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {related.map((r) => {
             const isFlat = [
               "change-in-company-master-data",
