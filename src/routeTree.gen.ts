@@ -26,6 +26,7 @@ import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax
 import { Route as TanRegistrationServicesIndiaRouteImport } from './routes/tan-registration-services-india'
 import { Route as TanCorrectionServicesRouteImport } from './routes/tan-correction-services'
 import { Route as SurrenderDuplicateDinRouteImport } from './routes/surrender-duplicate-din'
+import { Route as StrikeOffCompanyLlpRouteImport } from './routes/strike-off-company-llp'
 import { Route as StartupOutsourcingServicesRouteImport } from './routes/startup-outsourcing-services'
 import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
 import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
@@ -54,15 +55,18 @@ import { Route as NewTanRegistrationCertificateServicesRouteImport } from './rou
 import { Route as NewLlpFormationRouteImport } from './routes/new-llp-formation'
 import { Route as NewDinApplicationRouteImport } from './routes/new-din-application'
 import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
+import { Route as ModificationOfChargeRocMcaRouteImport } from './routes/modification-of-charge-roc-mca'
 import { Route as Mgt7Mgt7aFilingRouteImport } from './routes/mgt-7-mgt-7a-filing'
 import { Route as McaRocFilingServicesIndiaRouteImport } from './routes/mca-roc-filing-services-india'
 import { Route as LowerTdsCertificateSection197RouteImport } from './routes/lower-tds-certificate-section-197'
+import { Route as LoanCreationModificationOfChargeRouteImport } from './routes/loan-creation-modification-of-charge'
 import { Route as LlpFormsFilingRouteImport } from './routes/llp-forms-filing'
 import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
 import { Route as LlpBalanceSheetForm8ServicesRouteImport } from './routes/llp-balance-sheet-form-8-services'
 import { Route as LlpAgreementChangesRouteImport } from './routes/llp-agreement-changes'
 import { Route as KycFilingMcaRouteImport } from './routes/kyc-filing-mca'
 import { Route as ItrBalanceSheetPreparationServicesRouteImport } from './routes/itr-balance-sheet-preparation-services'
+import { Route as IssueOfShareCertificateSh1RouteImport } from './routes/issue-of-share-certificate-sh1'
 import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
 import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
 import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
@@ -234,6 +238,11 @@ const SurrenderDuplicateDinRoute = SurrenderDuplicateDinRouteImport.update({
   path: '/surrender-duplicate-din',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StrikeOffCompanyLlpRoute = StrikeOffCompanyLlpRouteImport.update({
+  id: '/strike-off-company-llp',
+  path: '/strike-off-company-llp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StartupOutsourcingServicesRoute =
   StartupOutsourcingServicesRouteImport.update({
     id: '/startup-outsourcing-services',
@@ -395,6 +404,12 @@ const MsmeUdyamRegistrationServicesRoute =
     path: '/msme-udyam-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ModificationOfChargeRocMcaRoute =
+  ModificationOfChargeRocMcaRouteImport.update({
+    id: '/modification-of-charge-roc-mca',
+    path: '/modification-of-charge-roc-mca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const Mgt7Mgt7aFilingRoute = Mgt7Mgt7aFilingRouteImport.update({
   id: '/mgt-7-mgt-7a-filing',
   path: '/mgt-7-mgt-7a-filing',
@@ -410,6 +425,12 @@ const LowerTdsCertificateSection197Route =
   LowerTdsCertificateSection197RouteImport.update({
     id: '/lower-tds-certificate-section-197',
     path: '/lower-tds-certificate-section-197',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LoanCreationModificationOfChargeRoute =
+  LoanCreationModificationOfChargeRouteImport.update({
+    id: '/loan-creation-modification-of-charge',
+    path: '/loan-creation-modification-of-charge',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LlpFormsFilingRoute = LlpFormsFilingRouteImport.update({
@@ -442,6 +463,12 @@ const ItrBalanceSheetPreparationServicesRoute =
   ItrBalanceSheetPreparationServicesRouteImport.update({
     id: '/itr-balance-sheet-preparation-services',
     path: '/itr-balance-sheet-preparation-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IssueOfShareCertificateSh1Route =
+  IssueOfShareCertificateSh1RouteImport.update({
+    id: '/issue-of-share-certificate-sh1',
+    path: '/issue-of-share-certificate-sh1',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ImportExportCodeIecRegistrationServicesRoute =
@@ -915,15 +942,18 @@ export interface FileRoutesByFullPath {
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
   '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
+  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
@@ -952,6 +982,7 @@ export interface FileRoutesByFullPath {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tan-correction-services': typeof TanCorrectionServicesRoute
   '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
@@ -1038,15 +1069,18 @@ export interface FileRoutesByTo {
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
   '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
+  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
@@ -1075,6 +1109,7 @@ export interface FileRoutesByTo {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tan-correction-services': typeof TanCorrectionServicesRoute
   '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
@@ -1171,15 +1206,18 @@ export interface FileRoutesById {
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
+  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
+  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
   '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
+  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
@@ -1208,6 +1246,7 @@ export interface FileRoutesById {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
+  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
   '/tan-correction-services': typeof TanCorrectionServicesRoute
   '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
@@ -1305,15 +1344,18 @@ export interface FileRouteTypes {
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
+    | '/loan-creation-modification-of-charge'
     | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
+    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
@@ -1342,6 +1384,7 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
     | '/tan-correction-services'
     | '/tan-registration-services-india'
@@ -1428,15 +1471,18 @@ export interface FileRouteTypes {
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
+    | '/loan-creation-modification-of-charge'
     | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
+    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
@@ -1465,6 +1511,7 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
     | '/tan-correction-services'
     | '/tan-registration-services-india'
@@ -1560,15 +1607,18 @@ export interface FileRouteTypes {
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
+    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
+    | '/loan-creation-modification-of-charge'
     | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
+    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
@@ -1597,6 +1647,7 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
+    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
     | '/tan-correction-services'
     | '/tan-registration-services-india'
@@ -1693,15 +1744,18 @@ export interface RootRouteChildren {
   GstRegistrationReturnFilingServicesRoute: typeof GstRegistrationReturnFilingServicesRoute
   HufFormationRegistrationServicesRoute: typeof HufFormationRegistrationServicesRoute
   ImportExportCodeIecRegistrationServicesRoute: typeof ImportExportCodeIecRegistrationServicesRoute
+  IssueOfShareCertificateSh1Route: typeof IssueOfShareCertificateSh1Route
   ItrBalanceSheetPreparationServicesRoute: typeof ItrBalanceSheetPreparationServicesRoute
   KycFilingMcaRoute: typeof KycFilingMcaRoute
   LlpAgreementChangesRoute: typeof LlpAgreementChangesRoute
   LlpBalanceSheetForm8ServicesRoute: typeof LlpBalanceSheetForm8ServicesRoute
   LlpCompliancePackagesRoute: typeof LlpCompliancePackagesRoute
   LlpFormsFilingRoute: typeof LlpFormsFilingRoute
+  LoanCreationModificationOfChargeRoute: typeof LoanCreationModificationOfChargeRoute
   LowerTdsCertificateSection197Route: typeof LowerTdsCertificateSection197Route
   McaRocFilingServicesIndiaRoute: typeof McaRocFilingServicesIndiaRoute
   Mgt7Mgt7aFilingRoute: typeof Mgt7Mgt7aFilingRoute
+  ModificationOfChargeRocMcaRoute: typeof ModificationOfChargeRocMcaRoute
   MsmeUdyamRegistrationServicesRoute: typeof MsmeUdyamRegistrationServicesRoute
   NewDinApplicationRoute: typeof NewDinApplicationRoute
   NewLlpFormationRoute: typeof NewLlpFormationRoute
@@ -1730,6 +1784,7 @@ export interface RootRouteChildren {
   StartupIndiaDpiitRegistrationServicesRoute: typeof StartupIndiaDpiitRegistrationServicesRoute
   StartupNgoRegistrationServicesRoute: typeof StartupNgoRegistrationServicesRoute
   StartupOutsourcingServicesRoute: typeof StartupOutsourcingServicesRoute
+  StrikeOffCompanyLlpRoute: typeof StrikeOffCompanyLlpRoute
   SurrenderDuplicateDinRoute: typeof SurrenderDuplicateDinRoute
   TanCorrectionServicesRoute: typeof TanCorrectionServicesRoute
   TanRegistrationServicesIndiaRoute: typeof TanRegistrationServicesIndiaRoute
@@ -1868,6 +1923,13 @@ declare module '@tanstack/react-router' {
       path: '/surrender-duplicate-din'
       fullPath: '/surrender-duplicate-din'
       preLoaderRoute: typeof SurrenderDuplicateDinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strike-off-company-llp': {
+      id: '/strike-off-company-llp'
+      path: '/strike-off-company-llp'
+      fullPath: '/strike-off-company-llp'
+      preLoaderRoute: typeof StrikeOffCompanyLlpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/startup-outsourcing-services': {
@@ -2066,6 +2128,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/modification-of-charge-roc-mca': {
+      id: '/modification-of-charge-roc-mca'
+      path: '/modification-of-charge-roc-mca'
+      fullPath: '/modification-of-charge-roc-mca'
+      preLoaderRoute: typeof ModificationOfChargeRocMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mgt-7-mgt-7a-filing': {
       id: '/mgt-7-mgt-7a-filing'
       path: '/mgt-7-mgt-7a-filing'
@@ -2085,6 +2154,13 @@ declare module '@tanstack/react-router' {
       path: '/lower-tds-certificate-section-197'
       fullPath: '/lower-tds-certificate-section-197'
       preLoaderRoute: typeof LowerTdsCertificateSection197RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-creation-modification-of-charge': {
+      id: '/loan-creation-modification-of-charge'
+      path: '/loan-creation-modification-of-charge'
+      fullPath: '/loan-creation-modification-of-charge'
+      preLoaderRoute: typeof LoanCreationModificationOfChargeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/llp-forms-filing': {
@@ -2127,6 +2203,13 @@ declare module '@tanstack/react-router' {
       path: '/itr-balance-sheet-preparation-services'
       fullPath: '/itr-balance-sheet-preparation-services'
       preLoaderRoute: typeof ItrBalanceSheetPreparationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/issue-of-share-certificate-sh1': {
+      id: '/issue-of-share-certificate-sh1'
+      path: '/issue-of-share-certificate-sh1'
+      fullPath: '/issue-of-share-certificate-sh1'
+      preLoaderRoute: typeof IssueOfShareCertificateSh1RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/import-export-code-iec-registration-services': {
@@ -2867,6 +2950,7 @@ const rootRouteChildren: RootRouteChildren = {
   HufFormationRegistrationServicesRoute: HufFormationRegistrationServicesRoute,
   ImportExportCodeIecRegistrationServicesRoute:
     ImportExportCodeIecRegistrationServicesRoute,
+  IssueOfShareCertificateSh1Route: IssueOfShareCertificateSh1Route,
   ItrBalanceSheetPreparationServicesRoute:
     ItrBalanceSheetPreparationServicesRoute,
   KycFilingMcaRoute: KycFilingMcaRoute,
@@ -2874,9 +2958,11 @@ const rootRouteChildren: RootRouteChildren = {
   LlpBalanceSheetForm8ServicesRoute: LlpBalanceSheetForm8ServicesRoute,
   LlpCompliancePackagesRoute: LlpCompliancePackagesRoute,
   LlpFormsFilingRoute: LlpFormsFilingRoute,
+  LoanCreationModificationOfChargeRoute: LoanCreationModificationOfChargeRoute,
   LowerTdsCertificateSection197Route: LowerTdsCertificateSection197Route,
   McaRocFilingServicesIndiaRoute: McaRocFilingServicesIndiaRoute,
   Mgt7Mgt7aFilingRoute: Mgt7Mgt7aFilingRoute,
+  ModificationOfChargeRocMcaRoute: ModificationOfChargeRocMcaRoute,
   MsmeUdyamRegistrationServicesRoute: MsmeUdyamRegistrationServicesRoute,
   NewDinApplicationRoute: NewDinApplicationRoute,
   NewLlpFormationRoute: NewLlpFormationRoute,
@@ -2914,6 +3000,7 @@ const rootRouteChildren: RootRouteChildren = {
     StartupIndiaDpiitRegistrationServicesRoute,
   StartupNgoRegistrationServicesRoute: StartupNgoRegistrationServicesRoute,
   StartupOutsourcingServicesRoute: StartupOutsourcingServicesRoute,
+  StrikeOffCompanyLlpRoute: StrikeOffCompanyLlpRoute,
   SurrenderDuplicateDinRoute: SurrenderDuplicateDinRoute,
   TanCorrectionServicesRoute: TanCorrectionServicesRoute,
   TanRegistrationServicesIndiaRoute: TanRegistrationServicesIndiaRoute,
