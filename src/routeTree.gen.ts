@@ -12,10 +12,20 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as UpdateEmailMobileMcaRouteImport } from './routes/update-email-mobile-mca'
 import { Route as ThreeYearBalanceSheetRouteImport } from './routes/three-year-balance-sheet'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as TdsTcsReturnFilingServicesRouteImport } from './routes/tds-tcs-return-filing-services'
+import { Route as TdsTcsNoticeResolutionRouteImport } from './routes/tds-tcs-notice-resolution'
+import { Route as TdsOnRentNriSection195RouteImport } from './routes/tds-on-rent-nri-section-195'
+import { Route as TdsOnRentMultiplePartiesRouteImport } from './routes/tds-on-rent-multiple-parties'
+import { Route as TdsOnPropertySection194iaRouteImport } from './routes/tds-on-property-section-194ia'
+import { Route as TdsOnPropertyNriSection195RouteImport } from './routes/tds-on-property-nri-section-195'
+import { Route as TdsOnPropertyMultipleBuyersSellersRouteImport } from './routes/tds-on-property-multiple-buyers-sellers'
+import { Route as TdsChallanCorrectionOnlineRouteImport } from './routes/tds-challan-correction-online'
+import { Route as TdsCertificatesForm1616aRouteImport } from './routes/tds-certificates-form-16-16a'
 import { Route as TaxRegistrationServicesRouteImport } from './routes/tax-registration-services'
 import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax-holiday-section-80iac-services'
+import { Route as TanRegistrationServicesIndiaRouteImport } from './routes/tan-registration-services-india'
+import { Route as TanCorrectionServicesRouteImport } from './routes/tan-correction-services'
 import { Route as SurrenderDuplicateDinRouteImport } from './routes/surrender-duplicate-din'
-import { Route as StrikeOffCompanyLlpRouteImport } from './routes/strike-off-company-llp'
 import { Route as StartupOutsourcingServicesRouteImport } from './routes/startup-outsourcing-services'
 import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
 import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
@@ -26,6 +36,7 @@ import { Route as ShopAndEstablishmentRegistrationServicesRouteImport } from './
 import { Route as Section8CompanyRegistrationRouteImport } from './routes/section-8-company-registration'
 import { Route as SecretarialRecordsPreparationMaintenanceRouteImport } from './routes/secretarial-records-preparation-maintenance'
 import { Route as RocOtherFormsInc20aDir6Dpt3RouteImport } from './routes/roc-other-forms-inc20a-dir6-dpt3'
+import { Route as RevisedTdsTcsReturnFilingRouteImport } from './routes/revised-tds-tcs-return-filing'
 import { Route as ResignationOfPartnerInLlpRouteImport } from './routes/resignation-of-partner-in-llp'
 import { Route as ProjectedBalanceSheetRouteImport } from './routes/projected-balance-sheet'
 import { Route as ProjectReportForBankLoanRouteImport } from './routes/project-report-for-bank-loan'
@@ -39,25 +50,38 @@ import { Route as PartnershipFirmRegistrationServicesRouteImport } from './route
 import { Route as PartnershipFirmRouteImport } from './routes/partnership-firm'
 import { Route as OurFullPackagesServicesRouteImport } from './routes/our-full-packages-services'
 import { Route as OnePersonCompanyRegistrationRouteImport } from './routes/one-person-company-registration'
+import { Route as NewTanRegistrationCertificateServicesRouteImport } from './routes/new-tan-registration-certificate-services'
 import { Route as NewLlpFormationRouteImport } from './routes/new-llp-formation'
 import { Route as NewDinApplicationRouteImport } from './routes/new-din-application'
 import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
-import { Route as ModificationOfChargeRocMcaRouteImport } from './routes/modification-of-charge-roc-mca'
 import { Route as Mgt7Mgt7aFilingRouteImport } from './routes/mgt-7-mgt-7a-filing'
 import { Route as McaRocFilingServicesIndiaRouteImport } from './routes/mca-roc-filing-services-india'
-import { Route as LoanCreationModificationOfChargeRouteImport } from './routes/loan-creation-modification-of-charge'
+import { Route as LowerTdsCertificateSection197RouteImport } from './routes/lower-tds-certificate-section-197'
 import { Route as LlpFormsFilingRouteImport } from './routes/llp-forms-filing'
 import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
 import { Route as LlpBalanceSheetForm8ServicesRouteImport } from './routes/llp-balance-sheet-form-8-services'
 import { Route as LlpAgreementChangesRouteImport } from './routes/llp-agreement-changes'
 import { Route as KycFilingMcaRouteImport } from './routes/kyc-filing-mca'
 import { Route as ItrBalanceSheetPreparationServicesRouteImport } from './routes/itr-balance-sheet-preparation-services'
-import { Route as IssueOfShareCertificateSh1RouteImport } from './routes/issue-of-share-certificate-sh1'
 import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
 import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
 import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
 import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
+import { Route as Form27qTdsReturnFilingNriRouteImport } from './routes/form-27q-tds-return-filing-nri'
+import { Route as Form27eqTcsReturnFilingRouteImport } from './routes/form-27eq-tcs-return-filing'
+import { Route as Form27dTcsCertificateDownloadRouteImport } from './routes/form-27d-tcs-certificate-download'
+import { Route as Form26qcTdsFilingRentRouteImport } from './routes/form-26qc-tds-filing-rent'
+import { Route as Form26qcCorrectionTdsRentRouteImport } from './routes/form-26qc-correction-tds-rent'
+import { Route as Form26qbTdsFilingPropertyRouteImport } from './routes/form-26qb-tds-filing-property'
+import { Route as Form26qbCorrectionTdsPropertyRouteImport } from './routes/form-26qb-correction-tds-property'
+import { Route as Form26qTdsReturnFilingRouteImport } from './routes/form-26q-tds-return-filing'
+import { Route as Form24qTdsFilingSalaryRouteImport } from './routes/form-24q-tds-filing-salary'
+import { Route as Form16cTdsCertificateRentRouteImport } from './routes/form-16c-tds-certificate-rent'
+import { Route as Form16bTdsCertificatePropertyRouteImport } from './routes/form-16b-tds-certificate-property'
+import { Route as Form16aTdsCertificateDownloadRouteImport } from './routes/form-16a-tds-certificate-download'
+import { Route as Form15ca15cbForeignRemittanceRouteImport } from './routes/form-15ca-15cb-foreign-remittance'
 import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
+import { Route as DuplicateTanCertificateOnlineRouteImport } from './routes/duplicate-tan-certificate-online'
 import { Route as DpinApplicationLlpPartnerIndiaRouteImport } from './routes/dpin-application-llp-partner-india'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as DinDpinRegistrationDirectorLlpIndiaRouteImport } from './routes/din-dpin-registration-director-llp-india'
@@ -131,6 +155,58 @@ const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
   path: '/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TdsTcsReturnFilingServicesRoute =
+  TdsTcsReturnFilingServicesRouteImport.update({
+    id: '/tds-tcs-return-filing-services',
+    path: '/tds-tcs-return-filing-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsTcsNoticeResolutionRoute = TdsTcsNoticeResolutionRouteImport.update({
+  id: '/tds-tcs-notice-resolution',
+  path: '/tds-tcs-notice-resolution',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsOnRentNriSection195Route = TdsOnRentNriSection195RouteImport.update({
+  id: '/tds-on-rent-nri-section-195',
+  path: '/tds-on-rent-nri-section-195',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsOnRentMultiplePartiesRoute =
+  TdsOnRentMultiplePartiesRouteImport.update({
+    id: '/tds-on-rent-multiple-parties',
+    path: '/tds-on-rent-multiple-parties',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertySection194iaRoute =
+  TdsOnPropertySection194iaRouteImport.update({
+    id: '/tds-on-property-section-194ia',
+    path: '/tds-on-property-section-194ia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertyNriSection195Route =
+  TdsOnPropertyNriSection195RouteImport.update({
+    id: '/tds-on-property-nri-section-195',
+    path: '/tds-on-property-nri-section-195',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertyMultipleBuyersSellersRoute =
+  TdsOnPropertyMultipleBuyersSellersRouteImport.update({
+    id: '/tds-on-property-multiple-buyers-sellers',
+    path: '/tds-on-property-multiple-buyers-sellers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsChallanCorrectionOnlineRoute =
+  TdsChallanCorrectionOnlineRouteImport.update({
+    id: '/tds-challan-correction-online',
+    path: '/tds-challan-correction-online',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsCertificatesForm1616aRoute =
+  TdsCertificatesForm1616aRouteImport.update({
+    id: '/tds-certificates-form-16-16a',
+    path: '/tds-certificates-form-16-16a',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TaxRegistrationServicesRoute = TaxRegistrationServicesRouteImport.update({
   id: '/tax-registration-services',
   path: '/tax-registration-services',
@@ -142,14 +218,20 @@ const TaxHolidaySection80iacServicesRoute =
     path: '/tax-holiday-section-80iac-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TanRegistrationServicesIndiaRoute =
+  TanRegistrationServicesIndiaRouteImport.update({
+    id: '/tan-registration-services-india',
+    path: '/tan-registration-services-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TanCorrectionServicesRoute = TanCorrectionServicesRouteImport.update({
+  id: '/tan-correction-services',
+  path: '/tan-correction-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SurrenderDuplicateDinRoute = SurrenderDuplicateDinRouteImport.update({
   id: '/surrender-duplicate-din',
   path: '/surrender-duplicate-din',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StrikeOffCompanyLlpRoute = StrikeOffCompanyLlpRouteImport.update({
-  id: '/strike-off-company-llp',
-  path: '/strike-off-company-llp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StartupOutsourcingServicesRoute =
@@ -210,6 +292,12 @@ const RocOtherFormsInc20aDir6Dpt3Route =
   RocOtherFormsInc20aDir6Dpt3RouteImport.update({
     id: '/roc-other-forms-inc20a-dir6-dpt3',
     path: '/roc-other-forms-inc20a-dir6-dpt3',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RevisedTdsTcsReturnFilingRoute =
+  RevisedTdsTcsReturnFilingRouteImport.update({
+    id: '/revised-tds-tcs-return-filing',
+    path: '/revised-tds-tcs-return-filing',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ResignationOfPartnerInLlpRoute =
@@ -285,6 +373,12 @@ const OnePersonCompanyRegistrationRoute =
     path: '/one-person-company-registration',
     getParentRoute: () => rootRouteImport,
   } as any)
+const NewTanRegistrationCertificateServicesRoute =
+  NewTanRegistrationCertificateServicesRouteImport.update({
+    id: '/new-tan-registration-certificate-services',
+    path: '/new-tan-registration-certificate-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const NewLlpFormationRoute = NewLlpFormationRouteImport.update({
   id: '/new-llp-formation',
   path: '/new-llp-formation',
@@ -301,12 +395,6 @@ const MsmeUdyamRegistrationServicesRoute =
     path: '/msme-udyam-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ModificationOfChargeRocMcaRoute =
-  ModificationOfChargeRocMcaRouteImport.update({
-    id: '/modification-of-charge-roc-mca',
-    path: '/modification-of-charge-roc-mca',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const Mgt7Mgt7aFilingRoute = Mgt7Mgt7aFilingRouteImport.update({
   id: '/mgt-7-mgt-7a-filing',
   path: '/mgt-7-mgt-7a-filing',
@@ -318,10 +406,10 @@ const McaRocFilingServicesIndiaRoute =
     path: '/mca-roc-filing-services-india',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LoanCreationModificationOfChargeRoute =
-  LoanCreationModificationOfChargeRouteImport.update({
-    id: '/loan-creation-modification-of-charge',
-    path: '/loan-creation-modification-of-charge',
+const LowerTdsCertificateSection197Route =
+  LowerTdsCertificateSection197RouteImport.update({
+    id: '/lower-tds-certificate-section-197',
+    path: '/lower-tds-certificate-section-197',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LlpFormsFilingRoute = LlpFormsFilingRouteImport.update({
@@ -356,12 +444,6 @@ const ItrBalanceSheetPreparationServicesRoute =
     path: '/itr-balance-sheet-preparation-services',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IssueOfShareCertificateSh1Route =
-  IssueOfShareCertificateSh1RouteImport.update({
-    id: '/issue-of-share-certificate-sh1',
-    path: '/issue-of-share-certificate-sh1',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ImportExportCodeIecRegistrationServicesRoute =
   ImportExportCodeIecRegistrationServicesRouteImport.update({
     id: '/import-export-code-iec-registration-services',
@@ -386,10 +468,90 @@ const FssaiFoodLicenseRegistrationServicesRoute =
     path: '/fssai-food-license-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
+const Form27qTdsReturnFilingNriRoute =
+  Form27qTdsReturnFilingNriRouteImport.update({
+    id: '/form-27q-tds-return-filing-nri',
+    path: '/form-27q-tds-return-filing-nri',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form27eqTcsReturnFilingRoute = Form27eqTcsReturnFilingRouteImport.update({
+  id: '/form-27eq-tcs-return-filing',
+  path: '/form-27eq-tcs-return-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form27dTcsCertificateDownloadRoute =
+  Form27dTcsCertificateDownloadRouteImport.update({
+    id: '/form-27d-tcs-certificate-download',
+    path: '/form-27d-tcs-certificate-download',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qcTdsFilingRentRoute = Form26qcTdsFilingRentRouteImport.update({
+  id: '/form-26qc-tds-filing-rent',
+  path: '/form-26qc-tds-filing-rent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form26qcCorrectionTdsRentRoute =
+  Form26qcCorrectionTdsRentRouteImport.update({
+    id: '/form-26qc-correction-tds-rent',
+    path: '/form-26qc-correction-tds-rent',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qbTdsFilingPropertyRoute =
+  Form26qbTdsFilingPropertyRouteImport.update({
+    id: '/form-26qb-tds-filing-property',
+    path: '/form-26qb-tds-filing-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qbCorrectionTdsPropertyRoute =
+  Form26qbCorrectionTdsPropertyRouteImport.update({
+    id: '/form-26qb-correction-tds-property',
+    path: '/form-26qb-correction-tds-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qTdsReturnFilingRoute = Form26qTdsReturnFilingRouteImport.update({
+  id: '/form-26q-tds-return-filing',
+  path: '/form-26q-tds-return-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form24qTdsFilingSalaryRoute = Form24qTdsFilingSalaryRouteImport.update({
+  id: '/form-24q-tds-filing-salary',
+  path: '/form-24q-tds-filing-salary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form16cTdsCertificateRentRoute =
+  Form16cTdsCertificateRentRouteImport.update({
+    id: '/form-16c-tds-certificate-rent',
+    path: '/form-16c-tds-certificate-rent',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form16bTdsCertificatePropertyRoute =
+  Form16bTdsCertificatePropertyRouteImport.update({
+    id: '/form-16b-tds-certificate-property',
+    path: '/form-16b-tds-certificate-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form16aTdsCertificateDownloadRoute =
+  Form16aTdsCertificateDownloadRouteImport.update({
+    id: '/form-16a-tds-certificate-download',
+    path: '/form-16a-tds-certificate-download',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form15ca15cbForeignRemittanceRoute =
+  Form15ca15cbForeignRemittanceRouteImport.update({
+    id: '/form-15ca-15cb-foreign-remittance',
+    path: '/form-15ca-15cb-foreign-remittance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const EsicPfRegistrationServicesRoute =
   EsicPfRegistrationServicesRouteImport.update({
     id: '/esic-pf-registration-services',
     path: '/esic-pf-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DuplicateTanCertificateOnlineRoute =
+  DuplicateTanCertificateOnlineRouteImport.update({
+    id: '/duplicate-tan-certificate-online',
+    path: '/duplicate-tan-certificate-online',
     getParentRoute: () => rootRouteImport,
   } as any)
 const DpinApplicationLlpPartnerIndiaRoute =
@@ -734,25 +896,38 @@ export interface FileRoutesByFullPath {
   '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
+  '/duplicate-tan-certificate-online': typeof DuplicateTanCertificateOnlineRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/form-15ca-15cb-foreign-remittance': typeof Form15ca15cbForeignRemittanceRoute
+  '/form-16a-tds-certificate-download': typeof Form16aTdsCertificateDownloadRoute
+  '/form-16b-tds-certificate-property': typeof Form16bTdsCertificatePropertyRoute
+  '/form-16c-tds-certificate-rent': typeof Form16cTdsCertificateRentRoute
+  '/form-24q-tds-filing-salary': typeof Form24qTdsFilingSalaryRoute
+  '/form-26q-tds-return-filing': typeof Form26qTdsReturnFilingRoute
+  '/form-26qb-correction-tds-property': typeof Form26qbCorrectionTdsPropertyRoute
+  '/form-26qb-tds-filing-property': typeof Form26qbTdsFilingPropertyRoute
+  '/form-26qc-correction-tds-rent': typeof Form26qcCorrectionTdsRentRoute
+  '/form-26qc-tds-filing-rent': typeof Form26qcTdsFilingRentRoute
+  '/form-27d-tcs-certificate-download': typeof Form27dTcsCertificateDownloadRoute
+  '/form-27eq-tcs-return-filing': typeof Form27eqTcsReturnFilingRoute
+  '/form-27q-tds-return-filing-nri': typeof Form27qTdsReturnFilingNriRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
-  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
-  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
+  '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
-  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
+  '/new-tan-registration-certificate-services': typeof NewTanRegistrationCertificateServicesRoute
   '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
@@ -766,6 +941,7 @@ export interface FileRoutesByFullPath {
   '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
   '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
   '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/revised-tds-tcs-return-filing': typeof RevisedTdsTcsReturnFilingRoute
   '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
   '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
   '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
@@ -776,10 +952,20 @@ export interface FileRoutesByFullPath {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
-  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
+  '/tan-correction-services': typeof TanCorrectionServicesRoute
+  '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
+  '/tds-certificates-form-16-16a': typeof TdsCertificatesForm1616aRoute
+  '/tds-challan-correction-online': typeof TdsChallanCorrectionOnlineRoute
+  '/tds-on-property-multiple-buyers-sellers': typeof TdsOnPropertyMultipleBuyersSellersRoute
+  '/tds-on-property-nri-section-195': typeof TdsOnPropertyNriSection195Route
+  '/tds-on-property-section-194ia': typeof TdsOnPropertySection194iaRoute
+  '/tds-on-rent-multiple-parties': typeof TdsOnRentMultiplePartiesRoute
+  '/tds-on-rent-nri-section-195': typeof TdsOnRentNriSection195Route
+  '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
+  '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
@@ -833,25 +1019,38 @@ export interface FileRoutesByTo {
   '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
+  '/duplicate-tan-certificate-online': typeof DuplicateTanCertificateOnlineRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/form-15ca-15cb-foreign-remittance': typeof Form15ca15cbForeignRemittanceRoute
+  '/form-16a-tds-certificate-download': typeof Form16aTdsCertificateDownloadRoute
+  '/form-16b-tds-certificate-property': typeof Form16bTdsCertificatePropertyRoute
+  '/form-16c-tds-certificate-rent': typeof Form16cTdsCertificateRentRoute
+  '/form-24q-tds-filing-salary': typeof Form24qTdsFilingSalaryRoute
+  '/form-26q-tds-return-filing': typeof Form26qTdsReturnFilingRoute
+  '/form-26qb-correction-tds-property': typeof Form26qbCorrectionTdsPropertyRoute
+  '/form-26qb-tds-filing-property': typeof Form26qbTdsFilingPropertyRoute
+  '/form-26qc-correction-tds-rent': typeof Form26qcCorrectionTdsRentRoute
+  '/form-26qc-tds-filing-rent': typeof Form26qcTdsFilingRentRoute
+  '/form-27d-tcs-certificate-download': typeof Form27dTcsCertificateDownloadRoute
+  '/form-27eq-tcs-return-filing': typeof Form27eqTcsReturnFilingRoute
+  '/form-27q-tds-return-filing-nri': typeof Form27qTdsReturnFilingNriRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
-  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
-  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
+  '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
-  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
+  '/new-tan-registration-certificate-services': typeof NewTanRegistrationCertificateServicesRoute
   '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
@@ -865,6 +1064,7 @@ export interface FileRoutesByTo {
   '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
   '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
   '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/revised-tds-tcs-return-filing': typeof RevisedTdsTcsReturnFilingRoute
   '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
   '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
   '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
@@ -875,10 +1075,20 @@ export interface FileRoutesByTo {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
-  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
+  '/tan-correction-services': typeof TanCorrectionServicesRoute
+  '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
+  '/tds-certificates-form-16-16a': typeof TdsCertificatesForm1616aRoute
+  '/tds-challan-correction-online': typeof TdsChallanCorrectionOnlineRoute
+  '/tds-on-property-multiple-buyers-sellers': typeof TdsOnPropertyMultipleBuyersSellersRoute
+  '/tds-on-property-nri-section-195': typeof TdsOnPropertyNriSection195Route
+  '/tds-on-property-section-194ia': typeof TdsOnPropertySection194iaRoute
+  '/tds-on-rent-multiple-parties': typeof TdsOnRentMultiplePartiesRoute
+  '/tds-on-rent-nri-section-195': typeof TdsOnRentNriSection195Route
+  '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
+  '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
@@ -942,25 +1152,38 @@ export interface FileRoutesById {
   '/din-dpin-registration-director-llp-india': typeof DinDpinRegistrationDirectorLlpIndiaRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dpin-application-llp-partner-india': typeof DpinApplicationLlpPartnerIndiaRoute
+  '/duplicate-tan-certificate-online': typeof DuplicateTanCertificateOnlineRoute
   '/esic-pf-registration-services': typeof EsicPfRegistrationServicesRoute
+  '/form-15ca-15cb-foreign-remittance': typeof Form15ca15cbForeignRemittanceRoute
+  '/form-16a-tds-certificate-download': typeof Form16aTdsCertificateDownloadRoute
+  '/form-16b-tds-certificate-property': typeof Form16bTdsCertificatePropertyRoute
+  '/form-16c-tds-certificate-rent': typeof Form16cTdsCertificateRentRoute
+  '/form-24q-tds-filing-salary': typeof Form24qTdsFilingSalaryRoute
+  '/form-26q-tds-return-filing': typeof Form26qTdsReturnFilingRoute
+  '/form-26qb-correction-tds-property': typeof Form26qbCorrectionTdsPropertyRoute
+  '/form-26qb-tds-filing-property': typeof Form26qbTdsFilingPropertyRoute
+  '/form-26qc-correction-tds-rent': typeof Form26qcCorrectionTdsRentRoute
+  '/form-26qc-tds-filing-rent': typeof Form26qcTdsFilingRentRoute
+  '/form-27d-tcs-certificate-download': typeof Form27dTcsCertificateDownloadRoute
+  '/form-27eq-tcs-return-filing': typeof Form27eqTcsReturnFilingRoute
+  '/form-27q-tds-return-filing-nri': typeof Form27qTdsReturnFilingNriRoute
   '/fssai-food-license-registration-services': typeof FssaiFoodLicenseRegistrationServicesRoute
   '/gst-registration-return-filing-services': typeof GstRegistrationReturnFilingServicesRoute
   '/huf-formation-registration-services': typeof HufFormationRegistrationServicesRoute
   '/import-export-code-iec-registration-services': typeof ImportExportCodeIecRegistrationServicesRoute
-  '/issue-of-share-certificate-sh1': typeof IssueOfShareCertificateSh1Route
   '/itr-balance-sheet-preparation-services': typeof ItrBalanceSheetPreparationServicesRoute
   '/kyc-filing-mca': typeof KycFilingMcaRoute
   '/llp-agreement-changes': typeof LlpAgreementChangesRoute
   '/llp-balance-sheet-form-8-services': typeof LlpBalanceSheetForm8ServicesRoute
   '/llp-compliance-packages': typeof LlpCompliancePackagesRoute
   '/llp-forms-filing': typeof LlpFormsFilingRoute
-  '/loan-creation-modification-of-charge': typeof LoanCreationModificationOfChargeRoute
+  '/lower-tds-certificate-section-197': typeof LowerTdsCertificateSection197Route
   '/mca-roc-filing-services-india': typeof McaRocFilingServicesIndiaRoute
   '/mgt-7-mgt-7a-filing': typeof Mgt7Mgt7aFilingRoute
-  '/modification-of-charge-roc-mca': typeof ModificationOfChargeRocMcaRoute
   '/msme-udyam-registration-services': typeof MsmeUdyamRegistrationServicesRoute
   '/new-din-application': typeof NewDinApplicationRoute
   '/new-llp-formation': typeof NewLlpFormationRoute
+  '/new-tan-registration-certificate-services': typeof NewTanRegistrationCertificateServicesRoute
   '/one-person-company-registration': typeof OnePersonCompanyRegistrationRoute
   '/our-full-packages-services': typeof OurFullPackagesServicesRoute
   '/partnership-firm': typeof PartnershipFirmRoute
@@ -974,6 +1197,7 @@ export interface FileRoutesById {
   '/project-report-for-bank-loan': typeof ProjectReportForBankLoanRoute
   '/projected-balance-sheet': typeof ProjectedBalanceSheetRoute
   '/resignation-of-partner-in-llp': typeof ResignationOfPartnerInLlpRoute
+  '/revised-tds-tcs-return-filing': typeof RevisedTdsTcsReturnFilingRoute
   '/roc-other-forms-inc20a-dir6-dpt3': typeof RocOtherFormsInc20aDir6Dpt3Route
   '/secretarial-records-preparation-maintenance': typeof SecretarialRecordsPreparationMaintenanceRoute
   '/section-8-company-registration': typeof Section8CompanyRegistrationRoute
@@ -984,10 +1208,20 @@ export interface FileRoutesById {
   '/startup-india-dpiit-registration-services': typeof StartupIndiaDpiitRegistrationServicesRoute
   '/startup-ngo-registration-services': typeof StartupNgoRegistrationServicesRoute
   '/startup-outsourcing-services': typeof StartupOutsourcingServicesRoute
-  '/strike-off-company-llp': typeof StrikeOffCompanyLlpRoute
   '/surrender-duplicate-din': typeof SurrenderDuplicateDinRoute
+  '/tan-correction-services': typeof TanCorrectionServicesRoute
+  '/tan-registration-services-india': typeof TanRegistrationServicesIndiaRoute
   '/tax-holiday-section-80iac-services': typeof TaxHolidaySection80iacServicesRoute
   '/tax-registration-services': typeof TaxRegistrationServicesRoute
+  '/tds-certificates-form-16-16a': typeof TdsCertificatesForm1616aRoute
+  '/tds-challan-correction-online': typeof TdsChallanCorrectionOnlineRoute
+  '/tds-on-property-multiple-buyers-sellers': typeof TdsOnPropertyMultipleBuyersSellersRoute
+  '/tds-on-property-nri-section-195': typeof TdsOnPropertyNriSection195Route
+  '/tds-on-property-section-194ia': typeof TdsOnPropertySection194iaRoute
+  '/tds-on-rent-multiple-parties': typeof TdsOnRentMultiplePartiesRoute
+  '/tds-on-rent-nri-section-195': typeof TdsOnRentNriSection195Route
+  '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
+  '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
@@ -1052,25 +1286,38 @@ export interface FileRouteTypes {
     | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
     | '/dpin-application-llp-partner-india'
+    | '/duplicate-tan-certificate-online'
     | '/esic-pf-registration-services'
+    | '/form-15ca-15cb-foreign-remittance'
+    | '/form-16a-tds-certificate-download'
+    | '/form-16b-tds-certificate-property'
+    | '/form-16c-tds-certificate-rent'
+    | '/form-24q-tds-filing-salary'
+    | '/form-26q-tds-return-filing'
+    | '/form-26qb-correction-tds-property'
+    | '/form-26qb-tds-filing-property'
+    | '/form-26qc-correction-tds-rent'
+    | '/form-26qc-tds-filing-rent'
+    | '/form-27d-tcs-certificate-download'
+    | '/form-27eq-tcs-return-filing'
+    | '/form-27q-tds-return-filing-nri'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
-    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
-    | '/loan-creation-modification-of-charge'
+    | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
-    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
+    | '/new-tan-registration-certificate-services'
     | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
@@ -1084,6 +1331,7 @@ export interface FileRouteTypes {
     | '/project-report-for-bank-loan'
     | '/projected-balance-sheet'
     | '/resignation-of-partner-in-llp'
+    | '/revised-tds-tcs-return-filing'
     | '/roc-other-forms-inc20a-dir6-dpt3'
     | '/secretarial-records-preparation-maintenance'
     | '/section-8-company-registration'
@@ -1094,10 +1342,20 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
-    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
+    | '/tan-correction-services'
+    | '/tan-registration-services-india'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
+    | '/tds-certificates-form-16-16a'
+    | '/tds-challan-correction-online'
+    | '/tds-on-property-multiple-buyers-sellers'
+    | '/tds-on-property-nri-section-195'
+    | '/tds-on-property-section-194ia'
+    | '/tds-on-rent-multiple-parties'
+    | '/tds-on-rent-nri-section-195'
+    | '/tds-tcs-notice-resolution'
+    | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
@@ -1151,25 +1409,38 @@ export interface FileRouteTypes {
     | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
     | '/dpin-application-llp-partner-india'
+    | '/duplicate-tan-certificate-online'
     | '/esic-pf-registration-services'
+    | '/form-15ca-15cb-foreign-remittance'
+    | '/form-16a-tds-certificate-download'
+    | '/form-16b-tds-certificate-property'
+    | '/form-16c-tds-certificate-rent'
+    | '/form-24q-tds-filing-salary'
+    | '/form-26q-tds-return-filing'
+    | '/form-26qb-correction-tds-property'
+    | '/form-26qb-tds-filing-property'
+    | '/form-26qc-correction-tds-rent'
+    | '/form-26qc-tds-filing-rent'
+    | '/form-27d-tcs-certificate-download'
+    | '/form-27eq-tcs-return-filing'
+    | '/form-27q-tds-return-filing-nri'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
-    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
-    | '/loan-creation-modification-of-charge'
+    | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
-    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
+    | '/new-tan-registration-certificate-services'
     | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
@@ -1183,6 +1454,7 @@ export interface FileRouteTypes {
     | '/project-report-for-bank-loan'
     | '/projected-balance-sheet'
     | '/resignation-of-partner-in-llp'
+    | '/revised-tds-tcs-return-filing'
     | '/roc-other-forms-inc20a-dir6-dpt3'
     | '/secretarial-records-preparation-maintenance'
     | '/section-8-company-registration'
@@ -1193,10 +1465,20 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
-    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
+    | '/tan-correction-services'
+    | '/tan-registration-services-india'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
+    | '/tds-certificates-form-16-16a'
+    | '/tds-challan-correction-online'
+    | '/tds-on-property-multiple-buyers-sellers'
+    | '/tds-on-property-nri-section-195'
+    | '/tds-on-property-section-194ia'
+    | '/tds-on-rent-multiple-parties'
+    | '/tds-on-rent-nri-section-195'
+    | '/tds-tcs-notice-resolution'
+    | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
@@ -1259,25 +1541,38 @@ export interface FileRouteTypes {
     | '/din-dpin-registration-director-llp-india'
     | '/disclaimer'
     | '/dpin-application-llp-partner-india'
+    | '/duplicate-tan-certificate-online'
     | '/esic-pf-registration-services'
+    | '/form-15ca-15cb-foreign-remittance'
+    | '/form-16a-tds-certificate-download'
+    | '/form-16b-tds-certificate-property'
+    | '/form-16c-tds-certificate-rent'
+    | '/form-24q-tds-filing-salary'
+    | '/form-26q-tds-return-filing'
+    | '/form-26qb-correction-tds-property'
+    | '/form-26qb-tds-filing-property'
+    | '/form-26qc-correction-tds-rent'
+    | '/form-26qc-tds-filing-rent'
+    | '/form-27d-tcs-certificate-download'
+    | '/form-27eq-tcs-return-filing'
+    | '/form-27q-tds-return-filing-nri'
     | '/fssai-food-license-registration-services'
     | '/gst-registration-return-filing-services'
     | '/huf-formation-registration-services'
     | '/import-export-code-iec-registration-services'
-    | '/issue-of-share-certificate-sh1'
     | '/itr-balance-sheet-preparation-services'
     | '/kyc-filing-mca'
     | '/llp-agreement-changes'
     | '/llp-balance-sheet-form-8-services'
     | '/llp-compliance-packages'
     | '/llp-forms-filing'
-    | '/loan-creation-modification-of-charge'
+    | '/lower-tds-certificate-section-197'
     | '/mca-roc-filing-services-india'
     | '/mgt-7-mgt-7a-filing'
-    | '/modification-of-charge-roc-mca'
     | '/msme-udyam-registration-services'
     | '/new-din-application'
     | '/new-llp-formation'
+    | '/new-tan-registration-certificate-services'
     | '/one-person-company-registration'
     | '/our-full-packages-services'
     | '/partnership-firm'
@@ -1291,6 +1586,7 @@ export interface FileRouteTypes {
     | '/project-report-for-bank-loan'
     | '/projected-balance-sheet'
     | '/resignation-of-partner-in-llp'
+    | '/revised-tds-tcs-return-filing'
     | '/roc-other-forms-inc20a-dir6-dpt3'
     | '/secretarial-records-preparation-maintenance'
     | '/section-8-company-registration'
@@ -1301,10 +1597,20 @@ export interface FileRouteTypes {
     | '/startup-india-dpiit-registration-services'
     | '/startup-ngo-registration-services'
     | '/startup-outsourcing-services'
-    | '/strike-off-company-llp'
     | '/surrender-duplicate-din'
+    | '/tan-correction-services'
+    | '/tan-registration-services-india'
     | '/tax-holiday-section-80iac-services'
     | '/tax-registration-services'
+    | '/tds-certificates-form-16-16a'
+    | '/tds-challan-correction-online'
+    | '/tds-on-property-multiple-buyers-sellers'
+    | '/tds-on-property-nri-section-195'
+    | '/tds-on-property-section-194ia'
+    | '/tds-on-rent-multiple-parties'
+    | '/tds-on-rent-nri-section-195'
+    | '/tds-tcs-notice-resolution'
+    | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
@@ -1368,25 +1674,38 @@ export interface RootRouteChildren {
   DinDpinRegistrationDirectorLlpIndiaRoute: typeof DinDpinRegistrationDirectorLlpIndiaRoute
   DisclaimerRoute: typeof DisclaimerRoute
   DpinApplicationLlpPartnerIndiaRoute: typeof DpinApplicationLlpPartnerIndiaRoute
+  DuplicateTanCertificateOnlineRoute: typeof DuplicateTanCertificateOnlineRoute
   EsicPfRegistrationServicesRoute: typeof EsicPfRegistrationServicesRoute
+  Form15ca15cbForeignRemittanceRoute: typeof Form15ca15cbForeignRemittanceRoute
+  Form16aTdsCertificateDownloadRoute: typeof Form16aTdsCertificateDownloadRoute
+  Form16bTdsCertificatePropertyRoute: typeof Form16bTdsCertificatePropertyRoute
+  Form16cTdsCertificateRentRoute: typeof Form16cTdsCertificateRentRoute
+  Form24qTdsFilingSalaryRoute: typeof Form24qTdsFilingSalaryRoute
+  Form26qTdsReturnFilingRoute: typeof Form26qTdsReturnFilingRoute
+  Form26qbCorrectionTdsPropertyRoute: typeof Form26qbCorrectionTdsPropertyRoute
+  Form26qbTdsFilingPropertyRoute: typeof Form26qbTdsFilingPropertyRoute
+  Form26qcCorrectionTdsRentRoute: typeof Form26qcCorrectionTdsRentRoute
+  Form26qcTdsFilingRentRoute: typeof Form26qcTdsFilingRentRoute
+  Form27dTcsCertificateDownloadRoute: typeof Form27dTcsCertificateDownloadRoute
+  Form27eqTcsReturnFilingRoute: typeof Form27eqTcsReturnFilingRoute
+  Form27qTdsReturnFilingNriRoute: typeof Form27qTdsReturnFilingNriRoute
   FssaiFoodLicenseRegistrationServicesRoute: typeof FssaiFoodLicenseRegistrationServicesRoute
   GstRegistrationReturnFilingServicesRoute: typeof GstRegistrationReturnFilingServicesRoute
   HufFormationRegistrationServicesRoute: typeof HufFormationRegistrationServicesRoute
   ImportExportCodeIecRegistrationServicesRoute: typeof ImportExportCodeIecRegistrationServicesRoute
-  IssueOfShareCertificateSh1Route: typeof IssueOfShareCertificateSh1Route
   ItrBalanceSheetPreparationServicesRoute: typeof ItrBalanceSheetPreparationServicesRoute
   KycFilingMcaRoute: typeof KycFilingMcaRoute
   LlpAgreementChangesRoute: typeof LlpAgreementChangesRoute
   LlpBalanceSheetForm8ServicesRoute: typeof LlpBalanceSheetForm8ServicesRoute
   LlpCompliancePackagesRoute: typeof LlpCompliancePackagesRoute
   LlpFormsFilingRoute: typeof LlpFormsFilingRoute
-  LoanCreationModificationOfChargeRoute: typeof LoanCreationModificationOfChargeRoute
+  LowerTdsCertificateSection197Route: typeof LowerTdsCertificateSection197Route
   McaRocFilingServicesIndiaRoute: typeof McaRocFilingServicesIndiaRoute
   Mgt7Mgt7aFilingRoute: typeof Mgt7Mgt7aFilingRoute
-  ModificationOfChargeRocMcaRoute: typeof ModificationOfChargeRocMcaRoute
   MsmeUdyamRegistrationServicesRoute: typeof MsmeUdyamRegistrationServicesRoute
   NewDinApplicationRoute: typeof NewDinApplicationRoute
   NewLlpFormationRoute: typeof NewLlpFormationRoute
+  NewTanRegistrationCertificateServicesRoute: typeof NewTanRegistrationCertificateServicesRoute
   OnePersonCompanyRegistrationRoute: typeof OnePersonCompanyRegistrationRoute
   OurFullPackagesServicesRoute: typeof OurFullPackagesServicesRoute
   PartnershipFirmRoute: typeof PartnershipFirmRoute
@@ -1400,6 +1719,7 @@ export interface RootRouteChildren {
   ProjectReportForBankLoanRoute: typeof ProjectReportForBankLoanRoute
   ProjectedBalanceSheetRoute: typeof ProjectedBalanceSheetRoute
   ResignationOfPartnerInLlpRoute: typeof ResignationOfPartnerInLlpRoute
+  RevisedTdsTcsReturnFilingRoute: typeof RevisedTdsTcsReturnFilingRoute
   RocOtherFormsInc20aDir6Dpt3Route: typeof RocOtherFormsInc20aDir6Dpt3Route
   SecretarialRecordsPreparationMaintenanceRoute: typeof SecretarialRecordsPreparationMaintenanceRoute
   Section8CompanyRegistrationRoute: typeof Section8CompanyRegistrationRoute
@@ -1410,10 +1730,20 @@ export interface RootRouteChildren {
   StartupIndiaDpiitRegistrationServicesRoute: typeof StartupIndiaDpiitRegistrationServicesRoute
   StartupNgoRegistrationServicesRoute: typeof StartupNgoRegistrationServicesRoute
   StartupOutsourcingServicesRoute: typeof StartupOutsourcingServicesRoute
-  StrikeOffCompanyLlpRoute: typeof StrikeOffCompanyLlpRoute
   SurrenderDuplicateDinRoute: typeof SurrenderDuplicateDinRoute
+  TanCorrectionServicesRoute: typeof TanCorrectionServicesRoute
+  TanRegistrationServicesIndiaRoute: typeof TanRegistrationServicesIndiaRoute
   TaxHolidaySection80iacServicesRoute: typeof TaxHolidaySection80iacServicesRoute
   TaxRegistrationServicesRoute: typeof TaxRegistrationServicesRoute
+  TdsCertificatesForm1616aRoute: typeof TdsCertificatesForm1616aRoute
+  TdsChallanCorrectionOnlineRoute: typeof TdsChallanCorrectionOnlineRoute
+  TdsOnPropertyMultipleBuyersSellersRoute: typeof TdsOnPropertyMultipleBuyersSellersRoute
+  TdsOnPropertyNriSection195Route: typeof TdsOnPropertyNriSection195Route
+  TdsOnPropertySection194iaRoute: typeof TdsOnPropertySection194iaRoute
+  TdsOnRentMultiplePartiesRoute: typeof TdsOnRentMultiplePartiesRoute
+  TdsOnRentNriSection195Route: typeof TdsOnRentNriSection195Route
+  TdsTcsNoticeResolutionRoute: typeof TdsTcsNoticeResolutionRoute
+  TdsTcsReturnFilingServicesRoute: typeof TdsTcsReturnFilingServicesRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   ThreeYearBalanceSheetRoute: typeof ThreeYearBalanceSheetRoute
   UpdateEmailMobileMcaRoute: typeof UpdateEmailMobileMcaRoute
@@ -1442,6 +1772,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tds-tcs-return-filing-services': {
+      id: '/tds-tcs-return-filing-services'
+      path: '/tds-tcs-return-filing-services'
+      fullPath: '/tds-tcs-return-filing-services'
+      preLoaderRoute: typeof TdsTcsReturnFilingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-tcs-notice-resolution': {
+      id: '/tds-tcs-notice-resolution'
+      path: '/tds-tcs-notice-resolution'
+      fullPath: '/tds-tcs-notice-resolution'
+      preLoaderRoute: typeof TdsTcsNoticeResolutionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-rent-nri-section-195': {
+      id: '/tds-on-rent-nri-section-195'
+      path: '/tds-on-rent-nri-section-195'
+      fullPath: '/tds-on-rent-nri-section-195'
+      preLoaderRoute: typeof TdsOnRentNriSection195RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-rent-multiple-parties': {
+      id: '/tds-on-rent-multiple-parties'
+      path: '/tds-on-rent-multiple-parties'
+      fullPath: '/tds-on-rent-multiple-parties'
+      preLoaderRoute: typeof TdsOnRentMultiplePartiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-section-194ia': {
+      id: '/tds-on-property-section-194ia'
+      path: '/tds-on-property-section-194ia'
+      fullPath: '/tds-on-property-section-194ia'
+      preLoaderRoute: typeof TdsOnPropertySection194iaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-nri-section-195': {
+      id: '/tds-on-property-nri-section-195'
+      path: '/tds-on-property-nri-section-195'
+      fullPath: '/tds-on-property-nri-section-195'
+      preLoaderRoute: typeof TdsOnPropertyNriSection195RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-multiple-buyers-sellers': {
+      id: '/tds-on-property-multiple-buyers-sellers'
+      path: '/tds-on-property-multiple-buyers-sellers'
+      fullPath: '/tds-on-property-multiple-buyers-sellers'
+      preLoaderRoute: typeof TdsOnPropertyMultipleBuyersSellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-challan-correction-online': {
+      id: '/tds-challan-correction-online'
+      path: '/tds-challan-correction-online'
+      fullPath: '/tds-challan-correction-online'
+      preLoaderRoute: typeof TdsChallanCorrectionOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-certificates-form-16-16a': {
+      id: '/tds-certificates-form-16-16a'
+      path: '/tds-certificates-form-16-16a'
+      fullPath: '/tds-certificates-form-16-16a'
+      preLoaderRoute: typeof TdsCertificatesForm1616aRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tax-registration-services': {
       id: '/tax-registration-services'
       path: '/tax-registration-services'
@@ -1456,18 +1849,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TaxHolidaySection80iacServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tan-registration-services-india': {
+      id: '/tan-registration-services-india'
+      path: '/tan-registration-services-india'
+      fullPath: '/tan-registration-services-india'
+      preLoaderRoute: typeof TanRegistrationServicesIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tan-correction-services': {
+      id: '/tan-correction-services'
+      path: '/tan-correction-services'
+      fullPath: '/tan-correction-services'
+      preLoaderRoute: typeof TanCorrectionServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/surrender-duplicate-din': {
       id: '/surrender-duplicate-din'
       path: '/surrender-duplicate-din'
       fullPath: '/surrender-duplicate-din'
       preLoaderRoute: typeof SurrenderDuplicateDinRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/strike-off-company-llp': {
-      id: '/strike-off-company-llp'
-      path: '/strike-off-company-llp'
-      fullPath: '/strike-off-company-llp'
-      preLoaderRoute: typeof StrikeOffCompanyLlpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/startup-outsourcing-services': {
@@ -1538,6 +1938,13 @@ declare module '@tanstack/react-router' {
       path: '/roc-other-forms-inc20a-dir6-dpt3'
       fullPath: '/roc-other-forms-inc20a-dir6-dpt3'
       preLoaderRoute: typeof RocOtherFormsInc20aDir6Dpt3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/revised-tds-tcs-return-filing': {
+      id: '/revised-tds-tcs-return-filing'
+      path: '/revised-tds-tcs-return-filing'
+      fullPath: '/revised-tds-tcs-return-filing'
+      preLoaderRoute: typeof RevisedTdsTcsReturnFilingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resignation-of-partner-in-llp': {
@@ -1631,6 +2038,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OnePersonCompanyRegistrationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/new-tan-registration-certificate-services': {
+      id: '/new-tan-registration-certificate-services'
+      path: '/new-tan-registration-certificate-services'
+      fullPath: '/new-tan-registration-certificate-services'
+      preLoaderRoute: typeof NewTanRegistrationCertificateServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/new-llp-formation': {
       id: '/new-llp-formation'
       path: '/new-llp-formation'
@@ -1652,13 +2066,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/modification-of-charge-roc-mca': {
-      id: '/modification-of-charge-roc-mca'
-      path: '/modification-of-charge-roc-mca'
-      fullPath: '/modification-of-charge-roc-mca'
-      preLoaderRoute: typeof ModificationOfChargeRocMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/mgt-7-mgt-7a-filing': {
       id: '/mgt-7-mgt-7a-filing'
       path: '/mgt-7-mgt-7a-filing'
@@ -1673,11 +2080,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof McaRocFilingServicesIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/loan-creation-modification-of-charge': {
-      id: '/loan-creation-modification-of-charge'
-      path: '/loan-creation-modification-of-charge'
-      fullPath: '/loan-creation-modification-of-charge'
-      preLoaderRoute: typeof LoanCreationModificationOfChargeRouteImport
+    '/lower-tds-certificate-section-197': {
+      id: '/lower-tds-certificate-section-197'
+      path: '/lower-tds-certificate-section-197'
+      fullPath: '/lower-tds-certificate-section-197'
+      preLoaderRoute: typeof LowerTdsCertificateSection197RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/llp-forms-filing': {
@@ -1722,13 +2129,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ItrBalanceSheetPreparationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/issue-of-share-certificate-sh1': {
-      id: '/issue-of-share-certificate-sh1'
-      path: '/issue-of-share-certificate-sh1'
-      fullPath: '/issue-of-share-certificate-sh1'
-      preLoaderRoute: typeof IssueOfShareCertificateSh1RouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/import-export-code-iec-registration-services': {
       id: '/import-export-code-iec-registration-services'
       path: '/import-export-code-iec-registration-services'
@@ -1757,11 +2157,109 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FssaiFoodLicenseRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/form-27q-tds-return-filing-nri': {
+      id: '/form-27q-tds-return-filing-nri'
+      path: '/form-27q-tds-return-filing-nri'
+      fullPath: '/form-27q-tds-return-filing-nri'
+      preLoaderRoute: typeof Form27qTdsReturnFilingNriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-27eq-tcs-return-filing': {
+      id: '/form-27eq-tcs-return-filing'
+      path: '/form-27eq-tcs-return-filing'
+      fullPath: '/form-27eq-tcs-return-filing'
+      preLoaderRoute: typeof Form27eqTcsReturnFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-27d-tcs-certificate-download': {
+      id: '/form-27d-tcs-certificate-download'
+      path: '/form-27d-tcs-certificate-download'
+      fullPath: '/form-27d-tcs-certificate-download'
+      preLoaderRoute: typeof Form27dTcsCertificateDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qc-tds-filing-rent': {
+      id: '/form-26qc-tds-filing-rent'
+      path: '/form-26qc-tds-filing-rent'
+      fullPath: '/form-26qc-tds-filing-rent'
+      preLoaderRoute: typeof Form26qcTdsFilingRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qc-correction-tds-rent': {
+      id: '/form-26qc-correction-tds-rent'
+      path: '/form-26qc-correction-tds-rent'
+      fullPath: '/form-26qc-correction-tds-rent'
+      preLoaderRoute: typeof Form26qcCorrectionTdsRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qb-tds-filing-property': {
+      id: '/form-26qb-tds-filing-property'
+      path: '/form-26qb-tds-filing-property'
+      fullPath: '/form-26qb-tds-filing-property'
+      preLoaderRoute: typeof Form26qbTdsFilingPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qb-correction-tds-property': {
+      id: '/form-26qb-correction-tds-property'
+      path: '/form-26qb-correction-tds-property'
+      fullPath: '/form-26qb-correction-tds-property'
+      preLoaderRoute: typeof Form26qbCorrectionTdsPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26q-tds-return-filing': {
+      id: '/form-26q-tds-return-filing'
+      path: '/form-26q-tds-return-filing'
+      fullPath: '/form-26q-tds-return-filing'
+      preLoaderRoute: typeof Form26qTdsReturnFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-24q-tds-filing-salary': {
+      id: '/form-24q-tds-filing-salary'
+      path: '/form-24q-tds-filing-salary'
+      fullPath: '/form-24q-tds-filing-salary'
+      preLoaderRoute: typeof Form24qTdsFilingSalaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16c-tds-certificate-rent': {
+      id: '/form-16c-tds-certificate-rent'
+      path: '/form-16c-tds-certificate-rent'
+      fullPath: '/form-16c-tds-certificate-rent'
+      preLoaderRoute: typeof Form16cTdsCertificateRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16b-tds-certificate-property': {
+      id: '/form-16b-tds-certificate-property'
+      path: '/form-16b-tds-certificate-property'
+      fullPath: '/form-16b-tds-certificate-property'
+      preLoaderRoute: typeof Form16bTdsCertificatePropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16a-tds-certificate-download': {
+      id: '/form-16a-tds-certificate-download'
+      path: '/form-16a-tds-certificate-download'
+      fullPath: '/form-16a-tds-certificate-download'
+      preLoaderRoute: typeof Form16aTdsCertificateDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-15ca-15cb-foreign-remittance': {
+      id: '/form-15ca-15cb-foreign-remittance'
+      path: '/form-15ca-15cb-foreign-remittance'
+      fullPath: '/form-15ca-15cb-foreign-remittance'
+      preLoaderRoute: typeof Form15ca15cbForeignRemittanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/esic-pf-registration-services': {
       id: '/esic-pf-registration-services'
       path: '/esic-pf-registration-services'
       fullPath: '/esic-pf-registration-services'
       preLoaderRoute: typeof EsicPfRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duplicate-tan-certificate-online': {
+      id: '/duplicate-tan-certificate-online'
+      path: '/duplicate-tan-certificate-online'
+      fullPath: '/duplicate-tan-certificate-online'
+      preLoaderRoute: typeof DuplicateTanCertificateOnlineRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dpin-application-llp-partner-india': {
@@ -2347,7 +2845,21 @@ const rootRouteChildren: RootRouteChildren = {
     DinDpinRegistrationDirectorLlpIndiaRoute,
   DisclaimerRoute: DisclaimerRoute,
   DpinApplicationLlpPartnerIndiaRoute: DpinApplicationLlpPartnerIndiaRoute,
+  DuplicateTanCertificateOnlineRoute: DuplicateTanCertificateOnlineRoute,
   EsicPfRegistrationServicesRoute: EsicPfRegistrationServicesRoute,
+  Form15ca15cbForeignRemittanceRoute: Form15ca15cbForeignRemittanceRoute,
+  Form16aTdsCertificateDownloadRoute: Form16aTdsCertificateDownloadRoute,
+  Form16bTdsCertificatePropertyRoute: Form16bTdsCertificatePropertyRoute,
+  Form16cTdsCertificateRentRoute: Form16cTdsCertificateRentRoute,
+  Form24qTdsFilingSalaryRoute: Form24qTdsFilingSalaryRoute,
+  Form26qTdsReturnFilingRoute: Form26qTdsReturnFilingRoute,
+  Form26qbCorrectionTdsPropertyRoute: Form26qbCorrectionTdsPropertyRoute,
+  Form26qbTdsFilingPropertyRoute: Form26qbTdsFilingPropertyRoute,
+  Form26qcCorrectionTdsRentRoute: Form26qcCorrectionTdsRentRoute,
+  Form26qcTdsFilingRentRoute: Form26qcTdsFilingRentRoute,
+  Form27dTcsCertificateDownloadRoute: Form27dTcsCertificateDownloadRoute,
+  Form27eqTcsReturnFilingRoute: Form27eqTcsReturnFilingRoute,
+  Form27qTdsReturnFilingNriRoute: Form27qTdsReturnFilingNriRoute,
   FssaiFoodLicenseRegistrationServicesRoute:
     FssaiFoodLicenseRegistrationServicesRoute,
   GstRegistrationReturnFilingServicesRoute:
@@ -2355,7 +2867,6 @@ const rootRouteChildren: RootRouteChildren = {
   HufFormationRegistrationServicesRoute: HufFormationRegistrationServicesRoute,
   ImportExportCodeIecRegistrationServicesRoute:
     ImportExportCodeIecRegistrationServicesRoute,
-  IssueOfShareCertificateSh1Route: IssueOfShareCertificateSh1Route,
   ItrBalanceSheetPreparationServicesRoute:
     ItrBalanceSheetPreparationServicesRoute,
   KycFilingMcaRoute: KycFilingMcaRoute,
@@ -2363,13 +2874,14 @@ const rootRouteChildren: RootRouteChildren = {
   LlpBalanceSheetForm8ServicesRoute: LlpBalanceSheetForm8ServicesRoute,
   LlpCompliancePackagesRoute: LlpCompliancePackagesRoute,
   LlpFormsFilingRoute: LlpFormsFilingRoute,
-  LoanCreationModificationOfChargeRoute: LoanCreationModificationOfChargeRoute,
+  LowerTdsCertificateSection197Route: LowerTdsCertificateSection197Route,
   McaRocFilingServicesIndiaRoute: McaRocFilingServicesIndiaRoute,
   Mgt7Mgt7aFilingRoute: Mgt7Mgt7aFilingRoute,
-  ModificationOfChargeRocMcaRoute: ModificationOfChargeRocMcaRoute,
   MsmeUdyamRegistrationServicesRoute: MsmeUdyamRegistrationServicesRoute,
   NewDinApplicationRoute: NewDinApplicationRoute,
   NewLlpFormationRoute: NewLlpFormationRoute,
+  NewTanRegistrationCertificateServicesRoute:
+    NewTanRegistrationCertificateServicesRoute,
   OnePersonCompanyRegistrationRoute: OnePersonCompanyRegistrationRoute,
   OurFullPackagesServicesRoute: OurFullPackagesServicesRoute,
   PartnershipFirmRoute: PartnershipFirmRoute,
@@ -2385,6 +2897,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectReportForBankLoanRoute: ProjectReportForBankLoanRoute,
   ProjectedBalanceSheetRoute: ProjectedBalanceSheetRoute,
   ResignationOfPartnerInLlpRoute: ResignationOfPartnerInLlpRoute,
+  RevisedTdsTcsReturnFilingRoute: RevisedTdsTcsReturnFilingRoute,
   RocOtherFormsInc20aDir6Dpt3Route: RocOtherFormsInc20aDir6Dpt3Route,
   SecretarialRecordsPreparationMaintenanceRoute:
     SecretarialRecordsPreparationMaintenanceRoute,
@@ -2401,10 +2914,21 @@ const rootRouteChildren: RootRouteChildren = {
     StartupIndiaDpiitRegistrationServicesRoute,
   StartupNgoRegistrationServicesRoute: StartupNgoRegistrationServicesRoute,
   StartupOutsourcingServicesRoute: StartupOutsourcingServicesRoute,
-  StrikeOffCompanyLlpRoute: StrikeOffCompanyLlpRoute,
   SurrenderDuplicateDinRoute: SurrenderDuplicateDinRoute,
+  TanCorrectionServicesRoute: TanCorrectionServicesRoute,
+  TanRegistrationServicesIndiaRoute: TanRegistrationServicesIndiaRoute,
   TaxHolidaySection80iacServicesRoute: TaxHolidaySection80iacServicesRoute,
   TaxRegistrationServicesRoute: TaxRegistrationServicesRoute,
+  TdsCertificatesForm1616aRoute: TdsCertificatesForm1616aRoute,
+  TdsChallanCorrectionOnlineRoute: TdsChallanCorrectionOnlineRoute,
+  TdsOnPropertyMultipleBuyersSellersRoute:
+    TdsOnPropertyMultipleBuyersSellersRoute,
+  TdsOnPropertyNriSection195Route: TdsOnPropertyNriSection195Route,
+  TdsOnPropertySection194iaRoute: TdsOnPropertySection194iaRoute,
+  TdsOnRentMultiplePartiesRoute: TdsOnRentMultiplePartiesRoute,
+  TdsOnRentNriSection195Route: TdsOnRentNriSection195Route,
+  TdsTcsNoticeResolutionRoute: TdsTcsNoticeResolutionRoute,
+  TdsTcsReturnFilingServicesRoute: TdsTcsReturnFilingServicesRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
   ThreeYearBalanceSheetRoute: ThreeYearBalanceSheetRoute,
   UpdateEmailMobileMcaRoute: UpdateEmailMobileMcaRoute,

@@ -22,7 +22,6 @@ import {
   Receipt,
   XCircle,
   Wrench,
-  Percent,
   BookOpen,
   Clock,
 } from "lucide-react";
@@ -59,36 +58,36 @@ const SERVICES_OFFERED = [
   {
     icon: Receipt,
     title: "TDS Registration",
-    text: "TAN application and allotment for new deductors.",
+    text: "TAN application (Form 49B) and allotment for new deductors.",
   },
   {
     icon: FileText,
     title: "TDS Return Filing",
-    text: "Quarterly returns (Form 24Q, 26Q, 27Q) filed accurately.",
+    text: "Quarterly returns (Form 24Q, 26Q, 27Q) prepared and filed on time.",
   },
   {
     icon: ClipboardCheck,
     title: "TCS Return Filing",
-    text: "Form 27EQ compliance for sale of goods & transactions.",
+    text: "Form 27EQ compliance for sale of goods, minerals & transactions.",
   },
   {
     icon: Calculator,
     title: "TDS Calculation & Deduction",
-    text: "Accurate rate mapping and threshold calculation support.",
+    text: "Accurate rate mapping, threshold calculation & challan generation.",
   },
   {
     icon: Wrench,
     title: "Correction & Revised Returns",
-    text: "Fix PAN errors, challan mismatches & demand notices.",
+    text: "Rectification of PAN errors, challan mismatches & demand notices.",
   },
   {
     icon: ShieldCheck,
     title: "TDS/TCS Compliance Advisory",
-    text: "Lower deduction certificates (Sec 197), TRACES & advisory.",
+    text: "Lower deduction certificates (Section 197), TRACES & advisory.",
   },
 ];
 
-export const Route = createFileRoute("/tds-tcs/")({
+export const Route = createFileRoute("/tds-tcs-return-filing-services")({
   head: () => ({
     meta: [
       {
@@ -98,7 +97,7 @@ export const Route = createFileRoute("/tds-tcs/")({
       {
         name: "description",
         content:
-          "End-to-end TDS & TCS compliance in India — TAN registration, quarterly return filing (24Q, 26Q, 27Q, 27EQ), corrections, Lower TDS (Sec 197), Form 16/16A & advisory by expert CA.",
+          "Complete TDS & TCS return filing services in India. End-to-end TAN registration, calculation, return filing (24Q, 26Q, 27Q, 27EQ), corrections & advisory with expert CA.",
       },
       {
         property: "og:title",
@@ -110,14 +109,14 @@ export const Route = createFileRoute("/tds-tcs/")({
         content:
           "Avoid penalties and stay compliant with expert CA support. End-to-end TDS/TCS services – registration, calculation, return filing & compliance.",
       },
-      { property: "og:url", content: "/tds-tcs" },
+      { property: "og:url", content: "/tds-tcs-return-filing-services" },
       {
         name: "keywords",
         content:
           "TDS return filing India, TCS return filing India, TDS compliance services, TDS filing online India, CA TDS TCS services",
       },
     ],
-    links: [{ rel: "canonical", href: "/tds-tcs" }],
+    links: [{ rel: "canonical", href: "/tds-tcs-return-filing-services" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -148,10 +147,10 @@ export const Route = createFileRoute("/tds-tcs/")({
       },
     ],
   }),
-  component: TdsTcsHub,
+  component: TdsTcsMainPage,
 });
 
-function TdsTcsHub() {
+function TdsTcsMainPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#FDFDFC]">
       <Header />
@@ -163,7 +162,7 @@ function TdsTcsHub() {
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
-            <span className="text-ink font-medium">TDS &amp; TCS Services</span>
+            <span className="text-ink font-medium">TDS &amp; TCS Return Filing Services</span>
           </div>
         </div>
 
@@ -172,7 +171,7 @@ function TdsTcsHub() {
           <div className="container mx-auto px-4 relative z-10 max-w-5xl text-center md:text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-brand/10 border border-brand/20 px-3.5 py-1 text-xs font-semibold text-brand mb-6">
               <Sparkles className="h-3.5 w-3.5" />
-              Complete Tax Compliance
+              Complete Compliance Support
             </div>
 
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink max-w-4xl leading-tight">
