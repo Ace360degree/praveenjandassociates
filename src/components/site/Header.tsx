@@ -4,8 +4,9 @@ import logo from "@/assets/logo.png";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { CONSULTATION_SERVICES } from "@/data/consultationServices";
 import { COMPLIANCE_BUNDLES } from "@/data/compliancePackages";
+import { ConsultationModal } from "@/components/site/ConsultationModal";
 import { HEADER_MENU } from "@/data/navigationMenu";
-function Link({ to, params, ...props }: { to: string; params?: Record<string, string | number>; [key: string]: any }) {
+function Link({ to, params, ...props }: { to: string; params?: Record<string, string | number>;[key: string]: any }) {
   let href = to;
   if (params) {
     for (const [key, value] of Object.entries(params)) {
@@ -15,50 +16,7 @@ function Link({ to, params, ...props }: { to: string; params?: Record<string, st
   return <a href={href} {...props} />;
 }
 
-/* ─── Consultation pop-up form ──────────────────────────────────────────── */
-function ConsultationModal({ children }: { children: React.ReactNode }) {
-  const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
-  const WA = "918169887643";
-  return (
-    <Dialog>
-      <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="w-[95vw] sm:max-w-[425px] p-4 sm:p-6 rounded-2xl max-h-[90vh] overflow-y-auto">
-        <h3 className="font-display text-lg sm:text-xl font-bold text-ink">Get a Callback within 24 Hours</h3>
-        <p className="text-xs sm:text-sm text-muted-foreground mt-1">Tell us what you need — our CA team will reach out.</p>
-        <form
-          className="mt-4 sm:mt-5 space-y-3"
-          onSubmit={(e) => {
-            e.preventDefault();
-            const msg = `Hi, I need CA assistance.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0AService: ${form.service}%0AMessage: ${form.message}`;
-            window.open(`https://wa.me/${WA}?text=${msg}`, "_blank");
-          }}
-        >
-          <input required maxLength={100} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full min-w-0 rounded-lg border px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-          <input required type="tel" maxLength={15} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone Number" className="w-full min-w-0 rounded-lg border px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-          <input required type="email" maxLength={255} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full min-w-0 rounded-lg border px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-          <select required value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className="w-full min-w-0 rounded-lg border px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30 bg-white">
-            <option value="">Service Required</option>
-            <option>Income Tax / ITR</option>
-            <option>GST</option>
-            <option>TDS / TCS</option>
-            <option>MCA / ROC</option>
-            <option>Accounting &amp; Audit</option>
-            <option>Registrations</option>
-            <option>Bank Loan Documentation</option>
-            <option>Compliance Package</option>
-            <option>CA Consultation</option>
-            <option>Other</option>
-          </select>
-          <textarea maxLength={1000} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Message (optional)" rows={3} className="w-full min-w-0 rounded-lg border px-3.5 py-2.5 sm:px-4 sm:py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-          <button type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer">
-            Request Callback <ArrowRight className="h-4 w-4" />
-          </button>
-          <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
-        </form>
-      </DialogContent>
-    </Dialog>
-  );
-}
+
 
 /* ─── Desktop mega-flyout item ──────────────────────────────────────────── */
 function DesktopMenuItem({ entry, isRightSide }: { entry: typeof HEADER_MENU[0]; isRightSide?: boolean }) {

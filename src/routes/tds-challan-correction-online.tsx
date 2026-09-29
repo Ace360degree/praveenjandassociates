@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ServiceHeroForm } from "@/components/site/ServiceHeroForm";
 import { useState } from "react";
 import {
   AlertTriangle,
@@ -23,7 +24,6 @@ import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { FinalCTA } from "@/components/site/Sections";
 import { ConsultationModal } from "@/components/site/ConsultationModal";
-
 const SERVICE_DATA = {
   slug: "tds-challan-correction-online",
   title: "TDS Challan Correction Online",
@@ -143,7 +143,7 @@ export const Route = createFileRoute("/tds-challan-correction-online")({
 });
 
 function TdsChallanCorrectionPage() {
-  const [form, setForm] = useState({ name: "", phone: "", email: "" });
+
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
@@ -215,49 +215,14 @@ function TdsChallanCorrectionPage() {
               </div>
             </div>
 
-            <div id="lead" className="bg-white rounded-2xl shadow-xl border p-6 lg:p-8">
-              <h3 className="font-display text-xl font-bold text-ink">Talk to a CA — free callback</h3>
-              <p className="text-sm text-muted-foreground mt-1">Share details, our CA will connect within 30 mins.</p>
-              <form
-                className="mt-5 space-y-3"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const msg = `Hi, I need help with ${SERVICE_DATA.title}.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-                  window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
-                }}
-              >
-                <input
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Full Name"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-                />
-                <input
-                  required
-                  type="tel"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="Mobile Number"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-                />
-                <input
-                  required
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="Email"
-                  className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-                />
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  {SERVICE_DATA.primaryCta} <ArrowRight className="h-4 w-4" />
-                </button>
-                <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
-              </form>
-            </div>
+            <ServiceHeroForm 
+          title="Talk to a CA — free callback" 
+          subtitle="Share details, our CA will connect within 30 mins." 
+          serviceName={SERVICE_DATA.title} 
+          ctaText={SERVICE_DATA.primaryCta} 
+          formName="Service Hero Form" 
+          ctaLocation="Route Hero Section" 
+        />
           </div>
         </section>
 

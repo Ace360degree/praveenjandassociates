@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ServiceHeroForm } from "@/components/site/ServiceHeroForm";
 import { useState } from "react";
 import {
   Sparkles, ArrowRight, MessageCircle, Star, ShieldCheck, BadgeCheck,
@@ -8,7 +9,6 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { CONSULTATION_SERVICES } from "@/data/consultationServices";
-
 const FAQS = [
   { q: "What can I ask in consultation?", a: "Anything related to tax, GST, business setup, or compliance." },
   { q: "How is consultation provided?", a: "Via call, WhatsApp, or online meeting." },
@@ -107,26 +107,14 @@ function Hero() {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand shrink-0" /> 100% Confidential</span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 w-full box-border">
-          <h3 className="font-display text-lg sm:text-xl font-bold text-ink">Book Consultation / Callback</h3>
-          <p className="text-xs sm:text-sm text-muted-foreground mt-1">Share details, our CA will connect with you shortly.</p>
-          <form
-            className="mt-5 space-y-3.5"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const msg = `Hi, I need CA consultation.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-              window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
-            }}
-          >
-            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email Address" className="w-full rounded-lg border px-4 py-3 min-h-[48px] text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <button type="submit" className="w-full min-h-[48px] rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
-              Request Callback <ArrowRight className="h-4 w-4 shrink-0" />
-            </button>
-            <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
-          </form>
-        </div>
+        <ServiceHeroForm 
+          title="Book Consultation / Callback" 
+          subtitle="Share details, our CA will connect with you shortly." 
+          serviceName="General Service" 
+          ctaText="Request Callback" 
+          formName="Service Hero Form" 
+          ctaLocation="Route Hero Section" 
+        />
       </div>
     </section>
   );

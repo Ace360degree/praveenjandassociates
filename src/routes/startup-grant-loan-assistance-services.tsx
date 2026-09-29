@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ServiceHeroForm } from "@/components/site/ServiceHeroForm";
 import { useState } from "react";
 import {
   AlertTriangle,
@@ -21,7 +22,6 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
-
 const FAQS = [
   {
     q: "Can startups get loans in India?",
@@ -219,7 +219,7 @@ function Breadcrumbs() {
 }
 
 function Hero() {
-  const [form, setForm] = useState({ name: "", phone: "", email: "" });
+
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand/5 via-white to-brand/5">
@@ -270,56 +270,14 @@ function Hero() {
           </div>
         </div>
 
-        <div id="lead" className="rounded-3xl border bg-white p-6 shadow-xl lg:p-8">
-          <div className="mb-3 flex items-center justify-between">
-            <h2 className="font-display text-xl font-bold text-ink">Free Funding Consultation</h2>
-            <span className="rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-brand">
-              Free
-            </span>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            Share your details and our team will connect within 30 mins.
-          </p>
-          <form
-            className="mt-5 grid gap-3"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const msg = `Hi, I need help with startup funding.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-              window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
-            }}
-          >
-            <input
-              required
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              placeholder="Full Name"
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-            />
-            <input
-              required
-              type="tel"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              placeholder="Mobile Number"
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-            />
-            <input
-              required
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="Email"
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30"
-            />
-            <button
-              type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-brand py-3 font-semibold text-white shadow-lg shadow-brand/30 transition-all hover:bg-brand/90"
-            >
-              Request Callback <ArrowRight className="h-4 w-4" />
-            </button>
-            <p className="text-center text-xs text-muted-foreground">No spam. 100% confidential.</p>
-          </form>
-        </div>
+        <ServiceHeroForm 
+          title="Free Funding Consultation" 
+          subtitle="Share your details and our team will connect within 30 mins." 
+          serviceName="startup funding" 
+          ctaText="Request Callback" 
+          formName="Service Hero Form" 
+          ctaLocation="Route Hero Section" pattern="B" 
+        />
       </div>
     </section>
   );

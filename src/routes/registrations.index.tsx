@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ServiceHeroForm } from "@/components/site/ServiceHeroForm";
 import { useState } from "react";
 import {
   Sparkles, ArrowRight, MessageCircle, Star, ShieldCheck, BadgeCheck,
@@ -8,7 +9,6 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { REGISTRATION_SERVICES } from "@/data/registrationServices";
-
 const FAQS = [
   { q: "Mujhe konsi registration chahiye?", a: "Apke business type, turnover, state aur partners ke basis pe required registrations decide hote hain — free consultation pe clarity de denge." },
   { q: "Kya sab kuch ek jagah ho jayega?", a: "Haan — GST, PAN, TAN, MSME, Shop License, firm/company registration, DPIIT — sab CA-led single window." },
@@ -80,7 +80,7 @@ function RegistrationsHub() {
 }
 
 function Hero() {
-  const [form, setForm] = useState({ name: "", phone: "", email: "" });
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand/5 via-white to-brand/5">
       <div className="container mx-auto px-4 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
@@ -114,26 +114,14 @@ function Hero() {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Pan-India</span>
           </div>
         </div>
-        <div id="lead" className="bg-white rounded-2xl shadow-xl border p-4 sm:p-6 lg:p-8 min-w-0 max-w-full overflow-hidden box-border">
-          <h3 className="font-display text-xl font-bold text-ink">Free Registration Consultation</h3>
-          <p className="text-sm text-muted-foreground mt-1">Share details, CA will connect within 30 mins.</p>
-          <form
-            className="mt-5 space-y-3"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const msg = `Hi, I need help with business / tax registration.%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}`;
-              window.open(`https://wa.me/918169887643?text=${msg}`, "_blank");
-            }}
-          >
-            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-            <button type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2">
-              Request Callback <ArrowRight className="h-4 w-4" />
-            </button>
-            <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
-          </form>
-        </div>
+        <ServiceHeroForm 
+          title="Free Registration Consultation" 
+          subtitle="Share details, CA will connect within 30 mins." 
+          serviceName="General Service" 
+          ctaText="Request Callback" 
+          formName="Service Hero Form" 
+          ctaLocation="Route Hero Section" 
+        />
       </div>
     </section>
   );

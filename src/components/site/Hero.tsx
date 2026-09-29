@@ -2,10 +2,15 @@ import { useState } from "react";
 import { CheckCircle2, MessageCircle, Phone, Play, Sparkles, ArrowRight, ShieldCheck, Star } from "lucide-react";
 import praveen_home from "@/assets/praveen-home.jpg";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { submitLead } from "@/services/leadService";
+
 const SERVICES = ["ITR Filing", "GST", "TDS", "MCA/ROC", "Registration", "Accounting", "Consultation"];
 
 export function Hero() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [form, setForm] = useState({ name: "", phone: "", service: "" });
 
   const videoCardContent = (
     <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-soft bg-white p-2.5 sm:p-3 border border-border">
@@ -101,7 +106,6 @@ export function Hero() {
             {videoCardContent}
           </div>
 
-          {/* Lead form */}
           <div id="lead" className="mt-4 sm:mt-5 rounded-2xl sm:rounded-3xl bg-white shadow-soft border border-border p-4 sm:p-6 w-full box-border">
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-display font-bold text-base sm:text-lg">Talk to a CA</h3>
@@ -114,17 +118,38 @@ export function Hero() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  setErrorMsg("");
+
+                  const res = await submitLead({
+                    name: form.name,
+                    phone: form.phone,
+                    serviceName: form.service,
+                    sourceType: "inline",
+                    formName: "Homepage Hero Callback",
+                    ctaLocation: "Homepage Hero Section"
+                  });
+
+                  setIsSubmitting(false);
+                  if (res.success) {
+                    setSubmitted(true);
+                  } else {
+                    setErrorMsg(res.message || "Failed to submit. Please try again.");
+                  }
+                }}
                 className="grid gap-3 w-full"
               >
-                <input required placeholder="Your Name" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
-                <input required type="tel" pattern="[0-9]{10}" placeholder="Mobile Number" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
-                <select required className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border">
+                {errorMsg && <div className="p-2 bg-red-50 text-red-600 text-xs rounded border border-red-100">{errorMsg}</div>}
+                <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your Name" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
+                <input required type="tel" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} pattern="[0-9]{10}" placeholder="Mobile Number" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
+                <select required value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border">
                   <option value="">Select Service</option>
-                  {SERVICES.map(s => <option key={s}>{s}</option>)}
+                  {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
-                <button className="h-11 sm:h-12 rounded-xl bg-gradient-red text-white font-semibold text-sm sm:text-base shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer w-full box-border">
-                  Talk To CA <ArrowRight className="h-4 w-4 shrink-0" />
+                <button disabled={isSubmitting} className="h-11 sm:h-12 rounded-xl bg-gradient-red text-white font-semibold text-sm sm:text-base shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer w-full box-border disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? "Submitting..." : "Talk To CA"} {!isSubmitting && <ArrowRight className="h-4 w-4 shrink-0" />}
                 </button>
                 <p className="text-[11px] sm:text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
                   <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> No spam. Quick CA response.
