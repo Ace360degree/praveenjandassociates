@@ -1536,7 +1536,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Got my 15CA/15CB done within a day.", "Smooth remittance process without any issues.", "Highly professional and quick service."]}
-            ratingText="4.8/5 Client Rating"
+            ratingText="5/5 Client Rating"
             ctaText="Talk to a CA Today"
           />
 
@@ -2978,7 +2978,7 @@ function TdsServicePage() {
               ? ["Got my 15CA/15CB done within a day.", "Smooth remittance process without any issues.", "Highly professional and quick service."]
               : ["Corrected TAN without any hassle.", "Solved TDS filing issue quickly.", "Very professional CA support."]
             }
-            ratingText={s.slug === "form-15ca-15cb-foreign-remittance" ? "4.8/5 Client Rating" : "4.8/5 Rating on Google"}
+            ratingText={s.slug === "form-15ca-15cb-foreign-remittance" ? "5/5 Client Rating" : "4.8/5 Rating on Google"}
             ctaText={s.slug === "form-15ca-15cb-foreign-remittance" ? "👉 Talk to a CA Today" : "👉 Talk to CA Today"}
           />
         )}
@@ -4131,13 +4131,13 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getTdsServiceBySlug>> })
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Compliant</span>
           </div>
         </div>
-        <ServiceHeroForm 
-          title="Talk to a CA — free callback" 
-          subtitle="Share details, our CA will connect within 30 mins." 
-          serviceName={s.title} 
-          ctaText={s.primaryCta} 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" 
+        <ServiceHeroForm
+          title="Talk to a CA — free callback"
+          subtitle="Share details, our CA will connect within 30 mins."
+          serviceName={s.title}
+          ctaText={s.primaryCta}
+          formName="Service Hero Form"
+          ctaLocation="Route Hero Section"
         />
       </div>
     </section>

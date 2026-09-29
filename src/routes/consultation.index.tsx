@@ -107,13 +107,13 @@ function Hero() {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand shrink-0" /> 100% Confidential</span>
           </div>
         </div>
-        <ServiceHeroForm 
-          title="Book Consultation / Callback" 
-          subtitle="Share details, our CA will connect with you shortly." 
-          serviceName="General Service" 
-          ctaText="Request Callback" 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" 
+        <ServiceHeroForm
+          title="Book Consultation / Callback"
+          subtitle="Share details, our CA will connect with you shortly."
+          serviceName="General Service"
+          ctaText="Request Callback"
+          formName="Service Hero Form"
+          ctaLocation="Route Hero Section"
         />
       </div>
     </section>
@@ -403,7 +403,7 @@ function Trust() {
         <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">Client Reviews &amp; Trust</h2>
         <div className="mt-2 flex items-center justify-center gap-1.5 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400 shrink-0" />)}
-          <span className="font-bold text-ink">4.8/5 Client Rating</span>
+          <span className="font-bold text-ink"> 5/5 Client Rating</span>
         </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
           {reviews.map((r) => (

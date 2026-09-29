@@ -278,7 +278,7 @@ function PrivacyPage() {
               <article className="rounded-2xl border bg-white p-6 shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="h-11 w-11 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
-                  <Shield className="h-5 w-5" />
+                    <Shield className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-lg md:text-xl font-bold text-ink">Cookies Policy</h3>
                 </div>
@@ -385,7 +385,7 @@ function PrivacyPage() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
               ))}
-              <span className="ml-2 font-semibold text-ink">4.8/5 Client Rating</span>
+              <span className="ml-2 font-semibold text-ink">5/5 Client Rating</span>
             </div>
 
             <div className="mt-6 grid md:grid-cols-3 gap-4">

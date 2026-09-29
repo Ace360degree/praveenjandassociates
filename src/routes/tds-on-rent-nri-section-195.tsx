@@ -598,7 +598,7 @@ function TdsOnRentNriSection195Page() {
                       <Star key={i} className="h-5 w-5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-amber-300">4.8/5 Client Rating</span>
+                  <span className="text-sm font-bold text-amber-300">5/5 Client Rating</span>
                 </div>
                 <h2 className="text-2xl md:text-4xl font-extrabold mb-6">
                   Trusted by Tenants Paying Rent to NRI Landlords
@@ -662,9 +662,8 @@ function TdsOnRentNriSection195Page() {
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`h-5 w-5 text-muted-foreground transition-transform ${
-                        openFaq === idx ? "rotate-180 text-brand" : ""
-                      }`}
+                      className={`h-5 w-5 text-muted-foreground transition-transform ${openFaq === idx ? "rotate-180 text-brand" : ""
+                        }`}
                     />
                   </button>
                   {openFaq === idx && (

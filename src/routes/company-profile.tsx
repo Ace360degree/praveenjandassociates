@@ -279,7 +279,7 @@ function CompanyProfile() {
               <h2 className="font-display text-4xl font-bold text-foreground mb-12">Client Trust</h2>
               <div className="inline-flex items-center gap-2 rounded-full border-2 border-amber-400 bg-amber-50 px-6 py-3 text-lg font-bold text-amber-600 mb-12 shadow-sm">
                 <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
-                4.8/5 Client Rating
+                5/5 Client Rating
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 {[

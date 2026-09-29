@@ -525,7 +525,7 @@ function TrustSection() {
           </div>
           <div>
             <p className="text-sm font-semibold text-brand">Trust Section</p>
-            <h2 className="font-display text-2xl font-bold text-ink">4.8/5 Client Rating</h2>
+            <h2 className="font-display text-2xl font-bold text-ink">5/5 Client Rating</h2>
           </div>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">

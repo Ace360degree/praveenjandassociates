@@ -81,7 +81,7 @@ export function Hero() {
             </li>
           </ul>
           <div className="mt-4 sm:mt-6 flex flex-wrap gap-x-4 sm:gap-x-5 gap-y-2 text-xs sm:text-sm font-medium">
-            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400 shrink-0" /> 4.8/5 Client Rating</span>
+            <span className="inline-flex items-center gap-1.5"><Star className="h-4 w-4 fill-amber-400 text-amber-400 shrink-0" /> 5/5 Client Rating</span>
             <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-brand shrink-0" /> 1000+ Businesses Served</span>
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand shrink-0" /> Experienced Chartered Accountants</span>
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-brand shrink-0" /> Pan India Online Support</span>

@@ -250,13 +250,13 @@ function Hero() {
           </div>
         </div>
 
-        <ServiceHeroForm 
-          title="Free IEC Consultation" 
-          subtitle="Share your details and our team will connect within 30 mins." 
-          serviceName="IEC registration" 
-          ctaText="Request Callback" 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" pattern="B" 
+        <ServiceHeroForm
+          title="Free IEC Consultation"
+          subtitle="Share your details and our team will connect within 30 mins."
+          serviceName="IEC registration"
+          ctaText="Request Callback"
+          formName="Service Hero Form"
+          ctaLocation="Route Hero Section" pattern="B"
         />
       </div>
     </section>
@@ -472,7 +472,7 @@ function TrustSection() {
       <div className="container mx-auto max-w-5xl px-4">
         <div className="text-center">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
-            <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" /> 4.8/5 Client Rating
+            <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" /> 5/5 Client Rating
           </div>
           <h2 className="font-display text-2xl font-bold text-ink md:text-3xl">
             Trusted IEC Support
@@ -526,9 +526,8 @@ function FAQSection() {
               >
                 <span className="font-semibold text-ink">{item.q}</span>
                 <ChevronDown
-                  className={`h-5 w-5 shrink-0 text-brand transition-transform ${
-                    open === index ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 shrink-0 text-brand transition-transform ${open === index ? "rotate-180" : ""
+                    }`}
                 />
               </button>
               {open === index && (
