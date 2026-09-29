@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UpdateEmailMobileMcaRouteImport } from './routes/update-email-mobile-mca'
 import { Route as ThreeYearBalanceSheetRouteImport } from './routes/three-year-balance-sheet'
+import { Route as ThankyouRouteImport } from './routes/thankyou'
 import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as TdsTcsReturnFilingServicesRouteImport } from './routes/tds-tcs-return-filing-services'
 import { Route as TdsTcsNoticeResolutionRouteImport } from './routes/tds-tcs-notice-resolution'
@@ -152,6 +153,11 @@ const UpdateEmailMobileMcaRoute = UpdateEmailMobileMcaRouteImport.update({
 const ThreeYearBalanceSheetRoute = ThreeYearBalanceSheetRouteImport.update({
   id: '/three-year-balance-sheet',
   path: '/three-year-balance-sheet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankyouRoute = ThankyouRouteImport.update({
+  id: '/thankyou',
+  path: '/thankyou',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
@@ -998,6 +1004,7 @@ export interface FileRoutesByFullPath {
   '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
   '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thankyou': typeof ThankyouRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
@@ -1125,6 +1132,7 @@ export interface FileRoutesByTo {
   '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
   '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thankyou': typeof ThankyouRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
@@ -1262,6 +1270,7 @@ export interface FileRoutesById {
   '/tds-tcs-notice-resolution': typeof TdsTcsNoticeResolutionRoute
   '/tds-tcs-return-filing-services': typeof TdsTcsReturnFilingServicesRoute
   '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/thankyou': typeof ThankyouRoute
   '/three-year-balance-sheet': typeof ThreeYearBalanceSheetRoute
   '/update-email-mobile-mca': typeof UpdateEmailMobileMcaRoute
   '/accounting-audit-services/$slug': typeof AccountingAuditServicesSlugRoute
@@ -1400,6 +1409,7 @@ export interface FileRouteTypes {
     | '/tds-tcs-notice-resolution'
     | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
+    | '/thankyou'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
@@ -1527,6 +1537,7 @@ export interface FileRouteTypes {
     | '/tds-tcs-notice-resolution'
     | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
+    | '/thankyou'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
@@ -1663,6 +1674,7 @@ export interface FileRouteTypes {
     | '/tds-tcs-notice-resolution'
     | '/tds-tcs-return-filing-services'
     | '/terms-and-conditions'
+    | '/thankyou'
     | '/three-year-balance-sheet'
     | '/update-email-mobile-mca'
     | '/accounting-audit-services/$slug'
@@ -1800,6 +1812,7 @@ export interface RootRouteChildren {
   TdsTcsNoticeResolutionRoute: typeof TdsTcsNoticeResolutionRoute
   TdsTcsReturnFilingServicesRoute: typeof TdsTcsReturnFilingServicesRoute
   TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  ThankyouRoute: typeof ThankyouRoute
   ThreeYearBalanceSheetRoute: typeof ThreeYearBalanceSheetRoute
   UpdateEmailMobileMcaRoute: typeof UpdateEmailMobileMcaRoute
 }
@@ -1818,6 +1831,13 @@ declare module '@tanstack/react-router' {
       path: '/three-year-balance-sheet'
       fullPath: '/three-year-balance-sheet'
       preLoaderRoute: typeof ThreeYearBalanceSheetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thankyou': {
+      id: '/thankyou'
+      path: '/thankyou'
+      fullPath: '/thankyou'
+      preLoaderRoute: typeof ThankyouRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms-and-conditions': {
@@ -3017,6 +3037,7 @@ const rootRouteChildren: RootRouteChildren = {
   TdsTcsNoticeResolutionRoute: TdsTcsNoticeResolutionRoute,
   TdsTcsReturnFilingServicesRoute: TdsTcsReturnFilingServicesRoute,
   TermsAndConditionsRoute: TermsAndConditionsRoute,
+  ThankyouRoute: ThankyouRoute,
   ThreeYearBalanceSheetRoute: ThreeYearBalanceSheetRoute,
   UpdateEmailMobileMcaRoute: UpdateEmailMobileMcaRoute,
 }

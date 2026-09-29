@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight, MessageCircle, Star, ShieldCheck, BadgeCheck,
@@ -128,9 +128,9 @@ function AccountingPage() {
 
 function Hero() {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand/5 via-white to-brand/5">
@@ -169,45 +169,38 @@ function Hero() {
           <h3 className="font-display text-xl font-bold text-ink">Free Accounting Consultation</h3>
           <p className="text-sm text-muted-foreground mt-1">Apna business detail share kariye — CA expert 30 mins mein connect karega.</p>
 
-          {submitted ? (
-            <div className="py-6 text-center">
-              <CheckCircle2 className="h-10 w-10 text-green-500 mx-auto" />
-              <p className="mt-2 font-semibold text-sm">Thanks! Our CA team will reach out shortly.</p>
-            </div>
-          ) : (
-            <form
-              className="mt-5 space-y-3"
-              onSubmit={async (e) => {
-                e.preventDefault();
-                setIsSubmitting(true);
-                setErrorMsg("");
-                const res = await submitLead({
-                  name: form.name,
-                  phone: form.phone,
-                  email: form.email,
-                  serviceName: "Accounting & Audit",
-                  sourceType: "inline",
-                  formName: "Service Consultation Form",
-                  ctaLocation: "Accounting Hero Section"
-                });
-                setIsSubmitting(false);
-                if (res.success) {
-                  setSubmitted(true);
-                } else {
-                  setErrorMsg(res.message || "Failed to submit.");
-                }
-              }}
-            >
-              {errorMsg && <div className="p-2 bg-red-50 text-red-600 text-xs rounded border">{errorMsg}</div>}
-              <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-              <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-              <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
-              <button disabled={isSubmitting} type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                {isSubmitting ? "Sending..." : "Request Callback"} {!isSubmitting && <ArrowRight className="h-4 w-4" />}
-              </button>
-              <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
-            </form>
-          )}
+          <form
+            className="mt-5 space-y-3"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+              setErrorMsg("");
+              const res = await submitLead({
+                name: form.name,
+                phone: form.phone,
+                email: form.email,
+                serviceName: "Accounting & Audit",
+                sourceType: "inline",
+                formName: "Service Consultation Form",
+                ctaLocation: "Accounting Hero Section"
+              });
+              setIsSubmitting(false);
+              if (res.success) {
+                navigate({ to: "/thankyou" });
+              } else {
+                setErrorMsg(res.message || "Failed to submit.");
+              }
+            }}
+          >
+            {errorMsg && <div className="p-2 bg-red-50 text-red-600 text-xs rounded border">{errorMsg}</div>}
+            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Full Name" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Mobile Number" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email" className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand/30" />
+            <button disabled={isSubmitting} type="submit" className="w-full rounded-lg bg-brand text-white font-semibold py-3 shadow-lg shadow-brand/30 hover:bg-brand/90 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+              {isSubmitting ? "Sending..." : "Request Callback"} {!isSubmitting && <ArrowRight className="h-4 w-4" />}
+            </button>
+            <p className="text-xs text-muted-foreground text-center">No spam. 100% confidential.</p>
+          </form>
         </div>
       </div>
     </section>

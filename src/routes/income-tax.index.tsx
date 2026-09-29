@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Sparkles,
@@ -573,7 +573,7 @@ function ItHero() {
   const [form, setForm] = useState({ name: "", phone: "", serviceReq: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
@@ -661,78 +661,69 @@ function ItHero() {
                 Free Call
               </span>
             </div>
-            {submitted ? (
-              <div className="py-6 text-center">
-                <CheckCircle2 className="h-10 w-10 text-green-500 mx-auto" />
-                <p className="mt-2 font-semibold">
-                  Thanks! Our CA team will connect with you soon.
-                </p>
-              </div>
-            ) : (
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-                  setErrorMsg("");
-                  const res = await submitLead({
-                    name: form.name,
-                    phone: form.phone,
-                    email: "Not provided",
-                    serviceName: form.serviceReq || "Income Tax General",
-                    sourceType: "inline",
-                    formName: "Income Tax Hero Form",
-                    ctaLocation: "Hero Section",
-                  });
-                  setIsSubmitting(false);
-                  if (res.success) {
-                    setSubmitted(true);
-                  } else {
-                    setErrorMsg(res.message || "Failed to submit. Please try again.");
-                  }
-                }}
-                className="grid gap-3"
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setIsSubmitting(true);
+                setErrorMsg("");
+                const res = await submitLead({
+                  name: form.name,
+                  phone: form.phone,
+                  email: "Not provided",
+                  serviceName: form.serviceReq || "Income Tax General",
+                  sourceType: "inline",
+                  formName: "Income Tax Hero Form",
+                  ctaLocation: "Hero Section",
+                });
+                setIsSubmitting(false);
+                if (res.success) {
+                  navigate({ to: "/thankyou" });
+                } else {
+                  setErrorMsg(res.message || "Failed to submit. Please try again.");
+                }
+              }}
+              className="grid gap-3"
+            >
+              {errorMsg && (
+                <div className="p-3 bg-red-50 border border-red-100 text-red-600 text-sm rounded-lg">
+                  {errorMsg}
+                </div>
+              )}
+              <input
+                required
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                placeholder="Your Name"
+                className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+              <input
+                required
+                type="tel"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                pattern="[0-9]{10}"
+                placeholder="Mobile Number"
+                className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+              <select
+                required
+                value={form.serviceReq}
+                onChange={(e) => setForm({ ...form, serviceReq: e.target.value })}
+                className="h-11 rounded-xl border border-border px-4 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
               >
-                {errorMsg && (
-                  <div className="p-3 bg-red-50 border border-red-100 text-red-600 text-sm rounded-lg">
-                    {errorMsg}
-                  </div>
-                )}
-                <input
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Your Name"
-                  className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-                />
-                <input
-                  required
-                  type="tel"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  pattern="[0-9]{10}"
-                  placeholder="Mobile Number"
-                  className="h-11 rounded-xl border border-border px-4 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-                />
-                <select
-                  required
-                  value={form.serviceReq}
-                  onChange={(e) => setForm({ ...form, serviceReq: e.target.value })}
-                  className="h-11 rounded-xl border border-border px-4 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-                >
-                  <option value="">Income Tax Requirement</option>
-                  {FORM_OPTIONS.map((s) => (
-                    <option key={s}>{s}</option>
-                  ))}
-                </select>
-                <button disabled={isSubmitting} className="h-12 rounded-xl bg-gradient-red text-white font-semibold shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                  {isSubmitting ? "Submitting..." : "Request Callback"} <ArrowRight className="h-4 w-4" />
-                </button>
-                <p className="text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
-                  <ShieldCheck className="h-3.5 w-3.5" /> Quick response - No spam - Expert CA
-                  support
-                </p>
-              </form>
-            )}
+                <option value="">Income Tax Requirement</option>
+                {FORM_OPTIONS.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+              <button disabled={isSubmitting} className="h-12 rounded-xl bg-gradient-red text-white font-semibold shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                {isSubmitting ? "Submitting..." : "Request Callback"} <ArrowRight className="h-4 w-4" />
+              </button>
+              <p className="text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
+                <ShieldCheck className="h-3.5 w-3.5" /> Quick response - No spam - Expert CA
+                support
+              </p>
+            </form>
           </div>
         </div>
       </div>

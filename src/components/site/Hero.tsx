@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, MessageCircle, Phone, Play, Sparkles, ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { useNavigate } from "@tanstack/react-router";
 import praveen_home from "@/assets/praveen-home.jpg";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { submitLead } from "@/services/leadService";
@@ -7,10 +8,10 @@ import { submitLead } from "@/services/leadService";
 const SERVICES = ["ITR Filing", "GST", "TDS", "MCA/ROC", "Registration", "Accounting", "Consultation"];
 
 export function Hero() {
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [form, setForm] = useState({ name: "", phone: "", service: "" });
+  const navigate = useNavigate();
 
   const videoCardContent = (
     <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-soft bg-white p-2.5 sm:p-3 border border-border">
@@ -52,7 +53,7 @@ export function Hero() {
         <div className="absolute -bottom-20 -left-20 sm:-left-32 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-3.5 sm:px-4 pt-6 pb-12 sm:pt-12 sm:pb-16 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10 max-w-full">
+      <div className="container mx-auto px-3 sm:px-4 pt-6 pb-12 sm:pt-12 sm:pb-16 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
         <div className="lg:col-span-7 min-w-0">
           <div className="inline-flex max-w-full items-center gap-2 rounded-2xl sm:rounded-full bg-white border border-primary/20 px-3.5 py-1.5 text-xs font-semibold text-brand shadow-card leading-tight">
             <Sparkles className="h-3.5 w-3.5 shrink-0" />
@@ -111,51 +112,44 @@ export function Hero() {
               <h3 className="font-display font-bold text-base sm:text-lg">Talk to a CA</h3>
               <span className="text-xs font-semibold text-brand bg-primary/10 px-2 py-0.5 sm:py-1 rounded-full">Free</span>
             </div>
-            {submitted ? (
-              <div className="py-6 text-center">
-                <CheckCircle2 className="h-10 w-10 text-green-500 mx-auto" />
-                <p className="mt-2 font-semibold text-sm sm:text-base">Thanks! We'll reach out shortly.</p>
-              </div>
-            ) : (
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-                  setErrorMsg("");
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setIsSubmitting(true);
+                setErrorMsg("");
 
-                  const res = await submitLead({
-                    name: form.name,
-                    phone: form.phone,
-                    serviceName: form.service,
-                    sourceType: "inline",
-                    formName: "Homepage Hero Callback",
-                    ctaLocation: "Homepage Hero Section"
-                  });
+                const res = await submitLead({
+                  name: form.name,
+                  phone: form.phone,
+                  serviceName: form.service,
+                  sourceType: "inline",
+                  formName: "Homepage Hero Callback",
+                  ctaLocation: "Homepage Hero Section"
+                });
 
-                  setIsSubmitting(false);
-                  if (res.success) {
-                    setSubmitted(true);
-                  } else {
-                    setErrorMsg(res.message || "Failed to submit. Please try again.");
-                  }
-                }}
-                className="grid gap-3 w-full"
-              >
-                {errorMsg && <div className="p-2 bg-red-50 text-red-600 text-xs rounded border border-red-100">{errorMsg}</div>}
-                <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your Name" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
-                <input required type="tel" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} pattern="[0-9]{10}" placeholder="Mobile Number" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
-                <select required value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border">
-                  <option value="">Select Service</option>
-                  {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
-                </select>
-                <button disabled={isSubmitting} className="h-11 sm:h-12 rounded-xl bg-gradient-red text-white font-semibold text-sm sm:text-base shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer w-full box-border disabled:opacity-70 disabled:cursor-not-allowed">
-                  {isSubmitting ? "Submitting..." : "Talk To CA"} {!isSubmitting && <ArrowRight className="h-4 w-4 shrink-0" />}
-                </button>
-                <p className="text-[11px] sm:text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
-                  <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> No spam. Quick CA response.
-                </p>
-              </form>
-            )}
+                setIsSubmitting(false);
+                if (res.success) {
+                  navigate({ to: "/thankyou" });
+                } else {
+                  setErrorMsg(res.message || "Failed to submit. Please try again.");
+                }
+              }}
+              className="grid gap-3 w-full"
+            >
+              {errorMsg && <div className="p-2 bg-red-50 text-red-600 text-xs rounded border border-red-100">{errorMsg}</div>}
+              <input required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your Name" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
+              <input required type="tel" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} pattern="[0-9]{10}" placeholder="Mobile Number" className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border" />
+              <select required value={form.service} onChange={e => setForm({ ...form, service: e.target.value })} className="h-10 sm:h-11 rounded-xl border border-border px-3.5 sm:px-4 text-xs sm:text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 min-w-0 w-full box-border">
+                <option value="">Select Service</option>
+                {SERVICES.map(s => <option key={s} value={s}>{s}</option>)}
+              </select>
+              <button disabled={isSubmitting} className="h-11 sm:h-12 rounded-xl bg-gradient-red text-white font-semibold text-sm sm:text-base shadow-soft hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 cursor-pointer w-full box-border disabled:opacity-70 disabled:cursor-not-allowed">
+                {isSubmitting ? "Submitting..." : "Talk To CA"} {!isSubmitting && <ArrowRight className="h-4 w-4 shrink-0" />}
+              </button>
+              <p className="text-[11px] sm:text-xs text-muted-foreground text-center inline-flex items-center justify-center gap-1">
+                <ShieldCheck className="h-3.5 w-3.5 shrink-0" /> No spam. Quick CA response.
+              </p>
+            </form>
           </div>
         </div>
       </div>
