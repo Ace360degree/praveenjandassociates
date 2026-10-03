@@ -450,7 +450,7 @@ function Trust({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }
         <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">
           {s.trustHeading ?? "Trusted by Clients"}
         </h2>
-        <p className="mt-2 text-muted-foreground">{s.trustSubtitle ?? "4.8/5 Rating on Google"}</p>
+        <p className="mt-2 text-muted-foreground">{s.trustSubtitle ?? "5/5 Rating on Google"}</p>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />

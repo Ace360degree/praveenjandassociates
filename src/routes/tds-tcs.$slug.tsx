@@ -240,7 +240,7 @@ function TdsServicePage() {
               "Smooth and accurate filing every quarter.",
               "Very reliable CA support.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -377,7 +377,7 @@ function TdsServicePage() {
           <Process steps={s.process} note="👉 Simple and hassle-free execution." />
           {s.documents && <Documents items={s.documents} note="👉 Complete guidance provided." />}
           <TrustSection
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             reviews={[
               "Handled our joint rent TDS perfectly.",
               "No confusion, everything managed smoothly.",
@@ -513,7 +513,7 @@ function TdsServicePage() {
           <Process steps={s.process} note="👉 Hassle-free and accurate execution." />
           {s.documents && <Documents items={s.documents} note="👉 Complete guidance provided." />}
           <TrustSection
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             reviews={[
               "Handled our joint property TDS perfectly.",
               "No confusion, everything managed smoothly.",
@@ -649,7 +649,7 @@ function TdsServicePage() {
           <Process steps={s.process} note="👉 Simple and hassle-free process." />
           {s.documents && <Documents items={s.documents} note="👉 Minimal documentation required." />}
           <TrustSection
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             reviews={[
               "Handled property TDS smoothly.",
               "No confusion, very clear guidance.",
@@ -991,7 +991,7 @@ function TdsServicePage() {
           <WhoFor items={s.whoFor} />
           {s.documents && <Documents items={s.documents} note="👉 Full support provided for documentation." />}
           <TrustSection
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             reviews={[
               "Handled monthly TDS for my NRI landlord smoothly.",
               "Saved me from compliance issues and notices.",
@@ -1262,7 +1262,7 @@ function TdsServicePage() {
               "Very smooth and professional process.",
               "Great support for new business setup.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -1649,7 +1649,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Resolved my 26QB error quickly.", "Very smooth correction process.", "Professional and reliable CA support."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -1738,7 +1738,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Helped me download Form 16B quickly.", "Solved TRACES issue easily.", "Very smooth experience."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -1818,7 +1818,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Form 26QB filed without any hassle.", "Very smooth process for property TDS.", "Highly recommended CA service."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -1898,7 +1898,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Fixed challan mismatch issue quickly.", "Helped avoid return rejection.", "Very efficient CA support."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -1978,7 +1978,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Fixed my TDS return errors quickly.", "Helped avoid penalty and notices.", "Very professional CA service."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FinalCTA
@@ -2072,7 +2072,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Helped me fix Form 16 mismatch quickly.", "Got my TDS details sorted easily.", "Very helpful CA support."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FinalCTA
@@ -2147,7 +2147,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Helped me fix Form 16A mismatch quickly.", "Got my TDS credit correctly.", "Very supportive CA service."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FinalCTA
@@ -2221,7 +2221,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Helped me download Form 16B quickly.", "Solved TRACES issue easily.", "Very smooth experience."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="👉 Talk to CA Today"
           />
           <FinalCTA />
@@ -2329,7 +2329,7 @@ function TdsServicePage() {
 
           <TrustSection
             reviews={["Got Form 16C easily without confusion.", "Very smooth and fast support.", "Helped me complete rent TDS process."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -2408,7 +2408,7 @@ function TdsServicePage() {
 
           <TrustSection
             reviews={["Handled salary TDS for our company perfectly.", "No more errors in Form 16.", "Very reliable payroll compliance support."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -2488,7 +2488,7 @@ function TdsServicePage() {
           {s.documents && s.documents.length > 0 && <Documents items={s.documents} />}
           <TrustSection
             reviews={["Handled vendor TDS perfectly.", "No more confusion on TDS sections.", "Very reliable CA for compliance."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -2575,7 +2575,7 @@ function TdsServicePage() {
               "Great support for foreign transactions.",
               "Very knowledgeable CA team.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText=" Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -2662,7 +2662,7 @@ function TdsServicePage() {
               "Very smooth compliance process.",
               "Reliable CA for tax filings.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -2758,7 +2758,7 @@ function TdsServicePage() {
           <FAQ items={s.faqs} />
           <TrustSection
             reviews={["Helped me claim my TCS credit easily.", "Solved mismatch issue quickly.", "Very helpful CA support."]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FinalCTA
@@ -2803,7 +2803,7 @@ function TdsServicePage() {
               "Very smooth process for new business.",
               "Excellent CA support.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="👉 Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -2853,7 +2853,7 @@ function TdsServicePage() {
               "Solved TDS filing issue quickly.",
               "Very professional CA support.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -2902,7 +2902,7 @@ function TdsServicePage() {
               "Very helpful and quick service.",
               "Solved urgent compliance issue.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
           <FAQ items={s.faqs} />
@@ -3001,7 +3001,7 @@ function TrustSection({ reviews, ratingText, ctaText }: { reviews: string[]; rat
               <Star key={i} className="h-5 w-5 fill-current" />
             ))}
           </div>
-          <span className="text-ink ml-1">{ratingText || "4.8/5 Rating on Google"}</span>
+          <span className="text-ink ml-1">{ratingText || "5/5 Rating on Google"}</span>
         </div>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (

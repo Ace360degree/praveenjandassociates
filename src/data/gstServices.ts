@@ -115,7 +115,7 @@ export const GST_SERVICES: GstService[] = [
       "Photograph",
     ],
     trustHeading: "Trusted by New Businesses",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Perfect support for starting my business.",
       "Quick and hassle-free GST registration.",
@@ -288,7 +288,7 @@ export const GST_SERVICES: GstService[] = [
       "PAN & Aadhaar",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Added new warehouse to GST without any hassle.",
       "Smooth and quick APOB registration process.",
@@ -386,7 +386,7 @@ export const GST_SERVICES: GstService[] = [
       "PAN & Aadhaar",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Updated multiple business locations easily.",
       "Handled POB & APOB changes professionally.",
@@ -484,7 +484,7 @@ export const GST_SERVICES: GstService[] = [
       "PAN & Aadhaar",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Updated GST address quickly without hassle.",
       "Smooth and professional service.",
@@ -583,7 +583,7 @@ export const GST_SERVICES: GstService[] = [
       "Authorized signatory details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Helped me regain access to GST account quickly.",
       "Updated mobile and email without any hassle.",
@@ -680,7 +680,7 @@ export const GST_SERVICES: GstService[] = [
       "Supporting documents (if required)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Updated my GST name quickly without issues.",
       "Smooth and hassle-free amendment process.",
@@ -778,7 +778,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Closed my GST without any issues.",
       "Handled everything professionally and smoothly.",
@@ -875,7 +875,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank statements (if required)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Never missed GST deadline after working with them.",
       "Accurate filing and great support.",
@@ -973,7 +973,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank details (if required)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Quarterly GST filing made very easy.",
       "Great support for small business compliance.",
@@ -1070,7 +1070,7 @@ export const GST_SERVICES: GstService[] = [
       "Financial statements (if required)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled annual GST filing very professionally.",
       "Perfect reconciliation and no notices.",
@@ -1167,7 +1167,7 @@ export const GST_SERVICES: GstService[] = [
       "Audit reports (if applicable)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled GST audit and reconciliation perfectly.",
       "Very professional and detailed approach.",
@@ -1263,7 +1263,7 @@ export const GST_SERVICES: GstService[] = [
       "Financial data",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Completed GST closure smoothly without issues.",
       "Handled final return professionally.",
@@ -1362,7 +1362,7 @@ export const GST_SERVICES: GstService[] = [
       "Supporting documents",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled GST notice very professionally.",
       "Helped resolve assessment without issues.",
@@ -1460,7 +1460,7 @@ export const GST_SERVICES: GstService[] = [
       "Books of accounts",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Helped recover ITC we were missing.",
       "Perfect reconciliation and no more GST issues.",
@@ -1654,7 +1654,7 @@ export const GST_SERVICES: GstService[] = [
       "Books of accounts",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Recovered ITC we didn't even know we lost.",
       "Solved mismatch issues quickly.",
@@ -1753,7 +1753,7 @@ export const GST_SERVICES: GstService[] = [
       "Books of accounts",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Reduced my interest liability significantly.",
       "Handled notice professionally and quickly.",
@@ -1852,7 +1852,7 @@ export const GST_SERVICES: GstService[] = [
       "Books of accounts",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Saved us from major ITC reversal.",
       "Very detailed reconciliation and support.",
@@ -2150,7 +2150,7 @@ export const GST_SERVICES: GstService[] = [
       "Supporting documents",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Helped reduce GST demand significantly.",
       "Handled notice professionally and smoothly.",
@@ -2249,7 +2249,7 @@ export const GST_SERVICES: GstService[] = [
       "Supporting documents",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled ASMT-10 notice without any penalty.",
       "Very detailed and accurate response.",
@@ -2347,7 +2347,7 @@ export const GST_SERVICES: GstService[] = [
       "Financial data",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Excellent representation during GST hearing.",
       "Helped reduce tax demand significantly.",
@@ -2445,7 +2445,7 @@ export const GST_SERVICES: GstService[] = [
       "Financial data",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Helped reduce GST demand significantly.",
       "Handled appeal professionally.",
@@ -2543,7 +2543,7 @@ export const GST_SERVICES: GstService[] = [
       "Financial data",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Helped reduce GST demand significantly.",
       "Smooth and professional appeal process.",
@@ -2641,7 +2641,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Got export refund faster than expected.",
       "Smooth process with no rejection.",
@@ -2739,7 +2739,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank account details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Recovered excess GST smoothly.",
       "Very efficient refund handling.",
@@ -2837,7 +2837,7 @@ export const GST_SERVICES: GstService[] = [
       "Bank account details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Recovered huge ITC amount smoothly.",
       "Very efficient refund process.",
@@ -2935,7 +2935,7 @@ export const GST_SERVICES: GstService[] = [
       "Relevant documents",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Solved a very complex GST issue.",
       "Great advisory support.",
@@ -3034,7 +3034,7 @@ export const GST_SERVICES: GstService[] = [
       "Address proof",
     ],
     trustHeading: "TRUSTED BY SELLERS",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled GST for my Amazon business perfectly.",
       "No more TCS mismatch issues.",
@@ -3131,7 +3131,7 @@ export const GST_SERVICES: GstService[] = [
       "Previous LUT (if applicable)",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Got LUT approved within a day.",
       "Very smooth and quick process.",
@@ -3230,7 +3230,7 @@ export const GST_SERVICES: GstService[] = [
       "Business details",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Saved huge GST using 0.1% scheme.",
       "Very smooth compliance support.",
@@ -3328,7 +3328,7 @@ export const GST_SERVICES: GstService[] = [
       "Authorization documents",
     ],
     trustHeading: "TRUSTED BY BUSINESSES",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Handled multi-state GST smoothly.",
       "Great support for business expansion.",
@@ -3426,7 +3426,7 @@ export const GST_SERVICES: GstService[] = [
       "Books of accounts",
     ],
     trustHeading: "TRUSTED BY SELLERS",
-    trustRating: "4.8/5 Rating on Google",
+    trustRating: "5/5 Rating on Google",
     trustQuotes: [
       "Recovered missing TCS credit easily.",
       "Solved mismatch issues quickly.",

@@ -971,7 +971,7 @@ function ItReviews() {
         <SectionTitle
           eyebrow="Google Reviews"
           title="Trusted by Individuals and Businesses"
-          sub="4.8/5 rating and 120+ verified client reviews"
+          sub="5/5 rating and 120+ verified client reviews"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {REVIEWS.map((r) => (

@@ -362,7 +362,7 @@ export function Reviews() {
             </h2>
             <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground flex items-center gap-1.5">
               <Star className="h-4 w-4 sm:h-5 sm:w-5 fill-amber-400 text-amber-400" />{" "}
-              <span className="font-bold text-foreground">4.8/5</span> Average Client Rating
+              <span className="font-bold text-foreground">5/5</span> Average Client Rating
             </p>
           </div>
           <a

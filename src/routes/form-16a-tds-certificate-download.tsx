@@ -211,14 +211,14 @@ function Form16APage() {
               </div>
             </div>
 
-            <ServiceHeroForm 
-          title="Talk to a CA — free callback" 
-          subtitle="Share details, our CA will connect within 30 mins." 
-          serviceName={SERVICE_DATA.title} 
-          ctaText={SERVICE_DATA.primaryCta} 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" 
-        />
+            <ServiceHeroForm
+              title="Talk to a CA — free callback"
+              subtitle="Share details, our CA will connect within 30 mins."
+              serviceName={SERVICE_DATA.title}
+              ctaText={SERVICE_DATA.primaryCta}
+              formName="Service Hero Form"
+              ctaLocation="Route Hero Section"
+            />
           </div>
         </section>
 
@@ -443,7 +443,7 @@ function Form16APage() {
                   <Star key={i} className="h-5 w-5 fill-current" />
                 ))}
               </div>
-              <span className="text-ink ml-1">4.8/5 Rating on Google</span>
+              <span className="text-ink ml-1">5/5 Rating on Google</span>
             </div>
             <div className="mt-8 grid md:grid-cols-3 gap-6">
               {[
@@ -487,9 +487,8 @@ function Form16APage() {
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${
-                        openFaq === i ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {openFaq === i && (

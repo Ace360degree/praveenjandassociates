@@ -553,7 +553,7 @@ function TdsTcsMainPage() {
                       <Star key={i} className="h-5 w-5 fill-amber-400" />
                     ))}
                   </div>
-                  <span className="text-lg font-bold">4.8/5 Rating on Google</span>
+                  <span className="text-lg font-bold">5/5 Rating on Google</span>
                 </div>
 
                 <a
@@ -632,9 +632,8 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       >
         <span>{q}</span>
         <ChevronDown
-          className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${
-            open ? "rotate-180 text-brand" : ""
-          }`}
+          className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180 text-brand" : ""
+            }`}
         />
       </button>
       {open && (

@@ -226,7 +226,7 @@ function TdsTcsHub() {
               </div>
               <div className="flex items-center gap-2 p-3 rounded-lg bg-white border shadow-sm">
                 <Star className="h-4 w-4 fill-amber-400 text-amber-400 shrink-0" />
-                <span className="text-xs font-medium text-ink">4.8/5 Rated on Google</span>
+                <span className="text-xs font-medium text-ink">5/5 Rated on Google</span>
               </div>
             </div>
           </div>
@@ -554,7 +554,7 @@ function TdsTcsHub() {
                       <Star key={i} className="h-5 w-5 fill-amber-400" />
                     ))}
                   </div>
-                  <span className="text-lg font-bold">4.8/5 Rating on Google</span>
+                  <span className="text-lg font-bold">5/5 Rating on Google</span>
                 </div>
 
                 <a
@@ -633,9 +633,8 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       >
         <span>{q}</span>
         <ChevronDown
-          className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${
-            open ? "rotate-180 text-brand" : ""
-          }`}
+          className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${open ? "rotate-180 text-brand" : ""
+            }`}
         />
       </button>
       {open && (

@@ -50,8 +50,8 @@ export const ITR_SERVICES: ItrService[] = [
       "Legal and compliance complications",
     ],
     whatIs: {
-      title: "Can you file ITR for last 4 years?",
-      lead:
+      heading: "Can you file ITR for last 4 years?",
+      note:
         "Yes - through the correct updated return or compliance route, depending on the applicable timelines and facts of your case.",
       points: [
         "Updated Return (ITR-U) can help where timelines allow",
@@ -96,7 +96,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if any)",
       "Notices (if received)",
     ],
-    trustQuotes: [
+    trust: [
       "Had 4 years pending - everything handled professionally.",
       "Helped me become compliant without stress.",
       "Highly experienced and supportive CA team.",
@@ -157,8 +157,8 @@ export const ITR_SERVICES: ItrService[] = [
       "Legal and compliance complications",
     ],
     whatIs: {
-      title: "Can you file ITR for last 5 years?",
-      lead:
+      heading: "Can you file ITR for last 5 years?",
+      note:
         "Yes - through updated return or the correct compliance strategy, depending on the applicable timelines and facts of your case.",
       points: [
         "Updated Return (ITR-U) can help where timelines allow",
@@ -203,7 +203,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if any)",
       "Notices (if received)",
     ],
-    trustQuotes: [
+    trust: [
       "Had 5 years pending - everything handled professionally.",
       "Helped me become compliant without stress.",
       "Highly experienced and reliable CA service.",
@@ -310,7 +310,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Bank statements",
     ],
     trustHeading: "Trusted by Property Owners",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had rental income confusion, everything was explained clearly.",
       "They helped me claim deductions and reduce my tax.",
@@ -2168,7 +2168,7 @@ export const ITR_SERVICES: ItrService[] = [
     finalCtaLead: "Get expert CA support for your business today.",
     finalCtaPrimary: "Start Your OPC ITR Filing Now",
     finalCtaSecondary: "Consult CA on WhatsApp",
-  },  {
+  }, {
     slug: "private-limited-company-tax-filing-mumbai",
     title: "Private Limited Company ITR-6",
     h1: "ITR-6 Filing for Private Limited Company in Mumbai – Expert CA for Corporate Tax Compliance",
@@ -3086,8 +3086,8 @@ export const ITR_SERVICES: ItrService[] = [
       "Issues with loans, visas, or financial verification",
     ],
     whatIs: {
-      title: "Can you file ITR for last 3 years?",
-      lead:
+      heading: "Can you file ITR for last 3 years?",
+      note:
         "Yes, in many cases you can still regularize pending returns with the correct filing route. We assess your case carefully and choose the legally appropriate option.",
       points: [
         "Updated Return (ITR-U) can help for older years where applicable",
@@ -3132,7 +3132,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if any)",
       "Any notice received",
     ],
-    trustQuotes: [
+    trust: [
       "Had 3 years pending - everything handled professionally.",
       "Helped me avoid bigger issues and become compliant.",
       "Very supportive and knowledgeable CA team.",
@@ -3988,7 +3988,7 @@ export const ITR_SERVICES: ItrService[] = [
         a: "Yes. Expert handling helps ensure the response is correct and timely.",
       },
     ],
-    moreTitle: "SEO Alignment",
+    moreHeading: "SEO Alignment",
     moreLead: "Keywords and search phrases aligned with the page content.",
     more: [
       "Reply to income tax notice",

@@ -242,7 +242,7 @@ function TdsOnRentMultiplePartiesPage() {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Star className="h-4 w-4 text-amber-500 fill-amber-500" />
-                    <span>4.8/5 Rating on Google</span>
+                    <span>5/5 Rating on Google</span>
                   </div>
                 </div>
               </div>
@@ -570,7 +570,7 @@ function TdsOnRentMultiplePartiesPage() {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/20 px-3.5 py-1.5 rounded-full text-amber-400 text-xs font-bold mb-3">
                 <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-                4.8/5 Rating on Google
+                5/5 Rating on Google
               </div>
               <h2 className="font-display text-2xl md:text-3xl font-bold text-white">
                 Trusted by Joint Tenants &amp; Landlords Across India
@@ -650,9 +650,8 @@ function TdsOnRentMultiplePartiesPage() {
                     >
                       <span className="text-base">{faq.q}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-muted-foreground transition-transform duration-200 shrink-0 ${
-                          isOpen ? "rotate-180 text-brand" : ""
-                        }`}
+                        className={`h-5 w-5 text-muted-foreground transition-transform duration-200 shrink-0 ${isOpen ? "rotate-180 text-brand" : ""
+                          }`}
                       />
                     </button>
                     {isOpen && (

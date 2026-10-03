@@ -157,13 +157,13 @@ function Hero({ s }: { s: ReturnType<typeof getGstServiceBySlug> & {} }) {
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Online</span>
           </div>
         </div>
-        <ServiceHeroForm 
-          title="Get expert CA help — free callback" 
-          subtitle="Share details, our CA will call within 30 mins." 
-          serviceName={s.title} 
-          ctaText={s.primaryCta} 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" 
+        <ServiceHeroForm
+          title="Get expert CA help — free callback"
+          subtitle="Share details, our CA will call within 30 mins."
+          serviceName={s.title}
+          ctaText={s.primaryCta}
+          formName="Service Hero Form"
+          ctaLocation="Route Hero Section"
         />
       </div>
     </section>
@@ -319,7 +319,7 @@ function Trust() {
         <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">Trusted by New Businesses</h2>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold">4.8/5 Rating on Google</span>
+          <span className="ml-2 font-semibold">5/5 Rating on Google</span>
         </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (
