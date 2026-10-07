@@ -420,7 +420,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Rent receipts (if applicable)",
     ],
     trustHeading: "Trusted by Salaried Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "As a working professional, I had no idea about deductions. They helped me save tax.",
       "Quick and smooth ITR filing. Everything handled on WhatsApp.",
@@ -519,7 +519,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Property details (if applicable)",
     ],
     trustHeading: "Trusted by Senior Citizens",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Very helpful and patient team. Made filing easy for me.",
       "Explained everything clearly and handled the process smoothly.",
@@ -618,7 +618,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Investment proofs",
     ],
     trustHeading: "Trusted by Working Professionals",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had salary and investment income confusion — everything was handled perfectly.",
       "They ensured all my income was reported correctly.",
@@ -717,7 +717,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Bank statements",
     ],
     trustHeading: "Trusted by Working Professionals",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had both HRA and rental income confusion — they handled everything perfectly.",
       "Saved a lot of tax with proper guidance.",
@@ -817,7 +817,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if available)",
     ],
     trustHeading: "Trusted by Small Business Owners",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "44AD ke through filing easy ho gaya - no tension of accounts.",
       "Simple process and quick service.",
@@ -917,7 +917,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if available)",
     ],
     trustHeading: "Trusted by Freelancers",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Freelancer hone ke baad tax filing easy ho gaya.",
       "No need to maintain accounts - very convenient.",
@@ -1019,7 +1019,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Investors",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Stock and mutual fund gains were handled perfectly.",
       "Helped me calculate capital gains correctly and save tax.",
@@ -1121,7 +1121,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Investors",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had multiple stock transactions - everything was handled perfectly.",
       "They helped me adjust losses and save tax.",
@@ -1224,7 +1224,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Property Owners",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Property sale tax calculation was done perfectly.",
       "Saved a lot of tax using proper exemptions.",
@@ -1328,7 +1328,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by High-Income Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had multiple income sources - everything was handled perfectly.",
       "Helped me structure my income and save tax.",
@@ -1420,7 +1420,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by High-Income Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had multiple income sources - everything was handled perfectly.",
       "Helped me structure my income and save tax.",
@@ -1508,7 +1508,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Traders",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "F&O turnover and audit handled perfectly.",
       "Helped me carry forward losses correctly.",
@@ -1608,7 +1608,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Stock Traders",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Intraday income was filed correctly without any confusion.",
       "Helped me carry forward losses properly.",
@@ -1711,7 +1711,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Agents & Consultants",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled my commission income perfectly.",
       "Helped me claim expenses and reduce tax.",
@@ -1813,7 +1813,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Business Partners",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Partner income filing was handled perfectly.",
       "Clear explanation of tax treatment and smooth filing.",
@@ -1915,7 +1915,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Businesses",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled our LLP tax filing smoothly.",
       "Professional and reliable service for firm compliance.",
@@ -2026,7 +2026,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Partnership Firms",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled both firm and partner filing perfectly.",
       "Clear understanding of partnership taxation.",
@@ -2135,7 +2135,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Business Owners",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled my OPC filing professionally.",
       "Very smooth and compliant tax filing.",
@@ -2235,7 +2235,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Companies",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled our company tax filing professionally.",
       "Very reliable CA for corporate compliance.",
@@ -2347,7 +2347,7 @@ export const ITR_SERVICES: ItrService[] = [
       "AIS / TIS download if available",
     ],
     trustHeading: "Trusted by Crypto Investors",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had multiple crypto trades - everything was handled perfectly.",
       "Clear explanation of 30% tax and TDS.",
@@ -2443,7 +2443,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled my prize income filing smoothly.",
       "Clear explanation of tax and compliance.",
@@ -2539,7 +2539,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Helped me understand agricultural income taxation clearly.",
       "Properly handled partial integration calculation.",
@@ -2636,7 +2636,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by NRI Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Helped me claim TDS refund smoothly.",
       "Very clear guidance on NRI taxation.",
@@ -2734,7 +2734,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR",
     ],
     trustHeading: "Trusted by Global Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled my foreign income taxation perfectly.",
       "Helped me claim foreign tax credit easily.",
@@ -2829,7 +2829,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Notice (if any)",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Missed my deadline - they handled everything smoothly.",
       "Corrected my ITR without any issues.",
@@ -2940,7 +2940,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Notice (if received)",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Helped me update my return and avoid issues.",
       "Smooth and professional handling of ITR-U.",
@@ -3024,7 +3024,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous ITR (if any)",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Had 2 years pending - everything handled smoothly.",
       "Helped me become compliant without stress.",
@@ -3240,7 +3240,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Investment proofs",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Helped me revise my ITR quickly and accurately.",
       "Avoided potential notice by correcting on time.",
@@ -3350,7 +3350,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Tax payment proofs",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Resolved my tax mismatch issue quickly.",
       "Helped me get correct refund after rectification.",
@@ -3460,7 +3460,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Investment proofs",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Received 139(9) notice - they handled it perfectly.",
       "Quick response and smooth correction process.",
@@ -3559,7 +3559,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Bank statements",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Got tax demand - they helped resolve it quickly.",
       "Explained intimation clearly and saved me from mistake.",
@@ -3660,7 +3660,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Business records (if applicable)",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Received 142(1) notice - handled professionally.",
       "Clear guidance and proper response submission.",
@@ -3761,7 +3761,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Supporting documents",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Received 148A notice - handled very professionally.",
       "Strong response helped avoid further issues.",
@@ -3860,7 +3860,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Supporting documents",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Handled my reassessment case professionally.",
       "Helped reduce tax liability significantly.",
@@ -3960,7 +3960,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Supporting proofs",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Received notice - they handled everything smoothly.",
       "Clear explanation and quick resolution.",
@@ -4151,7 +4151,7 @@ export const ITR_SERVICES: ItrService[] = [
       "Previous correspondence",
     ],
     trustHeading: "Trusted by Clients",
-    trustSubtitle: "4.8/5 Rating on Google",
+    trustSubtitle: "5/5 Rating on Google",
     trust: [
       "Helped reduce my tax demand significantly.",
       "Handled appeal process professionally.",

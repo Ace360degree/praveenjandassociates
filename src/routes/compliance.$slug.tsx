@@ -406,7 +406,7 @@ function BundlePage() {
               </aside>
               <aside className="rounded-2xl border bg-ink p-6 md:p-8 shadow-sm text-white">
                 <p className="text-sm text-white/70">Client Rating</p>
-                <p className="mt-2 text-3xl font-bold">4.8/5</p>
+                <p className="mt-2 text-3xl font-bold">5/5</p>
                 <p className="mt-4 text-white/85">
                   Affordable compliance support, GST guidance and tax help for small businesses.
                 </p>

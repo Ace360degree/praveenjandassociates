@@ -484,11 +484,11 @@ function Trust({ s }: { s: NonNullable<ReturnType<typeof getItrServiceBySlug>> }
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
           ))}
-          <span className="ml-2 font-semibold">4.8/5 on Google</span>
+          <span className="ml-2 font-semibold">5/5 on Google</span>
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
           ))}
-          <span className="ml-2 font-semibold">4.8/5</span>
+          <span className="ml-2 font-semibold">5/5</span>
         </div>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (

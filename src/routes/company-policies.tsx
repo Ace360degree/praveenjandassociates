@@ -234,7 +234,7 @@ function CompanyPolicies() {
                 {
                   title: "Client Rating",
                   points: [
-                    "4.8/5 Rating on Google",
+                    "5/5 Rating on Google",
                     "Simple explanations",
                     "Quick support",
                     "Professional guidance",

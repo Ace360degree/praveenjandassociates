@@ -225,7 +225,7 @@ function TdsTcsMainPage() {
               </div>
               <div className="flex items-center gap-2 p-3 rounded-lg bg-white border shadow-sm">
                 <Star className="h-4 w-4 fill-amber-400 text-amber-400 shrink-0" />
-                <span className="text-xs font-medium text-ink">4.8/5 Rated on Google</span>
+                <span className="text-xs font-medium text-ink">5/5 Rated on Google</span>
               </div>
             </div>
           </div>

@@ -831,7 +831,7 @@ function TdsServicePage() {
           <WhoFor items={s.whoFor} />
           {s.documents && <Documents items={s.documents} note="👉 Complete assistance provided." />}
           <TrustSection
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             reviews={[
               "Handled complete TDS filing for NRI property purchase.",
               "Saved us from major compliance issues.",
@@ -1141,7 +1141,7 @@ function TdsServicePage() {
           <WhoFor items={s.whoFor} />
           {s.documents && <Documents items={s.documents} note="👉 Our team will guide you step-by-step." />}
           <TrustSection
-            ratingText="4.8/5 Client Satisfaction"
+            ratingText="5/5 Client Satisfaction"
             reviews={[
               "Resolved my TDS demand quickly.",
               "Very knowledgeable and responsive CA team.",
@@ -1440,7 +1440,7 @@ function TdsServicePage() {
               "Very professional handling of NRI case.",
               "Smooth and quick approval process.",
             ]}
-            ratingText="4.8/5 Rating on Google"
+            ratingText="5/5 Rating on Google"
             ctaText="Talk to CA Today"
           />
 
@@ -3008,7 +3008,7 @@ function TdsServicePage() {
               ? ["Got my 15CA/15CB done within a day.", "Smooth remittance process without any issues.", "Highly professional and quick service."]
               : ["Corrected TAN without any hassle.", "Solved TDS filing issue quickly.", "Very professional CA support."]
             }
-            ratingText={s.slug === "form-15ca-15cb-foreign-remittance" ? "5/5 Client Rating" : "4.8/5 Rating on Google"}
+            ratingText={s.slug === "form-15ca-15cb-foreign-remittance" ? "5/5 Client Rating" : "5/5 Rating on Google"}
             ctaText={s.slug === "form-15ca-15cb-foreign-remittance" ? "👉 Talk to a CA Today" : "👉 Talk to CA Today"}
           />
         )}
@@ -4155,7 +4155,7 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getTdsServiceBySlug>> })
           <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> 100% Compliant</span>

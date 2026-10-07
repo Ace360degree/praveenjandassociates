@@ -192,7 +192,7 @@ function Hero({ b, form, setForm }: { b: ComplianceBundle; form: FormState; setF
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1"><ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified</span>
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Annual Compliance</span>
@@ -292,7 +292,7 @@ function PackagesSection({ b, form, setForm }: { b: ComplianceBundle; form: Form
         </div>
         <div className="mt-8 grid md:grid-cols-2 xl:grid-cols-4 gap-5">
           {b.packages.map((pkg, idx) => (
-            <article key={pkg.name} className={"rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow " + (idx === b.packages.length - 1 ? "border-brand/40" : "") }>
+            <article key={pkg.name} className={"rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow " + (idx === b.packages.length - 1 ? "border-brand/40" : "")}>
               <div className="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
                 {idx === 0 ? <Building2 className="h-6 w-6" /> : idx === 1 ? <ClipboardCheck className="h-6 w-6" /> : idx === 2 ? <FileText className="h-6 w-6" /> : <Briefcase className="h-6 w-6" />}
               </div>
@@ -451,7 +451,7 @@ function AudienceSection() {
           <div className="mt-6 rounded-2xl bg-ink p-5 text-white flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm text-white/70">Client Rating</p>
-              <p className="text-2xl font-bold">4.8/5</p>
+              <p className="text-2xl font-bold">5/5</p>
             </div>
             <a href="https://wa.me/918169887643" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2 font-semibold text-ink">
               <MessageCircle className="h-4 w-4" /> Consult a CA Today

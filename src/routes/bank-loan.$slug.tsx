@@ -175,13 +175,13 @@ function Hero({ s }: { s: NonNullable<ReturnType<typeof getBankLoanServiceBySlug
             <span className="flex items-center gap-1"><BadgeCheck className="h-4 w-4 text-brand" /> Bank-Ready</span>
           </div>
         </div>
-        <ServiceHeroForm 
-          title="Talk to a CA — free callback" 
-          subtitle="Share details, our CA will connect within 30 mins." 
-          serviceName={s.title} 
-          ctaText={s.primaryCta} 
-          formName="Service Hero Form" 
-          ctaLocation="Route Hero Section" 
+        <ServiceHeroForm
+          title="Talk to a CA — free callback"
+          subtitle="Share details, our CA will connect within 30 mins."
+          serviceName={s.title}
+          ctaText={s.primaryCta}
+          formName="Service Hero Form"
+          ctaLocation="Route Hero Section"
         />
       </div>
     </section>
@@ -335,7 +335,7 @@ function Trust() {
         <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-ink break-words">Trusted by Businesses & Individuals</h2>
         <div className="mt-3 flex items-center justify-center gap-1 text-sm">
           {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />)}
-          <span className="ml-2 font-semibold">4.8/5 on Google</span>
+          <span className="ml-2 font-semibold">5/5 on Google</span>
         </div>
         <div className="mt-8 grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {reviews.map((r) => (

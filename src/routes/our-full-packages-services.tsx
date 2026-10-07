@@ -253,7 +253,7 @@ function Hero() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
               ))}
-              <span className="ml-1 font-semibold text-ink">4.8/5</span>
+              <span className="ml-1 font-semibold text-ink">5/5</span>
             </div>
             <span className="flex items-center gap-1">
               <ShieldCheck className="h-4 w-4 text-emerald-600" /> CA Verified
@@ -571,7 +571,7 @@ function AudienceSection() {
           <div className="mt-6 rounded-2xl bg-ink p-5 text-white flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm text-white/70">Client Rating</p>
-              <p className="text-2xl font-bold">4.8/5</p>
+              <p className="text-2xl font-bold">5/5</p>
             </div>
             <a
               href="https://wa.me/918169887643"
@@ -629,7 +629,7 @@ function TrustSection() {
           <div className="mt-6 rounded-2xl bg-white/10 p-5 flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-sm text-white/70">Client Rating</p>
-              <p className="text-2xl font-bold">4.8/5</p>
+              <p className="text-2xl font-bold">5/5</p>
             </div>
             <a
               href="https://wa.me/918169887643"

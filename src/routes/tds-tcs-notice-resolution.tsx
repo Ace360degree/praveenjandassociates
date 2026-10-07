@@ -522,7 +522,7 @@ function TdsTcsNoticeResolutionPage() {
                       <Star key={i} className="h-5 w-5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-amber-300">4.8/5 Client Satisfaction</span>
+                  <span className="text-sm font-bold text-amber-300">5/5 Client Satisfaction</span>
                 </div>
                 <h2 className="text-2xl md:text-4xl font-extrabold mb-6">
                   Trusted CA Team for TDS Notice Resolution
@@ -586,9 +586,8 @@ function TdsTcsNoticeResolutionPage() {
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`h-5 w-5 text-muted-foreground transition-transform ${
-                        openFaq === idx ? "rotate-180 text-brand" : ""
-                      }`}
+                      className={`h-5 w-5 text-muted-foreground transition-transform ${openFaq === idx ? "rotate-180 text-brand" : ""
+                        }`}
                     />
                   </button>
                   {openFaq === idx && (
