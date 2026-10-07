@@ -1,4 +1,4 @@
-﻿import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -22,16 +22,31 @@ import {
   COMPLIANCE_BUNDLES,
   type ComplianceBundle,
 } from "@/data/compliancePackages";
+import { getCMSPageBySlug } from "@/services/cmsApi";
+import { DynamicBlockRenderer } from "@/components/cms/DynamicBlockRenderer";
 
 export const Route = createFileRoute("/compliance/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const cmsPage = await getCMSPageBySlug(params.slug);
+    if (cmsPage && cmsPage.status === 'published') {
+      return { isCMS: true, page: cmsPage };
+    }
     const bundle = getComplianceBundle(params.slug);
     if (!bundle) throw notFound();
-    return { bundle };
+    return { isCMS: false, bundle };
   },
   head: ({ loaderData }) => {
-    const b = loaderData?.bundle;
-    if (!b) return {};
+    const data = loaderData;
+    if (!data) return {};
+    if (data.isCMS) {
+      return {
+        meta: [
+          { title: data.page.meta_title || data.page.title },
+          { name: "description", content: data.page.meta_description || "" },
+        ],
+      };
+    }
+    const b = data.bundle;
     return {
       meta: [
         { title: b.metaTitle },
@@ -68,7 +83,20 @@ export const Route = createFileRoute("/compliance/$slug")({
 });
 
 function BundlePage() {
-  const { bundle: b } = Route.useLoaderData() as { bundle: ComplianceBundle };
+  const data = Route.useLoaderData() as any;
+  if (data?.isCMS) {
+    return (
+      <div className="min-h-screen flex flex-col bg-white text-ink">
+        <Header />
+        <main className="flex-1">
+          <DynamicBlockRenderer blocks={data.page.blocks_json} pageTitle={data.page.title} />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+  const b = data.bundle as ComplianceBundle;
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [form, setForm] = useState({ name: "", phone: "", email: "", pkg: "" });
 

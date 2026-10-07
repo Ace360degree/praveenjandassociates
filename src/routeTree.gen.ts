@@ -9,725 +9,152 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as UpdateEmailMobileMcaRouteImport } from './routes/update-email-mobile-mca'
-import { Route as ThreeYearBalanceSheetRouteImport } from './routes/three-year-balance-sheet'
-import { Route as ThankyouRouteImport } from './routes/thankyou'
-import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
-import { Route as TdsTcsReturnFilingServicesRouteImport } from './routes/tds-tcs-return-filing-services'
-import { Route as TdsTcsNoticeResolutionRouteImport } from './routes/tds-tcs-notice-resolution'
-import { Route as TdsOnRentNriSection195RouteImport } from './routes/tds-on-rent-nri-section-195'
-import { Route as TdsOnRentMultiplePartiesRouteImport } from './routes/tds-on-rent-multiple-parties'
-import { Route as TdsOnPropertySection194iaRouteImport } from './routes/tds-on-property-section-194ia'
-import { Route as TdsOnPropertyNriSection195RouteImport } from './routes/tds-on-property-nri-section-195'
-import { Route as TdsOnPropertyMultipleBuyersSellersRouteImport } from './routes/tds-on-property-multiple-buyers-sellers'
-import { Route as TdsChallanCorrectionOnlineRouteImport } from './routes/tds-challan-correction-online'
-import { Route as TdsCertificatesForm1616aRouteImport } from './routes/tds-certificates-form-16-16a'
-import { Route as TaxRegistrationServicesRouteImport } from './routes/tax-registration-services'
-import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax-holiday-section-80iac-services'
-import { Route as TanRegistrationServicesIndiaRouteImport } from './routes/tan-registration-services-india'
-import { Route as TanCorrectionServicesRouteImport } from './routes/tan-correction-services'
-import { Route as SurrenderDuplicateDinRouteImport } from './routes/surrender-duplicate-din'
-import { Route as StrikeOffCompanyLlpRouteImport } from './routes/strike-off-company-llp'
-import { Route as StartupOutsourcingServicesRouteImport } from './routes/startup-outsourcing-services'
-import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
-import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
-import { Route as StartupGrantLoanAssistanceServicesRouteImport } from './routes/startup-grant-loan-assistance-services'
-import { Route as SoleProprietorshipRegistrationServicesRouteImport } from './routes/sole-proprietorship-registration-services'
-import { Route as SmallBusinessAccountingTaxServicesRouteImport } from './routes/small-business-accounting-tax-services'
-import { Route as ShopAndEstablishmentRegistrationServicesRouteImport } from './routes/shop-and-establishment-registration-services'
-import { Route as Section8CompanyRegistrationRouteImport } from './routes/section-8-company-registration'
-import { Route as SecretarialRecordsPreparationMaintenanceRouteImport } from './routes/secretarial-records-preparation-maintenance'
-import { Route as RocOtherFormsInc20aDir6Dpt3RouteImport } from './routes/roc-other-forms-inc20a-dir6-dpt3'
-import { Route as RevisedTdsTcsReturnFilingRouteImport } from './routes/revised-tds-tcs-return-filing'
-import { Route as ResignationOfPartnerInLlpRouteImport } from './routes/resignation-of-partner-in-llp'
-import { Route as ProjectedBalanceSheetRouteImport } from './routes/projected-balance-sheet'
-import { Route as ProjectReportForBankLoanRouteImport } from './routes/project-report-for-bank-loan'
-import { Route as ProfitAndLossStatementServicesRouteImport } from './routes/profit-and-loss-statement-services'
-import { Route as ProfessionalTaxRegistrationServicesRouteImport } from './routes/professional-tax-registration-services'
-import { Route as PrivateLimitedCompanyFormationRouteImport } from './routes/private-limited-company-formation'
-import { Route as PrivateLimitedCompanyRouteImport } from './routes/private-limited-company'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as PersonalAccountingServicesRouteImport } from './routes/personal-accounting-services'
-import { Route as PartnershipFirmRegistrationServicesRouteImport } from './routes/partnership-firm-registration-services'
-import { Route as PartnershipFirmRouteImport } from './routes/partnership-firm'
-import { Route as OurFullPackagesServicesRouteImport } from './routes/our-full-packages-services'
-import { Route as OnePersonCompanyRegistrationRouteImport } from './routes/one-person-company-registration'
-import { Route as NewTanRegistrationCertificateServicesRouteImport } from './routes/new-tan-registration-certificate-services'
-import { Route as NewLlpFormationRouteImport } from './routes/new-llp-formation'
-import { Route as NewDinApplicationRouteImport } from './routes/new-din-application'
-import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
-import { Route as ModificationOfChargeRocMcaRouteImport } from './routes/modification-of-charge-roc-mca'
-import { Route as Mgt7Mgt7aFilingRouteImport } from './routes/mgt-7-mgt-7a-filing'
-import { Route as McaRocFilingServicesIndiaRouteImport } from './routes/mca-roc-filing-services-india'
-import { Route as LowerTdsCertificateSection197RouteImport } from './routes/lower-tds-certificate-section-197'
-import { Route as LoanCreationModificationOfChargeRouteImport } from './routes/loan-creation-modification-of-charge'
-import { Route as LlpFormsFilingRouteImport } from './routes/llp-forms-filing'
-import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
-import { Route as LlpBalanceSheetForm8ServicesRouteImport } from './routes/llp-balance-sheet-form-8-services'
-import { Route as LlpAgreementChangesRouteImport } from './routes/llp-agreement-changes'
-import { Route as KycFilingMcaRouteImport } from './routes/kyc-filing-mca'
-import { Route as ItrBalanceSheetPreparationServicesRouteImport } from './routes/itr-balance-sheet-preparation-services'
-import { Route as IssueOfShareCertificateSh1RouteImport } from './routes/issue-of-share-certificate-sh1'
-import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
-import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
-import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
-import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
-import { Route as Form27qTdsReturnFilingNriRouteImport } from './routes/form-27q-tds-return-filing-nri'
-import { Route as Form27eqTcsReturnFilingRouteImport } from './routes/form-27eq-tcs-return-filing'
-import { Route as Form27dTcsCertificateDownloadRouteImport } from './routes/form-27d-tcs-certificate-download'
-import { Route as Form26qcTdsFilingRentRouteImport } from './routes/form-26qc-tds-filing-rent'
-import { Route as Form26qcCorrectionTdsRentRouteImport } from './routes/form-26qc-correction-tds-rent'
-import { Route as Form26qbTdsFilingPropertyRouteImport } from './routes/form-26qb-tds-filing-property'
-import { Route as Form26qbCorrectionTdsPropertyRouteImport } from './routes/form-26qb-correction-tds-property'
-import { Route as Form26qTdsReturnFilingRouteImport } from './routes/form-26q-tds-return-filing'
-import { Route as Form24qTdsFilingSalaryRouteImport } from './routes/form-24q-tds-filing-salary'
-import { Route as Form16cTdsCertificateRentRouteImport } from './routes/form-16c-tds-certificate-rent'
-import { Route as Form16bTdsCertificatePropertyRouteImport } from './routes/form-16b-tds-certificate-property'
-import { Route as Form16aTdsCertificateDownloadRouteImport } from './routes/form-16a-tds-certificate-download'
-import { Route as Form15ca15cbForeignRemittanceRouteImport } from './routes/form-15ca-15cb-foreign-remittance'
-import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
-import { Route as DuplicateTanCertificateOnlineRouteImport } from './routes/duplicate-tan-certificate-online'
-import { Route as DpinApplicationLlpPartnerIndiaRouteImport } from './routes/dpin-application-llp-partner-india'
-import { Route as DisclaimerRouteImport } from './routes/disclaimer'
-import { Route as DinDpinRegistrationDirectorLlpIndiaRouteImport } from './routes/din-dpin-registration-director-llp-india'
-import { Route as DigitalSignatureDscRegistrationServicesRouteImport } from './routes/digital-signature-dsc-registration-services'
-import { Route as DigitalBusinessServicesRouteImport } from './routes/digital-business-services'
-import { Route as DailyEinvoicingEwayBillServicesRouteImport } from './routes/daily-einvoicing-eway-bill-services'
-import { Route as ContactUsRouteImport } from './routes/contact-us'
-import { Route as CompleteAccountingServicesRouteImport } from './routes/complete-accounting-services'
-import { Route as CompanyProfileRouteImport } from './routes/company-profile'
-import { Route as CompanyPoliciesRouteImport } from './routes/company-policies'
-import { Route as CompanyNameChangeMcaRouteImport } from './routes/company-name-change-mca'
-import { Route as CompanyIncorporationServiceRouteImport } from './routes/company-incorporation-service'
-import { Route as CompanyFinancialStatementsServicesRouteImport } from './routes/company-financial-statements-services'
-import { Route as CompanyAddressChangeMcaRouteImport } from './routes/company-address-change-mca'
-import { Route as CmaDataForBankOdCc35YearsRouteImport } from './routes/cma-data-for-bank-od-cc-3-5-years'
-import { Route as ChangeMoaAoaOfCompanyRouteImport } from './routes/change-moa-aoa-of-company'
-import { Route as ChangeInCompanyMasterDataRouteImport } from './routes/change-in-company-master-data'
-import { Route as BusinessSetupServicesRouteImport } from './routes/business-setup-services'
-import { Route as BusinessRegistrationLicensesRouteImport } from './routes/business-registration-licenses'
-import { Route as BankLoanServicesRouteImport } from './routes/bank-loan-services'
-import { Route as BalanceSheetPreparationServicesRouteImport } from './routes/balance-sheet-preparation-services'
-import { Route as Aoc4FilingPrivateLimitedRouteImport } from './routes/aoc-4-filing-private-limited'
-import { Route as AnnualRocComplianceRouteImport } from './routes/annual-roc-compliance'
-import { Route as Adt1FilingForAuditorRouteImport } from './routes/adt-1-filing-for-auditor'
-import { Route as AccountingReviewVisitsServicesRouteImport } from './routes/accounting-review-visits-services'
-import { Route as AccountingForItrFilingRouteImport } from './routes/accounting-for-itr-filing'
-import { Route as R80g12aaRegistrationServicesRouteImport } from './routes/80g-12aa-registration-services'
-import { Route as TdsTcsRouteRouteImport } from './routes/tds-tcs.route'
-import { Route as RegistrationsRouteRouteImport } from './routes/registrations.route'
-import { Route as McaRouteRouteImport } from './routes/mca.route'
-import { Route as IncomeTaxRouteRouteImport } from './routes/income-tax.route'
-import { Route as GstRouteRouteImport } from './routes/gst.route'
-import { Route as ConsultationRouteRouteImport } from './routes/consultation.route'
-import { Route as ComplianceRouteRouteImport } from './routes/compliance.route'
-import { Route as BlogRouteRouteImport } from './routes/blog.route'
-import { Route as BankLoanRouteRouteImport } from './routes/bank-loan.route'
-import { Route as AccountingAuditServicesRouteRouteImport } from './routes/accounting-audit-services.route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as TdsTcsIndexRouteImport } from './routes/tds-tcs.index'
-import { Route as RegistrationsIndexRouteImport } from './routes/registrations.index'
-import { Route as McaIndexRouteImport } from './routes/mca.index'
-import { Route as IncomeTaxIndexRouteImport } from './routes/income-tax.index'
-import { Route as ConsultationIndexRouteImport } from './routes/consultation.index'
-import { Route as ComplianceIndexRouteImport } from './routes/compliance.index'
-import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as BankLoanIndexRouteImport } from './routes/bank-loan.index'
+import { Route as SlugRouteImport } from './routes/$slug'
+import { Route as R80g12aaRegistrationServicesRouteImport } from './routes/80g-12aa-registration-services'
+import { Route as AccountingAuditServicesRouteRouteImport } from './routes/accounting-audit-services.route'
+import { Route as AccountingForItrFilingRouteImport } from './routes/accounting-for-itr-filing'
+import { Route as AccountingReviewVisitsServicesRouteImport } from './routes/accounting-review-visits-services'
+import { Route as Adt1FilingForAuditorRouteImport } from './routes/adt-1-filing-for-auditor'
+import { Route as AnnualRocComplianceRouteImport } from './routes/annual-roc-compliance'
+import { Route as Aoc4FilingPrivateLimitedRouteImport } from './routes/aoc-4-filing-private-limited'
+import { Route as BalanceSheetPreparationServicesRouteImport } from './routes/balance-sheet-preparation-services'
+import { Route as BankLoanRouteRouteImport } from './routes/bank-loan.route'
+import { Route as BankLoanServicesRouteImport } from './routes/bank-loan-services'
+import { Route as BlogRouteRouteImport } from './routes/blog.route'
+import { Route as BusinessRegistrationLicensesRouteImport } from './routes/business-registration-licenses'
+import { Route as BusinessSetupServicesRouteImport } from './routes/business-setup-services'
+import { Route as ChangeInCompanyMasterDataRouteImport } from './routes/change-in-company-master-data'
+import { Route as ChangeMoaAoaOfCompanyRouteImport } from './routes/change-moa-aoa-of-company'
+import { Route as CmaDataForBankOdCc35YearsRouteImport } from './routes/cma-data-for-bank-od-cc-3-5-years'
+import { Route as CompanyAddressChangeMcaRouteImport } from './routes/company-address-change-mca'
+import { Route as CompanyFinancialStatementsServicesRouteImport } from './routes/company-financial-statements-services'
+import { Route as CompanyIncorporationServiceRouteImport } from './routes/company-incorporation-service'
+import { Route as CompanyNameChangeMcaRouteImport } from './routes/company-name-change-mca'
+import { Route as CompanyPoliciesRouteImport } from './routes/company-policies'
+import { Route as CompanyProfileRouteImport } from './routes/company-profile'
+import { Route as CompleteAccountingServicesRouteImport } from './routes/complete-accounting-services'
+import { Route as ComplianceRouteRouteImport } from './routes/compliance.route'
+import { Route as ConsultationRouteRouteImport } from './routes/consultation.route'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as DailyEinvoicingEwayBillServicesRouteImport } from './routes/daily-einvoicing-eway-bill-services'
+import { Route as DigitalBusinessServicesRouteImport } from './routes/digital-business-services'
+import { Route as DigitalSignatureDscRegistrationServicesRouteImport } from './routes/digital-signature-dsc-registration-services'
+import { Route as DinDpinRegistrationDirectorLlpIndiaRouteImport } from './routes/din-dpin-registration-director-llp-india'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as DpinApplicationLlpPartnerIndiaRouteImport } from './routes/dpin-application-llp-partner-india'
+import { Route as DuplicateTanCertificateOnlineRouteImport } from './routes/duplicate-tan-certificate-online'
+import { Route as EsicPfRegistrationServicesRouteImport } from './routes/esic-pf-registration-services'
+import { Route as Form15ca15cbForeignRemittanceRouteImport } from './routes/form-15ca-15cb-foreign-remittance'
+import { Route as Form16aTdsCertificateDownloadRouteImport } from './routes/form-16a-tds-certificate-download'
+import { Route as Form16bTdsCertificatePropertyRouteImport } from './routes/form-16b-tds-certificate-property'
+import { Route as Form16cTdsCertificateRentRouteImport } from './routes/form-16c-tds-certificate-rent'
+import { Route as Form24qTdsFilingSalaryRouteImport } from './routes/form-24q-tds-filing-salary'
+import { Route as Form26qTdsReturnFilingRouteImport } from './routes/form-26q-tds-return-filing'
+import { Route as Form26qbCorrectionTdsPropertyRouteImport } from './routes/form-26qb-correction-tds-property'
+import { Route as Form26qbTdsFilingPropertyRouteImport } from './routes/form-26qb-tds-filing-property'
+import { Route as Form26qcCorrectionTdsRentRouteImport } from './routes/form-26qc-correction-tds-rent'
+import { Route as Form26qcTdsFilingRentRouteImport } from './routes/form-26qc-tds-filing-rent'
+import { Route as Form27dTcsCertificateDownloadRouteImport } from './routes/form-27d-tcs-certificate-download'
+import { Route as Form27eqTcsReturnFilingRouteImport } from './routes/form-27eq-tcs-return-filing'
+import { Route as Form27qTdsReturnFilingNriRouteImport } from './routes/form-27q-tds-return-filing-nri'
+import { Route as FssaiFoodLicenseRegistrationServicesRouteImport } from './routes/fssai-food-license-registration-services'
+import { Route as GstRouteRouteImport } from './routes/gst.route'
+import { Route as GstRegistrationReturnFilingServicesRouteImport } from './routes/gst-registration-return-filing-services'
+import { Route as HufFormationRegistrationServicesRouteImport } from './routes/huf-formation-registration-services'
+import { Route as ImportExportCodeIecRegistrationServicesRouteImport } from './routes/import-export-code-iec-registration-services'
+import { Route as IncomeTaxRouteRouteImport } from './routes/income-tax.route'
+import { Route as IssueOfShareCertificateSh1RouteImport } from './routes/issue-of-share-certificate-sh1'
+import { Route as ItrBalanceSheetPreparationServicesRouteImport } from './routes/itr-balance-sheet-preparation-services'
+import { Route as KycFilingMcaRouteImport } from './routes/kyc-filing-mca'
+import { Route as LlpAgreementChangesRouteImport } from './routes/llp-agreement-changes'
+import { Route as LlpBalanceSheetForm8ServicesRouteImport } from './routes/llp-balance-sheet-form-8-services'
+import { Route as LlpCompliancePackagesRouteImport } from './routes/llp-compliance-packages'
+import { Route as LlpFormsFilingRouteImport } from './routes/llp-forms-filing'
+import { Route as LoanCreationModificationOfChargeRouteImport } from './routes/loan-creation-modification-of-charge'
+import { Route as LowerTdsCertificateSection197RouteImport } from './routes/lower-tds-certificate-section-197'
+import { Route as McaRouteRouteImport } from './routes/mca.route'
+import { Route as McaRocFilingServicesIndiaRouteImport } from './routes/mca-roc-filing-services-india'
+import { Route as Mgt7Mgt7aFilingRouteImport } from './routes/mgt-7-mgt-7a-filing'
+import { Route as ModificationOfChargeRocMcaRouteImport } from './routes/modification-of-charge-roc-mca'
+import { Route as MsmeUdyamRegistrationServicesRouteImport } from './routes/msme-udyam-registration-services'
+import { Route as NewDinApplicationRouteImport } from './routes/new-din-application'
+import { Route as NewLlpFormationRouteImport } from './routes/new-llp-formation'
+import { Route as NewTanRegistrationCertificateServicesRouteImport } from './routes/new-tan-registration-certificate-services'
+import { Route as OnePersonCompanyRegistrationRouteImport } from './routes/one-person-company-registration'
+import { Route as OurFullPackagesServicesRouteImport } from './routes/our-full-packages-services'
+import { Route as PartnershipFirmRouteImport } from './routes/partnership-firm'
+import { Route as PartnershipFirmRegistrationServicesRouteImport } from './routes/partnership-firm-registration-services'
+import { Route as PersonalAccountingServicesRouteImport } from './routes/personal-accounting-services'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PrivateLimitedCompanyRouteImport } from './routes/private-limited-company'
+import { Route as PrivateLimitedCompanyFormationRouteImport } from './routes/private-limited-company-formation'
+import { Route as ProfessionalTaxRegistrationServicesRouteImport } from './routes/professional-tax-registration-services'
+import { Route as ProfitAndLossStatementServicesRouteImport } from './routes/profit-and-loss-statement-services'
+import { Route as ProjectReportForBankLoanRouteImport } from './routes/project-report-for-bank-loan'
+import { Route as ProjectedBalanceSheetRouteImport } from './routes/projected-balance-sheet'
+import { Route as RegistrationsRouteRouteImport } from './routes/registrations.route'
+import { Route as ResignationOfPartnerInLlpRouteImport } from './routes/resignation-of-partner-in-llp'
+import { Route as RevisedTdsTcsReturnFilingRouteImport } from './routes/revised-tds-tcs-return-filing'
+import { Route as RocOtherFormsInc20aDir6Dpt3RouteImport } from './routes/roc-other-forms-inc20a-dir6-dpt3'
+import { Route as SecretarialRecordsPreparationMaintenanceRouteImport } from './routes/secretarial-records-preparation-maintenance'
+import { Route as Section8CompanyRegistrationRouteImport } from './routes/section-8-company-registration'
+import { Route as ShopAndEstablishmentRegistrationServicesRouteImport } from './routes/shop-and-establishment-registration-services'
+import { Route as SmallBusinessAccountingTaxServicesRouteImport } from './routes/small-business-accounting-tax-services'
+import { Route as SoleProprietorshipRegistrationServicesRouteImport } from './routes/sole-proprietorship-registration-services'
+import { Route as StartupGrantLoanAssistanceServicesRouteImport } from './routes/startup-grant-loan-assistance-services'
+import { Route as StartupIndiaDpiitRegistrationServicesRouteImport } from './routes/startup-india-dpiit-registration-services'
+import { Route as StartupNgoRegistrationServicesRouteImport } from './routes/startup-ngo-registration-services'
+import { Route as StartupOutsourcingServicesRouteImport } from './routes/startup-outsourcing-services'
+import { Route as StrikeOffCompanyLlpRouteImport } from './routes/strike-off-company-llp'
+import { Route as SurrenderDuplicateDinRouteImport } from './routes/surrender-duplicate-din'
+import { Route as TanCorrectionServicesRouteImport } from './routes/tan-correction-services'
+import { Route as TanRegistrationServicesIndiaRouteImport } from './routes/tan-registration-services-india'
+import { Route as TaxHolidaySection80iacServicesRouteImport } from './routes/tax-holiday-section-80iac-services'
+import { Route as TaxRegistrationServicesRouteImport } from './routes/tax-registration-services'
+import { Route as TdsCertificatesForm1616aRouteImport } from './routes/tds-certificates-form-16-16a'
+import { Route as TdsChallanCorrectionOnlineRouteImport } from './routes/tds-challan-correction-online'
+import { Route as TdsOnPropertyMultipleBuyersSellersRouteImport } from './routes/tds-on-property-multiple-buyers-sellers'
+import { Route as TdsOnPropertyNriSection195RouteImport } from './routes/tds-on-property-nri-section-195'
+import { Route as TdsOnPropertySection194iaRouteImport } from './routes/tds-on-property-section-194ia'
+import { Route as TdsOnRentMultiplePartiesRouteImport } from './routes/tds-on-rent-multiple-parties'
+import { Route as TdsOnRentNriSection195RouteImport } from './routes/tds-on-rent-nri-section-195'
+import { Route as TdsTcsRouteRouteImport } from './routes/tds-tcs.route'
+import { Route as TdsTcsNoticeResolutionRouteImport } from './routes/tds-tcs-notice-resolution'
+import { Route as TdsTcsReturnFilingServicesRouteImport } from './routes/tds-tcs-return-filing-services'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as ThankyouRouteImport } from './routes/thankyou'
+import { Route as ThreeYearBalanceSheetRouteImport } from './routes/three-year-balance-sheet'
+import { Route as UpdateEmailMobileMcaRouteImport } from './routes/update-email-mobile-mca'
 import { Route as AccountingAuditServicesIndexRouteImport } from './routes/accounting-audit-services.index'
-import { Route as TdsTcsSlugRouteImport } from './routes/tds-tcs.$slug'
-import { Route as RegistrationsSlugRouteImport } from './routes/registrations.$slug'
-import { Route as McaSlugRouteImport } from './routes/mca.$slug'
-import { Route as IncomeTaxSlugRouteImport } from './routes/income-tax.$slug'
-import { Route as GstSlugRouteImport } from './routes/gst.$slug'
-import { Route as ConsultationSlugRouteImport } from './routes/consultation.$slug'
-import { Route as ComplianceSlugRouteImport } from './routes/compliance.$slug'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as BankLoanSlugRouteImport } from './routes/bank-loan.$slug'
 import { Route as AccountingAuditServicesSlugRouteImport } from './routes/accounting-audit-services.$slug'
+import { Route as BankLoanIndexRouteImport } from './routes/bank-loan.index'
+import { Route as BankLoanSlugRouteImport } from './routes/bank-loan.$slug'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ComplianceIndexRouteImport } from './routes/compliance.index'
+import { Route as ComplianceSlugRouteImport } from './routes/compliance.$slug'
+import { Route as ConsultationIndexRouteImport } from './routes/consultation.index'
+import { Route as ConsultationSlugRouteImport } from './routes/consultation.$slug'
+import { Route as CustomSlugRouteImport } from './routes/custom.$slug'
+import { Route as GstSlugRouteImport } from './routes/gst.$slug'
+import { Route as IncomeTaxIndexRouteImport } from './routes/income-tax.index'
+import { Route as IncomeTaxSlugRouteImport } from './routes/income-tax.$slug'
+import { Route as McaIndexRouteImport } from './routes/mca.index'
+import { Route as McaSlugRouteImport } from './routes/mca.$slug'
+import { Route as RegistrationsIndexRouteImport } from './routes/registrations.index'
+import { Route as RegistrationsSlugRouteImport } from './routes/registrations.$slug'
+import { Route as TdsTcsIndexRouteImport } from './routes/tds-tcs.index'
+import { Route as TdsTcsSlugRouteImport } from './routes/tds-tcs.$slug'
 
-const UpdateEmailMobileMcaRoute = UpdateEmailMobileMcaRouteImport.update({
-  id: '/update-email-mobile-mca',
-  path: '/update-email-mobile-mca',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ThreeYearBalanceSheetRoute = ThreeYearBalanceSheetRouteImport.update({
-  id: '/three-year-balance-sheet',
-  path: '/three-year-balance-sheet',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ThankyouRoute = ThankyouRouteImport.update({
-  id: '/thankyou',
-  path: '/thankyou',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
-  id: '/terms-and-conditions',
-  path: '/terms-and-conditions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TdsTcsReturnFilingServicesRoute =
-  TdsTcsReturnFilingServicesRouteImport.update({
-    id: '/tds-tcs-return-filing-services',
-    path: '/tds-tcs-return-filing-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsTcsNoticeResolutionRoute = TdsTcsNoticeResolutionRouteImport.update({
-  id: '/tds-tcs-notice-resolution',
-  path: '/tds-tcs-notice-resolution',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TdsOnRentNriSection195Route = TdsOnRentNriSection195RouteImport.update({
-  id: '/tds-on-rent-nri-section-195',
-  path: '/tds-on-rent-nri-section-195',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TdsOnRentMultiplePartiesRoute =
-  TdsOnRentMultiplePartiesRouteImport.update({
-    id: '/tds-on-rent-multiple-parties',
-    path: '/tds-on-rent-multiple-parties',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsOnPropertySection194iaRoute =
-  TdsOnPropertySection194iaRouteImport.update({
-    id: '/tds-on-property-section-194ia',
-    path: '/tds-on-property-section-194ia',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsOnPropertyNriSection195Route =
-  TdsOnPropertyNriSection195RouteImport.update({
-    id: '/tds-on-property-nri-section-195',
-    path: '/tds-on-property-nri-section-195',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsOnPropertyMultipleBuyersSellersRoute =
-  TdsOnPropertyMultipleBuyersSellersRouteImport.update({
-    id: '/tds-on-property-multiple-buyers-sellers',
-    path: '/tds-on-property-multiple-buyers-sellers',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsChallanCorrectionOnlineRoute =
-  TdsChallanCorrectionOnlineRouteImport.update({
-    id: '/tds-challan-correction-online',
-    path: '/tds-challan-correction-online',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TdsCertificatesForm1616aRoute =
-  TdsCertificatesForm1616aRouteImport.update({
-    id: '/tds-certificates-form-16-16a',
-    path: '/tds-certificates-form-16-16a',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TaxRegistrationServicesRoute = TaxRegistrationServicesRouteImport.update({
-  id: '/tax-registration-services',
-  path: '/tax-registration-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TaxHolidaySection80iacServicesRoute =
-  TaxHolidaySection80iacServicesRouteImport.update({
-    id: '/tax-holiday-section-80iac-services',
-    path: '/tax-holiday-section-80iac-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TanRegistrationServicesIndiaRoute =
-  TanRegistrationServicesIndiaRouteImport.update({
-    id: '/tan-registration-services-india',
-    path: '/tan-registration-services-india',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const TanCorrectionServicesRoute = TanCorrectionServicesRouteImport.update({
-  id: '/tan-correction-services',
-  path: '/tan-correction-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SurrenderDuplicateDinRoute = SurrenderDuplicateDinRouteImport.update({
-  id: '/surrender-duplicate-din',
-  path: '/surrender-duplicate-din',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StrikeOffCompanyLlpRoute = StrikeOffCompanyLlpRouteImport.update({
-  id: '/strike-off-company-llp',
-  path: '/strike-off-company-llp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StartupOutsourcingServicesRoute =
-  StartupOutsourcingServicesRouteImport.update({
-    id: '/startup-outsourcing-services',
-    path: '/startup-outsourcing-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const StartupNgoRegistrationServicesRoute =
-  StartupNgoRegistrationServicesRouteImport.update({
-    id: '/startup-ngo-registration-services',
-    path: '/startup-ngo-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const StartupIndiaDpiitRegistrationServicesRoute =
-  StartupIndiaDpiitRegistrationServicesRouteImport.update({
-    id: '/startup-india-dpiit-registration-services',
-    path: '/startup-india-dpiit-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const StartupGrantLoanAssistanceServicesRoute =
-  StartupGrantLoanAssistanceServicesRouteImport.update({
-    id: '/startup-grant-loan-assistance-services',
-    path: '/startup-grant-loan-assistance-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const SoleProprietorshipRegistrationServicesRoute =
-  SoleProprietorshipRegistrationServicesRouteImport.update({
-    id: '/sole-proprietorship-registration-services',
-    path: '/sole-proprietorship-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const SmallBusinessAccountingTaxServicesRoute =
-  SmallBusinessAccountingTaxServicesRouteImport.update({
-    id: '/small-business-accounting-tax-services',
-    path: '/small-business-accounting-tax-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ShopAndEstablishmentRegistrationServicesRoute =
-  ShopAndEstablishmentRegistrationServicesRouteImport.update({
-    id: '/shop-and-establishment-registration-services',
-    path: '/shop-and-establishment-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Section8CompanyRegistrationRoute =
-  Section8CompanyRegistrationRouteImport.update({
-    id: '/section-8-company-registration',
-    path: '/section-8-company-registration',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const SecretarialRecordsPreparationMaintenanceRoute =
-  SecretarialRecordsPreparationMaintenanceRouteImport.update({
-    id: '/secretarial-records-preparation-maintenance',
-    path: '/secretarial-records-preparation-maintenance',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const RocOtherFormsInc20aDir6Dpt3Route =
-  RocOtherFormsInc20aDir6Dpt3RouteImport.update({
-    id: '/roc-other-forms-inc20a-dir6-dpt3',
-    path: '/roc-other-forms-inc20a-dir6-dpt3',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const RevisedTdsTcsReturnFilingRoute =
-  RevisedTdsTcsReturnFilingRouteImport.update({
-    id: '/revised-tds-tcs-return-filing',
-    path: '/revised-tds-tcs-return-filing',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ResignationOfPartnerInLlpRoute =
-  ResignationOfPartnerInLlpRouteImport.update({
-    id: '/resignation-of-partner-in-llp',
-    path: '/resignation-of-partner-in-llp',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProjectedBalanceSheetRoute = ProjectedBalanceSheetRouteImport.update({
-  id: '/projected-balance-sheet',
-  path: '/projected-balance-sheet',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectReportForBankLoanRoute =
-  ProjectReportForBankLoanRouteImport.update({
-    id: '/project-report-for-bank-loan',
-    path: '/project-report-for-bank-loan',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProfitAndLossStatementServicesRoute =
-  ProfitAndLossStatementServicesRouteImport.update({
-    id: '/profit-and-loss-statement-services',
-    path: '/profit-and-loss-statement-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProfessionalTaxRegistrationServicesRoute =
-  ProfessionalTaxRegistrationServicesRouteImport.update({
-    id: '/professional-tax-registration-services',
-    path: '/professional-tax-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PrivateLimitedCompanyFormationRoute =
-  PrivateLimitedCompanyFormationRouteImport.update({
-    id: '/private-limited-company-formation',
-    path: '/private-limited-company-formation',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PrivateLimitedCompanyRoute = PrivateLimitedCompanyRouteImport.update({
-  id: '/private-limited-company',
-  path: '/private-limited-company',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PersonalAccountingServicesRoute =
-  PersonalAccountingServicesRouteImport.update({
-    id: '/personal-accounting-services',
-    path: '/personal-accounting-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PartnershipFirmRegistrationServicesRoute =
-  PartnershipFirmRegistrationServicesRouteImport.update({
-    id: '/partnership-firm-registration-services',
-    path: '/partnership-firm-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const PartnershipFirmRoute = PartnershipFirmRouteImport.update({
-  id: '/partnership-firm',
-  path: '/partnership-firm',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OurFullPackagesServicesRoute = OurFullPackagesServicesRouteImport.update({
-  id: '/our-full-packages-services',
-  path: '/our-full-packages-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OnePersonCompanyRegistrationRoute =
-  OnePersonCompanyRegistrationRouteImport.update({
-    id: '/one-person-company-registration',
-    path: '/one-person-company-registration',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const NewTanRegistrationCertificateServicesRoute =
-  NewTanRegistrationCertificateServicesRouteImport.update({
-    id: '/new-tan-registration-certificate-services',
-    path: '/new-tan-registration-certificate-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const NewLlpFormationRoute = NewLlpFormationRouteImport.update({
-  id: '/new-llp-formation',
-  path: '/new-llp-formation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewDinApplicationRoute = NewDinApplicationRouteImport.update({
-  id: '/new-din-application',
-  path: '/new-din-application',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MsmeUdyamRegistrationServicesRoute =
-  MsmeUdyamRegistrationServicesRouteImport.update({
-    id: '/msme-udyam-registration-services',
-    path: '/msme-udyam-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ModificationOfChargeRocMcaRoute =
-  ModificationOfChargeRocMcaRouteImport.update({
-    id: '/modification-of-charge-roc-mca',
-    path: '/modification-of-charge-roc-mca',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Mgt7Mgt7aFilingRoute = Mgt7Mgt7aFilingRouteImport.update({
-  id: '/mgt-7-mgt-7a-filing',
-  path: '/mgt-7-mgt-7a-filing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McaRocFilingServicesIndiaRoute =
-  McaRocFilingServicesIndiaRouteImport.update({
-    id: '/mca-roc-filing-services-india',
-    path: '/mca-roc-filing-services-india',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LowerTdsCertificateSection197Route =
-  LowerTdsCertificateSection197RouteImport.update({
-    id: '/lower-tds-certificate-section-197',
-    path: '/lower-tds-certificate-section-197',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LoanCreationModificationOfChargeRoute =
-  LoanCreationModificationOfChargeRouteImport.update({
-    id: '/loan-creation-modification-of-charge',
-    path: '/loan-creation-modification-of-charge',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LlpFormsFilingRoute = LlpFormsFilingRouteImport.update({
-  id: '/llp-forms-filing',
-  path: '/llp-forms-filing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LlpCompliancePackagesRoute = LlpCompliancePackagesRouteImport.update({
-  id: '/llp-compliance-packages',
-  path: '/llp-compliance-packages',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LlpBalanceSheetForm8ServicesRoute =
-  LlpBalanceSheetForm8ServicesRouteImport.update({
-    id: '/llp-balance-sheet-form-8-services',
-    path: '/llp-balance-sheet-form-8-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LlpAgreementChangesRoute = LlpAgreementChangesRouteImport.update({
-  id: '/llp-agreement-changes',
-  path: '/llp-agreement-changes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const KycFilingMcaRoute = KycFilingMcaRouteImport.update({
-  id: '/kyc-filing-mca',
-  path: '/kyc-filing-mca',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ItrBalanceSheetPreparationServicesRoute =
-  ItrBalanceSheetPreparationServicesRouteImport.update({
-    id: '/itr-balance-sheet-preparation-services',
-    path: '/itr-balance-sheet-preparation-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IssueOfShareCertificateSh1Route =
-  IssueOfShareCertificateSh1RouteImport.update({
-    id: '/issue-of-share-certificate-sh1',
-    path: '/issue-of-share-certificate-sh1',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ImportExportCodeIecRegistrationServicesRoute =
-  ImportExportCodeIecRegistrationServicesRouteImport.update({
-    id: '/import-export-code-iec-registration-services',
-    path: '/import-export-code-iec-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const HufFormationRegistrationServicesRoute =
-  HufFormationRegistrationServicesRouteImport.update({
-    id: '/huf-formation-registration-services',
-    path: '/huf-formation-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const GstRegistrationReturnFilingServicesRoute =
-  GstRegistrationReturnFilingServicesRouteImport.update({
-    id: '/gst-registration-return-filing-services',
-    path: '/gst-registration-return-filing-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const FssaiFoodLicenseRegistrationServicesRoute =
-  FssaiFoodLicenseRegistrationServicesRouteImport.update({
-    id: '/fssai-food-license-registration-services',
-    path: '/fssai-food-license-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form27qTdsReturnFilingNriRoute =
-  Form27qTdsReturnFilingNriRouteImport.update({
-    id: '/form-27q-tds-return-filing-nri',
-    path: '/form-27q-tds-return-filing-nri',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form27eqTcsReturnFilingRoute = Form27eqTcsReturnFilingRouteImport.update({
-  id: '/form-27eq-tcs-return-filing',
-  path: '/form-27eq-tcs-return-filing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Form27dTcsCertificateDownloadRoute =
-  Form27dTcsCertificateDownloadRouteImport.update({
-    id: '/form-27d-tcs-certificate-download',
-    path: '/form-27d-tcs-certificate-download',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form26qcTdsFilingRentRoute = Form26qcTdsFilingRentRouteImport.update({
-  id: '/form-26qc-tds-filing-rent',
-  path: '/form-26qc-tds-filing-rent',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Form26qcCorrectionTdsRentRoute =
-  Form26qcCorrectionTdsRentRouteImport.update({
-    id: '/form-26qc-correction-tds-rent',
-    path: '/form-26qc-correction-tds-rent',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form26qbTdsFilingPropertyRoute =
-  Form26qbTdsFilingPropertyRouteImport.update({
-    id: '/form-26qb-tds-filing-property',
-    path: '/form-26qb-tds-filing-property',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form26qbCorrectionTdsPropertyRoute =
-  Form26qbCorrectionTdsPropertyRouteImport.update({
-    id: '/form-26qb-correction-tds-property',
-    path: '/form-26qb-correction-tds-property',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form26qTdsReturnFilingRoute = Form26qTdsReturnFilingRouteImport.update({
-  id: '/form-26q-tds-return-filing',
-  path: '/form-26q-tds-return-filing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Form24qTdsFilingSalaryRoute = Form24qTdsFilingSalaryRouteImport.update({
-  id: '/form-24q-tds-filing-salary',
-  path: '/form-24q-tds-filing-salary',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Form16cTdsCertificateRentRoute =
-  Form16cTdsCertificateRentRouteImport.update({
-    id: '/form-16c-tds-certificate-rent',
-    path: '/form-16c-tds-certificate-rent',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form16bTdsCertificatePropertyRoute =
-  Form16bTdsCertificatePropertyRouteImport.update({
-    id: '/form-16b-tds-certificate-property',
-    path: '/form-16b-tds-certificate-property',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form16aTdsCertificateDownloadRoute =
-  Form16aTdsCertificateDownloadRouteImport.update({
-    id: '/form-16a-tds-certificate-download',
-    path: '/form-16a-tds-certificate-download',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Form15ca15cbForeignRemittanceRoute =
-  Form15ca15cbForeignRemittanceRouteImport.update({
-    id: '/form-15ca-15cb-foreign-remittance',
-    path: '/form-15ca-15cb-foreign-remittance',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const EsicPfRegistrationServicesRoute =
-  EsicPfRegistrationServicesRouteImport.update({
-    id: '/esic-pf-registration-services',
-    path: '/esic-pf-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DuplicateTanCertificateOnlineRoute =
-  DuplicateTanCertificateOnlineRouteImport.update({
-    id: '/duplicate-tan-certificate-online',
-    path: '/duplicate-tan-certificate-online',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DpinApplicationLlpPartnerIndiaRoute =
-  DpinApplicationLlpPartnerIndiaRouteImport.update({
-    id: '/dpin-application-llp-partner-india',
-    path: '/dpin-application-llp-partner-india',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DisclaimerRoute = DisclaimerRouteImport.update({
-  id: '/disclaimer',
-  path: '/disclaimer',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DinDpinRegistrationDirectorLlpIndiaRoute =
-  DinDpinRegistrationDirectorLlpIndiaRouteImport.update({
-    id: '/din-dpin-registration-director-llp-india',
-    path: '/din-dpin-registration-director-llp-india',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DigitalSignatureDscRegistrationServicesRoute =
-  DigitalSignatureDscRegistrationServicesRouteImport.update({
-    id: '/digital-signature-dsc-registration-services',
-    path: '/digital-signature-dsc-registration-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const DigitalBusinessServicesRoute = DigitalBusinessServicesRouteImport.update({
-  id: '/digital-business-services',
-  path: '/digital-business-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DailyEinvoicingEwayBillServicesRoute =
-  DailyEinvoicingEwayBillServicesRouteImport.update({
-    id: '/daily-einvoicing-eway-bill-services',
-    path: '/daily-einvoicing-eway-bill-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ContactUsRoute = ContactUsRouteImport.update({
-  id: '/contact-us',
-  path: '/contact-us',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompleteAccountingServicesRoute =
-  CompleteAccountingServicesRouteImport.update({
-    id: '/complete-accounting-services',
-    path: '/complete-accounting-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CompanyProfileRoute = CompanyProfileRouteImport.update({
-  id: '/company-profile',
-  path: '/company-profile',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompanyPoliciesRoute = CompanyPoliciesRouteImport.update({
-  id: '/company-policies',
-  path: '/company-policies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompanyNameChangeMcaRoute = CompanyNameChangeMcaRouteImport.update({
-  id: '/company-name-change-mca',
-  path: '/company-name-change-mca',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompanyIncorporationServiceRoute =
-  CompanyIncorporationServiceRouteImport.update({
-    id: '/company-incorporation-service',
-    path: '/company-incorporation-service',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CompanyFinancialStatementsServicesRoute =
-  CompanyFinancialStatementsServicesRouteImport.update({
-    id: '/company-financial-statements-services',
-    path: '/company-financial-statements-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CompanyAddressChangeMcaRoute = CompanyAddressChangeMcaRouteImport.update({
-  id: '/company-address-change-mca',
-  path: '/company-address-change-mca',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CmaDataForBankOdCc35YearsRoute =
-  CmaDataForBankOdCc35YearsRouteImport.update({
-    id: '/cma-data-for-bank-od-cc-3-5-years',
-    path: '/cma-data-for-bank-od-cc-3-5-years',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ChangeMoaAoaOfCompanyRoute = ChangeMoaAoaOfCompanyRouteImport.update({
-  id: '/change-moa-aoa-of-company',
-  path: '/change-moa-aoa-of-company',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ChangeInCompanyMasterDataRoute =
-  ChangeInCompanyMasterDataRouteImport.update({
-    id: '/change-in-company-master-data',
-    path: '/change-in-company-master-data',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BusinessSetupServicesRoute = BusinessSetupServicesRouteImport.update({
-  id: '/business-setup-services',
-  path: '/business-setup-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BusinessRegistrationLicensesRoute =
-  BusinessRegistrationLicensesRouteImport.update({
-    id: '/business-registration-licenses',
-    path: '/business-registration-licenses',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const BankLoanServicesRoute = BankLoanServicesRouteImport.update({
-  id: '/bank-loan-services',
-  path: '/bank-loan-services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BalanceSheetPreparationServicesRoute =
-  BalanceSheetPreparationServicesRouteImport.update({
-    id: '/balance-sheet-preparation-services',
-    path: '/balance-sheet-preparation-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Aoc4FilingPrivateLimitedRoute =
-  Aoc4FilingPrivateLimitedRouteImport.update({
-    id: '/aoc-4-filing-private-limited',
-    path: '/aoc-4-filing-private-limited',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const AnnualRocComplianceRoute = AnnualRocComplianceRouteImport.update({
-  id: '/annual-roc-compliance',
-  path: '/annual-roc-compliance',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Adt1FilingForAuditorRoute = Adt1FilingForAuditorRouteImport.update({
-  id: '/adt-1-filing-for-auditor',
-  path: '/adt-1-filing-for-auditor',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AccountingReviewVisitsServicesRoute =
-  AccountingReviewVisitsServicesRouteImport.update({
-    id: '/accounting-review-visits-services',
-    path: '/accounting-review-visits-services',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const AccountingForItrFilingRoute = AccountingForItrFilingRouteImport.update({
-  id: '/accounting-for-itr-filing',
-  path: '/accounting-for-itr-filing',
+const SlugRoute = SlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const R80g12aaRegistrationServicesRoute =
@@ -736,39 +163,53 @@ const R80g12aaRegistrationServicesRoute =
     path: '/80g-12aa-registration-services',
     getParentRoute: () => rootRouteImport,
   } as any)
-const TdsTcsRouteRoute = TdsTcsRouteRouteImport.update({
-  id: '/tds-tcs',
-  path: '/tds-tcs',
+const AccountingAuditServicesRouteRoute =
+  AccountingAuditServicesRouteRouteImport.update({
+    id: '/accounting-audit-services',
+    path: '/accounting-audit-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AccountingForItrFilingRoute = AccountingForItrFilingRouteImport.update({
+  id: '/accounting-for-itr-filing',
+  path: '/accounting-for-itr-filing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RegistrationsRouteRoute = RegistrationsRouteRouteImport.update({
-  id: '/registrations',
-  path: '/registrations',
+const AccountingReviewVisitsServicesRoute =
+  AccountingReviewVisitsServicesRouteImport.update({
+    id: '/accounting-review-visits-services',
+    path: '/accounting-review-visits-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Adt1FilingForAuditorRoute = Adt1FilingForAuditorRouteImport.update({
+  id: '/adt-1-filing-for-auditor',
+  path: '/adt-1-filing-for-auditor',
   getParentRoute: () => rootRouteImport,
 } as any)
-const McaRouteRoute = McaRouteRouteImport.update({
-  id: '/mca',
-  path: '/mca',
+const AnnualRocComplianceRoute = AnnualRocComplianceRouteImport.update({
+  id: '/annual-roc-compliance',
+  path: '/annual-roc-compliance',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IncomeTaxRouteRoute = IncomeTaxRouteRouteImport.update({
-  id: '/income-tax',
-  path: '/income-tax',
+const Aoc4FilingPrivateLimitedRoute =
+  Aoc4FilingPrivateLimitedRouteImport.update({
+    id: '/aoc-4-filing-private-limited',
+    path: '/aoc-4-filing-private-limited',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BalanceSheetPreparationServicesRoute =
+  BalanceSheetPreparationServicesRouteImport.update({
+    id: '/balance-sheet-preparation-services',
+    path: '/balance-sheet-preparation-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BankLoanRouteRoute = BankLoanRouteRouteImport.update({
+  id: '/bank-loan',
+  path: '/bank-loan',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GstRouteRoute = GstRouteRouteImport.update({
-  id: '/gst',
-  path: '/gst',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsultationRouteRoute = ConsultationRouteRouteImport.update({
-  id: '/consultation',
-  path: '/consultation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComplianceRouteRoute = ComplianceRouteRouteImport.update({
-  id: '/compliance',
-  path: '/compliance',
+const BankLoanServicesRoute = BankLoanServicesRouteImport.update({
+  id: '/bank-loan-services',
+  path: '/bank-loan-services',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRouteRoute = BlogRouteRouteImport.update({
@@ -776,61 +217,587 @@ const BlogRouteRoute = BlogRouteRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BankLoanRouteRoute = BankLoanRouteRouteImport.update({
-  id: '/bank-loan',
-  path: '/bank-loan',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AccountingAuditServicesRouteRoute =
-  AccountingAuditServicesRouteRouteImport.update({
-    id: '/accounting-audit-services',
-    path: '/accounting-audit-services',
+const BusinessRegistrationLicensesRoute =
+  BusinessRegistrationLicensesRouteImport.update({
+    id: '/business-registration-licenses',
+    path: '/business-registration-licenses',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const BusinessSetupServicesRoute = BusinessSetupServicesRouteImport.update({
+  id: '/business-setup-services',
+  path: '/business-setup-services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TdsTcsIndexRoute = TdsTcsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => TdsTcsRouteRoute,
+const ChangeInCompanyMasterDataRoute =
+  ChangeInCompanyMasterDataRouteImport.update({
+    id: '/change-in-company-master-data',
+    path: '/change-in-company-master-data',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChangeMoaAoaOfCompanyRoute = ChangeMoaAoaOfCompanyRouteImport.update({
+  id: '/change-moa-aoa-of-company',
+  path: '/change-moa-aoa-of-company',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const RegistrationsIndexRoute = RegistrationsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => RegistrationsRouteRoute,
+const CmaDataForBankOdCc35YearsRoute =
+  CmaDataForBankOdCc35YearsRouteImport.update({
+    id: '/cma-data-for-bank-od-cc-3-5-years',
+    path: '/cma-data-for-bank-od-cc-3-5-years',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CompanyAddressChangeMcaRoute = CompanyAddressChangeMcaRouteImport.update({
+  id: '/company-address-change-mca',
+  path: '/company-address-change-mca',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const McaIndexRoute = McaIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => McaRouteRoute,
+const CompanyFinancialStatementsServicesRoute =
+  CompanyFinancialStatementsServicesRouteImport.update({
+    id: '/company-financial-statements-services',
+    path: '/company-financial-statements-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CompanyIncorporationServiceRoute =
+  CompanyIncorporationServiceRouteImport.update({
+    id: '/company-incorporation-service',
+    path: '/company-incorporation-service',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CompanyNameChangeMcaRoute = CompanyNameChangeMcaRouteImport.update({
+  id: '/company-name-change-mca',
+  path: '/company-name-change-mca',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const IncomeTaxIndexRoute = IncomeTaxIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => IncomeTaxRouteRoute,
+const CompanyPoliciesRoute = CompanyPoliciesRouteImport.update({
+  id: '/company-policies',
+  path: '/company-policies',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ConsultationRouteRoute,
+const CompanyProfileRoute = CompanyProfileRouteImport.update({
+  id: '/company-profile',
+  path: '/company-profile',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ComplianceIndexRoute = ComplianceIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ComplianceRouteRoute,
+const CompleteAccountingServicesRoute =
+  CompleteAccountingServicesRouteImport.update({
+    id: '/complete-accounting-services',
+    path: '/complete-accounting-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ComplianceRouteRoute = ComplianceRouteRouteImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => BlogRouteRoute,
+const ConsultationRouteRoute = ConsultationRouteRouteImport.update({
+  id: '/consultation',
+  path: '/consultation',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const BankLoanIndexRoute = BankLoanIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => BankLoanRouteRoute,
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DailyEinvoicingEwayBillServicesRoute =
+  DailyEinvoicingEwayBillServicesRouteImport.update({
+    id: '/daily-einvoicing-eway-bill-services',
+    path: '/daily-einvoicing-eway-bill-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DigitalBusinessServicesRoute = DigitalBusinessServicesRouteImport.update({
+  id: '/digital-business-services',
+  path: '/digital-business-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DigitalSignatureDscRegistrationServicesRoute =
+  DigitalSignatureDscRegistrationServicesRouteImport.update({
+    id: '/digital-signature-dsc-registration-services',
+    path: '/digital-signature-dsc-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DinDpinRegistrationDirectorLlpIndiaRoute =
+  DinDpinRegistrationDirectorLlpIndiaRouteImport.update({
+    id: '/din-dpin-registration-director-llp-india',
+    path: '/din-dpin-registration-director-llp-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DpinApplicationLlpPartnerIndiaRoute =
+  DpinApplicationLlpPartnerIndiaRouteImport.update({
+    id: '/dpin-application-llp-partner-india',
+    path: '/dpin-application-llp-partner-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DuplicateTanCertificateOnlineRoute =
+  DuplicateTanCertificateOnlineRouteImport.update({
+    id: '/duplicate-tan-certificate-online',
+    path: '/duplicate-tan-certificate-online',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const EsicPfRegistrationServicesRoute =
+  EsicPfRegistrationServicesRouteImport.update({
+    id: '/esic-pf-registration-services',
+    path: '/esic-pf-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form15ca15cbForeignRemittanceRoute =
+  Form15ca15cbForeignRemittanceRouteImport.update({
+    id: '/form-15ca-15cb-foreign-remittance',
+    path: '/form-15ca-15cb-foreign-remittance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form16aTdsCertificateDownloadRoute =
+  Form16aTdsCertificateDownloadRouteImport.update({
+    id: '/form-16a-tds-certificate-download',
+    path: '/form-16a-tds-certificate-download',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form16bTdsCertificatePropertyRoute =
+  Form16bTdsCertificatePropertyRouteImport.update({
+    id: '/form-16b-tds-certificate-property',
+    path: '/form-16b-tds-certificate-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form16cTdsCertificateRentRoute =
+  Form16cTdsCertificateRentRouteImport.update({
+    id: '/form-16c-tds-certificate-rent',
+    path: '/form-16c-tds-certificate-rent',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form24qTdsFilingSalaryRoute = Form24qTdsFilingSalaryRouteImport.update({
+  id: '/form-24q-tds-filing-salary',
+  path: '/form-24q-tds-filing-salary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form26qTdsReturnFilingRoute = Form26qTdsReturnFilingRouteImport.update({
+  id: '/form-26q-tds-return-filing',
+  path: '/form-26q-tds-return-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form26qbCorrectionTdsPropertyRoute =
+  Form26qbCorrectionTdsPropertyRouteImport.update({
+    id: '/form-26qb-correction-tds-property',
+    path: '/form-26qb-correction-tds-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qbTdsFilingPropertyRoute =
+  Form26qbTdsFilingPropertyRouteImport.update({
+    id: '/form-26qb-tds-filing-property',
+    path: '/form-26qb-tds-filing-property',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qcCorrectionTdsRentRoute =
+  Form26qcCorrectionTdsRentRouteImport.update({
+    id: '/form-26qc-correction-tds-rent',
+    path: '/form-26qc-correction-tds-rent',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form26qcTdsFilingRentRoute = Form26qcTdsFilingRentRouteImport.update({
+  id: '/form-26qc-tds-filing-rent',
+  path: '/form-26qc-tds-filing-rent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form27dTcsCertificateDownloadRoute =
+  Form27dTcsCertificateDownloadRouteImport.update({
+    id: '/form-27d-tcs-certificate-download',
+    path: '/form-27d-tcs-certificate-download',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Form27eqTcsReturnFilingRoute = Form27eqTcsReturnFilingRouteImport.update({
+  id: '/form-27eq-tcs-return-filing',
+  path: '/form-27eq-tcs-return-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Form27qTdsReturnFilingNriRoute =
+  Form27qTdsReturnFilingNriRouteImport.update({
+    id: '/form-27q-tds-return-filing-nri',
+    path: '/form-27q-tds-return-filing-nri',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FssaiFoodLicenseRegistrationServicesRoute =
+  FssaiFoodLicenseRegistrationServicesRouteImport.update({
+    id: '/fssai-food-license-registration-services',
+    path: '/fssai-food-license-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GstRouteRoute = GstRouteRouteImport.update({
+  id: '/gst',
+  path: '/gst',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GstRegistrationReturnFilingServicesRoute =
+  GstRegistrationReturnFilingServicesRouteImport.update({
+    id: '/gst-registration-return-filing-services',
+    path: '/gst-registration-return-filing-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HufFormationRegistrationServicesRoute =
+  HufFormationRegistrationServicesRouteImport.update({
+    id: '/huf-formation-registration-services',
+    path: '/huf-formation-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ImportExportCodeIecRegistrationServicesRoute =
+  ImportExportCodeIecRegistrationServicesRouteImport.update({
+    id: '/import-export-code-iec-registration-services',
+    path: '/import-export-code-iec-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const IncomeTaxRouteRoute = IncomeTaxRouteRouteImport.update({
+  id: '/income-tax',
+  path: '/income-tax',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IssueOfShareCertificateSh1Route =
+  IssueOfShareCertificateSh1RouteImport.update({
+    id: '/issue-of-share-certificate-sh1',
+    path: '/issue-of-share-certificate-sh1',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ItrBalanceSheetPreparationServicesRoute =
+  ItrBalanceSheetPreparationServicesRouteImport.update({
+    id: '/itr-balance-sheet-preparation-services',
+    path: '/itr-balance-sheet-preparation-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KycFilingMcaRoute = KycFilingMcaRouteImport.update({
+  id: '/kyc-filing-mca',
+  path: '/kyc-filing-mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlpAgreementChangesRoute = LlpAgreementChangesRouteImport.update({
+  id: '/llp-agreement-changes',
+  path: '/llp-agreement-changes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlpBalanceSheetForm8ServicesRoute =
+  LlpBalanceSheetForm8ServicesRouteImport.update({
+    id: '/llp-balance-sheet-form-8-services',
+    path: '/llp-balance-sheet-form-8-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LlpCompliancePackagesRoute = LlpCompliancePackagesRouteImport.update({
+  id: '/llp-compliance-packages',
+  path: '/llp-compliance-packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlpFormsFilingRoute = LlpFormsFilingRouteImport.update({
+  id: '/llp-forms-filing',
+  path: '/llp-forms-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoanCreationModificationOfChargeRoute =
+  LoanCreationModificationOfChargeRouteImport.update({
+    id: '/loan-creation-modification-of-charge',
+    path: '/loan-creation-modification-of-charge',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const LowerTdsCertificateSection197Route =
+  LowerTdsCertificateSection197RouteImport.update({
+    id: '/lower-tds-certificate-section-197',
+    path: '/lower-tds-certificate-section-197',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const McaRouteRoute = McaRouteRouteImport.update({
+  id: '/mca',
+  path: '/mca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const McaRocFilingServicesIndiaRoute =
+  McaRocFilingServicesIndiaRouteImport.update({
+    id: '/mca-roc-filing-services-india',
+    path: '/mca-roc-filing-services-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Mgt7Mgt7aFilingRoute = Mgt7Mgt7aFilingRouteImport.update({
+  id: '/mgt-7-mgt-7a-filing',
+  path: '/mgt-7-mgt-7a-filing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModificationOfChargeRocMcaRoute =
+  ModificationOfChargeRocMcaRouteImport.update({
+    id: '/modification-of-charge-roc-mca',
+    path: '/modification-of-charge-roc-mca',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MsmeUdyamRegistrationServicesRoute =
+  MsmeUdyamRegistrationServicesRouteImport.update({
+    id: '/msme-udyam-registration-services',
+    path: '/msme-udyam-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const NewDinApplicationRoute = NewDinApplicationRouteImport.update({
+  id: '/new-din-application',
+  path: '/new-din-application',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewLlpFormationRoute = NewLlpFormationRouteImport.update({
+  id: '/new-llp-formation',
+  path: '/new-llp-formation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewTanRegistrationCertificateServicesRoute =
+  NewTanRegistrationCertificateServicesRouteImport.update({
+    id: '/new-tan-registration-certificate-services',
+    path: '/new-tan-registration-certificate-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const OnePersonCompanyRegistrationRoute =
+  OnePersonCompanyRegistrationRouteImport.update({
+    id: '/one-person-company-registration',
+    path: '/one-person-company-registration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const OurFullPackagesServicesRoute = OurFullPackagesServicesRouteImport.update({
+  id: '/our-full-packages-services',
+  path: '/our-full-packages-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnershipFirmRoute = PartnershipFirmRouteImport.update({
+  id: '/partnership-firm',
+  path: '/partnership-firm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnershipFirmRegistrationServicesRoute =
+  PartnershipFirmRegistrationServicesRouteImport.update({
+    id: '/partnership-firm-registration-services',
+    path: '/partnership-firm-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PersonalAccountingServicesRoute =
+  PersonalAccountingServicesRouteImport.update({
+    id: '/personal-accounting-services',
+    path: '/personal-accounting-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivateLimitedCompanyRoute = PrivateLimitedCompanyRouteImport.update({
+  id: '/private-limited-company',
+  path: '/private-limited-company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivateLimitedCompanyFormationRoute =
+  PrivateLimitedCompanyFormationRouteImport.update({
+    id: '/private-limited-company-formation',
+    path: '/private-limited-company-formation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProfessionalTaxRegistrationServicesRoute =
+  ProfessionalTaxRegistrationServicesRouteImport.update({
+    id: '/professional-tax-registration-services',
+    path: '/professional-tax-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProfitAndLossStatementServicesRoute =
+  ProfitAndLossStatementServicesRouteImport.update({
+    id: '/profit-and-loss-statement-services',
+    path: '/profit-and-loss-statement-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectReportForBankLoanRoute =
+  ProjectReportForBankLoanRouteImport.update({
+    id: '/project-report-for-bank-loan',
+    path: '/project-report-for-bank-loan',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectedBalanceSheetRoute = ProjectedBalanceSheetRouteImport.update({
+  id: '/projected-balance-sheet',
+  path: '/projected-balance-sheet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegistrationsRouteRoute = RegistrationsRouteRouteImport.update({
+  id: '/registrations',
+  path: '/registrations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResignationOfPartnerInLlpRoute =
+  ResignationOfPartnerInLlpRouteImport.update({
+    id: '/resignation-of-partner-in-llp',
+    path: '/resignation-of-partner-in-llp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RevisedTdsTcsReturnFilingRoute =
+  RevisedTdsTcsReturnFilingRouteImport.update({
+    id: '/revised-tds-tcs-return-filing',
+    path: '/revised-tds-tcs-return-filing',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RocOtherFormsInc20aDir6Dpt3Route =
+  RocOtherFormsInc20aDir6Dpt3RouteImport.update({
+    id: '/roc-other-forms-inc20a-dir6-dpt3',
+    path: '/roc-other-forms-inc20a-dir6-dpt3',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SecretarialRecordsPreparationMaintenanceRoute =
+  SecretarialRecordsPreparationMaintenanceRouteImport.update({
+    id: '/secretarial-records-preparation-maintenance',
+    path: '/secretarial-records-preparation-maintenance',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Section8CompanyRegistrationRoute =
+  Section8CompanyRegistrationRouteImport.update({
+    id: '/section-8-company-registration',
+    path: '/section-8-company-registration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ShopAndEstablishmentRegistrationServicesRoute =
+  ShopAndEstablishmentRegistrationServicesRouteImport.update({
+    id: '/shop-and-establishment-registration-services',
+    path: '/shop-and-establishment-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SmallBusinessAccountingTaxServicesRoute =
+  SmallBusinessAccountingTaxServicesRouteImport.update({
+    id: '/small-business-accounting-tax-services',
+    path: '/small-business-accounting-tax-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SoleProprietorshipRegistrationServicesRoute =
+  SoleProprietorshipRegistrationServicesRouteImport.update({
+    id: '/sole-proprietorship-registration-services',
+    path: '/sole-proprietorship-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupGrantLoanAssistanceServicesRoute =
+  StartupGrantLoanAssistanceServicesRouteImport.update({
+    id: '/startup-grant-loan-assistance-services',
+    path: '/startup-grant-loan-assistance-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupIndiaDpiitRegistrationServicesRoute =
+  StartupIndiaDpiitRegistrationServicesRouteImport.update({
+    id: '/startup-india-dpiit-registration-services',
+    path: '/startup-india-dpiit-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupNgoRegistrationServicesRoute =
+  StartupNgoRegistrationServicesRouteImport.update({
+    id: '/startup-ngo-registration-services',
+    path: '/startup-ngo-registration-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StartupOutsourcingServicesRoute =
+  StartupOutsourcingServicesRouteImport.update({
+    id: '/startup-outsourcing-services',
+    path: '/startup-outsourcing-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const StrikeOffCompanyLlpRoute = StrikeOffCompanyLlpRouteImport.update({
+  id: '/strike-off-company-llp',
+  path: '/strike-off-company-llp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SurrenderDuplicateDinRoute = SurrenderDuplicateDinRouteImport.update({
+  id: '/surrender-duplicate-din',
+  path: '/surrender-duplicate-din',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TanCorrectionServicesRoute = TanCorrectionServicesRouteImport.update({
+  id: '/tan-correction-services',
+  path: '/tan-correction-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TanRegistrationServicesIndiaRoute =
+  TanRegistrationServicesIndiaRouteImport.update({
+    id: '/tan-registration-services-india',
+    path: '/tan-registration-services-india',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TaxHolidaySection80iacServicesRoute =
+  TaxHolidaySection80iacServicesRouteImport.update({
+    id: '/tax-holiday-section-80iac-services',
+    path: '/tax-holiday-section-80iac-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TaxRegistrationServicesRoute = TaxRegistrationServicesRouteImport.update({
+  id: '/tax-registration-services',
+  path: '/tax-registration-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsCertificatesForm1616aRoute =
+  TdsCertificatesForm1616aRouteImport.update({
+    id: '/tds-certificates-form-16-16a',
+    path: '/tds-certificates-form-16-16a',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsChallanCorrectionOnlineRoute =
+  TdsChallanCorrectionOnlineRouteImport.update({
+    id: '/tds-challan-correction-online',
+    path: '/tds-challan-correction-online',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertyMultipleBuyersSellersRoute =
+  TdsOnPropertyMultipleBuyersSellersRouteImport.update({
+    id: '/tds-on-property-multiple-buyers-sellers',
+    path: '/tds-on-property-multiple-buyers-sellers',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertyNriSection195Route =
+  TdsOnPropertyNriSection195RouteImport.update({
+    id: '/tds-on-property-nri-section-195',
+    path: '/tds-on-property-nri-section-195',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnPropertySection194iaRoute =
+  TdsOnPropertySection194iaRouteImport.update({
+    id: '/tds-on-property-section-194ia',
+    path: '/tds-on-property-section-194ia',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnRentMultiplePartiesRoute =
+  TdsOnRentMultiplePartiesRouteImport.update({
+    id: '/tds-on-rent-multiple-parties',
+    path: '/tds-on-rent-multiple-parties',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TdsOnRentNriSection195Route = TdsOnRentNriSection195RouteImport.update({
+  id: '/tds-on-rent-nri-section-195',
+  path: '/tds-on-rent-nri-section-195',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsTcsRouteRoute = TdsTcsRouteRouteImport.update({
+  id: '/tds-tcs',
+  path: '/tds-tcs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsTcsNoticeResolutionRoute = TdsTcsNoticeResolutionRouteImport.update({
+  id: '/tds-tcs-notice-resolution',
+  path: '/tds-tcs-notice-resolution',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TdsTcsReturnFilingServicesRoute =
+  TdsTcsReturnFilingServicesRouteImport.update({
+    id: '/tds-tcs-return-filing-services',
+    path: '/tds-tcs-return-filing-services',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankyouRoute = ThankyouRouteImport.update({
+  id: '/thankyou',
+  path: '/thankyou',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThreeYearBalanceSheetRoute = ThreeYearBalanceSheetRouteImport.update({
+  id: '/three-year-balance-sheet',
+  path: '/three-year-balance-sheet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UpdateEmailMobileMcaRoute = UpdateEmailMobileMcaRouteImport.update({
+  id: '/update-email-mobile-mca',
+  path: '/update-email-mobile-mca',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const AccountingAuditServicesIndexRoute =
   AccountingAuditServicesIndexRouteImport.update({
@@ -838,57 +805,102 @@ const AccountingAuditServicesIndexRoute =
     path: '/',
     getParentRoute: () => AccountingAuditServicesRouteRoute,
   } as any)
-const TdsTcsSlugRoute = TdsTcsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => TdsTcsRouteRoute,
-} as any)
-const RegistrationsSlugRoute = RegistrationsSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => RegistrationsRouteRoute,
-} as any)
-const McaSlugRoute = McaSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => McaRouteRoute,
-} as any)
-const IncomeTaxSlugRoute = IncomeTaxSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => IncomeTaxRouteRoute,
-} as any)
-const GstSlugRoute = GstSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => GstRouteRoute,
-} as any)
-const ConsultationSlugRoute = ConsultationSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ConsultationRouteRoute,
-} as any)
-const ComplianceSlugRoute = ComplianceSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ComplianceRouteRoute,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRouteRoute,
-} as any)
-const BankLoanSlugRoute = BankLoanSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BankLoanRouteRoute,
-} as any)
 const AccountingAuditServicesSlugRoute =
   AccountingAuditServicesSlugRouteImport.update({
     id: '/$slug',
     path: '/$slug',
     getParentRoute: () => AccountingAuditServicesRouteRoute,
   } as any)
+const BankLoanIndexRoute = BankLoanIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BankLoanRouteRoute,
+} as any)
+const BankLoanSlugRoute = BankLoanSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BankLoanRouteRoute,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRouteRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRouteRoute,
+} as any)
+const ComplianceIndexRoute = ComplianceIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ComplianceRouteRoute,
+} as any)
+const ComplianceSlugRoute = ComplianceSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ComplianceRouteRoute,
+} as any)
+const ConsultationIndexRoute = ConsultationIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ConsultationRouteRoute,
+} as any)
+const ConsultationSlugRoute = ConsultationSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ConsultationRouteRoute,
+} as any)
+const CustomSlugRoute = CustomSlugRouteImport.update({
+  id: '/custom/$slug',
+  path: '/custom/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GstSlugRoute = GstSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => GstRouteRoute,
+} as any)
+const IncomeTaxIndexRoute = IncomeTaxIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => IncomeTaxRouteRoute,
+} as any)
+const IncomeTaxSlugRoute = IncomeTaxSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => IncomeTaxRouteRoute,
+} as any)
+const McaIndexRoute = McaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => McaRouteRoute,
+} as any)
+const McaSlugRoute = McaSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => McaRouteRoute,
+} as any)
+const RegistrationsIndexRoute = RegistrationsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RegistrationsRouteRoute,
+} as any)
+const RegistrationsSlugRoute = RegistrationsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => RegistrationsRouteRoute,
+} as any)
+const TdsTcsIndexRoute = TdsTcsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TdsTcsRouteRoute,
+} as any)
+const TdsTcsSlugRoute = TdsTcsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => TdsTcsRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -902,6 +914,7 @@ export interface FileRoutesByFullPath {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/$slug': typeof SlugRoute
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
@@ -1012,6 +1025,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
+  '/custom/$slug': typeof CustomSlugRoute
   '/gst/$slug': typeof GstSlugRoute
   '/income-tax/$slug': typeof IncomeTaxSlugRoute
   '/mca/$slug': typeof McaSlugRoute
@@ -1030,6 +1044,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/gst': typeof GstRouteRouteWithChildren
+  '/$slug': typeof SlugRoute
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
@@ -1140,6 +1155,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
+  '/custom/$slug': typeof CustomSlugRoute
   '/gst/$slug': typeof GstSlugRoute
   '/income-tax/$slug': typeof IncomeTaxSlugRoute
   '/mca/$slug': typeof McaSlugRoute
@@ -1168,6 +1184,7 @@ export interface FileRoutesById {
   '/mca': typeof McaRouteRouteWithChildren
   '/registrations': typeof RegistrationsRouteRouteWithChildren
   '/tds-tcs': typeof TdsTcsRouteRouteWithChildren
+  '/$slug': typeof SlugRoute
   '/80g-12aa-registration-services': typeof R80g12aaRegistrationServicesRoute
   '/accounting-for-itr-filing': typeof AccountingForItrFilingRoute
   '/accounting-review-visits-services': typeof AccountingReviewVisitsServicesRoute
@@ -1278,6 +1295,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/compliance/$slug': typeof ComplianceSlugRoute
   '/consultation/$slug': typeof ConsultationSlugRoute
+  '/custom/$slug': typeof CustomSlugRoute
   '/gst/$slug': typeof GstSlugRoute
   '/income-tax/$slug': typeof IncomeTaxSlugRoute
   '/mca/$slug': typeof McaSlugRoute
@@ -1307,6 +1325,7 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/$slug'
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
@@ -1417,6 +1436,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
+    | '/custom/$slug'
     | '/gst/$slug'
     | '/income-tax/$slug'
     | '/mca/$slug'
@@ -1435,6 +1455,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/gst'
+    | '/$slug'
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
@@ -1545,6 +1566,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
+    | '/custom/$slug'
     | '/gst/$slug'
     | '/income-tax/$slug'
     | '/mca/$slug'
@@ -1572,6 +1594,7 @@ export interface FileRouteTypes {
     | '/mca'
     | '/registrations'
     | '/tds-tcs'
+    | '/$slug'
     | '/80g-12aa-registration-services'
     | '/accounting-for-itr-filing'
     | '/accounting-review-visits-services'
@@ -1682,6 +1705,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/compliance/$slug'
     | '/consultation/$slug'
+    | '/custom/$slug'
     | '/gst/$slug'
     | '/income-tax/$slug'
     | '/mca/$slug'
@@ -1710,6 +1734,7 @@ export interface RootRouteChildren {
   McaRouteRoute: typeof McaRouteRouteWithChildren
   RegistrationsRouteRoute: typeof RegistrationsRouteRouteWithChildren
   TdsTcsRouteRoute: typeof TdsTcsRouteRouteWithChildren
+  SlugRoute: typeof SlugRoute
   R80g12aaRegistrationServicesRoute: typeof R80g12aaRegistrationServicesRoute
   AccountingForItrFilingRoute: typeof AccountingForItrFilingRoute
   AccountingReviewVisitsServicesRoute: typeof AccountingReviewVisitsServicesRoute
@@ -1815,736 +1840,23 @@ export interface RootRouteChildren {
   ThankyouRoute: typeof ThankyouRoute
   ThreeYearBalanceSheetRoute: typeof ThreeYearBalanceSheetRoute
   UpdateEmailMobileMcaRoute: typeof UpdateEmailMobileMcaRoute
+  CustomSlugRoute: typeof CustomSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/update-email-mobile-mca': {
-      id: '/update-email-mobile-mca'
-      path: '/update-email-mobile-mca'
-      fullPath: '/update-email-mobile-mca'
-      preLoaderRoute: typeof UpdateEmailMobileMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/three-year-balance-sheet': {
-      id: '/three-year-balance-sheet'
-      path: '/three-year-balance-sheet'
-      fullPath: '/three-year-balance-sheet'
-      preLoaderRoute: typeof ThreeYearBalanceSheetRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/thankyou': {
-      id: '/thankyou'
-      path: '/thankyou'
-      fullPath: '/thankyou'
-      preLoaderRoute: typeof ThankyouRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/terms-and-conditions': {
-      id: '/terms-and-conditions'
-      path: '/terms-and-conditions'
-      fullPath: '/terms-and-conditions'
-      preLoaderRoute: typeof TermsAndConditionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-tcs-return-filing-services': {
-      id: '/tds-tcs-return-filing-services'
-      path: '/tds-tcs-return-filing-services'
-      fullPath: '/tds-tcs-return-filing-services'
-      preLoaderRoute: typeof TdsTcsReturnFilingServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-tcs-notice-resolution': {
-      id: '/tds-tcs-notice-resolution'
-      path: '/tds-tcs-notice-resolution'
-      fullPath: '/tds-tcs-notice-resolution'
-      preLoaderRoute: typeof TdsTcsNoticeResolutionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-on-rent-nri-section-195': {
-      id: '/tds-on-rent-nri-section-195'
-      path: '/tds-on-rent-nri-section-195'
-      fullPath: '/tds-on-rent-nri-section-195'
-      preLoaderRoute: typeof TdsOnRentNriSection195RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-on-rent-multiple-parties': {
-      id: '/tds-on-rent-multiple-parties'
-      path: '/tds-on-rent-multiple-parties'
-      fullPath: '/tds-on-rent-multiple-parties'
-      preLoaderRoute: typeof TdsOnRentMultiplePartiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-on-property-section-194ia': {
-      id: '/tds-on-property-section-194ia'
-      path: '/tds-on-property-section-194ia'
-      fullPath: '/tds-on-property-section-194ia'
-      preLoaderRoute: typeof TdsOnPropertySection194iaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-on-property-nri-section-195': {
-      id: '/tds-on-property-nri-section-195'
-      path: '/tds-on-property-nri-section-195'
-      fullPath: '/tds-on-property-nri-section-195'
-      preLoaderRoute: typeof TdsOnPropertyNriSection195RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-on-property-multiple-buyers-sellers': {
-      id: '/tds-on-property-multiple-buyers-sellers'
-      path: '/tds-on-property-multiple-buyers-sellers'
-      fullPath: '/tds-on-property-multiple-buyers-sellers'
-      preLoaderRoute: typeof TdsOnPropertyMultipleBuyersSellersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-challan-correction-online': {
-      id: '/tds-challan-correction-online'
-      path: '/tds-challan-correction-online'
-      fullPath: '/tds-challan-correction-online'
-      preLoaderRoute: typeof TdsChallanCorrectionOnlineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tds-certificates-form-16-16a': {
-      id: '/tds-certificates-form-16-16a'
-      path: '/tds-certificates-form-16-16a'
-      fullPath: '/tds-certificates-form-16-16a'
-      preLoaderRoute: typeof TdsCertificatesForm1616aRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tax-registration-services': {
-      id: '/tax-registration-services'
-      path: '/tax-registration-services'
-      fullPath: '/tax-registration-services'
-      preLoaderRoute: typeof TaxRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tax-holiday-section-80iac-services': {
-      id: '/tax-holiday-section-80iac-services'
-      path: '/tax-holiday-section-80iac-services'
-      fullPath: '/tax-holiday-section-80iac-services'
-      preLoaderRoute: typeof TaxHolidaySection80iacServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tan-registration-services-india': {
-      id: '/tan-registration-services-india'
-      path: '/tan-registration-services-india'
-      fullPath: '/tan-registration-services-india'
-      preLoaderRoute: typeof TanRegistrationServicesIndiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tan-correction-services': {
-      id: '/tan-correction-services'
-      path: '/tan-correction-services'
-      fullPath: '/tan-correction-services'
-      preLoaderRoute: typeof TanCorrectionServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/surrender-duplicate-din': {
-      id: '/surrender-duplicate-din'
-      path: '/surrender-duplicate-din'
-      fullPath: '/surrender-duplicate-din'
-      preLoaderRoute: typeof SurrenderDuplicateDinRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/strike-off-company-llp': {
-      id: '/strike-off-company-llp'
-      path: '/strike-off-company-llp'
-      fullPath: '/strike-off-company-llp'
-      preLoaderRoute: typeof StrikeOffCompanyLlpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/startup-outsourcing-services': {
-      id: '/startup-outsourcing-services'
-      path: '/startup-outsourcing-services'
-      fullPath: '/startup-outsourcing-services'
-      preLoaderRoute: typeof StartupOutsourcingServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/startup-ngo-registration-services': {
-      id: '/startup-ngo-registration-services'
-      path: '/startup-ngo-registration-services'
-      fullPath: '/startup-ngo-registration-services'
-      preLoaderRoute: typeof StartupNgoRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/startup-india-dpiit-registration-services': {
-      id: '/startup-india-dpiit-registration-services'
-      path: '/startup-india-dpiit-registration-services'
-      fullPath: '/startup-india-dpiit-registration-services'
-      preLoaderRoute: typeof StartupIndiaDpiitRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/startup-grant-loan-assistance-services': {
-      id: '/startup-grant-loan-assistance-services'
-      path: '/startup-grant-loan-assistance-services'
-      fullPath: '/startup-grant-loan-assistance-services'
-      preLoaderRoute: typeof StartupGrantLoanAssistanceServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sole-proprietorship-registration-services': {
-      id: '/sole-proprietorship-registration-services'
-      path: '/sole-proprietorship-registration-services'
-      fullPath: '/sole-proprietorship-registration-services'
-      preLoaderRoute: typeof SoleProprietorshipRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/small-business-accounting-tax-services': {
-      id: '/small-business-accounting-tax-services'
-      path: '/small-business-accounting-tax-services'
-      fullPath: '/small-business-accounting-tax-services'
-      preLoaderRoute: typeof SmallBusinessAccountingTaxServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/shop-and-establishment-registration-services': {
-      id: '/shop-and-establishment-registration-services'
-      path: '/shop-and-establishment-registration-services'
-      fullPath: '/shop-and-establishment-registration-services'
-      preLoaderRoute: typeof ShopAndEstablishmentRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/section-8-company-registration': {
-      id: '/section-8-company-registration'
-      path: '/section-8-company-registration'
-      fullPath: '/section-8-company-registration'
-      preLoaderRoute: typeof Section8CompanyRegistrationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/secretarial-records-preparation-maintenance': {
-      id: '/secretarial-records-preparation-maintenance'
-      path: '/secretarial-records-preparation-maintenance'
-      fullPath: '/secretarial-records-preparation-maintenance'
-      preLoaderRoute: typeof SecretarialRecordsPreparationMaintenanceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/roc-other-forms-inc20a-dir6-dpt3': {
-      id: '/roc-other-forms-inc20a-dir6-dpt3'
-      path: '/roc-other-forms-inc20a-dir6-dpt3'
-      fullPath: '/roc-other-forms-inc20a-dir6-dpt3'
-      preLoaderRoute: typeof RocOtherFormsInc20aDir6Dpt3RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/revised-tds-tcs-return-filing': {
-      id: '/revised-tds-tcs-return-filing'
-      path: '/revised-tds-tcs-return-filing'
-      fullPath: '/revised-tds-tcs-return-filing'
-      preLoaderRoute: typeof RevisedTdsTcsReturnFilingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resignation-of-partner-in-llp': {
-      id: '/resignation-of-partner-in-llp'
-      path: '/resignation-of-partner-in-llp'
-      fullPath: '/resignation-of-partner-in-llp'
-      preLoaderRoute: typeof ResignationOfPartnerInLlpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projected-balance-sheet': {
-      id: '/projected-balance-sheet'
-      path: '/projected-balance-sheet'
-      fullPath: '/projected-balance-sheet'
-      preLoaderRoute: typeof ProjectedBalanceSheetRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/project-report-for-bank-loan': {
-      id: '/project-report-for-bank-loan'
-      path: '/project-report-for-bank-loan'
-      fullPath: '/project-report-for-bank-loan'
-      preLoaderRoute: typeof ProjectReportForBankLoanRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/profit-and-loss-statement-services': {
-      id: '/profit-and-loss-statement-services'
-      path: '/profit-and-loss-statement-services'
-      fullPath: '/profit-and-loss-statement-services'
-      preLoaderRoute: typeof ProfitAndLossStatementServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/professional-tax-registration-services': {
-      id: '/professional-tax-registration-services'
-      path: '/professional-tax-registration-services'
-      fullPath: '/professional-tax-registration-services'
-      preLoaderRoute: typeof ProfessionalTaxRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/private-limited-company-formation': {
-      id: '/private-limited-company-formation'
-      path: '/private-limited-company-formation'
-      fullPath: '/private-limited-company-formation'
-      preLoaderRoute: typeof PrivateLimitedCompanyFormationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/private-limited-company': {
-      id: '/private-limited-company'
-      path: '/private-limited-company'
-      fullPath: '/private-limited-company'
-      preLoaderRoute: typeof PrivateLimitedCompanyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/personal-accounting-services': {
-      id: '/personal-accounting-services'
-      path: '/personal-accounting-services'
-      fullPath: '/personal-accounting-services'
-      preLoaderRoute: typeof PersonalAccountingServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partnership-firm-registration-services': {
-      id: '/partnership-firm-registration-services'
-      path: '/partnership-firm-registration-services'
-      fullPath: '/partnership-firm-registration-services'
-      preLoaderRoute: typeof PartnershipFirmRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/partnership-firm': {
-      id: '/partnership-firm'
-      path: '/partnership-firm'
-      fullPath: '/partnership-firm'
-      preLoaderRoute: typeof PartnershipFirmRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/our-full-packages-services': {
-      id: '/our-full-packages-services'
-      path: '/our-full-packages-services'
-      fullPath: '/our-full-packages-services'
-      preLoaderRoute: typeof OurFullPackagesServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/one-person-company-registration': {
-      id: '/one-person-company-registration'
-      path: '/one-person-company-registration'
-      fullPath: '/one-person-company-registration'
-      preLoaderRoute: typeof OnePersonCompanyRegistrationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/new-tan-registration-certificate-services': {
-      id: '/new-tan-registration-certificate-services'
-      path: '/new-tan-registration-certificate-services'
-      fullPath: '/new-tan-registration-certificate-services'
-      preLoaderRoute: typeof NewTanRegistrationCertificateServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/new-llp-formation': {
-      id: '/new-llp-formation'
-      path: '/new-llp-formation'
-      fullPath: '/new-llp-formation'
-      preLoaderRoute: typeof NewLlpFormationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/new-din-application': {
-      id: '/new-din-application'
-      path: '/new-din-application'
-      fullPath: '/new-din-application'
-      preLoaderRoute: typeof NewDinApplicationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/msme-udyam-registration-services': {
-      id: '/msme-udyam-registration-services'
-      path: '/msme-udyam-registration-services'
-      fullPath: '/msme-udyam-registration-services'
-      preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/modification-of-charge-roc-mca': {
-      id: '/modification-of-charge-roc-mca'
-      path: '/modification-of-charge-roc-mca'
-      fullPath: '/modification-of-charge-roc-mca'
-      preLoaderRoute: typeof ModificationOfChargeRocMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mgt-7-mgt-7a-filing': {
-      id: '/mgt-7-mgt-7a-filing'
-      path: '/mgt-7-mgt-7a-filing'
-      fullPath: '/mgt-7-mgt-7a-filing'
-      preLoaderRoute: typeof Mgt7Mgt7aFilingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mca-roc-filing-services-india': {
-      id: '/mca-roc-filing-services-india'
-      path: '/mca-roc-filing-services-india'
-      fullPath: '/mca-roc-filing-services-india'
-      preLoaderRoute: typeof McaRocFilingServicesIndiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lower-tds-certificate-section-197': {
-      id: '/lower-tds-certificate-section-197'
-      path: '/lower-tds-certificate-section-197'
-      fullPath: '/lower-tds-certificate-section-197'
-      preLoaderRoute: typeof LowerTdsCertificateSection197RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/loan-creation-modification-of-charge': {
-      id: '/loan-creation-modification-of-charge'
-      path: '/loan-creation-modification-of-charge'
-      fullPath: '/loan-creation-modification-of-charge'
-      preLoaderRoute: typeof LoanCreationModificationOfChargeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llp-forms-filing': {
-      id: '/llp-forms-filing'
-      path: '/llp-forms-filing'
-      fullPath: '/llp-forms-filing'
-      preLoaderRoute: typeof LlpFormsFilingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llp-compliance-packages': {
-      id: '/llp-compliance-packages'
-      path: '/llp-compliance-packages'
-      fullPath: '/llp-compliance-packages'
-      preLoaderRoute: typeof LlpCompliancePackagesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llp-balance-sheet-form-8-services': {
-      id: '/llp-balance-sheet-form-8-services'
-      path: '/llp-balance-sheet-form-8-services'
-      fullPath: '/llp-balance-sheet-form-8-services'
-      preLoaderRoute: typeof LlpBalanceSheetForm8ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/llp-agreement-changes': {
-      id: '/llp-agreement-changes'
-      path: '/llp-agreement-changes'
-      fullPath: '/llp-agreement-changes'
-      preLoaderRoute: typeof LlpAgreementChangesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/kyc-filing-mca': {
-      id: '/kyc-filing-mca'
-      path: '/kyc-filing-mca'
-      fullPath: '/kyc-filing-mca'
-      preLoaderRoute: typeof KycFilingMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/itr-balance-sheet-preparation-services': {
-      id: '/itr-balance-sheet-preparation-services'
-      path: '/itr-balance-sheet-preparation-services'
-      fullPath: '/itr-balance-sheet-preparation-services'
-      preLoaderRoute: typeof ItrBalanceSheetPreparationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/issue-of-share-certificate-sh1': {
-      id: '/issue-of-share-certificate-sh1'
-      path: '/issue-of-share-certificate-sh1'
-      fullPath: '/issue-of-share-certificate-sh1'
-      preLoaderRoute: typeof IssueOfShareCertificateSh1RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/import-export-code-iec-registration-services': {
-      id: '/import-export-code-iec-registration-services'
-      path: '/import-export-code-iec-registration-services'
-      fullPath: '/import-export-code-iec-registration-services'
-      preLoaderRoute: typeof ImportExportCodeIecRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/huf-formation-registration-services': {
-      id: '/huf-formation-registration-services'
-      path: '/huf-formation-registration-services'
-      fullPath: '/huf-formation-registration-services'
-      preLoaderRoute: typeof HufFormationRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gst-registration-return-filing-services': {
-      id: '/gst-registration-return-filing-services'
-      path: '/gst-registration-return-filing-services'
-      fullPath: '/gst-registration-return-filing-services'
-      preLoaderRoute: typeof GstRegistrationReturnFilingServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fssai-food-license-registration-services': {
-      id: '/fssai-food-license-registration-services'
-      path: '/fssai-food-license-registration-services'
-      fullPath: '/fssai-food-license-registration-services'
-      preLoaderRoute: typeof FssaiFoodLicenseRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-27q-tds-return-filing-nri': {
-      id: '/form-27q-tds-return-filing-nri'
-      path: '/form-27q-tds-return-filing-nri'
-      fullPath: '/form-27q-tds-return-filing-nri'
-      preLoaderRoute: typeof Form27qTdsReturnFilingNriRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-27eq-tcs-return-filing': {
-      id: '/form-27eq-tcs-return-filing'
-      path: '/form-27eq-tcs-return-filing'
-      fullPath: '/form-27eq-tcs-return-filing'
-      preLoaderRoute: typeof Form27eqTcsReturnFilingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-27d-tcs-certificate-download': {
-      id: '/form-27d-tcs-certificate-download'
-      path: '/form-27d-tcs-certificate-download'
-      fullPath: '/form-27d-tcs-certificate-download'
-      preLoaderRoute: typeof Form27dTcsCertificateDownloadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-26qc-tds-filing-rent': {
-      id: '/form-26qc-tds-filing-rent'
-      path: '/form-26qc-tds-filing-rent'
-      fullPath: '/form-26qc-tds-filing-rent'
-      preLoaderRoute: typeof Form26qcTdsFilingRentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-26qc-correction-tds-rent': {
-      id: '/form-26qc-correction-tds-rent'
-      path: '/form-26qc-correction-tds-rent'
-      fullPath: '/form-26qc-correction-tds-rent'
-      preLoaderRoute: typeof Form26qcCorrectionTdsRentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-26qb-tds-filing-property': {
-      id: '/form-26qb-tds-filing-property'
-      path: '/form-26qb-tds-filing-property'
-      fullPath: '/form-26qb-tds-filing-property'
-      preLoaderRoute: typeof Form26qbTdsFilingPropertyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-26qb-correction-tds-property': {
-      id: '/form-26qb-correction-tds-property'
-      path: '/form-26qb-correction-tds-property'
-      fullPath: '/form-26qb-correction-tds-property'
-      preLoaderRoute: typeof Form26qbCorrectionTdsPropertyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-26q-tds-return-filing': {
-      id: '/form-26q-tds-return-filing'
-      path: '/form-26q-tds-return-filing'
-      fullPath: '/form-26q-tds-return-filing'
-      preLoaderRoute: typeof Form26qTdsReturnFilingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-24q-tds-filing-salary': {
-      id: '/form-24q-tds-filing-salary'
-      path: '/form-24q-tds-filing-salary'
-      fullPath: '/form-24q-tds-filing-salary'
-      preLoaderRoute: typeof Form24qTdsFilingSalaryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-16c-tds-certificate-rent': {
-      id: '/form-16c-tds-certificate-rent'
-      path: '/form-16c-tds-certificate-rent'
-      fullPath: '/form-16c-tds-certificate-rent'
-      preLoaderRoute: typeof Form16cTdsCertificateRentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-16b-tds-certificate-property': {
-      id: '/form-16b-tds-certificate-property'
-      path: '/form-16b-tds-certificate-property'
-      fullPath: '/form-16b-tds-certificate-property'
-      preLoaderRoute: typeof Form16bTdsCertificatePropertyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-16a-tds-certificate-download': {
-      id: '/form-16a-tds-certificate-download'
-      path: '/form-16a-tds-certificate-download'
-      fullPath: '/form-16a-tds-certificate-download'
-      preLoaderRoute: typeof Form16aTdsCertificateDownloadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/form-15ca-15cb-foreign-remittance': {
-      id: '/form-15ca-15cb-foreign-remittance'
-      path: '/form-15ca-15cb-foreign-remittance'
-      fullPath: '/form-15ca-15cb-foreign-remittance'
-      preLoaderRoute: typeof Form15ca15cbForeignRemittanceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esic-pf-registration-services': {
-      id: '/esic-pf-registration-services'
-      path: '/esic-pf-registration-services'
-      fullPath: '/esic-pf-registration-services'
-      preLoaderRoute: typeof EsicPfRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/duplicate-tan-certificate-online': {
-      id: '/duplicate-tan-certificate-online'
-      path: '/duplicate-tan-certificate-online'
-      fullPath: '/duplicate-tan-certificate-online'
-      preLoaderRoute: typeof DuplicateTanCertificateOnlineRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/dpin-application-llp-partner-india': {
-      id: '/dpin-application-llp-partner-india'
-      path: '/dpin-application-llp-partner-india'
-      fullPath: '/dpin-application-llp-partner-india'
-      preLoaderRoute: typeof DpinApplicationLlpPartnerIndiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/disclaimer': {
-      id: '/disclaimer'
-      path: '/disclaimer'
-      fullPath: '/disclaimer'
-      preLoaderRoute: typeof DisclaimerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/din-dpin-registration-director-llp-india': {
-      id: '/din-dpin-registration-director-llp-india'
-      path: '/din-dpin-registration-director-llp-india'
-      fullPath: '/din-dpin-registration-director-llp-india'
-      preLoaderRoute: typeof DinDpinRegistrationDirectorLlpIndiaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/digital-signature-dsc-registration-services': {
-      id: '/digital-signature-dsc-registration-services'
-      path: '/digital-signature-dsc-registration-services'
-      fullPath: '/digital-signature-dsc-registration-services'
-      preLoaderRoute: typeof DigitalSignatureDscRegistrationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/digital-business-services': {
-      id: '/digital-business-services'
-      path: '/digital-business-services'
-      fullPath: '/digital-business-services'
-      preLoaderRoute: typeof DigitalBusinessServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/daily-einvoicing-eway-bill-services': {
-      id: '/daily-einvoicing-eway-bill-services'
-      path: '/daily-einvoicing-eway-bill-services'
-      fullPath: '/daily-einvoicing-eway-bill-services'
-      preLoaderRoute: typeof DailyEinvoicingEwayBillServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact-us': {
-      id: '/contact-us'
-      path: '/contact-us'
-      fullPath: '/contact-us'
-      preLoaderRoute: typeof ContactUsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/complete-accounting-services': {
-      id: '/complete-accounting-services'
-      path: '/complete-accounting-services'
-      fullPath: '/complete-accounting-services'
-      preLoaderRoute: typeof CompleteAccountingServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-profile': {
-      id: '/company-profile'
-      path: '/company-profile'
-      fullPath: '/company-profile'
-      preLoaderRoute: typeof CompanyProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-policies': {
-      id: '/company-policies'
-      path: '/company-policies'
-      fullPath: '/company-policies'
-      preLoaderRoute: typeof CompanyPoliciesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-name-change-mca': {
-      id: '/company-name-change-mca'
-      path: '/company-name-change-mca'
-      fullPath: '/company-name-change-mca'
-      preLoaderRoute: typeof CompanyNameChangeMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-incorporation-service': {
-      id: '/company-incorporation-service'
-      path: '/company-incorporation-service'
-      fullPath: '/company-incorporation-service'
-      preLoaderRoute: typeof CompanyIncorporationServiceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-financial-statements-services': {
-      id: '/company-financial-statements-services'
-      path: '/company-financial-statements-services'
-      fullPath: '/company-financial-statements-services'
-      preLoaderRoute: typeof CompanyFinancialStatementsServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/company-address-change-mca': {
-      id: '/company-address-change-mca'
-      path: '/company-address-change-mca'
-      fullPath: '/company-address-change-mca'
-      preLoaderRoute: typeof CompanyAddressChangeMcaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cma-data-for-bank-od-cc-3-5-years': {
-      id: '/cma-data-for-bank-od-cc-3-5-years'
-      path: '/cma-data-for-bank-od-cc-3-5-years'
-      fullPath: '/cma-data-for-bank-od-cc-3-5-years'
-      preLoaderRoute: typeof CmaDataForBankOdCc35YearsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/change-moa-aoa-of-company': {
-      id: '/change-moa-aoa-of-company'
-      path: '/change-moa-aoa-of-company'
-      fullPath: '/change-moa-aoa-of-company'
-      preLoaderRoute: typeof ChangeMoaAoaOfCompanyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/change-in-company-master-data': {
-      id: '/change-in-company-master-data'
-      path: '/change-in-company-master-data'
-      fullPath: '/change-in-company-master-data'
-      preLoaderRoute: typeof ChangeInCompanyMasterDataRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/business-setup-services': {
-      id: '/business-setup-services'
-      path: '/business-setup-services'
-      fullPath: '/business-setup-services'
-      preLoaderRoute: typeof BusinessSetupServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/business-registration-licenses': {
-      id: '/business-registration-licenses'
-      path: '/business-registration-licenses'
-      fullPath: '/business-registration-licenses'
-      preLoaderRoute: typeof BusinessRegistrationLicensesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bank-loan-services': {
-      id: '/bank-loan-services'
-      path: '/bank-loan-services'
-      fullPath: '/bank-loan-services'
-      preLoaderRoute: typeof BankLoanServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/balance-sheet-preparation-services': {
-      id: '/balance-sheet-preparation-services'
-      path: '/balance-sheet-preparation-services'
-      fullPath: '/balance-sheet-preparation-services'
-      preLoaderRoute: typeof BalanceSheetPreparationServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/aoc-4-filing-private-limited': {
-      id: '/aoc-4-filing-private-limited'
-      path: '/aoc-4-filing-private-limited'
-      fullPath: '/aoc-4-filing-private-limited'
-      preLoaderRoute: typeof Aoc4FilingPrivateLimitedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/annual-roc-compliance': {
-      id: '/annual-roc-compliance'
-      path: '/annual-roc-compliance'
-      fullPath: '/annual-roc-compliance'
-      preLoaderRoute: typeof AnnualRocComplianceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/adt-1-filing-for-auditor': {
-      id: '/adt-1-filing-for-auditor'
-      path: '/adt-1-filing-for-auditor'
-      fullPath: '/adt-1-filing-for-auditor'
-      preLoaderRoute: typeof Adt1FilingForAuditorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/accounting-review-visits-services': {
-      id: '/accounting-review-visits-services'
-      path: '/accounting-review-visits-services'
-      fullPath: '/accounting-review-visits-services'
-      preLoaderRoute: typeof AccountingReviewVisitsServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/accounting-for-itr-filing': {
-      id: '/accounting-for-itr-filing'
-      path: '/accounting-for-itr-filing'
-      fullPath: '/accounting-for-itr-filing'
-      preLoaderRoute: typeof AccountingForItrFilingRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$slug': {
+      id: '/$slug'
+      path: '/$slug'
+      fullPath: '/$slug'
+      preLoaderRoute: typeof SlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/80g-12aa-registration-services': {
@@ -2554,60 +1866,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof R80g12aaRegistrationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tds-tcs': {
-      id: '/tds-tcs'
-      path: '/tds-tcs'
-      fullPath: '/tds-tcs'
-      preLoaderRoute: typeof TdsTcsRouteRouteImport
+    '/accounting-audit-services': {
+      id: '/accounting-audit-services'
+      path: '/accounting-audit-services'
+      fullPath: '/accounting-audit-services'
+      preLoaderRoute: typeof AccountingAuditServicesRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/registrations': {
-      id: '/registrations'
-      path: '/registrations'
-      fullPath: '/registrations'
-      preLoaderRoute: typeof RegistrationsRouteRouteImport
+    '/accounting-for-itr-filing': {
+      id: '/accounting-for-itr-filing'
+      path: '/accounting-for-itr-filing'
+      fullPath: '/accounting-for-itr-filing'
+      preLoaderRoute: typeof AccountingForItrFilingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mca': {
-      id: '/mca'
-      path: '/mca'
-      fullPath: '/mca'
-      preLoaderRoute: typeof McaRouteRouteImport
+    '/accounting-review-visits-services': {
+      id: '/accounting-review-visits-services'
+      path: '/accounting-review-visits-services'
+      fullPath: '/accounting-review-visits-services'
+      preLoaderRoute: typeof AccountingReviewVisitsServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/income-tax': {
-      id: '/income-tax'
-      path: '/income-tax'
-      fullPath: '/income-tax'
-      preLoaderRoute: typeof IncomeTaxRouteRouteImport
+    '/adt-1-filing-for-auditor': {
+      id: '/adt-1-filing-for-auditor'
+      path: '/adt-1-filing-for-auditor'
+      fullPath: '/adt-1-filing-for-auditor'
+      preLoaderRoute: typeof Adt1FilingForAuditorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/gst': {
-      id: '/gst'
-      path: '/gst'
-      fullPath: '/gst'
-      preLoaderRoute: typeof GstRouteRouteImport
+    '/annual-roc-compliance': {
+      id: '/annual-roc-compliance'
+      path: '/annual-roc-compliance'
+      fullPath: '/annual-roc-compliance'
+      preLoaderRoute: typeof AnnualRocComplianceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/consultation': {
-      id: '/consultation'
-      path: '/consultation'
-      fullPath: '/consultation'
-      preLoaderRoute: typeof ConsultationRouteRouteImport
+    '/aoc-4-filing-private-limited': {
+      id: '/aoc-4-filing-private-limited'
+      path: '/aoc-4-filing-private-limited'
+      fullPath: '/aoc-4-filing-private-limited'
+      preLoaderRoute: typeof Aoc4FilingPrivateLimitedRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/compliance': {
-      id: '/compliance'
-      path: '/compliance'
-      fullPath: '/compliance'
-      preLoaderRoute: typeof ComplianceRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteRouteImport
+    '/balance-sheet-preparation-services': {
+      id: '/balance-sheet-preparation-services'
+      path: '/balance-sheet-preparation-services'
+      fullPath: '/balance-sheet-preparation-services'
+      preLoaderRoute: typeof BalanceSheetPreparationServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bank-loan': {
@@ -2617,75 +1922,747 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BankLoanRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/accounting-audit-services': {
-      id: '/accounting-audit-services'
-      path: '/accounting-audit-services'
-      fullPath: '/accounting-audit-services'
-      preLoaderRoute: typeof AccountingAuditServicesRouteRouteImport
+    '/bank-loan-services': {
+      id: '/bank-loan-services'
+      path: '/bank-loan-services'
+      fullPath: '/bank-loan-services'
+      preLoaderRoute: typeof BankLoanServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tds-tcs/': {
-      id: '/tds-tcs/'
-      path: '/'
-      fullPath: '/tds-tcs/'
-      preLoaderRoute: typeof TdsTcsIndexRouteImport
-      parentRoute: typeof TdsTcsRouteRoute
+    '/business-registration-licenses': {
+      id: '/business-registration-licenses'
+      path: '/business-registration-licenses'
+      fullPath: '/business-registration-licenses'
+      preLoaderRoute: typeof BusinessRegistrationLicensesRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/registrations/': {
-      id: '/registrations/'
-      path: '/'
-      fullPath: '/registrations/'
-      preLoaderRoute: typeof RegistrationsIndexRouteImport
-      parentRoute: typeof RegistrationsRouteRoute
+    '/business-setup-services': {
+      id: '/business-setup-services'
+      path: '/business-setup-services'
+      fullPath: '/business-setup-services'
+      preLoaderRoute: typeof BusinessSetupServicesRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/mca/': {
-      id: '/mca/'
-      path: '/'
-      fullPath: '/mca/'
-      preLoaderRoute: typeof McaIndexRouteImport
-      parentRoute: typeof McaRouteRoute
+    '/change-in-company-master-data': {
+      id: '/change-in-company-master-data'
+      path: '/change-in-company-master-data'
+      fullPath: '/change-in-company-master-data'
+      preLoaderRoute: typeof ChangeInCompanyMasterDataRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/income-tax/': {
-      id: '/income-tax/'
-      path: '/'
-      fullPath: '/income-tax/'
-      preLoaderRoute: typeof IncomeTaxIndexRouteImport
-      parentRoute: typeof IncomeTaxRouteRoute
+    '/change-moa-aoa-of-company': {
+      id: '/change-moa-aoa-of-company'
+      path: '/change-moa-aoa-of-company'
+      fullPath: '/change-moa-aoa-of-company'
+      preLoaderRoute: typeof ChangeMoaAoaOfCompanyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/consultation/': {
-      id: '/consultation/'
-      path: '/'
-      fullPath: '/consultation/'
-      preLoaderRoute: typeof ConsultationIndexRouteImport
-      parentRoute: typeof ConsultationRouteRoute
+    '/cma-data-for-bank-od-cc-3-5-years': {
+      id: '/cma-data-for-bank-od-cc-3-5-years'
+      path: '/cma-data-for-bank-od-cc-3-5-years'
+      fullPath: '/cma-data-for-bank-od-cc-3-5-years'
+      preLoaderRoute: typeof CmaDataForBankOdCc35YearsRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/compliance/': {
-      id: '/compliance/'
-      path: '/'
-      fullPath: '/compliance/'
-      preLoaderRoute: typeof ComplianceIndexRouteImport
-      parentRoute: typeof ComplianceRouteRoute
+    '/company-address-change-mca': {
+      id: '/company-address-change-mca'
+      path: '/company-address-change-mca'
+      fullPath: '/company-address-change-mca'
+      preLoaderRoute: typeof CompanyAddressChangeMcaRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof BlogRouteRoute
+    '/company-financial-statements-services': {
+      id: '/company-financial-statements-services'
+      path: '/company-financial-statements-services'
+      fullPath: '/company-financial-statements-services'
+      preLoaderRoute: typeof CompanyFinancialStatementsServicesRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/bank-loan/': {
-      id: '/bank-loan/'
-      path: '/'
-      fullPath: '/bank-loan/'
-      preLoaderRoute: typeof BankLoanIndexRouteImport
-      parentRoute: typeof BankLoanRouteRoute
+    '/company-incorporation-service': {
+      id: '/company-incorporation-service'
+      path: '/company-incorporation-service'
+      fullPath: '/company-incorporation-service'
+      preLoaderRoute: typeof CompanyIncorporationServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-name-change-mca': {
+      id: '/company-name-change-mca'
+      path: '/company-name-change-mca'
+      fullPath: '/company-name-change-mca'
+      preLoaderRoute: typeof CompanyNameChangeMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-policies': {
+      id: '/company-policies'
+      path: '/company-policies'
+      fullPath: '/company-policies'
+      preLoaderRoute: typeof CompanyPoliciesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-profile': {
+      id: '/company-profile'
+      path: '/company-profile'
+      fullPath: '/company-profile'
+      preLoaderRoute: typeof CompanyProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complete-accounting-services': {
+      id: '/complete-accounting-services'
+      path: '/complete-accounting-services'
+      fullPath: '/complete-accounting-services'
+      preLoaderRoute: typeof CompleteAccountingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compliance': {
+      id: '/compliance'
+      path: '/compliance'
+      fullPath: '/compliance'
+      preLoaderRoute: typeof ComplianceRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultation': {
+      id: '/consultation'
+      path: '/consultation'
+      fullPath: '/consultation'
+      preLoaderRoute: typeof ConsultationRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/daily-einvoicing-eway-bill-services': {
+      id: '/daily-einvoicing-eway-bill-services'
+      path: '/daily-einvoicing-eway-bill-services'
+      fullPath: '/daily-einvoicing-eway-bill-services'
+      preLoaderRoute: typeof DailyEinvoicingEwayBillServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-business-services': {
+      id: '/digital-business-services'
+      path: '/digital-business-services'
+      fullPath: '/digital-business-services'
+      preLoaderRoute: typeof DigitalBusinessServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/digital-signature-dsc-registration-services': {
+      id: '/digital-signature-dsc-registration-services'
+      path: '/digital-signature-dsc-registration-services'
+      fullPath: '/digital-signature-dsc-registration-services'
+      preLoaderRoute: typeof DigitalSignatureDscRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/din-dpin-registration-director-llp-india': {
+      id: '/din-dpin-registration-director-llp-india'
+      path: '/din-dpin-registration-director-llp-india'
+      fullPath: '/din-dpin-registration-director-llp-india'
+      preLoaderRoute: typeof DinDpinRegistrationDirectorLlpIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dpin-application-llp-partner-india': {
+      id: '/dpin-application-llp-partner-india'
+      path: '/dpin-application-llp-partner-india'
+      fullPath: '/dpin-application-llp-partner-india'
+      preLoaderRoute: typeof DpinApplicationLlpPartnerIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duplicate-tan-certificate-online': {
+      id: '/duplicate-tan-certificate-online'
+      path: '/duplicate-tan-certificate-online'
+      fullPath: '/duplicate-tan-certificate-online'
+      preLoaderRoute: typeof DuplicateTanCertificateOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esic-pf-registration-services': {
+      id: '/esic-pf-registration-services'
+      path: '/esic-pf-registration-services'
+      fullPath: '/esic-pf-registration-services'
+      preLoaderRoute: typeof EsicPfRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-15ca-15cb-foreign-remittance': {
+      id: '/form-15ca-15cb-foreign-remittance'
+      path: '/form-15ca-15cb-foreign-remittance'
+      fullPath: '/form-15ca-15cb-foreign-remittance'
+      preLoaderRoute: typeof Form15ca15cbForeignRemittanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16a-tds-certificate-download': {
+      id: '/form-16a-tds-certificate-download'
+      path: '/form-16a-tds-certificate-download'
+      fullPath: '/form-16a-tds-certificate-download'
+      preLoaderRoute: typeof Form16aTdsCertificateDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16b-tds-certificate-property': {
+      id: '/form-16b-tds-certificate-property'
+      path: '/form-16b-tds-certificate-property'
+      fullPath: '/form-16b-tds-certificate-property'
+      preLoaderRoute: typeof Form16bTdsCertificatePropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-16c-tds-certificate-rent': {
+      id: '/form-16c-tds-certificate-rent'
+      path: '/form-16c-tds-certificate-rent'
+      fullPath: '/form-16c-tds-certificate-rent'
+      preLoaderRoute: typeof Form16cTdsCertificateRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-24q-tds-filing-salary': {
+      id: '/form-24q-tds-filing-salary'
+      path: '/form-24q-tds-filing-salary'
+      fullPath: '/form-24q-tds-filing-salary'
+      preLoaderRoute: typeof Form24qTdsFilingSalaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26q-tds-return-filing': {
+      id: '/form-26q-tds-return-filing'
+      path: '/form-26q-tds-return-filing'
+      fullPath: '/form-26q-tds-return-filing'
+      preLoaderRoute: typeof Form26qTdsReturnFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qb-correction-tds-property': {
+      id: '/form-26qb-correction-tds-property'
+      path: '/form-26qb-correction-tds-property'
+      fullPath: '/form-26qb-correction-tds-property'
+      preLoaderRoute: typeof Form26qbCorrectionTdsPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qb-tds-filing-property': {
+      id: '/form-26qb-tds-filing-property'
+      path: '/form-26qb-tds-filing-property'
+      fullPath: '/form-26qb-tds-filing-property'
+      preLoaderRoute: typeof Form26qbTdsFilingPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qc-correction-tds-rent': {
+      id: '/form-26qc-correction-tds-rent'
+      path: '/form-26qc-correction-tds-rent'
+      fullPath: '/form-26qc-correction-tds-rent'
+      preLoaderRoute: typeof Form26qcCorrectionTdsRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-26qc-tds-filing-rent': {
+      id: '/form-26qc-tds-filing-rent'
+      path: '/form-26qc-tds-filing-rent'
+      fullPath: '/form-26qc-tds-filing-rent'
+      preLoaderRoute: typeof Form26qcTdsFilingRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-27d-tcs-certificate-download': {
+      id: '/form-27d-tcs-certificate-download'
+      path: '/form-27d-tcs-certificate-download'
+      fullPath: '/form-27d-tcs-certificate-download'
+      preLoaderRoute: typeof Form27dTcsCertificateDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-27eq-tcs-return-filing': {
+      id: '/form-27eq-tcs-return-filing'
+      path: '/form-27eq-tcs-return-filing'
+      fullPath: '/form-27eq-tcs-return-filing'
+      preLoaderRoute: typeof Form27eqTcsReturnFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/form-27q-tds-return-filing-nri': {
+      id: '/form-27q-tds-return-filing-nri'
+      path: '/form-27q-tds-return-filing-nri'
+      fullPath: '/form-27q-tds-return-filing-nri'
+      preLoaderRoute: typeof Form27qTdsReturnFilingNriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fssai-food-license-registration-services': {
+      id: '/fssai-food-license-registration-services'
+      path: '/fssai-food-license-registration-services'
+      fullPath: '/fssai-food-license-registration-services'
+      preLoaderRoute: typeof FssaiFoodLicenseRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gst': {
+      id: '/gst'
+      path: '/gst'
+      fullPath: '/gst'
+      preLoaderRoute: typeof GstRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gst-registration-return-filing-services': {
+      id: '/gst-registration-return-filing-services'
+      path: '/gst-registration-return-filing-services'
+      fullPath: '/gst-registration-return-filing-services'
+      preLoaderRoute: typeof GstRegistrationReturnFilingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/huf-formation-registration-services': {
+      id: '/huf-formation-registration-services'
+      path: '/huf-formation-registration-services'
+      fullPath: '/huf-formation-registration-services'
+      preLoaderRoute: typeof HufFormationRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/import-export-code-iec-registration-services': {
+      id: '/import-export-code-iec-registration-services'
+      path: '/import-export-code-iec-registration-services'
+      fullPath: '/import-export-code-iec-registration-services'
+      preLoaderRoute: typeof ImportExportCodeIecRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/income-tax': {
+      id: '/income-tax'
+      path: '/income-tax'
+      fullPath: '/income-tax'
+      preLoaderRoute: typeof IncomeTaxRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/issue-of-share-certificate-sh1': {
+      id: '/issue-of-share-certificate-sh1'
+      path: '/issue-of-share-certificate-sh1'
+      fullPath: '/issue-of-share-certificate-sh1'
+      preLoaderRoute: typeof IssueOfShareCertificateSh1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/itr-balance-sheet-preparation-services': {
+      id: '/itr-balance-sheet-preparation-services'
+      path: '/itr-balance-sheet-preparation-services'
+      fullPath: '/itr-balance-sheet-preparation-services'
+      preLoaderRoute: typeof ItrBalanceSheetPreparationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kyc-filing-mca': {
+      id: '/kyc-filing-mca'
+      path: '/kyc-filing-mca'
+      fullPath: '/kyc-filing-mca'
+      preLoaderRoute: typeof KycFilingMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-agreement-changes': {
+      id: '/llp-agreement-changes'
+      path: '/llp-agreement-changes'
+      fullPath: '/llp-agreement-changes'
+      preLoaderRoute: typeof LlpAgreementChangesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-balance-sheet-form-8-services': {
+      id: '/llp-balance-sheet-form-8-services'
+      path: '/llp-balance-sheet-form-8-services'
+      fullPath: '/llp-balance-sheet-form-8-services'
+      preLoaderRoute: typeof LlpBalanceSheetForm8ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-compliance-packages': {
+      id: '/llp-compliance-packages'
+      path: '/llp-compliance-packages'
+      fullPath: '/llp-compliance-packages'
+      preLoaderRoute: typeof LlpCompliancePackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llp-forms-filing': {
+      id: '/llp-forms-filing'
+      path: '/llp-forms-filing'
+      fullPath: '/llp-forms-filing'
+      preLoaderRoute: typeof LlpFormsFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loan-creation-modification-of-charge': {
+      id: '/loan-creation-modification-of-charge'
+      path: '/loan-creation-modification-of-charge'
+      fullPath: '/loan-creation-modification-of-charge'
+      preLoaderRoute: typeof LoanCreationModificationOfChargeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lower-tds-certificate-section-197': {
+      id: '/lower-tds-certificate-section-197'
+      path: '/lower-tds-certificate-section-197'
+      fullPath: '/lower-tds-certificate-section-197'
+      preLoaderRoute: typeof LowerTdsCertificateSection197RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mca': {
+      id: '/mca'
+      path: '/mca'
+      fullPath: '/mca'
+      preLoaderRoute: typeof McaRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mca-roc-filing-services-india': {
+      id: '/mca-roc-filing-services-india'
+      path: '/mca-roc-filing-services-india'
+      fullPath: '/mca-roc-filing-services-india'
+      preLoaderRoute: typeof McaRocFilingServicesIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mgt-7-mgt-7a-filing': {
+      id: '/mgt-7-mgt-7a-filing'
+      path: '/mgt-7-mgt-7a-filing'
+      fullPath: '/mgt-7-mgt-7a-filing'
+      preLoaderRoute: typeof Mgt7Mgt7aFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/modification-of-charge-roc-mca': {
+      id: '/modification-of-charge-roc-mca'
+      path: '/modification-of-charge-roc-mca'
+      fullPath: '/modification-of-charge-roc-mca'
+      preLoaderRoute: typeof ModificationOfChargeRocMcaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/msme-udyam-registration-services': {
+      id: '/msme-udyam-registration-services'
+      path: '/msme-udyam-registration-services'
+      fullPath: '/msme-udyam-registration-services'
+      preLoaderRoute: typeof MsmeUdyamRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-din-application': {
+      id: '/new-din-application'
+      path: '/new-din-application'
+      fullPath: '/new-din-application'
+      preLoaderRoute: typeof NewDinApplicationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-llp-formation': {
+      id: '/new-llp-formation'
+      path: '/new-llp-formation'
+      fullPath: '/new-llp-formation'
+      preLoaderRoute: typeof NewLlpFormationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-tan-registration-certificate-services': {
+      id: '/new-tan-registration-certificate-services'
+      path: '/new-tan-registration-certificate-services'
+      fullPath: '/new-tan-registration-certificate-services'
+      preLoaderRoute: typeof NewTanRegistrationCertificateServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/one-person-company-registration': {
+      id: '/one-person-company-registration'
+      path: '/one-person-company-registration'
+      fullPath: '/one-person-company-registration'
+      preLoaderRoute: typeof OnePersonCompanyRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-full-packages-services': {
+      id: '/our-full-packages-services'
+      path: '/our-full-packages-services'
+      fullPath: '/our-full-packages-services'
+      preLoaderRoute: typeof OurFullPackagesServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnership-firm': {
+      id: '/partnership-firm'
+      path: '/partnership-firm'
+      fullPath: '/partnership-firm'
+      preLoaderRoute: typeof PartnershipFirmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partnership-firm-registration-services': {
+      id: '/partnership-firm-registration-services'
+      path: '/partnership-firm-registration-services'
+      fullPath: '/partnership-firm-registration-services'
+      preLoaderRoute: typeof PartnershipFirmRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/personal-accounting-services': {
+      id: '/personal-accounting-services'
+      path: '/personal-accounting-services'
+      fullPath: '/personal-accounting-services'
+      preLoaderRoute: typeof PersonalAccountingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/private-limited-company': {
+      id: '/private-limited-company'
+      path: '/private-limited-company'
+      fullPath: '/private-limited-company'
+      preLoaderRoute: typeof PrivateLimitedCompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/private-limited-company-formation': {
+      id: '/private-limited-company-formation'
+      path: '/private-limited-company-formation'
+      fullPath: '/private-limited-company-formation'
+      preLoaderRoute: typeof PrivateLimitedCompanyFormationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/professional-tax-registration-services': {
+      id: '/professional-tax-registration-services'
+      path: '/professional-tax-registration-services'
+      fullPath: '/professional-tax-registration-services'
+      preLoaderRoute: typeof ProfessionalTaxRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profit-and-loss-statement-services': {
+      id: '/profit-and-loss-statement-services'
+      path: '/profit-and-loss-statement-services'
+      fullPath: '/profit-and-loss-statement-services'
+      preLoaderRoute: typeof ProfitAndLossStatementServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/project-report-for-bank-loan': {
+      id: '/project-report-for-bank-loan'
+      path: '/project-report-for-bank-loan'
+      fullPath: '/project-report-for-bank-loan'
+      preLoaderRoute: typeof ProjectReportForBankLoanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projected-balance-sheet': {
+      id: '/projected-balance-sheet'
+      path: '/projected-balance-sheet'
+      fullPath: '/projected-balance-sheet'
+      preLoaderRoute: typeof ProjectedBalanceSheetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/registrations': {
+      id: '/registrations'
+      path: '/registrations'
+      fullPath: '/registrations'
+      preLoaderRoute: typeof RegistrationsRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resignation-of-partner-in-llp': {
+      id: '/resignation-of-partner-in-llp'
+      path: '/resignation-of-partner-in-llp'
+      fullPath: '/resignation-of-partner-in-llp'
+      preLoaderRoute: typeof ResignationOfPartnerInLlpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/revised-tds-tcs-return-filing': {
+      id: '/revised-tds-tcs-return-filing'
+      path: '/revised-tds-tcs-return-filing'
+      fullPath: '/revised-tds-tcs-return-filing'
+      preLoaderRoute: typeof RevisedTdsTcsReturnFilingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/roc-other-forms-inc20a-dir6-dpt3': {
+      id: '/roc-other-forms-inc20a-dir6-dpt3'
+      path: '/roc-other-forms-inc20a-dir6-dpt3'
+      fullPath: '/roc-other-forms-inc20a-dir6-dpt3'
+      preLoaderRoute: typeof RocOtherFormsInc20aDir6Dpt3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/secretarial-records-preparation-maintenance': {
+      id: '/secretarial-records-preparation-maintenance'
+      path: '/secretarial-records-preparation-maintenance'
+      fullPath: '/secretarial-records-preparation-maintenance'
+      preLoaderRoute: typeof SecretarialRecordsPreparationMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/section-8-company-registration': {
+      id: '/section-8-company-registration'
+      path: '/section-8-company-registration'
+      fullPath: '/section-8-company-registration'
+      preLoaderRoute: typeof Section8CompanyRegistrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop-and-establishment-registration-services': {
+      id: '/shop-and-establishment-registration-services'
+      path: '/shop-and-establishment-registration-services'
+      fullPath: '/shop-and-establishment-registration-services'
+      preLoaderRoute: typeof ShopAndEstablishmentRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/small-business-accounting-tax-services': {
+      id: '/small-business-accounting-tax-services'
+      path: '/small-business-accounting-tax-services'
+      fullPath: '/small-business-accounting-tax-services'
+      preLoaderRoute: typeof SmallBusinessAccountingTaxServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sole-proprietorship-registration-services': {
+      id: '/sole-proprietorship-registration-services'
+      path: '/sole-proprietorship-registration-services'
+      fullPath: '/sole-proprietorship-registration-services'
+      preLoaderRoute: typeof SoleProprietorshipRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-grant-loan-assistance-services': {
+      id: '/startup-grant-loan-assistance-services'
+      path: '/startup-grant-loan-assistance-services'
+      fullPath: '/startup-grant-loan-assistance-services'
+      preLoaderRoute: typeof StartupGrantLoanAssistanceServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-india-dpiit-registration-services': {
+      id: '/startup-india-dpiit-registration-services'
+      path: '/startup-india-dpiit-registration-services'
+      fullPath: '/startup-india-dpiit-registration-services'
+      preLoaderRoute: typeof StartupIndiaDpiitRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-ngo-registration-services': {
+      id: '/startup-ngo-registration-services'
+      path: '/startup-ngo-registration-services'
+      fullPath: '/startup-ngo-registration-services'
+      preLoaderRoute: typeof StartupNgoRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/startup-outsourcing-services': {
+      id: '/startup-outsourcing-services'
+      path: '/startup-outsourcing-services'
+      fullPath: '/startup-outsourcing-services'
+      preLoaderRoute: typeof StartupOutsourcingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strike-off-company-llp': {
+      id: '/strike-off-company-llp'
+      path: '/strike-off-company-llp'
+      fullPath: '/strike-off-company-llp'
+      preLoaderRoute: typeof StrikeOffCompanyLlpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/surrender-duplicate-din': {
+      id: '/surrender-duplicate-din'
+      path: '/surrender-duplicate-din'
+      fullPath: '/surrender-duplicate-din'
+      preLoaderRoute: typeof SurrenderDuplicateDinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tan-correction-services': {
+      id: '/tan-correction-services'
+      path: '/tan-correction-services'
+      fullPath: '/tan-correction-services'
+      preLoaderRoute: typeof TanCorrectionServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tan-registration-services-india': {
+      id: '/tan-registration-services-india'
+      path: '/tan-registration-services-india'
+      fullPath: '/tan-registration-services-india'
+      preLoaderRoute: typeof TanRegistrationServicesIndiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-holiday-section-80iac-services': {
+      id: '/tax-holiday-section-80iac-services'
+      path: '/tax-holiday-section-80iac-services'
+      fullPath: '/tax-holiday-section-80iac-services'
+      preLoaderRoute: typeof TaxHolidaySection80iacServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-registration-services': {
+      id: '/tax-registration-services'
+      path: '/tax-registration-services'
+      fullPath: '/tax-registration-services'
+      preLoaderRoute: typeof TaxRegistrationServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-certificates-form-16-16a': {
+      id: '/tds-certificates-form-16-16a'
+      path: '/tds-certificates-form-16-16a'
+      fullPath: '/tds-certificates-form-16-16a'
+      preLoaderRoute: typeof TdsCertificatesForm1616aRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-challan-correction-online': {
+      id: '/tds-challan-correction-online'
+      path: '/tds-challan-correction-online'
+      fullPath: '/tds-challan-correction-online'
+      preLoaderRoute: typeof TdsChallanCorrectionOnlineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-multiple-buyers-sellers': {
+      id: '/tds-on-property-multiple-buyers-sellers'
+      path: '/tds-on-property-multiple-buyers-sellers'
+      fullPath: '/tds-on-property-multiple-buyers-sellers'
+      preLoaderRoute: typeof TdsOnPropertyMultipleBuyersSellersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-nri-section-195': {
+      id: '/tds-on-property-nri-section-195'
+      path: '/tds-on-property-nri-section-195'
+      fullPath: '/tds-on-property-nri-section-195'
+      preLoaderRoute: typeof TdsOnPropertyNriSection195RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-property-section-194ia': {
+      id: '/tds-on-property-section-194ia'
+      path: '/tds-on-property-section-194ia'
+      fullPath: '/tds-on-property-section-194ia'
+      preLoaderRoute: typeof TdsOnPropertySection194iaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-rent-multiple-parties': {
+      id: '/tds-on-rent-multiple-parties'
+      path: '/tds-on-rent-multiple-parties'
+      fullPath: '/tds-on-rent-multiple-parties'
+      preLoaderRoute: typeof TdsOnRentMultiplePartiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-on-rent-nri-section-195': {
+      id: '/tds-on-rent-nri-section-195'
+      path: '/tds-on-rent-nri-section-195'
+      fullPath: '/tds-on-rent-nri-section-195'
+      preLoaderRoute: typeof TdsOnRentNriSection195RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-tcs': {
+      id: '/tds-tcs'
+      path: '/tds-tcs'
+      fullPath: '/tds-tcs'
+      preLoaderRoute: typeof TdsTcsRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-tcs-notice-resolution': {
+      id: '/tds-tcs-notice-resolution'
+      path: '/tds-tcs-notice-resolution'
+      fullPath: '/tds-tcs-notice-resolution'
+      preLoaderRoute: typeof TdsTcsNoticeResolutionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tds-tcs-return-filing-services': {
+      id: '/tds-tcs-return-filing-services'
+      path: '/tds-tcs-return-filing-services'
+      fullPath: '/tds-tcs-return-filing-services'
+      preLoaderRoute: typeof TdsTcsReturnFilingServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thankyou': {
+      id: '/thankyou'
+      path: '/thankyou'
+      fullPath: '/thankyou'
+      preLoaderRoute: typeof ThankyouRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/three-year-balance-sheet': {
+      id: '/three-year-balance-sheet'
+      path: '/three-year-balance-sheet'
+      fullPath: '/three-year-balance-sheet'
+      preLoaderRoute: typeof ThreeYearBalanceSheetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/update-email-mobile-mca': {
+      id: '/update-email-mobile-mca'
+      path: '/update-email-mobile-mca'
+      fullPath: '/update-email-mobile-mca'
+      preLoaderRoute: typeof UpdateEmailMobileMcaRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/accounting-audit-services/': {
       id: '/accounting-audit-services/'
@@ -2694,61 +2671,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccountingAuditServicesIndexRouteImport
       parentRoute: typeof AccountingAuditServicesRouteRoute
     }
-    '/tds-tcs/$slug': {
-      id: '/tds-tcs/$slug'
+    '/accounting-audit-services/$slug': {
+      id: '/accounting-audit-services/$slug'
       path: '/$slug'
-      fullPath: '/tds-tcs/$slug'
-      preLoaderRoute: typeof TdsTcsSlugRouteImport
-      parentRoute: typeof TdsTcsRouteRoute
+      fullPath: '/accounting-audit-services/$slug'
+      preLoaderRoute: typeof AccountingAuditServicesSlugRouteImport
+      parentRoute: typeof AccountingAuditServicesRouteRoute
     }
-    '/registrations/$slug': {
-      id: '/registrations/$slug'
-      path: '/$slug'
-      fullPath: '/registrations/$slug'
-      preLoaderRoute: typeof RegistrationsSlugRouteImport
-      parentRoute: typeof RegistrationsRouteRoute
-    }
-    '/mca/$slug': {
-      id: '/mca/$slug'
-      path: '/$slug'
-      fullPath: '/mca/$slug'
-      preLoaderRoute: typeof McaSlugRouteImport
-      parentRoute: typeof McaRouteRoute
-    }
-    '/income-tax/$slug': {
-      id: '/income-tax/$slug'
-      path: '/$slug'
-      fullPath: '/income-tax/$slug'
-      preLoaderRoute: typeof IncomeTaxSlugRouteImport
-      parentRoute: typeof IncomeTaxRouteRoute
-    }
-    '/gst/$slug': {
-      id: '/gst/$slug'
-      path: '/$slug'
-      fullPath: '/gst/$slug'
-      preLoaderRoute: typeof GstSlugRouteImport
-      parentRoute: typeof GstRouteRoute
-    }
-    '/consultation/$slug': {
-      id: '/consultation/$slug'
-      path: '/$slug'
-      fullPath: '/consultation/$slug'
-      preLoaderRoute: typeof ConsultationSlugRouteImport
-      parentRoute: typeof ConsultationRouteRoute
-    }
-    '/compliance/$slug': {
-      id: '/compliance/$slug'
-      path: '/$slug'
-      fullPath: '/compliance/$slug'
-      preLoaderRoute: typeof ComplianceSlugRouteImport
-      parentRoute: typeof ComplianceRouteRoute
-    }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRouteRoute
+    '/bank-loan/': {
+      id: '/bank-loan/'
+      path: '/'
+      fullPath: '/bank-loan/'
+      preLoaderRoute: typeof BankLoanIndexRouteImport
+      parentRoute: typeof BankLoanRouteRoute
     }
     '/bank-loan/$slug': {
       id: '/bank-loan/$slug'
@@ -2757,12 +2692,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BankLoanSlugRouteImport
       parentRoute: typeof BankLoanRouteRoute
     }
-    '/accounting-audit-services/$slug': {
-      id: '/accounting-audit-services/$slug'
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRouteRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
       path: '/$slug'
-      fullPath: '/accounting-audit-services/$slug'
-      preLoaderRoute: typeof AccountingAuditServicesSlugRouteImport
-      parentRoute: typeof AccountingAuditServicesRouteRoute
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRouteRoute
+    }
+    '/compliance/': {
+      id: '/compliance/'
+      path: '/'
+      fullPath: '/compliance/'
+      preLoaderRoute: typeof ComplianceIndexRouteImport
+      parentRoute: typeof ComplianceRouteRoute
+    }
+    '/compliance/$slug': {
+      id: '/compliance/$slug'
+      path: '/$slug'
+      fullPath: '/compliance/$slug'
+      preLoaderRoute: typeof ComplianceSlugRouteImport
+      parentRoute: typeof ComplianceRouteRoute
+    }
+    '/consultation/': {
+      id: '/consultation/'
+      path: '/'
+      fullPath: '/consultation/'
+      preLoaderRoute: typeof ConsultationIndexRouteImport
+      parentRoute: typeof ConsultationRouteRoute
+    }
+    '/consultation/$slug': {
+      id: '/consultation/$slug'
+      path: '/$slug'
+      fullPath: '/consultation/$slug'
+      preLoaderRoute: typeof ConsultationSlugRouteImport
+      parentRoute: typeof ConsultationRouteRoute
+    }
+    '/custom/$slug': {
+      id: '/custom/$slug'
+      path: '/custom/$slug'
+      fullPath: '/custom/$slug'
+      preLoaderRoute: typeof CustomSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gst/$slug': {
+      id: '/gst/$slug'
+      path: '/$slug'
+      fullPath: '/gst/$slug'
+      preLoaderRoute: typeof GstSlugRouteImport
+      parentRoute: typeof GstRouteRoute
+    }
+    '/income-tax/': {
+      id: '/income-tax/'
+      path: '/'
+      fullPath: '/income-tax/'
+      preLoaderRoute: typeof IncomeTaxIndexRouteImport
+      parentRoute: typeof IncomeTaxRouteRoute
+    }
+    '/income-tax/$slug': {
+      id: '/income-tax/$slug'
+      path: '/$slug'
+      fullPath: '/income-tax/$slug'
+      preLoaderRoute: typeof IncomeTaxSlugRouteImport
+      parentRoute: typeof IncomeTaxRouteRoute
+    }
+    '/mca/': {
+      id: '/mca/'
+      path: '/'
+      fullPath: '/mca/'
+      preLoaderRoute: typeof McaIndexRouteImport
+      parentRoute: typeof McaRouteRoute
+    }
+    '/mca/$slug': {
+      id: '/mca/$slug'
+      path: '/$slug'
+      fullPath: '/mca/$slug'
+      preLoaderRoute: typeof McaSlugRouteImport
+      parentRoute: typeof McaRouteRoute
+    }
+    '/registrations/': {
+      id: '/registrations/'
+      path: '/'
+      fullPath: '/registrations/'
+      preLoaderRoute: typeof RegistrationsIndexRouteImport
+      parentRoute: typeof RegistrationsRouteRoute
+    }
+    '/registrations/$slug': {
+      id: '/registrations/$slug'
+      path: '/$slug'
+      fullPath: '/registrations/$slug'
+      preLoaderRoute: typeof RegistrationsSlugRouteImport
+      parentRoute: typeof RegistrationsRouteRoute
+    }
+    '/tds-tcs/': {
+      id: '/tds-tcs/'
+      path: '/'
+      fullPath: '/tds-tcs/'
+      preLoaderRoute: typeof TdsTcsIndexRouteImport
+      parentRoute: typeof TdsTcsRouteRoute
+    }
+    '/tds-tcs/$slug': {
+      id: '/tds-tcs/$slug'
+      path: '/$slug'
+      fullPath: '/tds-tcs/$slug'
+      preLoaderRoute: typeof TdsTcsSlugRouteImport
+      parentRoute: typeof TdsTcsRouteRoute
     }
   }
 }
@@ -2918,6 +2958,7 @@ const rootRouteChildren: RootRouteChildren = {
   McaRouteRoute: McaRouteRouteWithChildren,
   RegistrationsRouteRoute: RegistrationsRouteRouteWithChildren,
   TdsTcsRouteRoute: TdsTcsRouteRouteWithChildren,
+  SlugRoute: SlugRoute,
   R80g12aaRegistrationServicesRoute: R80g12aaRegistrationServicesRoute,
   AccountingForItrFilingRoute: AccountingForItrFilingRoute,
   AccountingReviewVisitsServicesRoute: AccountingReviewVisitsServicesRoute,
@@ -3040,6 +3081,7 @@ const rootRouteChildren: RootRouteChildren = {
   ThankyouRoute: ThankyouRoute,
   ThreeYearBalanceSheetRoute: ThreeYearBalanceSheetRoute,
   UpdateEmailMobileMcaRoute: UpdateEmailMobileMcaRoute,
+  CustomSlugRoute: CustomSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

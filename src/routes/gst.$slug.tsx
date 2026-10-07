@@ -8,15 +8,31 @@ import {
 import { Header } from "@/components/site/Header";
 import { Footer, FloatingWhatsApp } from "@/components/site/Footer";
 import { GST_SERVICES, getGstServiceBySlug } from "@/data/gstServices";
+import { getCMSPageBySlug } from "@/services/cmsApi";
+import { DynamicBlockRenderer } from "@/components/cms/DynamicBlockRenderer";
+
 export const Route = createFileRoute("/gst/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const cmsPage = await getCMSPageBySlug(params.slug);
+    if (cmsPage && cmsPage.status === 'published') {
+      return { isCMS: true, page: cmsPage };
+    }
     const service = getGstServiceBySlug(params.slug);
     if (!service) throw notFound();
-    return service;
+    return { isCMS: false, service };
   },
   head: ({ loaderData }) => {
-    const s = loaderData;
-    if (!s) return {};
+    const data = loaderData;
+    if (!data) return {};
+    if (data.isCMS) {
+      return {
+        meta: [
+          { title: data.page.meta_title || data.page.title },
+          { name: "description", content: data.page.meta_description || "" },
+        ],
+      };
+    }
+    const s = data.service;
     return {
       meta: [
         { title: s.metaTitle },
@@ -26,31 +42,6 @@ export const Route = createFileRoute("/gst/$slug")({
         { property: "og:url", content: `/gst/${s.slug}` },
       ],
       links: [{ rel: "canonical", href: `/gst/${s.slug}` }],
-      scripts: [
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: s.faqs.map((f) => ({
-              "@type": "Question",
-              name: f.q,
-              acceptedAnswer: { "@type": "Answer", text: f.a },
-            })),
-          }),
-        },
-        {
-          type: "application/ld+json",
-          children: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: s.title,
-            provider: { "@type": "Organization", name: "Praveen J & Associates" },
-            areaServed: "IN",
-            description: s.metaDescription,
-          }),
-        },
-      ],
     };
   },
   notFoundComponent: () => (
@@ -77,7 +68,22 @@ export const Route = createFileRoute("/gst/$slug")({
 });
 
 function GstServicePage() {
-  const s = Route.useLoaderData();
+  const data = Route.useLoaderData();
+  if (data.isCMS) {
+    return (
+      <div className="min-h-screen flex flex-col bg-white text-ink">
+        <Header />
+        <main className="flex-1">
+          <Breadcrumbs title={data.page.title} />
+          <DynamicBlockRenderer blocks={data.page.blocks_json} pageTitle={data.page.title} />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    );
+  }
+
+  const s = data.service;
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

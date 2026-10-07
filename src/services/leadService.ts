@@ -37,7 +37,9 @@ export const submitLead = async (data: LeadData) => {
             utmContent: sessionStorage.getItem('utm_content') || '',
         };
 
-        const response = await fetch('https://api.praveenjandassociates.com/api/enquiries/create.php', {
+        const API_BASE = import.meta.env.VITE_CMS_API_URL || 'http://localhost:5001/api';
+
+        const response = await fetch(`${API_BASE}/enquiries`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +48,7 @@ export const submitLead = async (data: LeadData) => {
         });
 
         const result = await response.json();
-        return result;
+        return { success: response.ok, ...result };
     } catch (error) {
         console.error("Lead submission failed:", error);
         return { success: false, message: "Submission failed due to a network error." };
